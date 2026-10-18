@@ -1,6 +1,6 @@
 {
  "binary_sha256": "60d7eb7f12fbb28a52533fe8be5884097403562aa02dc73991a021c7067e29a5",
- "cache_at": 1792291067093,
+ "cache_at": 1792360662198,
  "items": {
   "env:ANTHROPIC_API_HOST": {
    "category": "networking-api",
@@ -36707,6 +36707,8 @@
     "source": "growthbook",
     "value": {
      "creditsPerMillionTokens": {
+      "claude-fable-5": 8333,
+      "claude-fable-5-1": 8333,
       "claude-haiku-4-5": 833,
       "claude-opus-4-6": 5000,
       "claude-opus-4-7": 3338,
@@ -36718,11 +36720,8 @@
       "claude-sonnet-5-5": 1250
      },
      "fiveHourCredits": {
-      "default_claude_ai": 10000,
       "default_claude_max_20x": 200000,
-      "default_claude_max_5x": 50000,
-      "default_raven": 12500,
-      "default_raven_enterprise": 25000
+      "default_claude_max_5x": 50000
      },
      "minPercent": 5
     }
@@ -38856,7 +38855,9 @@
    "name": "tengu_canary",
    "served": {
     "source": "growthbook",
-    "value": {}
+    "value": {
+     "external": "2.1.303"
+    }
    },
    "sites": 1,
    "snippet": "...y,isWindows:!1}))}function Pn(e,{versions:n,executable:r,isWindows:s}){let h=(y)=>s?y.replaceAll(\"\\\\\",\"/\").toLowerCase():y,w=h(e),b=h(n).replace(/\\/+$/,\"\")+\"/\";return w.startsWith(b)||w===h(r)}function In(){try{let e=k(\"tengu_canary\",{});return typeof e.external===\"string\"&&Et.valid(e.external)||null}catch(e){return t(`getCanaryVersion: GB read failed, falling through: ${d(e)}`),null}}async function Mn(e,n=!1){let r=Date.now(),{executable:s}=Q(),h=!/^v?\\d+\\.\\d+\\.\\d+(-\\S+)?$/.test(e),{maxVersion:w,forceDowngradeE",
@@ -42488,7 +42489,10 @@
    "last_seen_at": "2026-10-17T02:57:10Z",
    "last_seen_version": "2.1.302",
    "name": "tengu_drifting_nova",
-   "served": null,
+   "served": {
+    "source": "growthbook",
+    "value": false
+   },
    "sites": 1,
    "snippet": "geCount:De,contextTokens:Oe})},Math.min(2147483647,Math.max(0,le)));this.#a=ve}#b(h){return Ef(ni(h))}#f(){return Math.max(this.#t.lastQueryCompletionTime,this.#t.lastTurnStopTime,this.#i)}}var LMe=\"tengu_amber_tally\",lkt=\"tengu_drifting_nova\",dkt=\"tengu_stateful_mitten\";function FMe(){return k(lkt,!1)===!0}var ckt=5,BMe=1500;var HMe=f(()=>u({minPercent:v().min(1).optional(),fiveHourCredits:fe(o(),v().positive()),creditsPerMillionTokens:fe(o(),v().positive()),newConversationPointer:M().optional(),servedTier:M().opt",
    "status": "investigated",

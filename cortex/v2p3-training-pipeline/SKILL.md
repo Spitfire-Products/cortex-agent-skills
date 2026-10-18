@@ -794,3 +794,11 @@ Full-battery bake-off of 4 checkpoints (durable queue, eval-only mode, all compl
 - Ops notes: one zombie-Space incident mid-queue (RUNNING + queue-thread dead 2.5h, no log, restarts
   frozen — restart_space resumed losslessly); MAX_MINUTES 150 capped s1300's first attempt (realheld
   2/16, general 0/0) — 300 completed it; queue survived the operator 402 top-up + 5 restarts total.
+
+
+## DELTA 2026-10-18 — runtime-invariance (swap) diagnostic is on the graduation checklist
+Source: @Sauers_ thread (x.com/sauers_/status/2111696312026677658; `research/x-thread-sauers-2111696312026677658.txt`): last-two-layer SFT
+teaches a model to detect activation probes / Trainer-vs-vLLM from fp-ordering fingerprints alone. Our apprentices are last-layers-SFT'd with
+Lens D / J-lens hooks present — the same recipe. Procedure + pass rule: `V2P4_INTERN_SPEC.md §8.1`. Rules: gates run in the SERVING runtime;
+probe topology identical across graded/ungraded runs (buffer-write probe preferred); spec-decode acceptance measured under the engine's batched
+verify, not eager one-token decode. A FAIL is fixed by retraining the last layers across randomized runtimes/kernel configs.
