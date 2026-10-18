@@ -291,27 +291,5 @@
       "path": ".cache/pkg/**, .bench-hosting/**, .claude/worktrees/**, **/.cortex/builtin/**, *-extracted/**",
       "why": "caches, worktree copies, mirrors"
     }
-  ],
-  "redact": [
-    {
-      "from": "/home/runner/workspace",
-      "to": "$WORKSPACE"
-    },
-    {
-      "from": "/home/runner/",
-      "to": "$HOME/"
-    },
-    {
-      "from": "tinkersnot/",
-      "to": "<hf-org>/"
-    },
-    {
-      "from": "tinkersnot",
-      "to": "<hf-org>"
-    },
-    {
-      "from": "shaneb_mr2@yahoo.com",
-      "to": "<owner-email>"
-    }
   ]
 }
