@@ -1,0 +1,317 @@
+{
+  "repo": "https://github.com/Spitfire-Products/cortex-agent-skills.git",
+  "categories": {
+    "general": "Agent skills that stand on their own: research discipline, session/memory hygiene, team orchestration, cloud compute, vendor references.",
+    "cortex": "Skills specific to the nexus-cortex harness (the npm `nexus-cortex` product), its benches and its training arc."
+  },
+  "skills": [
+    {
+      "name": "grounded-research",
+      "src": ".claude/skills/grounded-research",
+      "category": "general"
+    },
+    {
+      "name": "resume-session",
+      "src": ".claude/skills/resume-session",
+      "category": "general"
+    },
+    {
+      "name": "pm-wake-loop",
+      "src": ".claude/skills/pm-wake-loop",
+      "category": "general"
+    },
+    {
+      "name": "canon-store",
+      "src": ".claude/skills/canon-store",
+      "category": "general"
+    },
+    {
+      "name": "claude-code-variables",
+      "src": ".claude/skills/claude-code-variables",
+      "category": "general"
+    },
+    {
+      "name": "claude-code-experiments",
+      "src": ".claude/skills/claude-code-experiments",
+      "category": "general"
+    },
+    {
+      "name": "scope",
+      "src": ".claude/skills/scope",
+      "category": "general"
+    },
+    {
+      "name": "team-plan",
+      "src": ".claude/skills/team-plan",
+      "category": "general"
+    },
+    {
+      "name": "assemble-agents",
+      "src": ".claude/skills/assemble-agents",
+      "category": "general"
+    },
+    {
+      "name": "assemble-plugins",
+      "src": ".claude/skills/assemble-plugins",
+      "category": "general"
+    },
+    {
+      "name": "assemble-skills",
+      "src": ".claude/skills/assemble-skills",
+      "category": "general"
+    },
+    {
+      "name": "train",
+      "src": ".claude/skills/train",
+      "category": "general"
+    },
+    {
+      "name": "execute",
+      "src": ".claude/skills/execute",
+      "category": "general"
+    },
+    {
+      "name": "huggingface-spaces",
+      "src": ".claude/skills/huggingface-spaces",
+      "category": "general"
+    },
+    {
+      "name": "spot-gpu-compute",
+      "src": ".claude/skills/spot-gpu-compute",
+      "category": "general"
+    },
+    {
+      "name": "vast-compute",
+      "src": ".claude/skills/vast-compute",
+      "category": "general"
+    },
+    {
+      "name": "vastai",
+      "src": ".agents/skills/vastai",
+      "category": "general"
+    },
+    {
+      "name": "spacetimedb-cli",
+      "src": ".agents/skills/spacetimedb-cli",
+      "category": "general"
+    },
+    {
+      "name": "spacetimedb-concepts",
+      "src": ".agents/skills/spacetimedb-concepts",
+      "category": "general"
+    },
+    {
+      "name": "spacetimedb-csharp",
+      "src": ".agents/skills/spacetimedb-csharp",
+      "category": "general"
+    },
+    {
+      "name": "spacetimedb-rust",
+      "src": ".agents/skills/spacetimedb-rust",
+      "category": "general"
+    },
+    {
+      "name": "spacetimedb-typescript",
+      "src": ".agents/skills/spacetimedb-typescript",
+      "category": "general"
+    },
+    {
+      "name": "pdf-documents",
+      "src": "omniclaude-v4/.cortex/skills/pdf-documents",
+      "category": "general"
+    },
+    {
+      "name": "resume-analyst",
+      "src": "omniclaude-v4/.cortex/skills/resume-analyst",
+      "category": "general"
+    },
+    {
+      "name": "best-of-n",
+      "src": "omniclaude-v4/.cortex/skills/best-of-n",
+      "category": "general"
+    },
+    {
+      "name": "cortex",
+      "src": ".agents/skills/nexus-cortex-harness",
+      "category": "cortex",
+      "aliases": [
+        "nexus-cortex-harness"
+      ]
+    },
+    {
+      "name": "cortex-shipped",
+      "src": "omniclaude-v4/.cortex/skills/cortex",
+      "category": "cortex",
+      "note": "the sanitized variant that ships inside the npm package"
+    },
+    {
+      "name": "cortex-bench",
+      "src": ".agents/skills/cortex-bench",
+      "category": "cortex"
+    },
+    {
+      "name": "cortex-tool-development",
+      "src": ".claude/skills/cortex-tool-development",
+      "category": "cortex"
+    },
+    {
+      "name": "cortex-subagent",
+      "src": "omniclaude-v4/.cortex/skills/cortex-subagent",
+      "category": "cortex"
+    },
+    {
+      "name": "herdr",
+      "src": "omniclaude-v4/.cortex/skills/herdr",
+      "category": "cortex"
+    },
+    {
+      "name": "verify-work",
+      "src": "omniclaude-v4/.cortex/skills/verify-work",
+      "category": "cortex"
+    },
+    {
+      "name": "docx",
+      "src": "omniclaude-v4/.cortex/skills/docx",
+      "category": "cortex"
+    },
+    {
+      "name": "pptx",
+      "src": "omniclaude-v4/.cortex/skills/pptx",
+      "category": "cortex"
+    },
+    {
+      "name": "xlsx",
+      "src": "omniclaude-v4/.cortex/skills/xlsx",
+      "category": "cortex"
+    },
+    {
+      "name": "autoresearch",
+      "src": ".agents/skills/autoresearch",
+      "category": "cortex"
+    },
+    {
+      "name": "harbor-bench",
+      "src": ".claude/skills/harbor-bench",
+      "category": "cortex"
+    },
+    {
+      "name": "stdb-bench",
+      "src": ".claude/skills/stdb-bench",
+      "category": "cortex"
+    },
+    {
+      "name": "candidate-model-onboarding",
+      "src": ".claude/skills/candidate-model-onboarding",
+      "category": "cortex"
+    },
+    {
+      "name": "v2p3-training-pipeline",
+      "src": ".claude/skills/v2p3-training-pipeline",
+      "category": "cortex"
+    },
+    {
+      "name": "grok-build-bench",
+      "src": ".claude/skills/grok-build-bench",
+      "category": "cortex"
+    },
+    {
+      "name": "jev",
+      "src": ".claude/skills/jev",
+      "category": "cortex"
+    },
+    {
+      "name": "nexus-sense",
+      "src": "nexus-terminal/.agents/skills/nexus-sense",
+      "category": "cortex",
+      "hold": "Nexus Terminal product internals (proprietary)"
+    },
+    {
+      "name": "nexus-terminal-cortex",
+      "src": "nexus-terminal/.agents/skills/nexus-terminal-cortex",
+      "category": "cortex",
+      "hold": "Nexus Terminal product internals (proprietary)"
+    },
+    {
+      "name": "browser-cortex-bench",
+      "src": "nexus-terminal/.agents/skills/browser-cortex-bench",
+      "category": "cortex",
+      "hold": "Nexus Terminal product internals (proprietary)"
+    },
+    {
+      "name": "hosted-cortex-driving",
+      "src": "nexus-terminal/.agents/skills/hosted-cortex-driving",
+      "category": "cortex",
+      "hold": "documents admin routes of the hosted service"
+    },
+    {
+      "name": "npc-swarm",
+      "src": ".claude/skills/npc-swarm",
+      "category": "cortex",
+      "hold": "Nexus Terminal product internals (proprietary)"
+    },
+    {
+      "name": "npc-swarm-provisioning",
+      "src": "nexus-terminal/skills/npc-swarm-provisioning",
+      "category": "cortex",
+      "hold": "Nexus Terminal product internals (proprietary)"
+    },
+    {
+      "name": "nexus-resource-catalog",
+      "src": ".agents/skills/nexus-resource-catalog",
+      "category": "general",
+      "hold": "workspace-specific index of private resources"
+    }
+  ],
+  "excluded_sources": [
+    {
+      "path": ".grok/skills/{docx,pptx,xlsx}",
+      "why": "Anthropic document skills, proprietary license (LICENSE.txt) \u2014 not ours to republish"
+    },
+    {
+      "path": ".grok/skills/{check,help,create-skill}",
+      "why": "grok-build's own skills (xAI)"
+    },
+    {
+      "path": ".grok/bundled/*",
+      "why": "grok-build bundled skills (xAI)"
+    },
+    {
+      "path": ".local/secondary_skills/*",
+      "why": "Replit-provided sample skills"
+    },
+    {
+      "path": ".claude/plugins/**",
+      "why": "plugin marketplaces (third-party)"
+    },
+    {
+      "path": "aidenybai/**",
+      "why": "vendored upstream repos"
+    },
+    {
+      "path": ".cache/pkg/**, .bench-hosting/**, .claude/worktrees/**, **/.cortex/builtin/**, *-extracted/**",
+      "why": "caches, worktree copies, mirrors"
+    }
+  ],
+  "redact": [
+    {
+      "from": "/home/runner/workspace",
+      "to": "$WORKSPACE"
+    },
+    {
+      "from": "/home/runner/",
+      "to": "$HOME/"
+    },
+    {
+      "from": "tinkersnot/",
+      "to": "<hf-org>/"
+    },
+    {
+      "from": "tinkersnot",
+      "to": "<hf-org>"
+    },
+    {
+      "from": "shaneb_mr2@yahoo.com",
+      "to": "<owner-email>"
+    }
+  ]
+}

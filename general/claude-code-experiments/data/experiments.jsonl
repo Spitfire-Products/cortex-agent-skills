@@ -1,0 +1,35 @@
+{"event": "experiment_started", "experimentId": "tengu_flint_harbor", "features": {"tengu_flint_harbor": false}, "source": "backup:.claude.json.backup.1791837543001", "ts": "2026-10-12T21:11:24Z", "variationId": 0, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "precomputed-compaction-v7", "features": {"tengu_amber_moleskin": {"1000000": {"repl": 0.06, "sdk": 0.05}, "200000": {"repl": 0.15, "sdk": 0.15}, "default": {"repl": 0.15, "sdk": 0.15}}, "tengu_sepia_moth": true}, "source": "backup:.claude.json.backup.1791837543001", "ts": "2026-10-12T21:11:24Z", "variationId": 1, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "tengu_mcp_subagent_prompt-public", "features": {"tengu_mcp_subagent_prompt": false}, "source": "backup:.claude.json.backup.1791837543001", "ts": "2026-10-12T21:11:24Z", "variationId": 0, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "cc-grace-launch-1", "features": {"tengu_lantern_spool": false}, "source": "backup:.claude.json.backup.1791837543001", "ts": "2026-10-12T21:11:24Z", "variationId": 0, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "tengu_read_dedup_killswitch", "features": {"tengu_read_dedup_killswitch": true}, "source": "backup:.claude.json.backup.1791837543001", "ts": "2026-10-12T21:11:24Z", "variationId": 1, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "ultrareview_cli_nudges", "features": {"tengu_ultrareview_awareness": {"post_commit": true, "prose_pointer": true, "slash_menu": true, "startup_tip": true}}, "source": "backup:.claude.json.backup.1791837543001", "ts": "2026-10-12T21:11:24Z", "variationId": 1, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "cai_giggly_dream", "features": {"tengu_swift_lynx": {"claimLinkIncludesOrganization": true, "desktopPath": "/claude-code-desktop/claim-credit", "endpoint": "/v1/code/promo/cloud_credit", "ide": {"buttonLabel": "Get started", "text": "While you wait, start a new cloud session with a $250 credit"}, "limitWall": {"claimPageLine": "Get started with your $250 cloud session credit", "label": "While you wait, start a new cloud session with a $250 credit", "noticeLine": "While you wait, start a new cloud session with a $250 credit"}, "startup": {"buttonLabel": "Get started", "claimPageLine": "Get started with your $250 cloud session credit", "text": "You've been granted a $250 bonus credit for cloud sessions, on top of your plan limits"}, "version": 2, "webPath": "/code/claim-credit"}}, "source": "backup:.claude.json.backup.1791837543001", "ts": "2026-10-12T21:11:24Z", "variationId": 1, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "tengu_plank_river_frost", "features": {"tengu_plank_river_frost": "user_intent"}, "source": "backup:.claude.json.backup.1791837543001", "ts": "2026-10-12T21:11:24Z", "variationId": 0, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "tengu_amber_prism", "features": {"tengu_amber_prism": true}, "source": "backup:.claude.json.backup.1791837543001", "ts": "2026-10-12T21:11:24Z", "variationId": 1, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "tengu_quirky_kazoo_trigger_note_experiment", "features": {"tengu_quirky_kazoo": []}, "source": "live", "ts": "2026-10-13T16:45:16Z", "variationId": 0, "version": "2.1.296"}
+{"event": "experiment_started", "experimentId": "tengu_curried_trinket_external_experiment_v2", "features": {"tengu_curried_trinket": "short"}, "source": "live", "ts": "2026-10-14T05:56:14Z", "variationId": 1, "version": "2.1.296"}
+{"event": "experiment_ended", "experimentId": "tengu_quirky_kazoo_trigger_note_experiment", "last_variationId": 0, "ts": "2026-10-15T00:34:17Z", "version": "2.1.300"}
+{"event": "experiment_started", "experimentId": "tengu_clever_orbit_experiment", "features": {"tengu_clever_orbit": false}, "source": "live", "ts": "2026-10-15T21:20:13Z", "variationId": 0, "version": "2.1.301"}
+{"event": "experiment_ended", "experimentId": "cai_giggly_dream", "last_variationId": 1, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "cc-grace-launch-1", "last_variationId": 0, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "precomputed-compaction-v7", "last_variationId": 1, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "tengu_amber_prism", "last_variationId": 1, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "tengu_clever_orbit_experiment", "last_variationId": 0, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "tengu_curried_trinket_external_experiment_v2", "last_variationId": 1, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "tengu_flint_harbor", "last_variationId": 0, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "tengu_mcp_subagent_prompt-public", "last_variationId": 0, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "tengu_plank_river_frost", "last_variationId": 0, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "tengu_read_dedup_killswitch", "last_variationId": 1, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_ended", "experimentId": "ultrareview_cli_nudges", "last_variationId": 1, "ts": "2026-10-18T02:37:14Z", "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "precomputed-compaction-v7", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "tengu_amber_prism", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "tengu_clever_orbit_experiment", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "tengu_flint_harbor", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "cc-grace-launch-1", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "tengu_mcp_subagent_prompt-public", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "tengu_plank_river_frost", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "tengu_read_dedup_killswitch", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
+{"event": "experiment_started", "experimentId": "tengu_spicy_pearl_experiment", "features": {"tengu_spicy_pearl": true}, "source": "live", "ts": "2026-10-18T02:38:18Z", "variationId": 1, "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "cai_giggly_dream", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
+{"event": "experiment_resumed", "experimentId": "ultrareview_cli_nudges", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
