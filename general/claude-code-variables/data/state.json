@@ -1,6 +1,6 @@
 {
  "binary_sha256": "375988f457756524234695cf2d8f64ace99c5f68682e47ea24862a843c191450",
- "cache_at": 1792418341540,
+ "cache_at": 1792440092482,
  "items": {
   "env:ANTHROPIC_API_HOST": {
    "category": "networking-api",
@@ -45955,7 +45955,10 @@
    "last_seen_at": "2026-10-18T23:48:23Z",
    "last_seen_version": "2.1.303",
    "name": "tengu_jaunty_plum",
-   "served": null,
+   "served": {
+    "source": "growthbook",
+    "value": {}
+   },
    "sites": 1,
    "snippet": "nd the output space to write an output. If Claude plans well then it should not need to draft its output multiple times (and Claude is pretty good at planning, so this should not be an issue).`;function hIn(e,n,r){let s=k(\"tengu_jaunty_plum\",{}),h=Hn(s)?qYe(s,n)?.[1]:void 0;if(!Hn(h)||GQ(h,r)!==!0||!Q5(n))return[];let y=oht(n),S=mQr.replace(\"{cap_tokens}\",(Math.floor(y/1000)*1000||y).toLocaleString(\"en-US\"));if(e.flatMap((H)=>H.type===\"attachment\"&&H.attachment.type===\"output_limit_note\"&&gme(H.attachment.model,n)?",
    "status": "investigated",
@@ -45977,7 +45980,7 @@
    "name": "tengu_jaunty_umbrella",
    "served": {
     "source": "growthbook",
-    "value": false
+    "value": true
    },
    "sites": 1,
    "snippet": "ode classifier\"}}var eMo=\"tengu_buzzing_pelican\";function yG(e,n){return e.mcpInfo!==void 0&&Blo(Xg(e,n),n)}function Blo(e,n){return a.CLAUDE_CODE_REMOTE&&Us(e,n.servedCall===!0)&&CE(n.mode)===\"arbiter\"&&k(eMo,!1)}var nMo=\"tengu_jaunty_umbrella\";function bLn(e){return e===pr||e===Xu}function UI(e,n){return e.mcpInfo===void 0&&bLn(e.name)&&sXt(Xg(e,n),n)}function sXt(e,n){return oP()&&Us(e,n.servedCall===!0)&&CE(n.mode)===\"arbiter\"&&k(nMo,!1)}function Ffe(e,n){return e.name===Xu&&UI(e,n)}var oMo=\"tengu_dapper_truffl",
@@ -49147,7 +49150,7 @@
    "name": "tengu_memoized_owl",
    "served": {
     "source": "growthbook",
-    "value": false
+    "value": true
    },
    "sites": 1,
    "snippet": "s:r,tools:s}}){let[d,...b]=e.content??[];if(!(d?.type===\"text\"&&b.length===0&&lTn(d.text)&&o===void 0&&fr()&&GS()&&(i===\"web_claude_ai\"||i===\"desktop_app\")&&Sht(t)&&!Ei().bridgeBinding?.context.getPersistedDeviceId?.()&&k(\"tengu_memoized_owl\",!1)&&!(r?.()??s).some((a)=>LA(a.name)&&!a.name.startsWith(pM))&&await hes()))return e;return g(\"chrome_setup_card_answer\"),{content:[{type:\"text\",text:re}]}}var X=200;function D(e,o){let t=Ei().resolvedHostByToolUseId;if(t.size>=X)t.clear();t.set(e,o)}function ne(e,o){let t=Ei",
@@ -50416,7 +50419,12 @@
    "last_seen_at": "2026-10-18T23:48:23Z",
    "last_seen_version": "2.1.303",
    "name": "tengu_org_config_required",
-   "served": null,
+   "served": {
+    "source": "growthbook",
+    "value": {
+     "enabled": false
+    }
+   },
    "sites": 1,
    "snippet": "igration failed to persist; the set re-runs next startup.\",{level:\"error\"});return}await Ae((n)=>n.migrationVersion===De?n:{...n,migrationVersion:De},e)}import{createHash as Ho}from\"crypto\";var Wt=[\"team\",\"enterprise\"],tt=\"tengu_org_config_required\",x={enabled:!1,plans:[],percent:0,graceTtlHours:96,budgetMs:6000,exemptReasons:[]};function ot(e){switch(e){case\"ok\":case\"none_configured\":case\"not_required\":return\"fetched\";case\"refused_credential\":case\"refused_not_entitled\":case\"refused_other\":return\"refused\";case\"bloc",
    "status": "investigated",
@@ -52006,10 +52014,7 @@
    "last_seen_at": "2026-10-12T23:39:05Z",
    "last_seen_version": "2.1.296",
    "name": "tengu_quirky_kazoo",
-   "served": {
-    "source": "growthbook",
-    "value": []
-   },
+   "served": null,
    "sites": 1,
    "snippet": "{let r=Nl()?.non_deferrable_builtins;if(Array.isArray(r)){for(let o of r)if(typeof o===\"string\")e.add(o)}}catch{}if(e.size===0)return p;return[...e]}function zfs(){return Gr(\"tengu_shiny_stardust\",!1)}function m(){let e=Gr(\"tengu_quirky_kazoo\",p);return typeof e===\"object\"&&e!==null?e:{}}function Gfs(){let e=m();return Array.isArray(e)?e:Object.keys(e)}function Vfs(e){let r=m(),o=Array.isArray(r)?void 0:r[e];return typeof o===\"string\"?sA(o.replace(/\\s+/g,\" \").trim())||void 0:void 0}var A=\"tengu_drifting_heron\";func",
    "status": "deprecated",
@@ -54242,7 +54247,12 @@
    "last_seen_at": "2026-10-18T23:48:23Z",
    "last_seen_version": "2.1.303",
    "name": "tengu_snug_storm",
-   "served": null,
+   "served": {
+    "source": "growthbook",
+    "value": {
+     "text": "Your Max plan includes $200 a month in API credits to power your apps and agents. Claim them at https://clau.de/api-credits"
+    }
+   },
    "sites": 1,
    "snippet": ".text??ib;let z;if(_[12]!==L||_[13]!==G)z=L(G).split(/(`[^`]+`)/).map(Zk),_[12]=L,_[13]=G,_[14]=z;else z=_[14];let K;if(_[15]!==W||_[16]!==z)K=r(n,{children:[W,\" \",z]}),_[15]=W,_[16]=z,_[17]=K;else K=_[17];return K}var e_=\"tengu_snug_storm\",t_=\"tengu_radiant_fox\",Tn=\"api-credit-link\",$d=3,zd=86400000,ub=7*zd,db=10,o_=f(()=>u({text:o().trim().min(1).max(240).regex(/^[^\\p{Cc}\\p{Cf}]*$/u)})),r_=f(()=>u({status:o()})),s_=f(()=>u({eligibleSince:v().nullable(),nextAskAt:v(),asks:v()}));function jr(){let m=k(e_,null);if(m",
    "status": "investigated",

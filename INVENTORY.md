@@ -17,7 +17,7 @@ Every skill directory found in the workspace and what happened to it.
 | cortex | `grok-build-bench` | `.claude/skills/grok-build-bench` | 16 KB |
 | cortex | `harbor-bench` | `.claude/skills/harbor-bench` | 268 KB |
 | cortex | `herdr` | `omniclaude-v4/.cortex/skills/herdr` | 16 KB |
-| cortex | `jev` | `.claude/skills/jev` | 24 KB |
+| cortex | `jev` | `.claude/skills/jev` | 25 KB |
 | cortex | `pptx` | `omniclaude-v4/.cortex/skills/pptx` | 4 KB |
 | cortex | `stdb-bench` | `.claude/skills/stdb-bench` | 42 KB |
 | cortex | `v2p3-training-pipeline` | `.claude/skills/v2p3-training-pipeline` | 76 KB |
@@ -29,7 +29,7 @@ Every skill directory found in the workspace and what happened to it.
 | general | `best-of-n` | `omniclaude-v4/.cortex/skills/best-of-n` | 3 KB |
 | general | `canon-store` | `.claude/skills/canon-store` | 17 KB |
 | general | `claude-code-experiments` | `.claude/skills/claude-code-experiments` | 80 KB |
-| general | `claude-code-variables` | `.claude/skills/claude-code-variables` | 5228 KB |
+| general | `claude-code-variables` | `.claude/skills/claude-code-variables` | 5230 KB |
 | general | `execute` | `.claude/skills/execute` | 9 KB |
 | general | `grounded-research` | `.claude/skills/grounded-research` | 3 KB |
 | general | `huggingface-spaces` | `.claude/skills/huggingface-spaces` | 91 KB |

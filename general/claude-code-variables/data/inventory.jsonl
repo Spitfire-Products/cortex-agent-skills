@@ -5243,3 +5243,9 @@
 {"event": "default_changed", "from": "{allowlist:[...W6e]}", "kind": "flag", "name": "tengu_prompt_cache_1h_config", "to": "{allowlist:[...D3e]}", "ts": "2026-10-18T23:48:23Z", "version": "2.1.303"}
 {"added": 0, "counts": {"env": 964, "event": 768, "flag": 943, "setting": 109}, "deprecated": 0, "event": "scan", "restored": 0, "ts": "2026-10-18T23:48:23Z", "version": "2.1.303"}
 {"event": "value_changed", "from": {"source": "growthbook", "value": false}, "kind": "flag", "name": "tengu_pewter_brook", "to": {"source": "growthbook", "value": true}, "ts": "2026-10-19T13:59:01Z", "version": "2.1.303"}
+{"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_jaunty_plum", "to": {"source": "growthbook", "value": {}}, "ts": "2026-10-19T21:39:00Z", "version": "2.1.303"}
+{"event": "value_changed", "from": {"source": "growthbook", "value": false}, "kind": "flag", "name": "tengu_jaunty_umbrella", "to": {"source": "growthbook", "value": true}, "ts": "2026-10-19T21:39:00Z", "version": "2.1.303"}
+{"event": "value_changed", "from": {"source": "growthbook", "value": false}, "kind": "flag", "name": "tengu_memoized_owl", "to": {"source": "growthbook", "value": true}, "ts": "2026-10-19T21:39:00Z", "version": "2.1.303"}
+{"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_org_config_required", "to": {"source": "growthbook", "value": {"enabled": false}}, "ts": "2026-10-19T21:39:00Z", "version": "2.1.303"}
+{"event": "value_changed", "from": {"source": "growthbook", "value": []}, "kind": "flag", "name": "tengu_quirky_kazoo", "to": null, "ts": "2026-10-19T21:39:00Z", "version": "2.1.303"}
+{"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_snug_storm", "to": {"source": "growthbook", "value": {"text": "Your Max plan includes $200 a month in API credits to power your apps and agents. Claim them at https://clau.de/api-credits"}}, "ts": "2026-10-19T21:39:00Z", "version": "2.1.303"}

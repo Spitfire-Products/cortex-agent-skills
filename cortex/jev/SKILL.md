@@ -184,6 +184,7 @@ path binding) are hard checks, not scores. Runner `.bench/jev/signals-replay.py`
 ## DELTA 2026-10-19d — leaves + bisection + cross-model confirmation: NEGATIVE on the 8-call states (read `leaves-replay-2026-10-19.md`)
 Jev min-over-lines 0.520 / mean 0.621; Mercury 0.534 / 0.602; cross-confirmation agreement 0.59 as a pass signal — all far below the flat
 question (0.746 / 0.727). CAUSE: the compact states keep only the last 8 of ~50 tool calls, so 65 % of PASSING sessions have a requirement
-line with no evidencing call and the weakest-line aggregate is 0 for passes too. The sheep-demo pattern (narrow the state per question,
-confirm independently) is UNTESTED here, not refuted: a fair run needs states rebuilt with the full compact trajectory (+ the final message as
-its own slice), ≈$2–5. Runner `.bench/jev/leaves-replay.py` (resumable; line cache lines-66.json).
+line with no evidencing call and the weakest-line aggregate is 0 for passes too. RETESTED on full-trajectory states (median 128 calls, two-level typed locate) the same afternoon: WORSE (Jev min 0.504, Mercury 0.481; none-picks
+ROSE 1.47→2.66; coverage identical for pass/fail 0.57 vs 0.55). The §1 'missing evidence' reading was wrong — decomposing into typed
+single-slice leaves destroys the gestalt the flat question reads. CLOSED for typed-choice localization; a locator must be the harness or a
+generative pre-pass (vendor rule: degrades with indirection + irrelevant state). Note §2; records `leaves-full-*.jsonl` + `eval-262-full.jsonl` in HF. Runner `.bench/jev/leaves-replay.py` (resumable; line cache lines-66.json).
