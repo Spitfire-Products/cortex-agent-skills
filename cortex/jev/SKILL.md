@@ -170,7 +170,7 @@ Jev: P(none) AUC 0.722 (done-q 0.746), ECE 0.265 (done-q 0.097), 18 confident-wr
 `none` for most sessions (148 / 184 of 256; true 55) and both sit AT the majority-class baseline on the 6-way label (acc 0.31, macro-F1 0.18):
 verifier_mismatch / unverified_claim → `none` is the dominant confusion — the own-check-tested-the-wrong-thing failure is invisible without the
 hidden tests. RULE: the failure-mode taxonomy is a TRAINING TARGET (grader labels, `failure-mode-labels-256.json`), not a zero-shot hosted
-question; keep the harness gate on the done noul (Jev) until a trained verifier clears the design's gates. `CORTEX_DECISION_QUESTION` stays unbuilt.
+question; keep the harness gate on the done noul (Jev) until a trained verifier clears the design's gates. `CORTEX_DECISION_QUESTION` stays unbuilt. Self-hosted confirmation 10-19 (note §3): amos-large 0.759 / medium 0.704 / small 0.666 / mini 0.606 / d1-3B 0.665 none-AUC, ALL at or below the majority-class label baseline (acc 0.26–0.32) with the same none-confusion — closed across hosted and open models.
 Runner: `.bench/jev/fm-bakeoff.py <jev|mercury-decide>` (records fm-*.jsonl in clm-p2-2026-10-01 + the HF bake-off dataset).
 
 ## DELTA 2026-10-19c — the PER-TASK PRIOR is the biggest lift measured (read `omniclaude-v4/.cortex/research/signals-replay-2026-10-19.md`)
