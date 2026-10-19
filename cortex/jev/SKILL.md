@@ -157,3 +157,10 @@ the right protocol; it exposed the overfit a random split would have hidden). Ty
 (0.774) zero-shot. Harness lessons banked in the plan's amendments 1–4: Amos probabilities depend on the FULL served question set in one case
 (render all three bake-off questions, read q1); eval at the served context (30K), train capped at 6K; five smoke attempts of box plumbing
 (driver/CUDA floors, uv timeout, HF download retries, streamed logs, final-push watchdog). ~$12 total on Vast boxes.
+
+## DELTA 2026-10-19 — Mercury Decide (Inception, hosted) on the 256 fixed states (read `omniclaude-v4/.cortex/research/bakeoff-mercury-decide-2026-10-19.md`)
+`POST https://api.inceptionlabs.ai/v1/decisions` = the Jev request/response shape (state + questions noul/choice/score → noul p / choice + probabilities +
+confidence); $0.02/M input, output unbilled; 0.6 s median; adapter `make_mercury` in `.bench/jev/bakeoff-driver.py`. RESULT: done AUC **0.727**
+(Δ vs Jev −0.019, CI [−0.079, +0.036] → parity, JEV-27B class), verified 0.685, **raw ECE 0.396 / 64 failing sessions at done ≥ 0.9 / next=finish
+194/256** (over-trusts the agent; Jev 0 confident-wrong) → Platt 5-fold ECE 0.025. Same lesson as Amos / own-Qwen: ranking ≈ Jev, calibration is
+Jev's edge. Usable as a no-GPU second opinion ONLY behind a fitted calibration; vendor JevBench claims do not transfer to agent-doneness.
