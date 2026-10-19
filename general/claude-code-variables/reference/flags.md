@@ -12,6 +12,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_agentview_inherit_mode_demote` | investigated | `!0` | — | Whether background/agent view sessions inherit permission mode, marking permissionModeInherited | med | 2.1.296→2.1.304 |
 | `tengu_amber_flint` | investigated | `!0` | true (growthbook) | Master gate for experimental agent teams feature | high | 2.1.296→2.1.304 |
 | `tengu_amber_kestrel` | investigated | `!1` | — | When true bypasses concurrent subagent limit check | high | 2.1.296→2.1.304 |
+| `tengu_amber_quillwort` | investigated | — | — | Gates the local Claude Test feature (runs .claude-test/specs against the local dev server in a browser, PASS/FAIL per spec); CLAUDE_INTERNAL_FC_OVERRIDES can force it | med | 2.1.304→2.1.304 |
 | `tengu_bg_attach_stall_ms` | investigated | `kn` | 5000 (growthbook) | Stall timeout in ms before background session attach is considered stalled | high | 2.1.296→2.1.304 |
 | `tengu_bg_attach_upgrade` | investigated | `!0` | — | Background attach upgrade behavior toggle (SHr) used by prewarm and low mem logic | med | 2.1.296→2.1.304 |
 | `tengu_bg_binary_takeover` | investigated | `!0` | — | Lets newer client binary take over older background daemon version | high | 2.1.296→2.1.304 |
@@ -46,6 +47,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_giggly_dragonfly` | investigated | `!0` | — | Affects session-drain/exit logic with inputClosed and maxBudgetUsd while background tasks run | low | 2.1.296→2.1.304 |
 | `tengu_hazel_trellis` | investigated | — | 3 (growthbook) | Maximum subagent spawn depth. It is overridden by the CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH env var or clientData, and must be an integer of at least 1. | high | 2.1.296→2.1.304 |
 | `tengu_hushed_kestrel` | investigated | `!0` | — | Agent handback pointer notice to recipient | med | 2.1.296→2.1.304 |
+| `tengu_hushed_plover` | investigated | `!0` | — | Subagent permission prompts: if a prompt is already up this turn within promptTimeoutMs, a second one waits (quiet_spell) instead of stacking; default true | med | 2.1.304→2.1.304 |
 | `tengu_jade_compass` | investigated | `!0` | — | Workflows feature related toggle | low | 2.1.296→2.1.304 |
 | `tengu_jaunty_ember` | investigated | `!1` | — | Agent intent mid-turn message queue check for main agent | low | 2.1.296→2.1.304 |
 | `tengu_joyful_globe` | investigated | — | true (growthbook) | Gate (together with of()) in hr(), near goal check-in/teammate idle stop-hook code; likely enables a goal/teammate stop-hook feature, but exact effect not shown. | low | 2.1.296→2.1.304 |
@@ -69,7 +71,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_quiet_harbor` | investigated | `!1` | false (growthbook) | Daemon cold start default: "ask" instead of "transient" | high | 2.1.296→2.1.304 |
 | `tengu_quiet_heron` | investigated | `!1` | true (growthbook) | Gates thread feature when inherited breakerTripped is false | low | 2.1.296→2.1.304 |
 | `tengu_rename_full_session_fork` | investigated | `!1` | — | Generates session name via forked full session when preferFork | high | 2.1.296→2.1.304 |
-| `tengu_review_bughunter_config` | investigated | — | {"fleet_size": 5, "max_duration_minutes": 10, "agent_timeout_seconds": (growthbook) | Object config for the review/bughunter feature. Supplies cost_note, typical_cost_usd, duration_note, model, client_wait_minutes (30-55, default 45) and other review limits. | high | 2.1.296→2.1.304 |
+| `tengu_review_bughunter_config` | investigated | — | {"agent_timeout_seconds": 600, "cost_note": "$5-$25", "duration_note": (growthbook) | Object config for the review/bughunter feature. Supplies cost_note, typical_cost_usd, duration_note, model, client_wait_minutes (30-55, default 45) and other review limits. | high | 2.1.296→2.1.304 |
 | `tengu_rosy_donut` | investigated | `!0` | — | Unclear; near print-mode note about left-running programs | low | 2.1.296→2.1.304 |
 | `tengu_saffron_wren` | investigated | `!0` | true (growthbook) | Goal check-in interval; 0 disables check-ins | high | 2.1.296→2.1.304 |
 | `tengu_shimmering_firefly` | investigated | `!1` | — | Gate in projects thread classifier module (unclear) | low | 2.1.296→2.1.304 |
@@ -84,14 +86,16 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_sorrel_trellis_weir` | investigated | — | — | Numeric max auto-turns for artifact-comments auto-react: a positive value is clamped between Ts (1) and vs (600), otherwise the default hs (60) applies. | med | 2.1.296→2.1.304 |
 | `tengu_starry_squid` | investigated | `!0` | — | Forwards nested subagent tool calls over SDK | med | 2.1.296→2.1.304 |
 | `tengu_steady_panda` | investigated | `RD` | true (growthbook) | Reply/turn handling on initialize (rescan, isReaderOwed) | low | 2.1.296→2.1.304 |
+| `tengu_steady_puppy` | investigated | `!1` | — | Orphaned-subagent restore: seeds a sidecar so orphaned agent results can be offered and kept after a restart; default false, off in remote | med | 2.1.304→2.1.304 |
 | `tengu_swirling_meteor` | investigated | `!0` | — | Coalesces task notifications in queue | high | 2.1.296→2.1.304 |
 | `tengu_tidy_fern` | investigated | `!0` | — | Adds extra data to messages sent between peers/agents (uds) | low | 2.1.296→2.1.304 |
 | `tengu_tussock_oriole` | investigated | `!1` | false (growthbook) | Team-shared artifacts from teammate authors in project settings | med | 2.1.296→2.1.304 |
 | `tengu_ultraplan_config` | investigated | `null` | {"enabled": false} (growthbook) | Ultraplan (web plan) enabled config object | high | 2.1.296→2.1.304 |
 | `tengu_ultraplan_prompt_identifier` | investigated | `yon` | "visual_plan" (growthbook) | Selects ultraplan prompt variant (simple_plan default) | high | 2.1.296→2.1.304 |
 | `tengu_ultraplan_timeout_seconds` | investigated | `5400` | 5400 (growthbook) | Ultraplan wait timeout in seconds | high | 2.1.296→2.1.304 |
-| `tengu_ultrareview_awareness` | investigated | — | {"slash_menu": true, "prose_pointer": true, "post_commit": true, "star (experiment: ultrareview_cli_nudges) | ultrareview nudges config (slash_menu, prose_pointer, post_commit, startup_tip); experiment ultrareview_cli_nudges treatment | high | 2.1.296→2.1.304 |
+| `tengu_ultrareview_awareness` | investigated | — | {"post_commit": true, "prose_pointer": true, "slash_menu": true, "star (experiment: ultrareview_cli_nudges) | ultrareview nudges config (slash_menu, prose_pointer, post_commit, startup_tip); experiment ultrareview_cli_nudges treatment | high | 2.1.296→2.1.304 |
 | `tengu_ultrareview_post_enabled` | investigated | `!0` | — | Allow posting ultrareview (cloud review) results | med | 2.1.296→2.1.304 |
+| `tengu_velvet_harrow` | investigated | — | — | Second gate of local Claude Test, paired with tengu_amber_quillwort; outcome states needs_input, blocked_before_specs, specs_blocked | med | 2.1.304→2.1.304 |
 | `tengu_whimsical_elephant` | investigated | — | true (growthbook) | Gate TO() (env CLAUDE_CODE_WHIMSICAL_ELEPHANT overrides): when on, FBn attaches a random reminderId to forwarded-turn, peer or coordinator messages. | med | 2.1.296→2.1.304 |
 | `tengu_wild_tome` | investigated | `!1` | true (growthbook) | Forked agent query with sticky betas and cache | low | 2.1.296→2.1.304 |
 | `tengu_wondrous_acorn` | investigated | `null` | {"enabled": true, "min_continues": 3} (growthbook) | Thread drop/recreate config with enabled and min_continues | med | 2.1.296→2.1.304 |
@@ -104,7 +108,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 |---|---|---|---|---|---|---|
 | `tengu_amber_creek` | investigated | `!1` | — | Downsell gate cached on state (downsellGateCached) | med | 2.1.296→2.1.304 |
 | `tengu_amber_lark` | investigated | `!1` | false (growthbook) | Appends extra dim usage line in usage/spend limit display | low | 2.1.296→2.1.304 |
-| `tengu_amber_tally` | investigated | — | {"minPercent": 5, "fiveHourCredits": {"default_claude_max_5x": 50000,  (growthbook) | cold-cache quota warning model: minPercent, fiveHourCredits per plan (Pro 10K, Max5x 50K, Max20x 200K, raven 12.5K/25K), creditsPerMillionTokens per model; warns when resuming would spend >=minPercent of the 5-hour window | high | 2.1.296→2.1.304 |
+| `tengu_amber_tally` | investigated | — | {"creditsPerMillionTokens": {"claude-fable-5": 8333, "claude-fable-5-1 (growthbook) | cold-cache quota warning model: minPercent, fiveHourCredits per plan (Pro 10K, Max5x 50K, Max20x 200K, raven 12.5K/25K), creditsPerMillionTokens per model; warns when resuming would spend >=minPercent of the 5-hour window | high | 2.1.296→2.1.304 |
 | `tengu_c4e_slash_upsell` | investigated | `!1` | true (growthbook) | Shows a slash command upsell for logged-out/no-key users | med | 2.1.296→2.1.304 |
 | `tengu_calm_seal` | investigated | `null` | ["Mythos"] (growthbook) | Allowlist of model FAMILIES (besides Fable, always included) that get Fable's premium usage-credit treatment: overage consent, 'buy more or switch models' limit messaging, excluded as free fallback, advisor bills-to-credits notice. Served [Mythos] = Mythos billed like Fable. | high | 2.1.296→2.1.304 |
 | `tengu_cedar_ember` | investigated | — | — | Flag defined next to the /limit-reset command text ('Use your reset now', 'Refills your limits'). Its exact gating of that feature is not shown. | low | 2.1.296→2.1.304 |
@@ -133,7 +137,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_linked_clover` | investigated | `!0` | — | Killswitch for auto-continue at usage limit | high | 2.1.296→2.1.304 |
 | `tengu_lively_beaver` | investigated | — | true (growthbook) | Reader-based gate hMt(), default false; when on, recognizes 'account on hold' error messages with a claude.ai/restricted appeal link. | med | 2.1.296→2.1.304 |
 | `tengu_marble_heron` | investigated | — | — | Object/boolean config for auto-continue at usage limit: enabled and autoArm fields; defaults to true when unset, string 'false'/'0' disables. | high | 2.1.296→2.1.304 |
-| `tengu_nifty_lemur` | investigated | — | {"enabled": true, "version": 1, "autoContinue": true, "label": "Reset  (growthbook) | /limit-reset command: once-a-week reset of the 5-hour session limit paid from the weekly limit; enabled, autoContinue, all UI copy served | high | 2.1.296→2.1.304 |
+| `tengu_nifty_lemur` | investigated | — | {"autoContinue": true, "enabled": true, "label": "Reset your session l (growthbook) | /limit-reset command: once-a-week reset of the 5-hour session limit paid from the weekly limit; enabled, autoContinue, all UI copy served | high | 2.1.296→2.1.304 |
 | `tengu_org_config_required` | investigated | — | {"enabled": false} (growthbook) | Org config fetch gate. Defaults to disabled, applies to team and enterprise plans, with a percent rollout, grace TTL and time budget. | med | 2.1.296→2.1.304 |
 | `tengu_pewter_summit` | investigated | — | true (growthbook) | unclear: alias NNt is declared just before rate-limit message telemetry (tengu_rate_limit_message_shown, limit footer offers). Its use is not visible. | low | 2.1.296→2.1.304 |
 | `tengu_quiet_marten` | investigated | — | — | unclear: alias hT is declared beside an OAuth refresh lockfile owner record (.oauth_refresh.lock.owner, pid, procStart). Its use is not visible. | low | 2.1.296→2.1.304 |
@@ -154,18 +158,19 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_smooth_forest` | investigated | — | true (growthbook) | Y() returns true when the flag is true (default false). Next to it, the allow_promo_offers policy and promoStartupStatusCache (eligible, claimed) handle promo offers. | med | 2.1.296→2.1.304 |
 | `tengu_smooth_harbor` | investigated | `!1` | — | Gates usage-limit/extra-usage handling (workflow waits out usage limit) | med | 2.1.296→2.1.304 |
 | `tengu_snug_storm` | investigated | — | {"text": "Your Max plan includes $200 a month in API credits to power  (growthbook) | Carries the api-credit-link tip texts (validated, max 240 chars); shown under tengu_radiant_fox gating. | med | 2.1.302→2.1.304 |
+| `tengu_starry_waterfall` | investigated | — | — | Usage-credits promotion wall: limited-time percent-off or extra-credit offers (/usage-credits); eligibility fetched and logged as _asked and _wall | high | 2.1.304→2.1.304 |
 | `tengu_still_heron` | investigated | `!0` | — | Denied-notice behavior when usage limit already hit (not on gateway) | med | 2.1.296→2.1.304 |
 | `tengu_streamed_thimble` | investigated | `!0` | — | Sibling login watch for account-entry changes | high | 2.1.296→2.1.304 |
-| `tengu_swift_lynx` | investigated | — | {"version": 2, "endpoint": "/v1/code/promo/cloud_credit", "webPath": " (experiment: cai_giggly_dream) | $250 cloud-session credit promo (experiment cai_giggly_dream, treatment): startup banner, limit-wall offer, IDE button, claim endpoint /v1/code/promo/cloud_credit | high | 2.1.296→2.1.304 |
+| `tengu_swift_lynx` | investigated | — | {"claimLinkIncludesOrganization": true, "desktopPath": "/claude-code-d (experiment: cai_giggly_dream) | $250 cloud-session credit promo (experiment cai_giggly_dream, treatment): startup banner, limit-wall offer, IDE button, claim endpoint /v1/code/promo/cloud_credit | high | 2.1.296→2.1.304 |
 | `tengu_teal_corbel_newel` | investigated | `!1` | false (growthbook) | Gate adjacent to API key / OAuth token file descriptor and unix socket auth remedies | low | 2.1.296→2.1.304 |
 | `tengu_tidy_lemon` | investigated | `null` | null (growthbook) | Config for one_step/confirm dialog flow (title, body, send, cancel) before browser action | low | 2.1.296→2.1.304 |
-| `tengu_toasty_breeze` | investigated | — | {"enabled": true, "version": 3, "label": "Continue now at lower priori (growthbook) | Object config for the /low-priority slow mode: enabled, version, label and notice copy. Tied to the anthropic-ratelimit-unified-slow-* headers and weekly allowance. | high | 2.1.296→2.1.304 |
+| `tengu_toasty_breeze` | investigated | — | {"allowanceNote": "{percent} allowance left", "budgetExhaustedCopy": " (growthbook) | Object config for the /low-priority slow mode: enabled, version, label and notice copy. Tied to the anthropic-ratelimit-unified-slow-* headers and weekly allowance. | high | 2.1.296→2.1.304 |
 | `tengu_twinkling_hoare` | investigated | `!1` | — | Credential issuance / timing gate near hazel_lantern renewal ms | low | 2.1.296→2.1.304 |
 | `tengu_usage_overage_included_models` | investigated | — | ["Fable", "Fable 5", "Fable 5.1"] (growthbook) | model display names covered by the overage-included 7-day limit (Fable, Fable 5, Fable 5.1) | high | 2.1.296→2.1.304 |
 | `tengu_vellum_anchor` | investigated | `!1` | false (growthbook) | Usage/spend limit messaging for channels | med | 2.1.296→2.1.304 |
 | `tengu_velvet_harbor_owl` | investigated | — | "off" (growthbook) | String variant (off/has_ce/no_ce) for an Enterprise upsell notice to admin, billing and owner roles. It is shown only a limited number of times. | high | 2.1.296→2.1.304 |
 | `tengu_velvet_heron` | investigated | `!0` | — | Auto mode classifier billing notice for non-pro/max/team plans | high | 2.1.296→2.1.304 |
-| `tengu_wise_bear_copy` | investigated | — | {"note_session": "Use your limit reset to reset it now: `clau.de/reset (growthbook) | note appended to limit messages pointing at clau.de/reset, keyed by limit type (session/weekly/model); only while the weekly reset is unused | high | 2.1.296→2.1.304 |
+| `tengu_wise_bear_copy` | investigated | — | {"note_model": "Use your limit reset to reset it now: `clau.de/reset`" (growthbook) | note appended to limit messages pointing at clau.de/reset, keyed by limit type (session/weekly/model); only while the weekly reset is unused | high | 2.1.296→2.1.304 |
 | `tengu_zany_book` | investigated | — | — | Constant beside OAuth refresh lock owner code (tengu_quiet_marten); read via registry. Purpose unclear. | low | 2.1.301→2.1.304 |
 
 ## bridge-remote-control
@@ -186,6 +191,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_bridge_host_profile` | investigated | `"off"` | "off" (growthbook) | Share host profile (OS, cuda version) with Remote Control; modes with off default | high | 2.1.296→2.1.304 |
 | `tengu_bridge_inbox_pointer_boundary` | investigated | `!0` | — | Session inbox unread pointer boundary for file_id wake messages | med | 2.1.296→2.1.304 |
 | `tengu_bridge_initialize_commands` | investigated | `!1` | — | Send initialize commands in REPL bridge | med | 2.1.296→2.1.304 |
+| `tengu_bridge_owner_check_attribution` | investigated | `!0` | — | Remote Control bridge: the owner check consults attribution (default true); sibling of bridge_resume_respects_local_owner and owner_pinned_end | med | 2.1.304→2.1.304 |
 | `tengu_bridge_owner_pinned_end` | investigated | `!0` | — | Owner-pinned session end behavior in bridge | low | 2.1.296→2.1.304 |
 | `tengu_bridge_partial_messages` | investigated | `!1` | true (growthbook) | Forward partial (streaming) messages over bridge | med | 2.1.296→2.1.304 |
 | `tengu_bridge_rc_child_artifact` | investigated | `!0` | — | Artifact support for remote control child sessions | med | 2.1.296→2.1.304 |
@@ -266,8 +272,8 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_polished_lagoon` | investigated | — | true (growthbook) | Gates advertising session notices (mcp_session_notice) for remote sessions. Requires CLAUDE_CODE_REMOTE, non-interactive mode, a poll channel and not own-events-only. | high | 2.1.296→2.1.304 |
 | `tengu_polished_salamander` | investigated | — | true (growthbook) | Read as a string flag (ho(LI)==="on") deciding whether a parked message is held open. Part of resuming parked permission state in cloud (CCR) sessions. | med | 2.1.296→2.1.304 |
 | `tengu_quizzical_toucan` | investigated | — | — | In remote mode (CLAUDE_CODE_REMOTE), z() enables a check tied to queued remote notifications. It is separate from the saffron_kite gate and its effect is only. | low | 2.1.296→2.1.304 |
-| `tengu_rc_long_turn_nudge` | investigated | `null` | {"thresholdSec": 10, "probability": 0.5, "maxImpressions": 5, "impress (growthbook) | Config for remote-control nudge after long turns (threshold, probability, impressions) | high | 2.1.296→2.1.304 |
-| `tengu_rc_permission_nudge` | investigated | `s` | {"afterPromptCount": 2, "probability": 0.5, "maxImpressions": 3} (growthbook) | Config for remote-control nudge on permission prompts (afterPromptCount, probability) | high | 2.1.296→2.1.304 |
+| `tengu_rc_long_turn_nudge` | investigated | `null` | {"impressionKey": "v1", "maxImpressions": 5, "probability": 0.5, "thre (growthbook) | Config for remote-control nudge after long turns (threshold, probability, impressions) | high | 2.1.296→2.1.304 |
+| `tengu_rc_permission_nudge` | investigated | `s` | {"afterPromptCount": 2, "maxImpressions": 3, "probability": 0.5} (growthbook) | Config for remote-control nudge on permission prompts (afterPromptCount, probability) | high | 2.1.296→2.1.304 |
 | `tengu_rc_thread_reply_gate` | investigated | — | — | Gates a wait for the bridge projects MCP mount (tengu_bridge_projects_mount_wait) and the reply, no_reply_needed, post_message, react and update_status tools for rc_owner threads. | med | 2.1.296→2.1.304 |
 | `tengu_reactive_quilt` | investigated | `!1` | — | Unclear; sits among CCR (remote) stream event helpers | low | 2.1.296→2.1.304 |
 | `tengu_record_created_pr_to_ccr` | investigated | `!1` | — | Records created PR URL to CCR session | high | 2.1.296→2.1.304 |
@@ -300,7 +306,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 
 | flag | status | code default | served now | summary | conf | seen |
 |---|---|---|---|---|---|---|
-| `tengu_amber_moleskin` | investigated | — | {"200000": {"repl": 0.15, "sdk": 0.15}, "1000000": {"repl": 0.06, "sdk (experiment: precomputed-compaction-v7) | precomputed-compaction buffer-fraction table per window size (1M: repl 0.06 / sdk 0.05; 200K: 0.15); experiment precomputed-compaction-v7 | high | 2.1.296→2.1.304 |
+| `tengu_amber_moleskin` | investigated | — | {"1000000": {"repl": 0.06, "sdk": 0.05}, "200000": {"repl": 0.15, "sdk (experiment: precomputed-compaction-v7) | precomputed-compaction buffer-fraction table per window size (1M: repl 0.06 / sdk 0.05; 200K: 0.15); experiment precomputed-compaction-v7 | high | 2.1.296→2.1.304 |
 | `tengu_amber_packet` | investigated | `!1` | false (growthbook) | Precompute-compaction variant, requires precomputeCompactionEnabled and sepia_moth | med | 2.1.296→2.1.304 |
 | `tengu_amber_redwood2` | investigated | `""` | "" (growthbook) | String-valued variant selector (with redwood3) for autocompact related prompt/model; near autoCompactEnabled | med | 2.1.296→2.1.304 |
 | `tengu_amber_redwood3` | investigated | `""` | "" (growthbook) | Second string-valued variant selector OR-ed with redwood2 near autocompact settings | med | 2.1.296→2.1.304 |
@@ -318,6 +324,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_gentle_parasol` | investigated | — | — | unclear: alias sits in compaction-related code that re-announces attachments in the kept tail. Next to an ephemeral-reminder string; the flag is not read in the. | low | 2.1.296→2.1.304 |
 | `tengu_goofy_jellyfish` | investigated | — | "" (growthbook) | string flag read next to the auto-compact enable check and the opus-4-8 compaction-model literal; empty today; exact use unclear | low | 2.1.296→2.1.304 |
 | `tengu_hidden_frog` | investigated | `!0` | true (growthbook) | Boolean toggle near reactive compact remote latch; exact use unclear | low | 2.1.296→2.1.304 |
+| `tengu_jiggly_blossom` | investigated | — | — | Compact micro keep-recent: on a context_hint trigger clears old tool results keeping the last 12 tool uses (minIdle 3900 s); mcp__container__ tools exempt | med | 2.1.304→2.1.304 |
 | `tengu_lapis_anchor` | investigated | — | "padded-countdown" (growthbook) | default mode of the <total_tokens> reminder (served padded-countdown); settings totalTokensReminder / env CLAUDE_CODE_TOTAL_TOKENS_REMINDER override | high | 2.1.296→2.1.304 |
 | `tengu_lapis_anchor_budget` | investigated | — | 15000000 (growthbook) | starting budget for the padded-countdown total-tokens reminder (served 15,000,000) | high | 2.1.296→2.1.304 |
 | `tengu_lapis_anchor_from_client_data` | investigated | — | — | take the total-tokens reminder config from clientData instead of the flag (nothing served) | med | 2.1.296→2.1.304 |
@@ -439,6 +446,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_curried_trinket` | investigated | — | "no_scratchpad_capped" (experiment: tengu_curried_trinket_external_experiment_v3) | system-prompt brevity variant: control \| lean \| short \| short_v2 \| capped (env CLAUDE_CODE_CURRIED_TRINKET wins); served control | high | 2.1.296→2.1.304 |
 | `tengu_fennel_godwit` | investigated | — | false (growthbook) | Inside OLn, which tests the opus_5_prompt_bundle override; the bundle applies only when this flag is false. It is read by the K$ prompt-feature resolver. | med | 2.1.296→2.1.304 |
 | `tengu_groovy_eclipse` | investigated | `!1` | true (growthbook) | Unclear flag adjacent to wise_comet thinking strip logic | low | 2.1.296→2.1.304 |
+| `tengu_harp_pedal` | investigated | `!0` | — | Default-on gate on the model catalog path: cached model rows with null values are returned for refresh when on; purpose partly unclear | low | 2.1.304→2.1.304 |
 | `tengu_jaunty_plum` | investigated | `{}` | {} (growthbook) | Served object keyed per model; when matching, adds an output_limit_note attachment telling the model its output token cap. Default {}. | med | 2.1.300→2.1.304 |
 | `tengu_jazzy_goblet` | investigated | — | true (growthbook) | unclear: alias sits in code for 'Switch models when a message is flagged' (cyber and bio safeguards, refusal fallback setting); the flag read is not. | low | 2.1.296→2.1.304 |
 | `tengu_loggia_passage` | investigated | — | — | Kill switch: when on, a refused effort level is withheld from carrying over (withheld:'killed') when no hook/turn effort layer exists. | med | 2.1.296→2.1.304 |
@@ -531,6 +539,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_gorse_sill` | investigated | `!1` | — | Fixed fast-ack reply text variant for artifact comments | high | 2.1.296→2.1.304 |
 | `tengu_hearth_member_relay_rows_enabled` | investigated | `!1` | true (growthbook) | Member relay rows in auto mode (hearth) via env override | med | 2.1.296→2.1.304 |
 | `tengu_hearth_resolved_rows` | investigated | `"off"` | "full" (growthbook) | Resolved rows mode: off, full or model_only | med | 2.1.296→2.1.304 |
+| `tengu_humble_flurry` | investigated | — | — | One of about twelve served-true gates read through a registered reader with a settled/answeredOn/answeredOff state; purpose not visible in code read | low | 2.1.304→2.1.304 |
 | `tengu_hushed_lark` | investigated | `Gwn` | 5 (growthbook) | Number of turns for silent-turn reminder | high | 2.1.296→2.1.304 |
 | `tengu_hushed_lark_text` | investigated | `zwn` | "The user hasn't heard from you in a while \u2014 say in a few words w (growthbook) | Text of silent-turn reminder message | high | 2.1.296→2.1.304 |
 | `tengu_import` | investigated | `!1` | true (growthbook) | Gates claude import command (not yet available) | high | 2.1.296→2.1.304 |
@@ -653,7 +662,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_cobalt_plinth_thrift` | investigated | `!1` | — | Artifact-related strict true gate; unclear. | low | 2.1.296→2.1.304 |
 | `tengu_cobalt_plinth_willow` | investigated | `!1` | true (growthbook) | Artifact open action. | high | 2.1.296→2.1.304 |
 | `tengu_copper_hinge_wren` | investigated | `!1` | — | Artifact hot update. | high | 2.1.296→2.1.304 |
-| `tengu_flint_harbor_prompt` | investigated | `{}` | {"prompt": "You are helping a power user generate an onboarding guide  (growthbook) | Overrides prompt, guide template and windowDays for team-onboarding builtin command | high | 2.1.296→2.1.304 |
+| `tengu_flint_harbor_prompt` | investigated | `{}` | {"guideTemplate": "# Welcome to [Team Name]\n\n## How We Use Claude\n\ (growthbook) | Overrides prompt, guide template and windowDays for team-onboarding builtin command | high | 2.1.296→2.1.304 |
 | `tengu_flint_harbor_share` | investigated | `!1` | false (growthbook) | Gates team onboarding guide sharing (needs allow_team_onboarding policy) | high | 2.1.296→2.1.304 |
 | `tengu_fresh_heron` | investigated | `eNt` | — | Allows hooks module loading unless false (disabled in server tenant) | med | 2.1.296→2.1.304 |
 | `tengu_gentle_frost` | investigated | — | false (growthbook) | Session-pinned flag gating plugin suggest behavior; C() requires le() and this flag. It sits beside suggestRolloutEnabled and plugin_suggest code. | med | 2.1.296→2.1.304 |
@@ -725,6 +734,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_steady_sunbeam` | investigated | `false` | false (growthbook) | kill-switch style gate read via servedTrue() (true only when served true); the gated behaviour is in minified code not named in the snippet — unclear | low | 2.1.296→2.1.304 |
 | `tengu_synchronous_bunny` | investigated | — | true (growthbook) | Safe gate R() in the module that handles served-settings change events (project/local settings reload and notify). Exact gated behaviour is not shown. | low | 2.1.296→2.1.304 |
 | `tengu_tender_mitten` | investigated | — | — | Member of the obfuscated flag-name set near GrowthBook init; role unclear. | low | 2.1.300→2.1.304 |
+| `tengu_thistle_orrery` | investigated | — | — | Member of the GrowthBook pre-init gate sets read before the OAuth refresh (with tengu_steady_bittern); purpose not visible in code read | low | 2.1.304→2.1.304 |
 | `tengu_tools_exclusion_killswitch` | investigated | `!1` | — | Killswitch for tool exclusion prefix parsing in tool lists | med | 2.1.296→2.1.304 |
 | `tengu_tranquil_crescent` | investigated | `false` | false (growthbook) | kill-switch style gate read via servedTrue() (true only when served true); the gated behaviour is in minified code not named in the snippet — unclear | low | 2.1.296→2.1.304 |
 | `tengu_twinkling_globe` | investigated | `false` | false (growthbook) | kill-switch style gate read via servedTrue() (true only when served true); the gated behaviour is in minified code not named in the snippet — unclear | low | 2.1.296→2.1.304 |
@@ -739,6 +749,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 |---|---|---|---|---|---|---|
 | `tengu_ccr_disk_watchdog` | investigated | — | — | Gates a disk-usage watchdog class. It polls on a timer and statfs, warns at 85% usage ('disk_low'), drains at 95% ('disk_drain') and keeps a lock. | med | 2.1.296→2.1.304 |
 | `tengu_ccr_keepalive_after_stop_enabled` | investigated | — | true (growthbook) | Controls whether a CCR keepalive timer is armed after a stop. When 'off' no timer starts. It sends frames every 30s while background tasks are. | high | 2.1.296→2.1.304 |
+| `tengu_ccr_memory_watchdog` | investigated | — | — | Enables the CCR machine-status memory watchdog: 60 s timer, warn at 85 pct and drain at 95 pct memory fraction, 5 pct hysteresis, lock file | med | 2.1.304→2.1.304 |
 | `tengu_fizzy_petal` | investigated | — | false (growthbook) | Gates the 'carried_writes' turn-handoff capability. On turn start, RBo waits up to 3000ms for the flag to be served and logs tengu_turn_handoff_flag_wait. | med | 2.1.296→2.1.304 |
 | `tengu_melodic_octopus` | investigated | `!0` | — | Default on: when fetching a PR, uses refs/pull/N/head (GitHub) or merge-requests refs (GitLab) per forge detection; off uses the legacy path. | med | 2.1.300→2.1.304 |
 | `tengu_parallel_trinket` | investigated | — | — | unclear: alias sits in Windows PowerShell shell-launcher code (CLAUDE_CODE_SHELL_LAUNCHER_SCRIPT, chcp, path validation). Its use is not visible. | low | 2.1.296→2.1.304 |
@@ -754,12 +765,12 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 
 | flag | status | code default | served now | summary | conf | seen |
 |---|---|---|---|---|---|---|
-| `tengu_1p_event_batch_config` | investigated | — | {"scheduledDelayMillis": 30000, "maxExportBatchSize": 400, "maxQueueSi (growthbook) | first-party telemetry batch exporter config (scheduledDelayMillis, maxExportBatchSize, maxQueueSize) | high | 2.1.296→2.1.304 |
-| `tengu_agile_glade` | investigated | `null` | {"api_request": 0.01, "tool_bash": 0.01, "hook_post_tool_use": 0.01, " (growthbook) | Per-feature sample-rate scaling for tengu_feature_ok telemetry events | high | 2.1.296→2.1.304 |
+| `tengu_1p_event_batch_config` | investigated | — | {"maxExportBatchSize": 400, "maxQueueSize": 8192, "path": "/api/event_ (growthbook) | first-party telemetry batch exporter config (scheduledDelayMillis, maxExportBatchSize, maxQueueSize) | high | 2.1.296→2.1.304 |
+| `tengu_agile_glade` | investigated | `null` | {"agent_proxy_request": 0.01, "agents_cross_session_inbox": 0.01, "api (growthbook) | Per-feature sample-rate scaling for tengu_feature_ok telemetry events | high | 2.1.296→2.1.304 |
 | `tengu_cozy_dusk` | investigated | `xe` | — | Metric export interval (ms) clamped between Le and yt. | high | 2.1.296→2.1.304 |
 | `tengu_dunwich_bell` | investigated | — | false (growthbook) | Enables the memory feedback survey. DJe() needs the flag plus an eligibility check, no active session guard, allow_product_feedback policy, and the feedback-survey disable env unset. | high | 2.1.296→2.1.304 |
-| `tengu_event_sampling_config` | investigated | — | {"tengu_plugin_name_collision": {"sample_rate": 0.01}, "tengu_session_ (growthbook) | Config object mapping event names to sample_rate (0-1). AEr(event) samples first-party event logging; 0 drops, rate>=1 or invalid means no sampling. | high | 2.1.296→2.1.304 |
-| `tengu_feedback_survey_config` | investigated | `DSn` | {"minTimeBeforeFeedbackMs": 600000, "minTimeBetweenFeedbackMs": 432000 (growthbook) | Feedback survey config object (probability etc.) for VSCode/product feedback survey | high | 2.1.296→2.1.304 |
+| `tengu_event_sampling_config` | investigated | — | {"tengu_api_after_normalize": {"sample_rate": 0}, "tengu_api_before_no (growthbook) | Config object mapping event names to sample_rate (0-1). AEr(event) samples first-party event logging; 0 drops, rate>=1 or invalid means no sampling. | high | 2.1.296→2.1.304 |
+| `tengu_feedback_survey_config` | investigated | `DSn` | {"hideThanksAfterMs": 3000, "minTimeBeforeFeedbackMs": 600000, "minTim (growthbook) | Feedback survey config object (probability etc.) for VSCode/product feedback survey | high | 2.1.296→2.1.304 |
 | `tengu_frond_boric` | investigated | — | {} (growthbook) | Object-valued config; mOt(e) returns true when the named key is set to true. Defined next to the 1P event logging code. | med | 2.1.296→2.1.304 |
 | `tengu_iridescent_gem` | investigated | — | 0.01 (growthbook) | Sampling rate (0-1) for the first-party-only prefix-break diagnostic. Returns 0 for non-firstParty or hipaa sessions; dt() gates De(). | med | 2.1.296→2.1.304 |
 | `tengu_juniper_relay` | investigated | `!1` | true (growthbook) | Feedback drafts sending gate (CLAUDE_CODE_SEND_FEEDBACK) | high | 2.1.296→2.1.304 |
@@ -780,6 +791,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_russet_whimbrel` | investigated | — | 0 (growthbook) | Alias SHo is next to the feedback survey defaults (minTimeBeforeFeedbackMs, minUserTurnsBeforeFeedback, probability 0.005). It likely tunes the survey, but its use is not visible. | low | 2.1.296→2.1.304 |
 | `tengu_snug_quill` | investigated | — | — | Name in a set of tengu_* flags (twinkly_clover, splendid_lynx and others) in the GrowthBook user data module. The set's purpose is not shown. | low | 2.1.296→2.1.304 |
 | `tengu_splendid_lynx` | investigated | — | — | unclear: name only appears in a Set of seven tengu_* ids (lr) near GrowthBook client setup, with no visible getter. Likely a set of special-handled. | low | 2.1.296→2.1.304 |
+| `tengu_steady_mitten` | investigated | — | false (growthbook) | Org survey invite (cli_org_survey) rendered per account and org with headline, message and questions; cadence constants 6 h, 24 h, 1 h | med | 2.1.304→2.1.304 |
 | `tengu_swift_whistle` | investigated | `!1` | true (growthbook) | First-party event logging gate (logger shutdown/export) | med | 2.1.296→2.1.304 |
 | `tengu_trace_lantern` | investigated | `!1` | false (growthbook) | Enables detailed beta tracing in addition to env | med | 2.1.296→2.1.304 |
 | `tengu_twinkly_clover` | investigated | — | — | unclear: only appears in a Set of seven tengu_* ids (lr) next to the GrowthBook client class, with no visible getter. | low | 2.1.296→2.1.304 |
@@ -795,7 +807,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_amber_prism` | investigated | `!1` | true (experiment: tengu_amber_prism) | Appends suffix to tool-rejection/tool result text when condition holds | low | 2.1.296→2.1.304 |
 | `tengu_amber_sentinel` | investigated | `!1` | true (growthbook) | Gates push-notification/monitor guidance text for background events in system prompt | med | 2.1.296→2.1.304 |
 | `tengu_ant_yolo_equiv_strip_config` | investigated | `{}` | — | Config to strip yolo-equivalent permission rules, filtered by entrypoint include/exclude | med | 2.1.296→2.1.304 |
-| `tengu_auto_mode_config` | investigated | `mc/{}` | {"enabled": "enabled", "twoStageClassifier": true, "sameTurnSiblingCon (growthbook) | Auto permission mode config incl. disableFastMode setting; many sites | med | 2.1.296→2.1.304 |
+| `tengu_auto_mode_config` | investigated | `mc/{}` | {"editRemovalCap": 3000, "editRemovalVisibility": true, "enabled": "en (growthbook) | Auto permission mode config incl. disableFastMode setting; many sites | med | 2.1.296→2.1.304 |
 | `tengu_auto_mode_worktree_fast_path` | investigated | `!1` | — | Fast path for auto mode path checks involving worktrees outside the working dir | med | 2.1.296→2.1.304 |
 | `tengu_binary_lollipop` | investigated | — | — | Gate returned by `$we()`, defined next to the Bash command-prefix parser `Nrr`. Its use is not shown in this context. | low | 2.1.296→2.1.304 |
 | `tengu_brass_sled` | investigated | `!1` | false (growthbook) | Adds build tools list to PowerShell tool prompt | med | 2.1.296→2.1.304 |
@@ -810,6 +822,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_clever_orbit` | investigated | `!1` | false (experiment: tengu_clever_orbit_experiment) | Enables web fetch agent. | high | 2.1.296→2.1.304 |
 | `tengu_cobalt_ridge` | investigated | `!1` | true (growthbook) | Enables PowerShell tool on Windows when Git bash missing. | high | 2.1.296→2.1.304 |
 | `tengu_composed_teacup` | investigated | — | — | Safe-gate (ld) in rsync command validation: when on, the rsync option regex also matches -e, --rsh and --rsync-path. The scp, rcp and sftp branch is. | med | 2.1.296→2.1.304 |
+| `tengu_composed_treehouse` | investigated | `!1` | — | When a deferred-tools delta retracts a tool because it was denied, marks the delta deniedLead (code default false) | med | 2.1.304→2.1.304 |
 | `tengu_compressed_river` | investigated | `!0` | — | IDE bridge permission dialog for outside reads. | med | 2.1.296→2.1.304 |
 | `tengu_cosmic_shore` | investigated | `!0` | true (growthbook) | Background deadline for bash commands. | med | 2.1.296→2.1.304 |
 | `tengu_cowork_auto_mode_include_allowed_write_mcp` | investigated | `!1` | true (growthbook) | Auto mode includes allowed destructive write MCP tools in remote. | med | 2.1.296→2.1.304 |
@@ -839,6 +852,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_gorse_plover` | investigated | — | false (growthbook) | Enables the Bash 'act first' behavior (bashActFirstEnabled), as an alternative to the CLAUDE_CODE_GORSE_PLOVER env var or clientData override. Cached per session. | med | 2.1.296→2.1.304 |
 | `tengu_harbor_permissions` | investigated | `!1` | true (growthbook) | Channel permission relay feature (permission relay code with word filter) | med | 2.1.296→2.1.304 |
 | `tengu_harbor_willow` | investigated | `!0` | true (growthbook) | Permission mode related gating (meadow_lantern override) for startup modes | low | 2.1.296→2.1.304 |
+| `tengu_harp_forepillar` | investigated | — | — | Gate (default false) for classifying a path as launch_dir, inside_launch_dir or elsewhere relative to the launch directory | med | 2.1.304→2.1.304 |
 | `tengu_harp_voatavo` | investigated | — | — | Default true; when served false, permission rule parsing skips expanded rule variants/blocksNothing computation (legacy rules only). | med | 2.1.299→2.1.304 |
 | `tengu_hazy_cosmos` | investigated | `!0` | — | Default true: on Linux hosted sessions, refuses writes to paths that look like the user's local computer (/Users, C:\) with an explanatory error. | med | 2.1.300→2.1.304 |
 | `tengu_hazy_peach` | investigated | — | — | Safe gate that switches how G7e splits application-name command text: kSn pattern when on, otherwise /\s/. Used in the read-only command allowlist check. | med | 2.1.296→2.1.304 |
@@ -886,6 +900,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_quirky_shore` | investigated | `"off"` | — | Computer-use checks on/off for auto-mode permission classification | med | 2.1.296→2.1.304 |
 | `tengu_radiant_teapot` | investigated | `!0` | — | Preserves permissionModeAtRequest when arbiter mode is active | med | 2.1.296→2.1.304 |
 | `tengu_reactive_zephyr` | investigated | — | true (growthbook) | Safe-mode gate (ld, safe:false) in a permission and file-operation module with hook-held and hook-forced-ask decisions, safety-check reasons and own-made-delete handling. The exact behavior is unclear. | low | 2.1.296→2.1.304 |
+| `tengu_recursive_puddle` | investigated | — | — | Turns on the Claude-in-Chrome browser tool set (browser_navigate through browser_wait_for) when served true; latches on for the session | med | 2.1.304→2.1.304 |
 | `tengu_refactored_gadget` | investigated | — | true (growthbook) | Gate bo() (ld, safe:false) in a bash and permission analysis module next to the violin_* flags. Its effect is unclear; the nearby code includes auto/plan. | low | 2.1.296→2.1.304 |
 | `tengu_remote_auto_mode_include_destructive_mcp` | investigated | `!1` | false (growthbook) | Includes destructive MCP tools in auto-mode classification for remote sessions | high | 2.1.296→2.1.304 |
 | `tengu_rosy_flute` | investigated | `!0` | — | WebFetch URL/prompt hash dedup tracking (toolState urls promptHashes) | med | 2.1.296→2.1.304 |
@@ -976,11 +991,11 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_jazzy_puddle` | investigated | `!0` | — | Print text results at turn end in print mode | med | 2.1.296→2.1.304 |
 | `tengu_jolly_aurora` | investigated | — | false (growthbook) | Gates emitting a system 'instruction_size_warning' message when instruction files exceed the total character limit. It also logs context_instruction_size_warning. | high | 2.1.296→2.1.304 |
 | `tengu_joyful_parasol` | investigated | `!0` | — | Claude in Chrome setting consent gating in config panel | high | 2.1.296→2.1.304 |
-| `tengu_juniper_vale` | investigated | — | {"enabled": false, "maxChars": 500, "autoDismissAfterMs": 30000} (growthbook) | Feedback-survey related config near feedback timing constants; default object {enabled:false,maxChars:500,autoDismissAfterMs:30000}. Exact read site not shown. | low | 2.1.296→2.1.304 |
+| `tengu_juniper_vale` | investigated | — | {"autoDismissAfterMs": 30000, "enabled": false, "maxChars": 500} (growthbook) | Feedback-survey related config near feedback timing constants; default object {enabled:false,maxChars:500,autoDismissAfterMs:30000}. Exact read site not shown. | low | 2.1.296→2.1.304 |
 | `tengu_kairos_brief` | investigated | `!1` | — | Brief mode where plain assistant text is hidden (env CLAUDE_CODE_BRIEF) | high | 2.1.296→2.1.304 |
 | `tengu_kairos_brief_config` | investigated | `n` | — | Config enable_slash_command for /brief toggle command | high | 2.1.296→2.1.304 |
 | `tengu_kairos_brief_stop_hook_text` | investigated | `""` | — | Override stop-hook text reminding to message the user in brief mode | high | 2.1.296→2.1.304 |
-| `tengu_kairos_ready_nudge` | investigated | `null` | {"probability": 0.25, "maxImpressions": 5, "impressionKey": "v1"} (growthbook) | Nudge config (probability, maxImpressions) for RC permission tips | med | 2.1.296→2.1.304 |
+| `tengu_kairos_ready_nudge` | investigated | `null` | {"impressionKey": "v1", "maxImpressions": 5, "probability": 0.25} (growthbook) | Nudge config (probability, maxImpressions) for RC permission tips | med | 2.1.296→2.1.304 |
 | `tengu_keen_sloth` | investigated | `!0` | — | Cancels pending deferred submit when draft input is non-empty | med | 2.1.296→2.1.304 |
 | `tengu_kestrel_arch` | investigated | `"off"` | "OFF" (growthbook) | Tip/prompt shown for users without API key after startups | low | 2.1.296→2.1.304 |
 | `tengu_keybinding_customization_release` | investigated | `!0` | true (growthbook) | Keybinding customization feature released | high | 2.1.296→2.1.304 |
@@ -1024,23 +1039,3 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `tengu_web_setup_push_offer` | investigated | — | — | Name of the telemetry event for the web-setup push offer ('Pushed to GitHub. Connect GitHub to claude.ai...'); the offer variant is chosen by tengu_reflective_bee. | med | 2.1.296→2.1.304 |
 | `tengu_woolly_owl` | investigated | — | — | When on, Idt returns false and so skips a bridge-origin queued '/clear' local command check; otherwise bridge-origin '/clear' is recognised for the input queue. | med | 2.1.296→2.1.304 |
 | `tengu_xterm_atlas_reset` | investigated | `!0` | true (growthbook) | Terminal style atlas auto-reset recording | med | 2.1.296→2.1.304 |
-
-## uncategorised
-
-| flag | status | code default | served now | summary | conf | seen |
-|---|---|---|---|---|---|---|
-| `tengu_amber_quillwort` | new | — | — |  |  | 2.1.304→2.1.304 |
-| `tengu_bridge_owner_check_attribution` | new | `!0` | — |  |  | 2.1.304→2.1.304 |
-| `tengu_ccr_memory_watchdog` | new | — | — |  |  | 2.1.304→2.1.304 |
-| `tengu_composed_treehouse` | new | `!1` | — |  |  | 2.1.304→2.1.304 |
-| `tengu_harp_forepillar` | new | — | — |  |  | 2.1.304→2.1.304 |
-| `tengu_harp_pedal` | new | `!0` | — |  |  | 2.1.304→2.1.304 |
-| `tengu_humble_flurry` | new | — | — |  |  | 2.1.304→2.1.304 |
-| `tengu_hushed_plover` | new | `!0` | — |  |  | 2.1.304→2.1.304 |
-| `tengu_jiggly_blossom` | new | — | — |  |  | 2.1.304→2.1.304 |
-| `tengu_recursive_puddle` | new | — | — |  |  | 2.1.304→2.1.304 |
-| `tengu_starry_waterfall` | new | — | — |  |  | 2.1.304→2.1.304 |
-| `tengu_steady_mitten` | new | — | false (growthbook) |  |  | 2.1.304→2.1.304 |
-| `tengu_steady_puppy` | new | `!1` | — |  |  | 2.1.304→2.1.304 |
-| `tengu_thistle_orrery` | new | — | — |  |  | 2.1.304→2.1.304 |
-| `tengu_velvet_harrow` | new | — | — |  |  | 2.1.304→2.1.304 |

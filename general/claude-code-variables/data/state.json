@@ -3904,15 +3904,15 @@
    "summary": "When falsy-opt-out, suppresses the attribution header string sent with requests."
   },
   "env:CLAUDE_CODE_ATTRIBUTION_PROJECT": {
-   "category": "",
-   "confidence": "",
+   "category": "bridge-remote-control",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:42Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -3920,8 +3920,8 @@
    "served": null,
    "sites": 1,
    "snippet": "IR;if(o!==void 0)e.push(`CLAUDE_SECURESTORAGE_CONFIG_DIR=${go([o])}`);let s=a.CLAUDE_CODE_AUTO_MODE_TIER;if(s!==void 0)e.push(`CLAUDE_CODE_AUTO_MODE_TIER=${go([s])}`);return e.push(`CLAUDE_CODE_ATTRIBUTION_PROJECT=${go([a.CLAUDE_CODE_ATTRIBUTION_PROJECT??\"\"])}`),e.join(\" \")}function D(e,n){return Eee(n)?`${e} ${go([n])}`:`${e}=${go([n])}`}function B(e){return e??et()}function me(e,n){if(a.CLAUDE_CODE_SUBAGENT_MODEL_FORCE)e=void 0;if(e===\"inherit\")return B(n);if(e!==void 0){if(!Jr(e))return z(e,n);if(n!==null&&Dbr(e",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Host-set project label in the forwarded-env allow-set (with REMOTE, HERMETIC_MODE, HOSTED_DESKTOP); passed to child/bridge processes for attribution, not a user knob"
   },
   "env:CLAUDE_CODE_ATTRIBUTION_STATUS_TIMEOUT_MS": {
    "category": "other",
@@ -4364,15 +4364,15 @@
    "summary": "Include prior assistant context in auto-mode classifier; default false."
   },
   "env:CLAUDE_CODE_AUTO_MODE_REMOTE_BROWSER": {
-   "category": "",
-   "confidence": "",
+   "category": "tools-permissions",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "process.env",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:43Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -4380,8 +4380,8 @@
    "served": null,
    "sites": 1,
    "snippet": "ntinue;let h=s.name.split(\"__\"),y=h.map((S,w)=>h.slice(w).join(\"__\"));if(iEe(`${s.name}_`,lEe)||!Kpr(s.name)&&h.some((S)=>VL(S).includes(chn))||V8n.some((S)=>y.some((w)=>iEe(`${w}_`,`${S}_`))))return}if(!cYs(n??y_())||!(nr.CLAUDE_CODE_AUTO_MODE_REMOTE_BROWSER??Xpr()))return;return Qpr()}var cZe=` - **Chrome-MCP**:`;function phn(e,n){for(let r=e.indexOf(cZe);r!==-1;r=e.indexOf(cZe,r+1)){let s=e.indexOf(` `,r+1);if(s!==-1&&e.startsWith(n,s))return!0}return!1}function mhn(e,n){let r=n===void 0?-1:e.indexOf(cZe);if(r==",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "When set, enables auto-mode permission handling for remote-browser (Chrome-MCP) tool calls; otherwise a served default decides"
   },
   "env:CLAUDE_CODE_AUTO_MODE_REPO_VISIBILITY": {
    "category": "tools-permissions",
@@ -4825,15 +4825,15 @@
    "summary": "Bridge child uses machine settings; checked with A9()."
   },
   "env:CLAUDE_CODE_BRIDGE_CHILD_PROJECTS_ENTRYPOINT": {
-   "category": "",
-   "confidence": "",
+   "category": "bridge-remote-control",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:43Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -4841,8 +4841,8 @@
    "served": null,
    "sites": 3,
    "snippet": "_UNATTENDED,ae=Object.keys(i).some((s)=>s.toUpperCase()===\"CLAUDE_CODE_REMOTE_TOOLS_FORWARD\"),Ee=a.CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT||a.CLAUDE_CODE_BRIDGE_CHILD_ARTIFACT||a.CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SETTINGS||a.CLAUDE_CODE_BRIDGE_CHILD_PROJECTS_ENTRYPOINT,de=a.CLAUDE_CODE_CONFIG_PROBE,le=a.CLAUDE_CODE_MCP_STARTUP_WAIT_MS!==void 0,ue=a.CLAUDE_CODE_REMOTE_MCP_CONFIG,pe=a.CLAUDE_CODE_MCP_APPS_HOST,Oe=a.CLAUDE_CODE_ATTACHMENTS_BY_PATH,Ae=a.CLAUDE_CODE_SLEEP_COMPACT||a.CLAUDE_CODE_SLEEP_COMPACT_AFTER_MS!==voi",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "One of four bridge-child markers (auto-default, artifact, machine-settings, projects-entrypoint) telling a Remote Control child how it was launched; forwarded to children"
   },
   "env:CLAUDE_CODE_BRIDGE_MCP_CARRIER": {
    "category": "bridge-remote-control",
@@ -6983,15 +6983,15 @@
    "summary": "Disables model access fallback ladder (same as CLAUDE_CODE_NO_MODEL_FALLBACK)."
   },
   "env:CLAUDE_CODE_DISABLE_MOUNTED_DRIVE_RM_PROMPT": {
-   "category": "",
-   "confidence": "",
+   "category": "tools-permissions",
+   "confidence": "high",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:43Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -6999,8 +6999,8 @@
    "served": null,
    "sites": 1,
    "snippet": ", an additional working directory, or one of their parent directories). This requires explicit approval and cannot be auto-allowed by permission rules.`,`on working directory or its ancestor: ${Ee}`)}if(ke===void 0&&V&&!a.CLAUDE_CODE_DISABLE_MOUNTED_DRIVE_RM_PROMPT&&e===\"rm\"&&(_e||Ie)&&Ge.some((Ve)=>{let rt=L$o.normalize(Ve).replace(/(.)\\/$/,\"$1\");return Ve.startsWith(\"/\")&&G$o.test(rt)})){let Ve=rWe(Ee).replaceAll(\"__CMDSUB__\",\"$(\\u2026)\");ke=jb(e,`Dangerous ${e} operation detected: '${Ve}'  This command would rem",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Skips the explicit-approval prompt for rm commands that target a mounted drive, the mounts folder, or a drive's top-level entries"
   },
   "env:CLAUDE_CODE_DISABLE_MOUSE": {
    "category": "ui-tui",
@@ -11049,15 +11049,15 @@
    "summary": "Auth token for the MCP serve HTTP server; unset from env after read."
   },
   "env:CLAUDE_CODE_MCP_SERVE_ENABLED_PLUGINS": {
-   "category": "",
-   "confidence": "",
+   "category": "mcp",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:43Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -11065,8 +11065,8 @@
    "served": null,
    "sites": 2,
    "snippet": "LAUDE_CODE_WARN_DISK_FREE_GIB!==void 0||a.CLAUDE_CODE_WARN_MEMORY_FREE_GIB!==void 0,Le=a.CLAUDE_CHROME_TAB_GROUP_KEY!==void 0,ge=a.CLAUDE_CODE_HOST_PROMPT_SUPERSEDES_RECORD,Ue=Ev.CLAUDE_CODE_MCP_SERVE_SETTINGS!==void 0||Ev.CLAUDE_CODE_MCP_SERVE_ENABLED_PLUGINS!==void 0||Ev.CLAUDE_CODE_MCP_SERVE_WORKSPACE_ROOT!==void 0,g=!1;g=Object.keys(i).some(w);let N=E&&Object.keys(i).some(G);if(e===void 0&&!o&&!c&&!A&&!b&&!J&&!z.length&&!q.length&&!m&&!ee&&!_&&!te&&!ne&&!re&&!oe&&!se&&!ie&&!ce&&!_e&&!ae&&!Ee&&!de&&!le&&!ue&&!pe",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Host-provided plugin list for claude mcp serve (with MCP_SERVE_SETTINGS and MCP_SERVE_WORKSPACE_ROOT); forwarded to children, internal"
   },
   "env:CLAUDE_CODE_MCP_SERVE_INTERFACE_MIN_VERSION": {
    "category": "mcp",
@@ -12052,15 +12052,15 @@
    "summary": "Perforce mode: read-only files require p4 edit before editing; adds Perforce note to system context."
   },
   "env:CLAUDE_CODE_PERSONAL_CONFIG_FIX": {
-   "category": "",
-   "confidence": "",
+   "category": "session-host-internal",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:43Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -12068,8 +12068,8 @@
    "served": null,
    "sites": 2,
    "snippet": "root/chunk-cd1a8ced.js\";var t=null;function Nzs(e){t=e}function ry(){return a.CLAUDE_CODE_RESTRICT_PERSONAL_CONFIG===!0||Fe(t?.()?.CLAUDE_CODE_RESTRICT_PERSONAL_CONFIG)}var o=300;function DFt(){let e=t?.(),n=(e===void 0?a.CLAUDE_CODE_PERSONAL_CONFIG_FIX:e.CLAUDE_CODE_PERSONAL_CONFIG_FIX)?.trim();if(n===void 0||n===\"\"||n.length>o||/[\\p{Cc}\\p{Cf}\\p{Zl}\\p{Zp}]/u.test(n))return;return n} export{Nzs,ry,DFt}; \u0000// @bun @bytecode // Claude Code is a Beta product per Anthropic's Commercial Terms of Service. // By using Clau",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Host-supplied plain-text instruction (max 300 chars, control chars rejected) shown when RESTRICT_PERSONAL_CONFIG blocks personal config"
   },
   "env:CLAUDE_CODE_PER_TURN_TIMING": {
    "category": "model-effort-thinking",
@@ -14231,15 +14231,15 @@
    "summary": "SDK host reads session_state_changed events; defaulted to 1 for SDK children."
   },
   "env:CLAUDE_CODE_SDK_READS_STARTUP_MARKS": {
-   "category": "",
-   "confidence": "",
+   "category": "agents-subagents-workflows",
+   "confidence": "high",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:43Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -14247,8 +14247,8 @@
    "served": null,
    "sites": 3,
    "snippet": "TION!==void 0,ne=a.CLAUDE_CODE_QUESTION_EXTENDED||a.CLAUDE_CODE_QUESTION_OPTIONAL_DESCRIPTIONS,re=a.CLAUDE_CODE_AGENT_PROGRESS_SUMMARIES,oe=a.CLAUDE_CODE_SDK_HAS_OAUTH_REFRESH,se=a.CLAUDE_CODE_SDK_READS_SESSION_STATE,ie=a.CLAUDE_CODE_SDK_READS_STARTUP_MARKS,ce=iP(),_e=a.CLAUDE_CODE_REMOTE_TOOLS_HOST_ALLOWS_UNATTENDED,ae=Object.keys(i).some((s)=>s.toUpperCase()===\"CLAUDE_CODE_REMOTE_TOOLS_FORWARD\"),Ee=a.CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT||a.CLAUDE_CODE_BRIDGE_CHILD_ARTIFACT||a.CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SET",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Set by Agent SDK startup() and prewarm(); the CLI then emits keepalive lines carrying startup_mark checkpoints before the initialize response"
   },
   "env:CLAUDE_CODE_SENDMESSAGE_HANDBACK": {
    "category": "agents-subagents-workflows",
@@ -14943,15 +14943,15 @@
    "summary": "Disables a hashed model-access cache key (provider, config, credentials digest) used across starts."
   },
   "env:CLAUDE_CODE_SKIP_PLUGIN_LOCAL_MCP_SERVERS": {
-   "category": "",
-   "confidence": "",
+   "category": "plugins-skills",
+   "confidence": "high",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:44Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -14959,19 +14959,19 @@
    "served": null,
    "sites": 1,
    "snippet": "GIN_MCP_SERVERS_EXCEPT)`)}if(e.skipMcpDiscovery)return{};if(IPn(e)){t(`Skipping MCP server discovery for claude.ai-synced plugin \"${e.name}\": the GrowthBook flag ${crt} is on`);return}let S=NPn(e,{fullIdsOnly:!0}),w=!S&&a.CLAUDE_CODE_SKIP_PLUGIN_LOCAL_MCP_SERVERS,H=w||!S&&a.CLAUDE_CODE_SKIP_PLUGIN_MCP_BUNDLES,K={},V=[],J=nK(e),_e=h&&K3(e.source),ke=0,be=(xe)=>{if(H&&vM(xe))return t(`Skipping MCPB source \"${If(xe)}\" of plugin \"${e.name}\" (CLAUDE_CODE_SKIP_PLUGIN_LOCAL_MCP_SERVERS or CLAUDE_CODE_SKIP_PLUGIN_MCP_BUNDL",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Skips a plugin's local in-directory MCP server sources during discovery (logged Skipping MCP server); inline declarations still resolve"
   },
   "env:CLAUDE_CODE_SKIP_PLUGIN_MCP_BUNDLES": {
-   "category": "",
-   "confidence": "",
+   "category": "plugins-skills",
+   "confidence": "high",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:44Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -14979,8 +14979,8 @@
    "served": null,
    "sites": 1,
    "snippet": "n{};if(IPn(e)){t(`Skipping MCP server discovery for claude.ai-synced plugin \"${e.name}\": the GrowthBook flag ${crt} is on`);return}let S=NPn(e,{fullIdsOnly:!0}),w=!S&&a.CLAUDE_CODE_SKIP_PLUGIN_LOCAL_MCP_SERVERS,H=w||!S&&a.CLAUDE_CODE_SKIP_PLUGIN_MCP_BUNDLES,K={},V=[],J=nK(e),_e=h&&K3(e.source),ke=0,be=(xe)=>{if(H&&vM(xe))return t(`Skipping MCPB source \"${If(xe)}\" of plugin \"${e.name}\" (CLAUDE_CODE_SKIP_PLUGIN_LOCAL_MCP_SERVERS or CLAUDE_CODE_SKIP_PLUGIN_MCP_BUNDLES is set)`),!0;if(_e)return ke++,!0;if(!J)return!1;i",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Skips plugin MCPB bundle sources during MCP discovery (logged Skipping MCPB source); pairs with SKIP_PLUGIN_LOCAL_MCP_SERVERS"
   },
   "env:CLAUDE_CODE_SKIP_PLUGIN_MCP_SERVERS": {
    "category": "plugins-skills",
@@ -17020,15 +17020,15 @@
    "summary": "Forces on voice forwarding of interim typed results; else tengu_brick_follow flag."
   },
   "env:CLAUDE_CODE_WARN_DISK_FREE_GIB": {
-   "category": "",
-   "confidence": "",
+   "category": "session-host-internal",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:44Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -17036,19 +17036,19 @@
    "served": null,
    "sites": 2,
    "snippet": "DE_CODE_RESUME_SESSIONSTART_HOOKS_WAIT_MS!==void 0,fe=a.CLAUDE_CODE_ARTIFACT_SHARE!==void 0,Se=a.CLAUDE_CODE_AUTOUPDATER_DISABLED_BY_HOST,Re=Object.keys(i).some((s)=>s.toUpperCase()===\"CLAUDE_CODE_ARTIFACT_VERSIONS\"),he=a.CLAUDE_CODE_WARN_DISK_FREE_GIB!==void 0||a.CLAUDE_CODE_WARN_MEMORY_FREE_GIB!==void 0,Le=a.CLAUDE_CHROME_TAB_GROUP_KEY!==void 0,ge=a.CLAUDE_CODE_HOST_PROMPT_SUPERSEDES_RECORD,Ue=Ev.CLAUDE_CODE_MCP_SERVE_SETTINGS!==void 0||Ev.CLAUDE_CODE_MCP_SERVE_ENABLED_PLUGINS!==void 0||Ev.CLAUDE_CODE_MCP_SERVE_W",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "GiB threshold for the CCR machine-status disk watchdog's low-disk warning (tengu_ccr_disk_watchdog); host-forwarded"
   },
   "env:CLAUDE_CODE_WARN_MEMORY_FREE_GIB": {
-   "category": "",
-   "confidence": "",
+   "category": "session-host-internal",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "env-table",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:44Z",
+   "investigated_by": "agent",
    "kind": "env",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -17056,8 +17056,8 @@
    "served": null,
    "sites": 2,
    "snippet": "=void 0,fe=a.CLAUDE_CODE_ARTIFACT_SHARE!==void 0,Se=a.CLAUDE_CODE_AUTOUPDATER_DISABLED_BY_HOST,Re=Object.keys(i).some((s)=>s.toUpperCase()===\"CLAUDE_CODE_ARTIFACT_VERSIONS\"),he=a.CLAUDE_CODE_WARN_DISK_FREE_GIB!==void 0||a.CLAUDE_CODE_WARN_MEMORY_FREE_GIB!==void 0,Le=a.CLAUDE_CHROME_TAB_GROUP_KEY!==void 0,ge=a.CLAUDE_CODE_HOST_PROMPT_SUPERSEDES_RECORD,Ue=Ev.CLAUDE_CODE_MCP_SERVE_SETTINGS!==void 0||Ev.CLAUDE_CODE_MCP_SERVE_ENABLED_PLUGINS!==void 0||Ev.CLAUDE_CODE_MCP_SERVE_WORKSPACE_ROOT!==void 0,g=!1;g=Object.keys(i",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "GiB threshold for the CCR memory watchdog's low-memory warning (tengu_ccr_memory_watchdog: warn 85 pct, drain 95 pct fractions)"
   },
   "env:CLAUDE_CODE_WEBFETCH_CACHE_TTL_MS": {
    "category": "performance-caching",
@@ -36850,15 +36850,15 @@
    "summary": "Appends suffix to tool-rejection/tool result text when condition holds"
   },
   "flag:tengu_amber_quillwort": {
-   "category": "",
-   "confidence": "",
+   "category": "agents-subagents-workflows",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:44Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -36866,8 +36866,8 @@
    "served": null,
    "sites": 1,
    "snippet": "hine, not the claude.ai Claude Test connector): runs the plain-language specs in .claude-test/specs/ against your local dev server in a browser on this computer and reports PASS or FAIL per spec, with a screenshot\";var To=\"tengu_amber_quillwort\",yo=\"tengu_velvet_harrow\";function bt(e){if(ui(e,{safe:!1}))return!0;let o=a.CLAUDE_INTERNAL_FC_OVERRIDES;return o!==void 0&&uUo(e)&&!Hzs(\"CLAUDE_INTERNAL_FC_OVERRIDES\",o)&&bn(e,!1).value===!0}var St=[\"needs_input\",\"blocked_before_specs\",\"specs_blocked\",\"signin_missing\",\"sig",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Gates the local Claude Test feature (runs .claude-test/specs against the local dev server in a browser, PASS/FAIL per spec); CLAUDE_INTERNAL_FC_OVERRIDES can force it"
   },
   "flag:tengu_amber_redwood2": {
    "category": "compaction-context",
@@ -38368,15 +38368,15 @@
    "summary": "Minimum client version required for remote control (default 2.1.270)"
   },
   "flag:tengu_bridge_owner_check_attribution": {
-   "category": "",
-   "confidence": "",
+   "category": "bridge-remote-control",
+   "confidence": "med",
    "default": "!0",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "k",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:45Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -38384,8 +38384,8 @@
    "served": null,
    "sites": 1,
    "snippet": "_lagoon\",!0)}function Qxo(){return k(\"tengu_bridge_resume_respects_local_owner\",!0)}function Zxo(){return k(\"tengu_sequential_puffin\",!0)}function xEe(){return k(\"tengu_bridge_owner_pinned_end\",!0)}function FOr(){return k(\"tengu_bridge_owner_check_attribution\",!0)}function pVn(){return k(\"tengu_glimmering_glade\",!0)}function ePo(){return k(\"tengu_lucky_quill\",!0)}function tPo(){return k(\"tengu_keen_lantern\",!0)}function nPo(){return k(\"tengu_zany_melody\",!0)}function UOr(){return k(\"tengu_bridge_host_declined_end\",",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Remote Control bridge: the owner check consults attribution (default true); sibling of bridge_resume_respects_local_owner and owner_pinned_end"
   },
   "flag:tengu_bridge_owner_pinned_end": {
    "category": "bridge-remote-control",
@@ -39546,15 +39546,15 @@
    "summary": "Controls whether a CCR keepalive timer is armed after a stop. When 'off' no timer starts. It sends frames every 30s while background tasks are."
   },
   "flag:tengu_ccr_memory_watchdog": {
-   "category": "",
-   "confidence": "",
+   "category": "session-host-internal",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:45Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -39562,8 +39562,8 @@
    "served": null,
    "sites": 1,
    "snippet": ".readText(n)}catch(r){t(`machine status: ${n} not read (${E(r)??\"unreadable\"}); its figures are left out`);return}}async function mOr(e,n){try{return await e.readText(n)}catch{return}}var _Or=\"tengu_ccr_disk_watchdog\",kOr=\"tengu_ccr_memory_watchdog\",SOr=60000,evn=0.85,nnt=0.95,ont=0.05,bOr=1.25,ite=1048576,wOr=1024*ite;class rvn{timer=void 0;lockPath=void 0;lockErrorReported=!1;warnArmed=!0;drainArmed=!0;memoryFractions={warnArmed:!0,drainArmed:!0};diskFree={armed:!0,status:void 0,told:!1};memoryFree={armed:!0,stat",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Enables the CCR machine-status memory watchdog: 60 s timer, warn at 85 pct and drain at 95 pct memory fraction, 5 pct hysteresis, lock file"
   },
   "flag:tengu_ccr_no_subscriber_flush_ms": {
    "category": "bridge-remote-control",
@@ -41552,15 +41552,15 @@
    "summary": "Safe-gate (ld) in rsync command validation: when on, the rsync option regex also matches -e, --rsh and --rsync-path. The scp, rcp and sftp branch is."
   },
   "flag:tengu_composed_treehouse": {
-   "category": "",
-   "confidence": "",
+   "category": "tools-permissions",
+   "confidence": "med",
    "default": "!1",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "k",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:45Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -41568,8 +41568,8 @@
    "served": null,
    "sites": 1,
    "snippet": "===!1)return[]}let ke=$vs(e,r??[],s,h,y,S,w?.(),H,_e&&K!==void 0?{nameOnlyAnnouncements:K.latches.nameOnlyAnnouncements}:void 0,K?.latches.nameOnlyAnnouncements,V);if(ke?.retractedTools?.some((we)=>we.cause===\"denied\")&&k(\"tengu_composed_treehouse\",!1))ke.deniedLead=!0;let be=ke?[{type:\"deferred_tools_delta\",...ke}]:[];if(K===void 0)return be;try{if(!BHs(K.latches,n))return be;let we=await AIr(ke,e,n,r??[],K);return we?[{type:\"deferred_tools_delta\",...we}]:[]}catch(we){return l(U(we)),be}}async function AIr(e,n,r,s",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "When a deferred-tools delta retracts a tool because it was denied, marks the delta deniedLead (code default false)"
   },
   "flag:tengu_compressed_river": {
    "category": "tools-permissions",
@@ -45198,15 +45198,15 @@
    "summary": "Override text for pending coordinator-session message notice"
   },
   "flag:tengu_harp_forepillar": {
-   "category": "",
-   "confidence": "",
+   "category": "tools-permissions",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:45Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -45214,19 +45214,19 @@
    "served": null,
    "sites": 1,
    "snippet": "ubject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.  // Version: 2.1.304 import{ir}from\"/$bunfs/root/chunk-7p6jp6kj.js\";import{YPe}from\"/$bunfs/root/chunk-g9wezmnw.js\";var t=\"tengu_harp_forepillar\";function g2t(){return ir(t,!1)===!0}function G8o(e,r){if(e===r)return\"launch_dir\";return YPe(e,r)?\"inside_launch_dir\":\"elsewhere\"} export{g2t,G8o}; \u0000// @bun @bytecode // Claude Code is a Beta product per Anthropic's Commercial Terms of Service. // By using Claude Code, you ",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Gate (default false) for classifying a path as launch_dir, inside_launch_dir or elsewhere relative to the launch directory"
   },
   "flag:tengu_harp_pedal": {
-   "category": "",
-   "confidence": "",
+   "category": "model-effort-thinking",
+   "confidence": "low",
    "default": "!0",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "k",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:45Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -45234,8 +45234,8 @@
    "served": null,
    "sites": 1,
    "snippet": "nfs/root/chunk-rd4mxy2p.js\";import\"/$bunfs/root/chunk-3pcxq77r.js\";import\"/$bunfs/root/chunk-ag4wmr6x.js\";import\"/$bunfs/root/chunk-7vca30xa.js\";import{S}from\"/$bunfs/root/chunk-ye9f1kvm.js\";B();function dt(){try{return k(\"tengu_harp_pedal\",!0)!==!1}catch{return!0}}var we=new W(()=>new Map);function at({models:r}){return r.map(RGs).filter((o)=>o!==null)}function Kt(r,o){if(o===void 0||!dt())return null;let a=r.get(o);return a?.rows.some((n)=>n.value===null)?a:null}function ut(r,o,a){if(o!==void 0)r.set(o,a)}functio",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Default-on gate on the model catalog path: cached model rows with null values are returned for refresh when on; purpose partly unclear"
   },
   "flag:tengu_harp_voatavo": {
    "category": "tools-permissions",
@@ -45670,15 +45670,15 @@
    "summary": "Slash command detection/highlighting in input with pasted contents"
   },
   "flag:tengu_humble_flurry": {
-   "category": "",
-   "confidence": "",
+   "category": "other",
+   "confidence": "low",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:46Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -45686,8 +45686,8 @@
    "served": null,
    "sites": 1,
    "snippet": "dy_marshmallow\",lf=\"tengu_tranquil_crescent\",df=\"tengu_steady_sunbeam\",cf=\"tengu_hashed_lark\",uf=\"tengu_validated_clover\",pf=\"tengu_copper_kite\",ff=\"tengu_calm_eagle\",gf=\"tengu_snug_platypus\",mf=\"tengu_async_snowglobe\",hf=\"tengu_humble_flurry\",Ef=\"tengu_fizzy_widget\";class ti{reader=null;register(e){let n=this.reader;return this.reader=e,n}servedTrue(e){let n=this.reader;if(!n)return!1;try{return n(e,!1)===!0}catch{return!1}}}var Ae=new ti,rt=Ce({settled:void 0,answeredOff:!1,answeredOn:!1},(e)=>{e.settled=void 0,e",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "One of about twelve served-true gates read through a registered reader with a settled/answeredOn/answeredOff state; purpose not visible in code read"
   },
   "flag:tengu_humble_hammock": {
    "category": "networking-api",
@@ -45949,15 +45949,15 @@
    "summary": "Text of silent-turn reminder message"
   },
   "flag:tengu_hushed_plover": {
-   "category": "",
-   "confidence": "",
+   "category": "agents-subagents-workflows",
+   "confidence": "med",
    "default": "!0",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "k",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:46Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -45965,8 +45965,8 @@
    "served": null,
    "sites": 1,
    "snippet": "y=await Gln(e);if(y)return{outcome:y};n.refuseIfLetGo();let S=k(car,!1)===!0,{unanswered:w}=n.promptsUp;if(e.fromSubagent&&!n.signal.aborted&&w!==void 0&&w.turn===e.turn&&performance.now()-w.at<(e.promptTimeoutMs??Jln)&&k(\"tengu_hushed_plover\",!0))return{outcome:\"quiet_spell\",wait:{upAtRaise:n.promptsUp.count,upAtEnd:n.promptsUp.count,queuedMs:0,waitedMs:0,fetchedBeforeAsking:!1,oneAtATime:S}};let H=performance.now(),K=!1,V=!1;n.promptsUp.count++;let J={counted:!0,oneAtATime:S},_e;try{for(;;){if(K||=S&&s.wouldWait(",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Subagent permission prompts: if a prompt is already up this turn within promptTimeoutMs, a second one waits (quiet_spell) instead of stacking; default true"
   },
   "flag:tengu_ide_rc_auto_enable": {
    "category": "bridge-remote-control",
@@ -46519,15 +46519,15 @@
    "summary": "Plugin related inverse gate (qDe returns !flag)"
   },
   "flag:tengu_jiggly_blossom": {
-   "category": "",
-   "confidence": "",
+   "category": "compaction-context",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:46Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -46535,8 +46535,8 @@
    "served": null,
    "sites": 1,
    "snippet": "ro_keep_recent\"),t(`[KEEP-RECENT MC] context_hint trigger, cleared ${S.size} tool results (~${h} tokens), kept last ${r.size}`),x$t(),n)bt(n,s.agentId);return{messages:w,tokensSaved:h,clearedIds:S,clearedContent:R}}var xl=\"tengu_jiggly_blossom\",ir=64,ar=/^[a-zA-Z0-9_-]{1,128}$/,lr=\"mcp__container__\";function dr(e){return wt.has(e)||e.startsWith(lr)&&wt.has(e.slice(lr.length))}var Ml=[Qh,Lm],cr=64,ur=12,Nn={minIdleSeconds:3900,keepToolUses:ur,clearAtLeastTokens:L4n,triggerToolUsesBelowCount:3,minTriggerToolUses:ur+1",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Compact micro keep-recent: on a context_hint trigger clears old tool results keeping the last 12 tool uses (minIdle 3900 s); mcp__container__ tools exempt"
   },
   "flag:tengu_jiggly_harp": {
    "category": "tools-permissions",
@@ -52939,15 +52939,15 @@
    "summary": "Records created PR URL to CCR session"
   },
   "flag:tengu_recursive_puddle": {
-   "category": "",
-   "confidence": "",
+   "category": "tools-permissions",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:46Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -52955,8 +52955,8 @@
    "served": null,
    "sites": 1,
    "snippet": "open_window\",\"browser_press_and_hold\",\"browser_press_key\",\"browser_resize\",\"browser_save_download\",\"browser_select_option\",\"browser_snapshot\",\"browser_tabs\",\"browser_take_screenshot\",\"browser_type\",\"browser_wait_for\"],xFo=\"tengu_recursive_puddle\",Qf=null,ep=Ce({on:!1},(e)=>{e.on=!1});function Lk(e){let n=Qf;return Qf=e,ep.on=!1,n}function q8n(){let e=Qf?.(xFo,!1)===!0;if(e)ep.on=!0;return e}function epn(){return q8n()||ep.on}class Hk{cachedEmail=null;emailFetchPromise=null;coreUserData=ro((e)=>{let n=ZM(),r=ue(),s,",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Turns on the Claude-in-Chrome browser tool set (browser_navigate through browser_wait_for) when served true; latches on for the session"
   },
   "flag:tengu_refactored_gadget": {
    "category": "tools-permissions",
@@ -55275,15 +55275,15 @@
    "summary": "Forwards nested subagent tool calls over SDK"
   },
   "flag:tengu_starry_waterfall": {
-   "category": "",
-   "confidence": "",
+   "category": "auth-billing-limits",
+   "confidence": "high",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:47Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -55291,8 +55291,8 @@
    "served": null,
    "sites": 1,
    "snippet": "f(typeof n!==\"object\"||n===null||!(\"type\"in n)||typeof n.type!==\"string\")return;let r=\"message\"in n&&typeof n.message===\"string\"?re(n.message,Lt):void 0;return{error:{type:re(n.type,Rt),...r!==void 0&&{message:r}}}}var Ct=\"tengu_starry_waterfall\",H={menuSuffixPctOff:\"at least {pct}% off \\xB7 {days} left\",menuSuffixExtraCredit:\"get at least {pct}% extra credit \\xB7 {days} left\",hintPctOff:\"Usage credits are at least {pct}% off \\xB7 {days} left \\xB7 /usage-credits\",hintExtraCredit:\"Buy usage credits and get at least ",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Usage-credits promotion wall: limited-time percent-off or extra-credit offers (/usage-credits); eligibility fetched and logged as _asked and _wall"
   },
   "flag:tengu_startup_announcements": {
    "category": "ui-tui",
@@ -55454,15 +55454,15 @@
    "summary": "kill-switch style gate read via servedTrue() (true only when served true); the gated behaviour is in minified code not named in the snippet \u2014 unclear"
   },
   "flag:tengu_steady_mitten": {
-   "category": "",
-   "confidence": "",
+   "category": "telemetry-surveys",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:47Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -55473,8 +55473,8 @@
    },
    "sites": 1,
    "snippet": "son:\"unrenderable_question\"};_e.push({...Ge,kind:He,options:ze})}return{survey:{surveyUuid:te.surveyUuid,ownerKey:H,orgName:L,headline:aN(te.inviteHeadline)??Tdo,message:aN(te.inviteMessage)??xdo(L),questions:_e}}}var Ado=\"tengu_steady_mitten\",NW=21600000,Mdo=86400000,Ido=3600000;async function r7e(h){try{return await Ddo(h)}catch{return f(\"cli_org_survey\",\"skip_caller_error\"),\"error\"}}function Edo(){let h=mn();return h?.accountUuid&&h.organizationUuid?`${h.accountUuid}:${h.organizationUuid}`:null}async function Dd",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Org survey invite (cli_org_survey) rendered per account and org with headline, message and questions; cadence constants 6 h, 24 h, 1 h"
   },
   "flag:tengu_steady_panda": {
    "category": "agents-subagents-workflows",
@@ -55521,15 +55521,15 @@
    "summary": "Default true: when resuming, a cut-off user turn is detected and resumes with a cut_reply_nudge (interrupted_turn) instead of ignoring the tail."
   },
   "flag:tengu_steady_puppy": {
-   "category": "",
-   "confidence": "",
+   "category": "agents-subagents-workflows",
+   "confidence": "med",
    "default": "!1",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "k",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:47Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -55537,8 +55537,8 @@
    "served": null,
    "sites": 1,
    "snippet": "h.size===s.size)g(\"subagent_orphan_sidecar_seed\");else f(\"subagent_orphan_sidecar_seed\",\"sidecar_unwritten\")}catch(S){t(`[orphanAgentRestore] ${oM(S)}`,{level:\"error\"})}return{offered:s,kept:h}}function kh(){return!Z()&&k(\"tengu_steady_puppy\",!1)}var aoe=t4e*1000;async function mR(e,n){return[]}function bh(e){let n=new Set;for(let[r,s]of e??[])if(s===ht||s===Wp)n.add(r);return n}async function pR({recorded:e,agentCallIds:n,known:r,hasTool:s,settleFlags:h}){let S=nd(Array.isArray(e)?e:[]).filter((O)=>typeof O.tool_u",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Orphaned-subagent restore: seeds a sidecar so orphaned agent results can be offered and kept after a restart; default false, off in remote"
   },
   "flag:tengu_steady_sunbeam": {
    "category": "rollout-killswitch",
@@ -56185,15 +56185,15 @@
    "summary": "steering prompt variant: default | no_nudges | counter_steer (env CLAUDE_CODE_THISTLE_GREBE wins); served default"
   },
   "flag:tengu_thistle_orrery": {
-   "category": "",
-   "confidence": "",
+   "category": "rollout-killswitch",
+   "confidence": "low",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:47Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -56201,8 +56201,8 @@
    "served": null,
    "sites": 1,
    "snippet": "der_mitten\",O4s=\"tengu_snug_quill\",M4s=\"tengu_wondrous_haven\",H4s=\"tengu_goofy_hare\",D4s=\"tengu_mighty_flask\",L4s=\"tengu_zippy_harbor\",N4s=\"tengu_fallow_lantern\",$4s=\"tengu_mellow_hollerith\",F4s=\"tengu_steady_bittern\",U4s=\"tengu_thistle_orrery\",Gk=new Set([\"tengu_steady_bittern\",\"tengu_thistle_orrery\",...[]]),br=new Set([\"tengu_steady_bittern\",...[],\"tengu_twinkly_clover\",\"tengu_candid_juniper\",\"tengu_steadfast_wren\",\"tengu_cheeky_toucan\",\"tengu_cobalt_plinth_orpine\",\"tengu_valiant_lantern\",\"tengu_level_plover\",\"te",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Member of the GrowthBook pre-init gate sets read before the OAuth refresh (with tengu_steady_bittern); purpose not visible in code read"
   },
   "flag:tengu_thrifty_sonic": {
    "category": "tools-permissions",
@@ -57671,15 +57671,15 @@
    "summary": "String variant (off/has_ce/no_ce) for an Enterprise upsell notice to admin, billing and owner roles. It is shown only a limited number of times."
   },
   "flag:tengu_velvet_harrow": {
-   "category": "",
-   "confidence": "",
+   "category": "agents-subagents-workflows",
+   "confidence": "med",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "indirect",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:44Z",
+   "investigated_by": "agent",
    "kind": "flag",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -57687,8 +57687,8 @@
    "served": null,
    "sites": 1,
    "snippet": "ude Test connector): runs the plain-language specs in .claude-test/specs/ against your local dev server in a browser on this computer and reports PASS or FAIL per spec, with a screenshot\";var To=\"tengu_amber_quillwort\",yo=\"tengu_velvet_harrow\";function bt(e){if(ui(e,{safe:!1}))return!0;let o=a.CLAUDE_INTERNAL_FC_OVERRIDES;return o!==void 0&&uUo(e)&&!Hzs(\"CLAUDE_INTERNAL_FC_OVERRIDES\",o)&&bn(e,!1).value===!0}var St=[\"needs_input\",\"blocked_before_specs\",\"specs_blocked\",\"signin_missing\",\"signin_expired\",\"used_folder\",",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Second gate of local Claude Test, paired with tengu_amber_quillwort; outcome states needs_input, blocked_before_specs, specs_blocked"
   },
   "flag:tengu_velvet_heron": {
    "category": "auth-billing-limits",
@@ -61596,15 +61596,15 @@
    "summary": "file-suggestion provider; {type:\"command\"} runs a custom command for @-path suggestions"
   },
   "setting:filter": {
-   "category": "",
-   "confidence": "",
+   "category": "other",
+   "confidence": "high",
    "default": "",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "ft",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:47Z",
+   "investigated_by": "agent",
    "kind": "setting",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -61612,8 +61612,8 @@
    "served": null,
    "sites": 1,
    "snippet": "n=new Set,qr=($e)=>{let at=$t.find((fn)=>sS(Re($e),fn));if(at!==void 0&&!Cn.has($e))Cn.add($e),vt(`[Sandbox Linux] ${$e} is at or beneath the credential deny ${at}: not bound back`,{level:\"warn\"});return at===void 0},qa=ft().filter(($e)=>xe().includes($e)||qr($e)),ko=I.filter(qr);for(let{normalizedPath:$e,mount:at,liftedFile:fn}of hn()){if(at===void 0){vt(`[Sandbox Linux] Read deny path mounts nothing this wrap can place (absent, or uninspectable, or a link to '/' with nothing but '/' holding it): ${$e}`);continue}",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "False positive: the Bun plugin-API string Expected an object with filter RegExp, not a settings.json key"
   },
   "setting:footerLinksRegexes": {
    "category": "setting",
@@ -62128,15 +62128,15 @@
    "summary": "Custom directory for plan files, relative to project root. If not set, defaults to ~/.claude/plans/"
   },
   "setting:pluginOrigin": {
-   "category": "",
-   "confidence": "",
+   "category": "tools-permissions",
+   "confidence": "high",
    "default": "`plugin-origin: ${bi}`",
    "desc": "",
    "first_seen_at": "2026-10-19T23:08:01Z",
    "first_seen_version": "2.1.304",
    "getters": "hs",
-   "investigated_at": "",
-   "investigated_by": "",
+   "investigated_at": "2026-10-19T23:34:47Z",
+   "investigated_by": "agent",
    "kind": "setting",
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
@@ -62144,8 +62144,8 @@
    "served": null,
    "sites": 1,
    "snippet": "===void 0&&vr===void 0&&!jIt()&&Bl(be.decisionReason,EN)===void 0&&!Ut&&!S7(e,n)&&!zae(e.name)&&!GD(e,Ee)){if(t(`Skipping auto mode classifier for ${e.name}: called by plugin ${bi}`),io)return be;if(Do)J0n(h,e,n);return hs(\"pluginOrigin\",`plugin-origin: ${bi}`)}if(H.synthesizedBy!==void 0&&e.name===ht&&js(Ee.mode)&&js(xe)&&mt===void 0&&!ji&&!Ut&&Bl(be.decisionReason,EN)===void 0)return t(`Skipping auto mode classifier for ${e.name}: synthesized by ${H.synthesizedBy}`),hs(\"harnessSynthesized\",`harness-synthesized: $",
-   "status": "new",
-   "summary": ""
+   "status": "investigated",
+   "summary": "Not a settings key: an auto-mode classifier decision reason (plugin-origin: name) when a tool call originates from a plugin, so the classifier is skipped"
   },
   "setting:precomputeCompactionEnabled": {
    "category": "setting",

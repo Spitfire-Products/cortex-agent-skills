@@ -10,6 +10,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | key | status | read via | default | description / summary | seen |
 |---|---|---|---|---|---|
 | `check` | investigated | ft | — | Not a settings key: .check is a method of the lockfile library exported by ft(). Scanner false positive. | 2.1.300→2.1.304 |
+| `filter` | investigated | ft | — | False positive: the Bun plugin-API string Expected an object with filter RegExp, not a settings.json key | 2.1.304→2.1.304 |
 | `lock` | investigated | ft | — | Not a settings key: .lock is a method of the lockfile library exported by ft(). Scanner false positive. | 2.1.300→2.1.304 |
 | `trim` | investigated | ft | — | Scanner false positive: String.prototype.trim() call on an input buffer (ft().trim()), not a settings key. | 2.1.302→2.1.304 |
 
@@ -122,9 +123,8 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `wheelScrollAccelerationEnabled` | auto | schema | `!0` | Ramp mouse-wheel scroll speed during fast scrolls (fullscreen mode only) | 2.1.296→2.1.304 |
 | `wslInheritsWindowsSettings` | auto | schema | — | When set to true in either admin-only Windows source \u2014 the HKLM SOFTWARE/Policies/ClaudeCode registry key or C:/Program Files/ClaudeCode/managed-settings.json \u2014 WSL reads managed settings from the full Windows policy chain (HKLM, C:/Program Files/ClaudeCode via DrvFs, HKCU) in addition to /etc/claude-code. Windows sources take priority. The flag is also required in HKCU itself for HKCU policy to apply on WSL (double opt-in: admin enables the chain, user confirms HKCU). On native Windows the flag has no effect. | 2.1.296→2.1.304 |
 
-## uncategorised
+## tools-permissions
 
 | key | status | read via | default | description / summary | seen |
 |---|---|---|---|---|---|
-| `filter` | new | ft | — |  | 2.1.304→2.1.304 |
-| `pluginOrigin` | new | hs | ``plugin-origin: ${bi}`` |  | 2.1.304→2.1.304 |
+| `pluginOrigin` | investigated | hs | ``plugin-origin: ${bi}`` | Not a settings key: an auto-mode classifier decision reason (plugin-origin: name) when a tool call originates from a plugin, so the classifier is skipped | 2.1.304→2.1.304 |

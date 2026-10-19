@@ -2,13 +2,13 @@
 
 # Claude Code variables — index
 
-Binary version: **2.1.304** · last scan 2026-10-19T23:08:01Z UTC · pending investigation: **28** · deprecated: 144
+Binary version: **2.1.304** · last scan 2026-10-19T23:08:01Z UTC · pending investigation: **0** · deprecated: 144
 
 | kind | total | new (uninvestigated) | investigated | auto | deprecated | file |
 |---|---|---|---|---|---|---|
-| flag | 1047 | 15 | 940 | 0 | 92 | `reference/flags.md` |
-| env | 977 | 11 | 964 | 0 | 2 | `reference/env-vars.md` |
-| setting | 141 | 2 | 3 | 104 | 32 | `reference/settings.md` |
+| flag | 1047 | 0 | 955 | 0 | 92 | `reference/flags.md` |
+| env | 977 | 0 | 975 | 0 | 2 | `reference/env-vars.md` |
+| setting | 141 | 0 | 5 | 104 | 32 | `reference/settings.md` |
 | event | 788 | 0 | 5 | 765 | 18 | `reference/events.md` |
 
 Served-but-not-read-by-this-build flag names: 354 (`reference/served-only.md`). Deprecated list: `reference/deprecated.md`. Pending: `reference/NOTICE.md`.

@@ -35,7 +35,7 @@
 | `tengu_agentview_inherit_mode_demote` | `!0` | Whether background/agent view sessions inherit permission mode, marking permissionModeInherited | 2.1.296 |
 | `tengu_amber_creek` | `!1` | Downsell gate cached on state (downsellGateCached) | 2.1.296 |
 | `tengu_amber_kestrel` | `!1` | When true bypasses concurrent subagent limit check | 2.1.296 |
-| `tengu_amber_quillwort` | `` |  | 2.1.304 |
+| `tengu_amber_quillwort` | `` | Gates the local Claude Test feature (runs .claude-test/specs against the local dev server in a browser, PASS/FAIL per spec); CLAUDE_INTERNAL_FC_OVERRIDES can force it | 2.1.304 |
 | `tengu_ant_yolo_equiv_strip_config` | `{}` | Config to strip yolo-equivalent permission rules, filtered by entrypoint include/exclude | 2.1.296 |
 | `tengu_async_goblet` | `!0` | Selects sdk_hosted vs sdk_hosted_disabled remote mode label | 2.1.296 |
 | `tengu_attempt_decision_shadow` | `!1` | Shadow-mode attempt decision logic for API retry handling | 2.1.296 |
@@ -64,7 +64,7 @@
 | `tengu_bridge_host_declined_end` | `!0` | End bridge session when host declined | 2.1.296 |
 | `tengu_bridge_inbox_pointer_boundary` | `!0` | Session inbox unread pointer boundary for file_id wake messages | 2.1.296 |
 | `tengu_bridge_initialize_commands` | `!1` | Send initialize commands in REPL bridge | 2.1.296 |
-| `tengu_bridge_owner_check_attribution` | `!0` |  | 2.1.304 |
+| `tengu_bridge_owner_check_attribution` | `!0` | Remote Control bridge: the owner check consults attribution (default true); sibling of bridge_resume_respects_local_owner and owner_pinned_end | 2.1.304 |
 | `tengu_bridge_owner_pinned_end` | `!0` | Owner-pinned session end behavior in bridge | 2.1.296 |
 | `tengu_bridge_rc_child_artifact` | `!0` | Artifact support for remote control child sessions | 2.1.296 |
 | `tengu_bridge_rc_child_auto_compact` | `!0` | Auto-compact enabled for remote control child sessions | 2.1.296 |
@@ -88,7 +88,7 @@
 | `tengu_ccr_exclude_dynamic_restore_killswitch` | `!1` | Kill switch for restoring excludeDynamicSections from prior worker epoch | 2.1.296 |
 | `tengu_ccr_external_event_record` | `!1` | Default false. True passes the external-event record into the session-inbox wake resolver for remote (CCR) messages; else undefined. | 2.1.302 |
 | `tengu_ccr_inherited_approval_killswitch` | `` | Killswitch for CCR inherited permission approvals. Sits with parked-permission resume settings, and `inheritedAnswerOff` appears to read it. | 2.1.296 |
-| `tengu_ccr_memory_watchdog` | `` |  | 2.1.304 |
+| `tengu_ccr_memory_watchdog` | `` | Enables the CCR machine-status memory watchdog: 60 s timer, warn at 85 pct and drain at 95 pct memory fraction, 5 pct hysteresis, lock file | 2.1.304 |
 | `tengu_ccr_orphan_restore_wake` | `!0` | Wake agent to handle restored orphan tasks/shells after session restore | 2.1.296 |
 | `tengu_ccr_orphan_restore_wake_shells` | `!0` | Include shells in orphan restore wake | 2.1.296 |
 | `tengu_ccr_skip_redundant_heartbeat` | `!1` | Skips redundant CCR worker heartbeats (skipRedundantHeartbeats option). | 2.1.296 |
@@ -119,7 +119,7 @@
 | `tengu_cobalt_plinth_tansy` | `!1` | Artifact feature gate; unclear. | 2.1.296 |
 | `tengu_cobalt_plinth_thrift` | `!1` | Artifact-related strict true gate; unclear. | 2.1.296 |
 | `tengu_composed_teacup` | `` | Safe-gate (ld) in rsync command validation: when on, the rsync option regex also matches -e, --rsh and --rsync-path. The scp, rcp and sftp branch is. | 2.1.296 |
-| `tengu_composed_treehouse` | `!1` |  | 2.1.304 |
+| `tengu_composed_treehouse` | `!1` | When a deferred-tools delta retracts a tool because it was denied, marks the delta deniedLead (code default false) | 2.1.304 |
 | `tengu_compressed_river` | `!0` | IDE bridge permission dialog for outside reads. | 2.1.296 |
 | `tengu_concurrent_shore` | `!0` | Idle-window keepalive for background tasks/agents. | 2.1.296 |
 | `tengu_coordinator_panel` | `!0` | Coordinator panel display in interactive mode. | 2.1.296 |
@@ -188,8 +188,8 @@
 | `tengu_gravel_chorus` | `!0` | Bridge/remote-control related toggle near remote_control_at_startup | 2.1.296 |
 | `tengu_greedy_crane` | `!0` | Auto-restart of exited session with "Continue from where you left off" message (not disabled when !==false) | 2.1.296 |
 | `tengu_harbor_moth` | `!1` | Remote recap (away summary) enable | 2.1.296 |
-| `tengu_harp_forepillar` | `` |  | 2.1.304 |
-| `tengu_harp_pedal` | `!0` |  | 2.1.304 |
+| `tengu_harp_forepillar` | `` | Gate (default false) for classifying a path as launch_dir, inside_launch_dir or elsewhere relative to the launch directory | 2.1.304 |
+| `tengu_harp_pedal` | `!0` | Default-on gate on the model catalog path: cached model rows with null values are returned for refresh when on; purpose partly unclear | 2.1.304 |
 | `tengu_harp_voatavo` | `` | Default true; when served false, permission rule parsing skips expanded rule variants/blocksNothing computation (legacy rules only). | 2.1.299 |
 | `tengu_hazel_lantern` | `0` | Seconds duration for a timer (clamped min/max) with repeatRenews | 2.1.296 |
 | `tengu_hazy_cosmos` | `!0` | Default true: on Linux hosted sessions, refuses writes to paths that look like the user's local computer (/Users, C:\) with an explanatory error. | 2.1.300 |
@@ -197,7 +197,7 @@
 | `tengu_heron_brook` | `""` | Override string text shown after hook blocking (client data or flag) | 2.1.296 |
 | `tengu_hidden_volcano` | `null` | Config for ask/prompt (enabled, form line/dialog, maxAsks, minHoursBetween) near resume-return | 2.1.296 |
 | `tengu_humble_emerson` | `!0` | Slash command detection/highlighting in input with pasted contents | 2.1.296 |
-| `tengu_humble_flurry` | `` |  | 2.1.304 |
+| `tengu_humble_flurry` | `` | One of about twelve served-true gates read through a registered reader with a settled/answeredOn/answeredOff state; purpose not visible in code read | 2.1.304 |
 | `tengu_humble_petal` | `!0` | Bridge behavior toggle default on | 2.1.296 |
 | `tengu_humble_wand` | `!0` | Async agent permission denial path (no interactive approval) | 2.1.296 |
 | `tengu_humming_locket` | `!0` | Slash commands (effort, model, rename, usage) handled specially | 2.1.296 |
@@ -206,7 +206,7 @@
 | `tengu_humming_wave` | `` | Constant near /feedback and /share handling; read indirectly (likely share switch). Purpose not fully confirmed. | 2.1.299 |
 | `tengu_hushed_kestrel` | `!0` | Agent handback pointer notice to recipient | 2.1.296 |
 | `tengu_hushed_lantern` | `!0` | Default true: gates browser extension roster/relay check for bridge-connected extensions with persisted device IDs. | 2.1.299 |
-| `tengu_hushed_plover` | `!0` |  | 2.1.304 |
+| `tengu_hushed_plover` | `!0` | Subagent permission prompts: if a prompt is already up this turn within promptTimeoutMs, a second one waits (quiet_spell) instead of stacking; default true | 2.1.304 |
 | `tengu_immutable_ladybug` | `` | Safe gate for judging plugin prompt commands against their plugin folder roots (k5r, rDt). Off means no judgment; a sync_off result is also possible. | 2.1.296 |
 | `tengu_immutable_tide` | `0` | Numeric size threshold for PDF extraction failure handling | 2.1.296 |
 | `tengu_indexed_pearl` | `AF` | Numeric multiplier for headless heap census RSS thresholds on hosted workers; non-positive disables the census. | 2.1.300 |
@@ -219,7 +219,7 @@
 | `tengu_jaunty_forest` | `` | Safe gate in the shell-parser string handling: when on, the string node text is processed as a UTF-8 Buffer, using byte offsets rather than string. | 2.1.296 |
 | `tengu_jazzy_puddle` | `!0` | Print text results at turn end in print mode | 2.1.296 |
 | `tengu_jazzy_ripple` | `!1` | Plugin related inverse gate (qDe returns !flag) | 2.1.296 |
-| `tengu_jiggly_blossom` | `` |  | 2.1.304 |
+| `tengu_jiggly_blossom` | `` | Compact micro keep-recent: on a context_hint trigger clears old tool results keeping the last 12 tool uses (minIdle 3900 s); mcp__container__ tools exempt | 2.1.304 |
 | `tengu_jiggly_harp` | `` | Constant beside edit/replace-regex handling with hash allowlist; read indirectly. Purpose unclear. | 2.1.299 |
 | `tengu_jiggly_mochi` | `!1` | Hook-related toggle near PermissionRequest/PostToolBatch hook events | 2.1.296 |
 | `tengu_joyful_anchor` | `` | Array of tool names/ids; Vn returns true if a (non-MCP-restricted) tool matches an entry in the served list. Likely tool-deferral exemption, but exact effect unclear. | 2.1.296 |
@@ -359,7 +359,7 @@
 | `tengu_rc_thread_reply_gate` | `` | Gates a wait for the bridge projects MCP mount (tengu_bridge_projects_mount_wait) and the reply, no_reply_needed, post_message, react and update_status tools for rc_owner threads. | 2.1.296 |
 | `tengu_reactive_quilt` | `!1` | Unclear; sits among CCR (remote) stream event helpers | 2.1.296 |
 | `tengu_record_created_pr_to_ccr` | `!1` | Records created PR URL to CCR session | 2.1.296 |
-| `tengu_recursive_puddle` | `` |  | 2.1.304 |
+| `tengu_recursive_puddle` | `` | Turns on the Claude-in-Chrome browser tool set (browser_navigate through browser_wait_for) when served true; latches on for the session | 2.1.304 |
 | `tengu_remote_backend` | `!1` | Forces cloud/remote backend session instead of local terminal | 2.1.296 |
 | `tengu_rename_full_session_fork` | `!1` | Generates session name via forked full session when preferFork | 2.1.296 |
 | `tengu_resume_open_live_bg` | `!0` | Resume opens live background job via jobId | 2.1.296 |
@@ -401,14 +401,14 @@
 | `tengu_squishy_spring` | `!0` | Worktree staged-copy rename strategy vs legacy path | 2.1.296 |
 | `tengu_staged_ladybug` | `!0` | Forwarded as vscode/IDE feature flag value in a flags object | 2.1.296 |
 | `tengu_starry_squid` | `!0` | Forwards nested subagent tool calls over SDK | 2.1.296 |
-| `tengu_starry_waterfall` | `` |  | 2.1.304 |
+| `tengu_starry_waterfall` | `` | Usage-credits promotion wall: limited-time percent-off or extra-credit offers (/usage-credits); eligibility fetched and logged as _asked and _wall | 2.1.304 |
 | `tengu_startup_notice` | `""` | Remote-set startup warning notification text (30s toast) | 2.1.296 |
 | `tengu_stateful_mitten` | `` | unclear: variable lSt is defined beside the idle-return /clear hint and cold-cache quota warning code, but its use is not visible in the context. | 2.1.296 |
 | `tengu_static_title_under_mux` | `!0` | Disables animated terminal title under terminal multiplexer | 2.1.296 |
 | `tengu_steadfast_wren` | `` | Member of the obfuscated flag-name set near GrowthBook init; role unclear. | 2.1.299 |
 | `tengu_steady_bittern` | `` | First member of the obfuscated flag-name set (also in its own one-item set _k) near GrowthBook init; role unclear. | 2.1.300 |
 | `tengu_steady_plover` | `!0` | Default true: when resuming, a cut-off user turn is detected and resumes with a cut_reply_nudge (interrupted_turn) instead of ignoring the tail. | 2.1.299 |
-| `tengu_steady_puppy` | `!1` |  | 2.1.304 |
+| `tengu_steady_puppy` | `!1` | Orphaned-subagent restore: seeds a sidecar so orphaned agent results can be offered and kept after a restart; default false, off in remote | 2.1.304 |
 | `tengu_still_heron` | `!0` | Denied-notice behavior when usage limit already hit (not on gateway) | 2.1.296 |
 | `tengu_stream_watchdog_default_on` | `!0` | Default for byte-level stream watchdog (CLAUDE_ENABLE_BYTE_WATCHDOG) | 2.1.296 |
 | `tengu_streamed_thimble` | `!0` | Sibling login watch for account-entry changes | 2.1.296 |
@@ -418,7 +418,7 @@
 | `tengu_teleport_permission_mode_refused` | `` | Name constant in move-to-cloud (teleport) code, likely a telemetry event when the permission mode is refused; not shown as a flag read. | 2.1.299 |
 | `tengu_tender_mitten` | `` | Member of the obfuscated flag-name set near GrowthBook init; role unclear. | 2.1.300 |
 | `tengu_terminal_sidebar` | `!1` | Shows "Show status in terminal tab" setting | 2.1.296 |
-| `tengu_thistle_orrery` | `` |  | 2.1.304 |
+| `tengu_thistle_orrery` | `` | Member of the GrowthBook pre-init gate sets read before the OAuth refresh (with tengu_steady_bittern); purpose not visible in code read | 2.1.304 |
 | `tengu_tidy_cloud` | `!0` | Retry cap on API retries (min of retries, limit) with non-streaming fallback | 2.1.296 |
 | `tengu_tidy_eclipse` | `!0` | Tolerates unrecognized_keys in tool input by setting keys aside before schema parse | 2.1.296 |
 | `tengu_tidy_fern` | `!0` | Adds extra data to messages sent between peers/agents (uds) | 2.1.296 |
@@ -445,7 +445,7 @@
 | `tengu_vast_platypus` | `` | Safe-read flag in hook handling; aHt() returns true when flag is not served true; affects blockingError path for certain hook events. | 2.1.300 |
 | `tengu_vast_sunset` | `!0` | Default true: builds a 'cut short' error for a non-streaming response when stop_reason/output cap hit (max_tokens), instead of silently returning. | 2.1.299 |
 | `tengu_velvet_cairn` | `!0` | Read-dedup/cache check for tool results (after_note, no_cache, server_cleared) | 2.1.296 |
-| `tengu_velvet_harrow` | `` |  | 2.1.304 |
+| `tengu_velvet_harrow` | `` | Second gate of local Claude Test, paired with tengu_amber_quillwort; outcome states needs_input, blocked_before_specs, specs_blocked | 2.1.304 |
 | `tengu_velvet_heron` | `!0` | Auto mode classifier billing notice for non-pro/max/team plans | 2.1.296 |
 | `tengu_velvety_aurora` | `!0` | unclear; near projects thread recap prompt and projectsModel selection | 2.1.296 |
 | `tengu_verified_vs_assumed` | `!1` | Adds system prompt line to report verified vs assumed | 2.1.296 |

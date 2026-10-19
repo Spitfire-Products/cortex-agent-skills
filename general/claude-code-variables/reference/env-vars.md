@@ -50,6 +50,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `CLAUDE_CODE_PLAN_V2_AGENT_COUNT` | investigated | env-table | 1 | Number of plan-v2 agents (1-10); defaults by subscription tier (3 for max 20x/team/enterprise, else 1). | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_PLAN_V2_EXPLORE_AGENT_COUNT` | investigated | env-table | 1 | Number of plan-v2 explore agents (1-10), default 3. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_PROACTIVE` | investigated | env-table | 1 | Sets assistant (proactive) mode for the REPL transcript/assistant hook. | low | 2.1.296→2.1.304 |
+| `CLAUDE_CODE_SDK_READS_STARTUP_MARKS` | investigated | env-table | 3 | Set by Agent SDK startup() and prewarm(); the CLI then emits keepalive lines carrying startup_mark checkpoints before the initialize response | high | 2.1.304→2.1.304 |
 | `CLAUDE_CODE_SENDMESSAGE_HANDBACK` | investigated | process.env | 1 | Subagent final report delivered via SendMessage handback; falls back to tengu_lively_waffle. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_STREAMED_BUMBLEBEE` | investigated | env-table | 1 | Enables a subagent budget note (token budget wording) via tengu_streamed_bumblebee override. | med | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_STREAMED_BUMBLEBEE_TEXT` | investigated | env-table | 1 | Custom wording for the subagent budget note; {N} replaced by token budget. | high | 2.1.296→2.1.304 |
@@ -173,10 +174,12 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `CLAUDE_CLIENT_PRESENCE_FILE` | investigated | env-table | 1 | Path to a client-presence marker file; existence signals a client is attached. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_ATTACHMENTS_BY_PATH` | investigated | env-table | 5 | Read into a startup flag bundle next to bridge-child/MCP-apps settings; exact effect on attachments not visible. Unclear. | low | 2.1.300→2.1.304 |
 | `CLAUDE_CODE_ATTACHMENTS_IN_USER_DATA` | investigated | env-table | 1 | In a remote session (CLAUDE_CODE_REMOTE_SESSION_ID), gates an attachment-handling path that checks retention-exemption status first. Details unclear. | low | 2.1.301→2.1.304 |
+| `CLAUDE_CODE_ATTRIBUTION_PROJECT` | investigated | env-table | 1 | Host-set project label in the forwarded-env allow-set (with REMOTE, HERMETIC_MODE, HOSTED_DESKTOP); passed to child/bridge processes for attribution, not a user knob | med | 2.1.304→2.1.304 |
 | `CLAUDE_CODE_AUTO_MODE_HEARTH_MEMBER_RELAY_ROWS` | investigated | process.env | 2 | Overrides member relay rows display; default from tengu_hearth_member_relay_rows_enabled. | med | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_BRIDGE_CHILD_ARTIFACT` | investigated | env-table | 3 | Remote-control bridge child setting enabling artifacts. | med | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_BRIDGE_CHILD_AUTO_DEFAULT` | investigated | env-table | 6 | Marks unattended Remote Control machine session; defaultMode auto ignored when disableAutoMode set. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_BRIDGE_CHILD_MACHINE_SETTINGS` | investigated | env-table | 3 | Bridge child uses machine settings; checked with A9(). | med | 2.1.296→2.1.304 |
+| `CLAUDE_CODE_BRIDGE_CHILD_PROJECTS_ENTRYPOINT` | investigated | env-table | 3 | One of four bridge-child markers (auto-default, artifact, machine-settings, projects-entrypoint) telling a Remote Control child how it was launched; forwarded to children | med | 2.1.304→2.1.304 |
 | `CLAUDE_CODE_BRIDGE_MCP_CARRIER` | investigated | env-table | 2 | Marks bridge MCP carrier child/descendant; deleted for byoc remote. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_BRIDGE_OWNER_ACCOUNT_UUID` | investigated | env-table | 1 | Account UUID of the bridge owner, used with org UUID for identity. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_BRIDGE_OWNER_ORG_UUID` | investigated | env-table | 1 | Organization UUID of the bridge owner. | high | 2.1.296→2.1.304 |
@@ -282,6 +285,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `CLAUDE_CODE_MCP_PREWAIT_SERVERS` | investigated | env-table | 1 | Named MCP servers to pre-wait for in ccr_worker mode. | med | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_MCP_PREWAIT_SERVERS_MS` | investigated | env-table | 1 | Timeout ms paired with PREWAIT_SERVERS for pre-waiting named MCP servers. | med | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_MCP_SERVE_AUTH_TOKEN` | investigated | env-table | 1 | Auth token for the MCP serve HTTP server; unset from env after read. | high | 2.1.296→2.1.304 |
+| `CLAUDE_CODE_MCP_SERVE_ENABLED_PLUGINS` | investigated | env-table | 2 | Host-provided plugin list for claude mcp serve (with MCP_SERVE_SETTINGS and MCP_SERVE_WORKSPACE_ROOT); forwarded to children, internal | med | 2.1.304→2.1.304 |
 | `CLAUDE_CODE_MCP_SERVE_INTERFACE_MIN_VERSION` | investigated | env-table | 2 | Sets min_version advertised for the anthropic/toolHostInterface in MCP serve mode; logs launch_min_version_ignored if daemon differs. | med | 2.1.299→2.1.304 |
 | `CLAUDE_CODE_MCP_SERVE_SETTINGS` | investigated | env-table | 2 | JSON settings (permissions allow/deny) for MCP serve mode; parsed then unset. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_MCP_SERVE_TOOL_OUTPUT` | investigated | env-table | 1 | Enables experimental tool-output metadata (deny_rules) in MCP serve mode. | med | 2.1.296→2.1.304 |
@@ -670,6 +674,8 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `CLAUDE_CODE_PLUGIN_USE_ZIP_CACHE` | investigated | env-table | 1 | Enables plugin zip cache mode (requires CLAUDE_CODE_PLUGIN_CACHE_DIR). | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_SKILL_ATTRIBUTION` | investigated | env-table | 3 | Skill attribution value; stripped from child env and flagged in telemetry. | med | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_SKILL_PROPOSALS` | investigated | env-table | 4 | Enables skill-proposal tool/guidance (propose or save skills from recurring procedures) in remote environments. | med | 2.1.296→2.1.304 |
+| `CLAUDE_CODE_SKIP_PLUGIN_LOCAL_MCP_SERVERS` | investigated | env-table | 1 | Skips a plugin's local in-directory MCP server sources during discovery (logged Skipping MCP server); inline declarations still resolve | high | 2.1.304→2.1.304 |
+| `CLAUDE_CODE_SKIP_PLUGIN_MCP_BUNDLES` | investigated | env-table | 1 | Skips plugin MCPB bundle sources during MCP discovery (logged Skipping MCPB source); pairs with SKIP_PLUGIN_LOCAL_MCP_SERVERS | high | 2.1.304→2.1.304 |
 | `CLAUDE_CODE_SKIP_PLUGIN_MCP_SERVERS` | investigated | env-table | 2 | Skips MCP server discovery for plugins unless exempted via the _EXCEPT list. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_SKIP_PLUGIN_MCP_SERVERS_EXCEPT` | investigated | env-table | 1 | Comma-separated plugin names or name@repository entries exempt from skipping plugin MCP servers. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_SYNC_PLUGINS` | investigated | env-table | 6 | Enables syncing plugins from the account/org on startup. | high | 2.1.296→2.1.304 |
@@ -790,6 +796,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `CLAUDE_CODE_IS_COWORK` | investigated | env-table | 10 | Marks session as Cowork; affects synced skills loading and prompt-cache behaviour. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_LAZY_ENV_GETTERS` | investigated | env-table | 0 | Appears only as an env-table key with no read sites in the scan; purpose unclear from code seen. | low | 2.1.299→2.1.304 |
 | `CLAUDE_CODE_LEGACY_BUNDLE` | investigated | env-table | 1 | Selects previous git working-tree upload path instead of new bundle upload; owner-settings only. | high | 2.1.296→2.1.304 |
+| `CLAUDE_CODE_PERSONAL_CONFIG_FIX` | investigated | env-table | 2 | Host-supplied plain-text instruction (max 300 chars, control chars rejected) shown when RESTRICT_PERSONAL_CONFIG blocks personal config | med | 2.1.304→2.1.304 |
 | `CLAUDE_CODE_PROCESS_WRAPPER` | investigated | process.env | 1 | Corporate launcher the desktop app starts bundled Claude Code through; named in managed settings. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_PROJECT_DIR_NAME` | investigated | env-table | 2 | Overrides project directory name (validated A-Za-z0-9_- up to 64 chars) under the config dir. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_RELAUNCH_HOME_TRUST` | investigated | env-table | 1 | Set on relaunch as pid:token to carry home-directory trust to the new process. | high | 2.1.296→2.1.304 |
@@ -815,6 +822,8 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `CLAUDE_CODE_TEE_SDK_STDOUT` | investigated | env-table | 1 | Tees SDK stdout in the remote-io transport. | med | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_TRANSCRIPT_LOCAL_GC` | investigated | env-table | 3 | Enables local transcript garbage collection in non-interactive non-remote sessions; overrides tengu_transcript_local_gc. | med | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_TRANSCRIPT_SLIM_TOOL_RESULTS` | investigated | env-table | 1 | For SDK-URL remote sessions, selects 'slim' instead of 'counted' transcript tool-result mode. | med | 2.1.299→2.1.304 |
+| `CLAUDE_CODE_WARN_DISK_FREE_GIB` | investigated | env-table | 2 | GiB threshold for the CCR machine-status disk watchdog's low-disk warning (tengu_ccr_disk_watchdog); host-forwarded | med | 2.1.304→2.1.304 |
+| `CLAUDE_CODE_WARN_MEMORY_FREE_GIB` | investigated | env-table | 2 | GiB threshold for the CCR memory watchdog's low-memory warning (tengu_ccr_memory_watchdog: warn 85 pct, drain 95 pct fractions) | med | 2.1.304→2.1.304 |
 | `CLAUDE_CONFIG_DIR` | investigated | env-table | 31 | Overrides the Claude config directory (default ~/.claude) and .claude.json location. | high | 2.1.296→2.1.304 |
 | `CLAUDE_EFFORT` | investigated | process.env | 1 | Set in child session/hook env to pass the parent's effort level | high | 2.1.296→2.1.304 |
 | `CLAUDE_ENV_FILE` | investigated | env-table | 2 | Path to env script loaded into session environment; also set for SessionStart/Setup/CwdChanged hooks | high | 2.1.296→2.1.304 |
@@ -899,6 +908,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `CLAUDE_CODE_AUTO_MODE_GIT_STATUS_UPLOADS` | investigated | process.env | 1 | Include git status uploads info in auto-mode classifier; default false. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_AUTO_MODE_OUTCOME_CODES` | investigated | process.env | 2 | Shows auto-mode outcome codes (automode-blocked etc.); default false. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_AUTO_MODE_PRIOR_ASSISTANT_CONTEXT` | investigated | process.env | 2 | Include prior assistant context in auto-mode classifier; default false. | high | 2.1.296→2.1.304 |
+| `CLAUDE_CODE_AUTO_MODE_REMOTE_BROWSER` | investigated | process.env | 1 | When set, enables auto-mode permission handling for remote-browser (Chrome-MCP) tool calls; otherwise a served default decides | med | 2.1.304→2.1.304 |
 | `CLAUDE_CODE_AUTO_MODE_REPO_VISIBILITY` | investigated | process.env | 1 | Enables repo visibility lookup for auto-mode classifier via GitHub API. | med | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_AUTO_MODE_SEGMENTED_TRANSCRIPT` | investigated | process.env | 1 | Use segmented transcript in auto-mode classifier; default false. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_AUTO_MODE_SERVER` | investigated | env-table | 3 | User switch to enable or disable server-side auto-mode classifier; forwarded to children. | high | 2.1.296→2.1.304 |
@@ -913,6 +923,7 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `CLAUDE_CODE_DISABLE_FILE_CHECKPOINTING` | investigated | env-table | 4 | Disables file history checkpointing (snapshots of edited files for rewind). | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_DISABLE_FILE_MENTIONS` | investigated | env-table | 2 | When truthy, @-mentioned file attachments use the alternate extractor (kXr) instead of the normal one (bXr). Exact difference not read. | low | 2.1.299→2.1.304 |
 | `CLAUDE_CODE_DISABLE_INLINE_SHELL_RM_PROMPT` | investigated | env-table | 1 | Skips the extra approval prompt for dangerous rm inside inline shell scripts. | med | 2.1.296→2.1.304 |
+| `CLAUDE_CODE_DISABLE_MOUNTED_DRIVE_RM_PROMPT` | investigated | env-table | 1 | Skips the explicit-approval prompt for rm commands that target a mounted drive, the mounts folder, or a drive's top-level entries | high | 2.1.304→2.1.304 |
 | `CLAUDE_CODE_DISABLE_PERMISSION_PROMPT_NOTIFY_HOOKS` | investigated | env-table | 1 | Disables notification sent after delay when a permission prompt is pending. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_DISABLE_POWERSHELL_CMD_RM_DENY` | investigated | env-table | 1 | Disables PowerShell cmd-style rm/del/rd deny check; otherwise gated by tengu_curious_lake. | high | 2.1.296→2.1.304 |
 | `CLAUDE_CODE_DISABLE_SUBSTITUTION_RM_PROMPT` | investigated | env-table | 1 | Skips approval prompt for rm whose target is a command substitution. | high | 2.1.296→2.1.304 |
@@ -1048,19 +1059,3 @@ Status: `new` = appeared in the binary and nobody has investigated it yet (see N
 | `DISABLE_UPGRADE_COMMAND` | investigated | env-table | 1 | Disables the /upgrade command (also off for enterprise) | high | 2.1.296→2.1.304 |
 | `FORCE_CODE_TERMINAL` | investigated | process.env | 1 | Treats terminal as a supported code terminal (IDE auto-connect) | high | 2.1.296→2.1.304 |
 | `FORCE_COLOR` | investigated | process.env | 19 | Forces ANSI color level (0-3, true) in Bun/Node runtime color detection | high | 2.1.296→2.1.304 |
-
-## uncategorised
-
-| variable | status | read via | sites | summary | conf | seen |
-|---|---|---|---|---|---|---|
-| `CLAUDE_CODE_ATTRIBUTION_PROJECT` | new | env-table | 1 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_AUTO_MODE_REMOTE_BROWSER` | new | process.env | 1 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_BRIDGE_CHILD_PROJECTS_ENTRYPOINT` | new | env-table | 3 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_DISABLE_MOUNTED_DRIVE_RM_PROMPT` | new | env-table | 1 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_MCP_SERVE_ENABLED_PLUGINS` | new | env-table | 2 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_PERSONAL_CONFIG_FIX` | new | env-table | 2 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_SDK_READS_STARTUP_MARKS` | new | env-table | 3 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_SKIP_PLUGIN_LOCAL_MCP_SERVERS` | new | env-table | 1 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_SKIP_PLUGIN_MCP_BUNDLES` | new | env-table | 1 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_WARN_DISK_FREE_GIB` | new | env-table | 2 |  |  | 2.1.304→2.1.304 |
-| `CLAUDE_CODE_WARN_MEMORY_FREE_GIB` | new | env-table | 2 |  |  | 2.1.304→2.1.304 |
