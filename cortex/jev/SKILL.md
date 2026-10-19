@@ -164,3 +164,11 @@ confidence); $0.02/M input, output unbilled; 0.6 s median; adapter `make_mercury
 (Δ vs Jev −0.019, CI [−0.079, +0.036] → parity, JEV-27B class), verified 0.685, **raw ECE 0.396 / 64 failing sessions at done ≥ 0.9 / next=finish
 194/256** (over-trusts the agent; Jev 0 confident-wrong) → Platt 5-fold ECE 0.025. Same lesson as Amos / own-Qwen: ranking ≈ Jev, calibration is
 Jev's edge. Usable as a no-GPU second opinion ONLY behind a fitted calibration; vendor JevBench claims do not transfer to agent-doneness.
+
+## DELTA 2026-10-19b — the failure-mode question (design §2) zero-shot on the 256: NOT a better gate (read bakeoff-mercury-decide-2026-10-19.md §2)
+Jev: P(none) AUC 0.722 (done-q 0.746), ECE 0.265 (done-q 0.097), 18 confident-wrong; Mercury Decide: 0.727 / ECE 0.501 / 115. Both pick
+`none` for most sessions (148 / 184 of 256; true 55) and both sit AT the majority-class baseline on the 6-way label (acc 0.31, macro-F1 0.18):
+verifier_mismatch / unverified_claim → `none` is the dominant confusion — the own-check-tested-the-wrong-thing failure is invisible without the
+hidden tests. RULE: the failure-mode taxonomy is a TRAINING TARGET (grader labels, `failure-mode-labels-256.json`), not a zero-shot hosted
+question; keep the harness gate on the done noul (Jev) until a trained verifier clears the design's gates. `CORTEX_DECISION_QUESTION` stays unbuilt.
+Runner: `.bench/jev/fm-bakeoff.py <jev|mercury-decide>` (records fm-*.jsonl in clm-p2-2026-10-01 + the HF bake-off dataset).
