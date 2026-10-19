@@ -5249,3 +5249,69 @@
 {"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_org_config_required", "to": {"source": "growthbook", "value": {"enabled": false}}, "ts": "2026-10-19T21:39:00Z", "version": "2.1.303"}
 {"event": "value_changed", "from": {"source": "growthbook", "value": []}, "kind": "flag", "name": "tengu_quirky_kazoo", "to": null, "ts": "2026-10-19T21:39:00Z", "version": "2.1.303"}
 {"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_snug_storm", "to": {"source": "growthbook", "value": {"text": "Your Max plan includes $200 a month in API credits to power your apps and agents. Claim them at https://clau.de/api-credits"}}, "ts": "2026-10-19T21:39:00Z", "version": "2.1.303"}
+{"event": "value_changed", "from": {"source": "growthbook", "value": "control"}, "kind": "flag", "name": "tengu_curried_trinket", "to": {"experiment": "tengu_curried_trinket_external_experiment_v3", "source": "experiment", "value": "no_scratchpad_capped", "variation": 4}, "ts": "2026-10-19T23:07:23Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "Sc/{}", "kind": "flag", "name": "tengu_auto_mode_config", "to": "mc/{}", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "gC", "kind": "flag", "name": "tengu_mcp_directory_visibility", "to": "zC", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "jd", "kind": "flag", "name": "tengu_saffron_lattice", "to": "Vu", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "Yd", "kind": "flag", "name": "tengu_saffron_credits_only_tiers", "to": "Xu", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "Sm", "kind": "flag", "name": "tengu_byte_stream_idle_timeout_ms", "to": "wp", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "!0", "desc": "", "event": "added", "kind": "flag", "name": "tengu_bridge_owner_check_attribution", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "L", "kind": "flag", "name": "tengu_bridge_rc_child_idle_exit_ms", "to": "X", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "cD", "kind": "flag", "name": "tengu_memory_store_resync_interval_minutes", "to": "FL", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "Qtn", "kind": "flag", "name": "tengu_fresh_heron", "to": "eNt", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "aye", "kind": "flag", "name": "tengu_amber_rokovoko", "to": "W_e", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "$Zt", "kind": "flag", "name": "tengu_ultraplan_prompt_identifier", "to": "yon", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "!0", "desc": "", "event": "added", "kind": "flag", "name": "tengu_hushed_plover", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "scn", "kind": "flag", "name": "tengu_webfetch_deadline_ms", "to": "odn", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "{allowlist:[...D3e]}", "kind": "flag", "name": "tengu_prompt_cache_1h_config", "to": "{allowlist:[...a8e]}", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "sIn", "kind": "flag", "name": "tengu_hushed_lark_text", "to": "zwn", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "rIn", "kind": "flag", "name": "tengu_hushed_lark", "to": "Gwn", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "!1", "desc": "", "event": "added", "kind": "flag", "name": "tengu_composed_treehouse", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "Edn", "kind": "flag", "name": "tengu_plain_kestrel", "to": "kAn", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "Wos", "kind": "flag", "name": "tengu_plugins_npm_marketplace", "to": "yus", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "Cn", "kind": "flag", "name": "tengu_bg_attach_stall_ms", "to": "kn", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "uRt", "kind": "flag", "name": "tengu_ccr_stream_event_flush_ms", "to": "rPt", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "Uyn", "kind": "flag", "name": "tengu_feedback_survey_config", "to": "DSn", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "lDo", "kind": "flag", "name": "tengu_luminous_locket", "to": "DBo", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "{delayMs:eyt}", "kind": "flag", "name": "tengu_sedge_lantern_config", "to": "{delayMs:fkt}", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "Pe", "kind": "flag", "name": "tengu_cozy_dusk", "to": "xe", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "!1", "kind": "flag", "name": "tengu_melodic_ember", "to": "!0", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "zI", "kind": "flag", "name": "tengu_steady_panda", "to": "RD", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "default_changed", "from": "ZO", "kind": "flag", "name": "tengu_indexed_pearl", "to": "AF", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "!1", "desc": "", "event": "added", "kind": "flag", "name": "tengu_steady_puppy", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "!0", "desc": "", "event": "added", "kind": "flag", "name": "tengu_harp_pedal", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_humble_flurry", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_recursive_puddle", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_thistle_orrery", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_jiggly_blossom", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_starry_waterfall", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_ccr_memory_watchdog", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_harp_forepillar", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_steady_mitten", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_amber_quillwort", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "flag", "name": "tengu_velvet_harrow", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_PERSONAL_CONFIG_FIX", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_SKIP_PLUGIN_LOCAL_MCP_SERVERS", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_SDK_READS_STARTUP_MARKS", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_AUTO_MODE_REMOTE_BROWSER", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_BRIDGE_CHILD_PROJECTS_ENTRYPOINT", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_MCP_SERVE_ENABLED_PLUGINS", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_WARN_MEMORY_FREE_GIB", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_DISABLE_MOUNTED_DRIVE_RM_PROMPT", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_ATTRIBUTION_PROJECT", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_SKIP_PLUGIN_MCP_BUNDLES", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "env", "name": "CLAUDE_CODE_WARN_DISK_FREE_GIB", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "`plugin-origin: ${bi}`", "desc": "", "event": "added", "kind": "setting", "name": "pluginOrigin", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "setting", "name": "filter", "status": "new", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "event", "name": "tengu_gentle_grove", "status": "auto", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "event", "name": "tengu_wary_ladle", "status": "auto", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "event", "name": "tengu_steady_metcalfe", "status": "auto", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"default": "", "desc": "", "event": "added", "kind": "event", "name": "tengu_mcp_serve_background_records_read", "status": "auto", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "deprecated", "kind": "event", "last_seen_version": "2.1.303", "name": "tengu_quirky_kazoo", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "deprecated", "kind": "event", "last_seen_version": "2.1.303", "name": "tengu_rate_limit_options_menu_select_extra_usage", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "deprecated", "kind": "flag", "last_seen_version": "2.1.303", "name": "tengu_mcp_skills", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "deprecated", "kind": "flag", "last_seen_version": "2.1.303", "name": "tengu_violin_guarneri", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "deprecated", "kind": "flag", "last_seen_version": "2.1.303", "name": "tengu_zany_pike", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "deprecated", "kind": "setting", "last_seen_version": "2.1.303", "name": "add", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"event": "deprecated", "kind": "setting", "last_seen_version": "2.1.303", "name": "has", "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
+{"added": 32, "counts": {"env": 975, "event": 770, "flag": 955, "setting": 109}, "deprecated": 7, "event": "scan", "restored": 0, "ts": "2026-10-19T23:08:01Z", "version": "2.1.304"}
