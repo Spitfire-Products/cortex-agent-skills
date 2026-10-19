@@ -180,3 +180,10 @@ Amos-large 0.774→**0.879**, Mercury Decide 0.727→**0.827** — every CI clea
 path binding, holds, hedging, effort) are 0.48–0.59 alone and add nothing on top. RULES: (1) any accept gate on a task with history must
 combine the verifier with the task prior (novelty-weighted: no history → structural gates only); (2) the behavioral facts (order consistency,
 path binding) are hard checks, not scores. Runner `.bench/jev/signals-replay.py`; features `clm-p2-2026-10-01/signals-256.json`.
+
+## DELTA 2026-10-19d — leaves + bisection + cross-model confirmation: NEGATIVE on the 8-call states (read `leaves-replay-2026-10-19.md`)
+Jev min-over-lines 0.520 / mean 0.621; Mercury 0.534 / 0.602; cross-confirmation agreement 0.59 as a pass signal — all far below the flat
+question (0.746 / 0.727). CAUSE: the compact states keep only the last 8 of ~50 tool calls, so 65 % of PASSING sessions have a requirement
+line with no evidencing call and the weakest-line aggregate is 0 for passes too. The sheep-demo pattern (narrow the state per question,
+confirm independently) is UNTESTED here, not refuted: a fair run needs states rebuilt with the full compact trajectory (+ the final message as
+its own slice), ≈$2–5. Runner `.bench/jev/leaves-replay.py` (resumable; line cache lines-66.json).
