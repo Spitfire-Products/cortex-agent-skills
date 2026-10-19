@@ -1,6 +1,6 @@
 {
  "binary_sha256": "375988f457756524234695cf2d8f64ace99c5f68682e47ea24862a843c191450",
- "cache_at": 1792367293012,
+ "cache_at": 1792418341540,
  "items": {
   "env:ANTHROPIC_API_HOST": {
    "category": "networking-api",
@@ -50761,7 +50761,7 @@
    "name": "tengu_pewter_brook",
    "served": {
     "source": "growthbook",
-    "value": false
+    "value": true
    },
    "sites": 2,
    "snippet": "een\"?\"settings_on\":\"upsell_trial_on\";case\"default\":return\"settings_off\"}if(e.freshInstallCached??d())return\"fresh_install_on\";if(e.downsellGateCached??k(\"tengu_amber_creek\",!1))return\"downsell_on\";return e.gbGateCached??k(\"tengu_pewter_brook\",!1)?\"gb_on\":\"gb_off\"}function RFn(e){switch(e){case\"env_on\":case\"bg_forced_on\":case\"settings_on\":case\"upsell_trial_on\":case\"ant_default\":case\"fresh_install_on\":case\"downsell_on\":case\"gb_on\":return\"fullscreen\";case\"env_off\":case\"sr_auto_off\":case\"crash_auto_off\":case\"tmux_cc_au",
