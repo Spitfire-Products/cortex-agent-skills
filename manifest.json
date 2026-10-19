@@ -260,6 +260,12 @@
       "src": ".agents/skills/nexus-resource-catalog",
       "category": "general",
       "hold": "workspace-specific index of private resources"
+    },
+    {
+      "name": "leanrea",
+      "src": ".claude/skills/leanrea",
+      "category": "general",
+      "note": "third-party: aicodeking/leanrea @ 09ba4aa0 (MIT, LICENSE kept); local Linux/quota notes appended to SKILL.md"
     }
   ],
   "excluded_sources": [
