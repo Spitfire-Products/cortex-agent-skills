@@ -172,3 +172,11 @@ verifier_mismatch / unverified_claim → `none` is the dominant confusion — th
 hidden tests. RULE: the failure-mode taxonomy is a TRAINING TARGET (grader labels, `failure-mode-labels-256.json`), not a zero-shot hosted
 question; keep the harness gate on the done noul (Jev) until a trained verifier clears the design's gates. `CORTEX_DECISION_QUESTION` stays unbuilt.
 Runner: `.bench/jev/fm-bakeoff.py <jev|mercury-decide>` (records fm-*.jsonl in clm-p2-2026-10-01 + the HF bake-off dataset).
+
+## DELTA 2026-10-19c — the PER-TASK PRIOR is the biggest lift measured (read `omniclaude-v4/.cortex/research/signals-replay-2026-10-19.md`)
+Leave-own-store-out pass rate of the base task from `.bench/tb4-pass-matrix.jsonl` (median 17 graded attempts/task) alone = done AUC **0.792**
+(> Jev 0.746, > Amos-large 0.774; vs Jev CI spans 0). Added to any verifier by a plain logit sum (no fitting): Jev 0.746→**0.860** [+0.052,+0.177],
+Amos-large 0.774→**0.879**, Mercury Decide 0.727→**0.827** — every CI clear of 0; fitted Jev+prior ECE 0.025. Trajectory heuristics (check-after-edit,
+path binding, holds, hedging, effort) are 0.48–0.59 alone and add nothing on top. RULES: (1) any accept gate on a task with history must
+combine the verifier with the task prior (novelty-weighted: no history → structural gates only); (2) the behavioral facts (order consistency,
+path binding) are hard checks, not scores. Runner `.bench/jev/signals-replay.py`; features `clm-p2-2026-10-01/signals-256.json`.
