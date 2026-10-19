@@ -19,7 +19,7 @@ Every skill directory found in the workspace and what happened to it.
 | cortex | `herdr` | `omniclaude-v4/.cortex/skills/herdr` | 16 KB |
 | cortex | `jev` | `.claude/skills/jev` | 20 KB |
 | cortex | `pptx` | `omniclaude-v4/.cortex/skills/pptx` | 4 KB |
-| cortex | `stdb-bench` | `.claude/skills/stdb-bench` | 40 KB |
+| cortex | `stdb-bench` | `.claude/skills/stdb-bench` | 42 KB |
 | cortex | `v2p3-training-pipeline` | `.claude/skills/v2p3-training-pipeline` | 76 KB |
 | cortex | `verify-work` | `omniclaude-v4/.cortex/skills/verify-work` | 3 KB |
 | cortex | `xlsx` | `omniclaude-v4/.cortex/skills/xlsx` | 4 KB |

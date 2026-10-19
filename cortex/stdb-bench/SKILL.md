@@ -368,3 +368,16 @@ fatal-WITH-work only; `heartbeat_boot_dead_shards` = fatal with done=0; `host_co
 dead host's finished shards; `uncovered_shard_groups` chunks the missing shards per_host for renting; host_place and the P3 completion use
 them (`host_covers` dropped). Expect: a `[bench host_place] … shards [<n>]` line for the dead shard while the original box keeps running, and
 completion only when every shard was graded by some host. The supervisor also retries the boot store reach 6×60 s (the trigger).
+
+## TTL EXTENSION mid-run (first done 5:25 AM PT 2026-10-19, t4w2 b/c +16 h)
+TTL is enforced TWICE: the controller (`bench_host.ttl_at` → host_watch `Destroy("ttl")` → host reaped → run HALTED) and the box's own
+`self-reaper.sh <iid> <hours>` (its OWN clock; `/root/reaper-hold` suspends only the idle rule, never the TTL). Extend BOTH, in this order:
+1. Box first (no publish needed): upload a tiny script and run it — never put `self-reaper.sh` in the ssh command line itself, `pkill -f` would
+   kill the ssh shell: `printf '...pkill -f "self-reape[r].sh"; setsid nohup bash /root/self-reaper.sh "$1" "$2" &...' | ssh … 'cat > /root/rearm-reaper.sh'`
+   then `ssh … 'bash /root/rearm-reaper.sh <iid> <hours>'`; hours = (new controller TTL − now) + 1 so the controller fires first. Direct SSH route =
+   `vastai ssh-url <iid>` (public ip + mapped port 22) with `.ssh/id_ed25519`; the ssh5/ssh9 proxy ports refuse.
+2. Controller: `spacetime call nexus-nexus-cortex extend_bench_host_ttl '"<host_id>"' <ttl_at_ms> -s maincloud` (admin-gated; future only; refuses
+   reaped/failed). Verify `SELECT host_id, ttl_at FROM bench_host`. A publish keeps `bench_scheduler_job` (verified 1 row before/after) — re-arm with
+   `arm_bench_scheduler` only if it is 0.
+TRAP (10-19): workspace `.cargo/bin` was EMPTY (rustup proxies lost) → the publish script silently built with /usr/bin rustc 1.88 and failed on the
+MSRV; fix = symlink cargo/rustc/rustdoc from `.rustup/toolchains/1.93.0-x86_64-unknown-linux-gnu/bin` into `.cargo/bin` (GLIBC_TUNABLES still required).
