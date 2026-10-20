@@ -17,7 +17,7 @@ Every skill directory found in the workspace and what happened to it.
 | cortex | `grok-build-bench` | `.claude/skills/grok-build-bench` | 16 KB |
 | cortex | `harbor-bench` | `.claude/skills/harbor-bench` | 268 KB |
 | cortex | `herdr` | `omniclaude-v4/.cortex/skills/herdr` | 16 KB |
-| cortex | `jev` | `.claude/skills/jev` | 27 KB |
+| cortex | `jev` | `.claude/skills/jev` | 28 KB |
 | cortex | `pptx` | `omniclaude-v4/.cortex/skills/pptx` | 4 KB |
 | cortex | `stdb-bench` | `.claude/skills/stdb-bench` | 47 KB |
 | cortex | `v2p3-training-pipeline` | `.claude/skills/v2p3-training-pipeline` | 76 KB |

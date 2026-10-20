@@ -204,3 +204,7 @@ image localization is a different primitive and is untested on real captcha grid
   for this model` on /v1/chat/completions with an image_url part. Only `mercury-decide` sees images. So Mercury cannot replace the captcha
   READER stage (free-form "what does the widget ask / name the targets"); the reader stays a vision generative model (deepseek-flash today; any
   vision LLM is swappable), and Mercury Decide stays a typed judge over the image.
+- 10-20c (probe, ledger captcha-bakeoff §4): typed models cannot SPELL (keyboard = one choice per character position: Jev 0.20 / Mercury Decide 0.08
+  char accuracy — they do not count positions) but read an instruction as a MENU perfectly (colour/size/action 16/16 each, one request, conf ≈1.0).
+  Design rule: "type it out" = enumerate the answer space and ask a choice; never a per-character keyboard. Jev's request token budget caps a
+  38-option question at ~8 per request.
