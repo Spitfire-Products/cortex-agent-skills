@@ -34,6 +34,7 @@ Every skill directory found in the workspace and what happened to it.
 | general | `grounded-research` | `.claude/skills/grounded-research` | 3 KB |
 | general | `huggingface-spaces` | `.claude/skills/huggingface-spaces` | 91 KB |
 | general | `leanrea` | `.claude/skills/leanrea` | 16 KB |
+| general | `nexus-rea` | `.claude/skills/nexus-rea` | 28 KB |
 | general | `pdf-documents` | `omniclaude-v4/.cortex/skills/pdf-documents` | 105 KB |
 | general | `pm-wake-loop` | `.claude/skills/pm-wake-loop` | 4 KB |
 | general | `resume-analyst` | `omniclaude-v4/.cortex/skills/resume-analyst` | 12 KB |

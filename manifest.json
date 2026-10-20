@@ -266,6 +266,12 @@
       "src": ".claude/skills/leanrea",
       "category": "general",
       "note": "third-party: aicodeking/leanrea @ 09ba4aa0 (MIT, LICENSE kept); local Linux/quota notes appended to SKILL.md"
+    },
+    {
+      "name": "nexus-rea",
+      "src": ".claude/skills/nexus-rea",
+      "category": "general",
+      "note": "our evolution of leanrea (attributed, MIT notice kept): runtime React layer \u2014 hook shim pre-load, fiber probe, prop-signature inventory; three paths (plain Playwright / nexus-browser MCP / sandbox relay)"
     }
   ],
   "excluded_sources": [
