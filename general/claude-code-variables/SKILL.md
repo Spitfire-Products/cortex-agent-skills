@@ -70,3 +70,25 @@ kills manual /compact too. Settings keys the code reads AFTER a flag still overr
 - "How do I turn X off locally?" → the env var row (env wins), else the settings row, else there is no local override.
 - "What changed in the new CLI?" → `grep '"event": "added"\|"deprecated"' data/inventory.jsonl | tail`, or the INDEX counts + NOTICE.md.
 - "Which experiments touch X?" → load `claude-code-experiments`.
+
+## Changelog tracking + library candidates (2026-10-20, operator)
+The public changelog (`https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md`; the installed package ships none) names
+new variables/flags/settings as they ship and describes behaviour the binary scan can only hint at. It is tracked beside the scan:
+| path | what | edit? |
+|---|---|---|
+| `data/changelog.md` | raw cached changelog (last fetch) | generated |
+| `data/changelog.jsonl` | **append-only**: `changelog_entry` (version, bullet, linked inventory items, keyword tags) / `changelog_triaged` | append via ccv.py only |
+| `data/changelog-state.json` | per-version bullets + triaged flag | never by hand |
+| `reference/changelog.md` | UNTRIAGED section (tagged bullets, linked `kind:name` items) + the newest 40 versions in full | generated |
+| `library/CANDIDATES.md` | **hand-curated**: Claude Code changes the nexus-cortex harness should adopt / mirror / decline, with the harness analog, proposal and status | the agent writes rows |
+- **Refresh:** `ccv.py check` (the SessionStart hook) spawns `ccv.py changelog` in the background when the cache is older than 24 h or the
+  binary changed; `ccv.py update` refreshes it too. Manual: `ccv.py changelog` (network) or `ccv.py changelog --file <path>`. ~5 s for 424 versions.
+- **Operator notice:** the hook says `N Claude Code changelog version(s) untriaged for library candidates`. The agent then: reads
+  `reference/changelog.md` UNTRIAGED (tagged bullets first; `Fixed …` lines rarely matter), adds rows to `library/CANDIDATES.md` for anything
+  the harness should answer (what it is · harness analog or gap with a file pointer to VERIFY · proposal · status), and records the pass:
+  `python3 .claude/skills/claude-code-variables/scripts/ccv.py changelog-triaged <version> [<version> …]` (`--before <ver> --by baseline`
+  marks pre-ledger history as not-to-be-triaged; done once for everything below 2.1.290).
+- **Rules:** rows cite the bullet's version; a harness pointer is a lead to verify, never a fact ([[feedback-subagent-claims-are-unverified]]);
+  an accepted candidate gets a def-… backlog row / Rxx line and the status here moves with it; declined rows keep their reason.
+- Seeded 2026-10-20 with C01–C21 from 2.1.290 → 2.1.304 (system-prompt-in-transcript, bash changed-files capture, compaction tool roster,
+  per-agent effort/compaction window, Read allow_large, 529/usage-limit retry levers, fail-closed hooks, tool-description byte budgets, …).

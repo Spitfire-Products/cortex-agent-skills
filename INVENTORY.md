@@ -29,7 +29,7 @@ Every skill directory found in the workspace and what happened to it.
 | general | `best-of-n` | `omniclaude-v4/.cortex/skills/best-of-n` | 3 KB |
 | general | `canon-store` | `.claude/skills/canon-store` | 17 KB |
 | general | `claude-code-experiments` | `.claude/skills/claude-code-experiments` | 83 KB |
-| general | `claude-code-variables` | `.claude/skills/claude-code-variables` | 5294 KB |
+| general | `claude-code-variables` | `.claude/skills/claude-code-variables` | 10062 KB |
 | general | `execute` | `.claude/skills/execute` | 9 KB |
 | general | `grounded-research` | `.claude/skills/grounded-research` | 3 KB |
 | general | `huggingface-spaces` | `.claude/skills/huggingface-spaces` | 91 KB |

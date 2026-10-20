@@ -4,3 +4,8 @@
 
 Nothing pending. The next binary version that adds an item will list it here and the SessionStart hook will say so.
 
+
+# CHANGELOG — 0 version(s) untriaged for library candidates
+
+Every tracked version is triaged. The hook refreshes the changelog daily and on a binary change.
+
