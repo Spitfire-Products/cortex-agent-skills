@@ -395,3 +395,23 @@ path it already uses for `browser_mcp_keys` (60-s KV cache); picks running + cou
 policy = `browser_mcp_keys.proxy_allowed / proxy_daily_seconds` (platform module, appended Options). Publish = owner gate; code lands dark.
 Gateway concurrency test method (from the SpacetimeDB benchmark + our 06-17 restore memory): N connections × D in-flight; mean ± sd + p50/p99;
 30-s warm-up, ≥3 repeats; contention = one box vs spread; count end-to-end (bytes in the browser) and raw (SOCKS) separately; disclose placement.
+
+## REFERENCE 2026-10-20 — the SpacetimeDB concurrency benchmark, catalogued (operator ask; for any future STDB throughput question)
+**Vendor numbers (spacetimedb.com/blog/benchmarking, corrected May 2026; the March 2026 "100K+ TPS" claim was RETRACTED for harness bugs):**
+SpacetimeDB Standalone on one Intel 14900K (24 vCPU), server + DB colocated: **303,920 ± 4,712 TPS contended (α=1.5) / 279,025 ± 4,763
+uncontended (α=0)**; earlier Rust-client run 265,541 ± 940. Same harness: Bun+Postgres 10,730 / 2,773; Node+Postgres 9,905 / 961; Node+SQLite
+3,122 / 3,188; Convex 1,140 / 127; CockroachDB (5-node GCP) 4,253 / DNF. Workload = account-to-account transfers, counted only when persisted.
+**Method:** 64 clients (384 PlanetScale HA, 320 CRDB); **up to 40 requests in flight per client (pipelining) for STDB** — competitors got none
+in the headline run (giving them 40-deep changed throughput little but raised p50 sharply); no client batching; 5-minute windows after a 30-s
+warm-up; throughput = mean ± sd; latency p50/p99; **Little's law (mean latency ≈ in-flight ÷ throughput) matched the measured p50s**;
+Postgres pool = 2× DB cores, max_connections 100; no PgBouncer; reproduction `pnpm run bench test-1 --seconds 300 --connectors <backend>`.
+**The five confessed faults (the checklist for OUR benches too):** asymmetric pipelining (16,384 in flight on one side), a test whose UPDATEs
+never executed (SQLite), client-language mismatch (Rust vs TS), undisclosed warm-up, undisclosed placement/replication (original numbers came
+from a replicated Cloud deployment, not Standalone; cloud AZ names are not physical). Fixed in-flight counts make latency climb once throughput
+saturates — report both or report nothing.
+**Our own measurements (memory `nexus-autoresearch-mcp-keysystem`, lattice restore 06-17):** HTTP `/call` per row = 183 rows/s (one txn/commit
+per row, fsync-bound); batch-1000 at concurrency 8 = 4,212 rows/s (23×); concurrency 16 × batch 1000 CRASHED a local `spacetime start` on
+per-request REMOTE JWT validation (the auth path, not the data path) → bulk work uses a local identity or concurrency ≤ 8; identity-keyed tables
+restore per row. The vendor figure is SERVER capacity over the WebSocket SDK with pipelined calls — "in the pipe" — not HTTP batching "on the wire".
+**Implications for this control plane:** the scheduler's one-tick-per-60-s reducer fan-out is nowhere near these limits; the costs that matter are
+per-request auth, per-row commits (batch), and confirmed reads (fsync before delivery — enable only for financial/critical subscriptions).
