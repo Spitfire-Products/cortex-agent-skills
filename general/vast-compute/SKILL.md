@@ -139,3 +139,6 @@ raw — the SpacetimeDB-benchmark method (clients × pipelining, Little's law); 
 - 10-20b: the pool's box side is `.bench/vm/bootstrap-proxy.sh` (sshd forwarding-only key `restrict,port-forwarding …` + an sshd_config.d drop-in, egress ip
   via ipify/ifconfig.me/icanhazip, ASN/org/country via `whois.cymru.com:43` over a python socket, keyword classifier → residential|isp|datacenter|unknown,
   TTL-only self-reaper = `/root/reaper-hold` held forever). Rig `.bench/proxy/stdb-proxy-pool.sh`; sweep `.bench/proxy/gateway-sweep.sh` (P3, live pool only).
+- 10-20c TRAP: `cpu_ram` is **0 on every CPU-only offer** (`num_gpus=0`; 64/64 probed) — Vast reports RAM per GPU slice. Any `cpu_ram gte N` term
+  empties a CPU-only search (the proxy-pool rig's first filter returned 0 offers for US/CA). Filter CPU-only boxes on `cpu_cores_effective`,
+  `disk_space`, `inet_up`, `reliability`, `dph_total`, `vms_enabled`; read the VM's real memory with `free -m` inside once it boots.
