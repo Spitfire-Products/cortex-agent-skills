@@ -48,7 +48,7 @@ Every skill directory found in the workspace and what happened to it.
 | general | `spot-gpu-compute` | `.claude/skills/spot-gpu-compute` | 25 KB |
 | general | `team-plan` | `.claude/skills/team-plan` | 5 KB |
 | general | `train` | `.claude/skills/train` | 8 KB |
-| general | `vast-compute` | `.claude/skills/vast-compute` | 17 KB |
+| general | `vast-compute` | `.claude/skills/vast-compute` | 18 KB |
 | general | `vastai` | `.agents/skills/vastai` | 1025 KB |
 
 ## Held back (not exported until approved)

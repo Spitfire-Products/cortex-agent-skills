@@ -142,3 +142,10 @@ raw — the SpacetimeDB-benchmark method (clients × pipelining, Little's law); 
 - 10-20c TRAP: `cpu_ram` is **0 on every CPU-only offer** (`num_gpus=0`; 64/64 probed) — Vast reports RAM per GPU slice. Any `cpu_ram gte N` term
   empties a CPU-only search (the proxy-pool rig's first filter returned 0 offers for US/CA). Filter CPU-only boxes on `cpu_cores_effective`,
   `disk_space`, `inet_up`, `reliability`, `dph_total`, `vms_enabled`; read the VM's real memory with `free -m` inside once it boots.
+
+- 10-20d 🔴 VAST HAS NO CPU-ONLY COMPUTE (vendor-validated): the search API's `resource_type` enum is `network_disk | disk | gpu`; every `num_gpus=0`
+  "offer" is a DISK ask (`resource_type disk`, price = `instance.diskHour`, `cpu_ram 0`, `gpu_name N/A`) and `PUT /asks/<id>/` on it always returns
+  `404/3603 no_such_ask` whatever the body. Always pass `resource_type: "gpu"` in a compute search (the web console does). Cheapest compute on a
+  residential/ISP line = a fractional-GPU Docker offer (`gpu_frac` 0.125–0.5) at $0.03–0.09/h; `vms_enabled` offers are rare and dear (US 1 @ $1/h).
+  `onstart` is capped at 4048 chars (docs quirks note) — ship bundles by URL (`.bench/proxy/stdb-proxy-pool.sh publish-bundle`), never embedded.
+  A host_place `create_failed` ban (2 h, by machine_id) is OURS (10-05 rule) — `unban_vast_machine` lifts it; 32 lifted 10-20.
