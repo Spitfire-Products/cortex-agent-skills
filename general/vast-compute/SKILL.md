@@ -136,3 +136,6 @@ Vast ToS is silent on proxying ("careful and proper manner") — confirm before 
 Gateway concurrency test (P3): sweep N tunnels × D in-flight streams, MB/s ± sd + p50/p99, warm-up, 3 repeats, one box vs spread, end-to-end vs
 raw — the SpacetimeDB-benchmark method (clients × pipelining, Little's law); "in the pipe" (streams inside one SSH connection) beats "on the wire"
 (a connection per request; the gateway handshake is the auth-path analogue that crashed our local STDB at concurrency 16).
+- 10-20b: the pool's box side is `.bench/vm/bootstrap-proxy.sh` (sshd forwarding-only key `restrict,port-forwarding …` + an sshd_config.d drop-in, egress ip
+  via ipify/ifconfig.me/icanhazip, ASN/org/country via `whois.cymru.com:43` over a python socket, keyword classifier → residential|isp|datacenter|unknown,
+  TTL-only self-reaper = `/root/reaper-hold` held forever). Rig `.bench/proxy/stdb-proxy-pool.sh`; sweep `.bench/proxy/gateway-sweep.sh` (P3, live pool only).

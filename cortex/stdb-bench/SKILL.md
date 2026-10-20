@@ -415,3 +415,14 @@ per-request REMOTE JWT validation (the auth path, not the data path) → bulk wo
 restore per row. The vendor figure is SERVER capacity over the WebSocket SDK with pipelined calls — "in the pipe" — not HTTP batching "on the wire".
 **Implications for this control plane:** the scheduler's one-tick-per-60-s reducer fan-out is nowhere near these limits; the costs that matter are
 per-request auth, per-row commits (batch), and confirmed reads (fsync before delivery — enable only for financial/critical subscriptions).
+
+## DELTA 2026-10-20b — proxy pool P0 BUILT (module code in tree; publish = owner gate)
+`bench_host` + `ssh_host, ssh_port, egress_ip, net_class` (Option, `#[default]`, at the END); `parse_instance` reads `ssh_host/ssh_port/public_ipaddr`;
+`bench_vast.rs` `is_proxy_run` / `parse_proxy_heartbeat` / `proxy_reject_reason` / `proxy_arm_country` (tests); host_watch: a RUNNING host of a `proxy-*` run
+is judged every tick (datacenter → now; unknown / no heartbeat / sshd down → after 10 min; country ≠ arm → now) through the BootFailed path (destroy +
+failed + 30-day machine ban, host_place re-rents the slot); a proxy host's TTL never halts the run (rolling refresh); the P3 completion loop skips proxy
+runs; the heartbeat reducer fills `egress_ip/net_class` from a `phase:"proxy"` heartbeat. `cargo test --lib` 1083 passed. Rig `.bench/proxy/stdb-proxy-pool.sh`
+(the arm's onstart EMBEDS bootstrap-proxy.sh + stdb-box-client.sh + self-reaper.sh as a base64 tarball — no HF store on a pool box; box env is only the
+worker's PUBLIC key, named `PROXY_SSH_AUTHORIZED` because `set_bench_arm_vast` refuses literals whose name contains KEY/TOKEN/SECRET). Read the module log
+after `create` exactly as for a cell. Pilot checks owed: Vast's accepted onstart size (13.6 KB), `geolocation in [CC]` on the search API, `-D` through the
+ssh gateway, classifier precision (heartbeat `asn_org`).
