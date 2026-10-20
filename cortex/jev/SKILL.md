@@ -200,3 +200,7 @@ Operator: "all those models are vision capable". Verified with one synthetic ima
 Use: the browser MCP's captcha/challenge work (see the Browserbase comparison doc §5 + nexus-sense DELTA 10-20): typed choice over tiles,
 noul presence, Box/region localization → `computer_use`/`click({x,y})`. The 09-19/10-19 leaves replays measured Jev as a TEXT locator (null);
 image localization is a different primitive and is untested on real captcha grids — bake it off before trusting it (same rig as the fm question).
+- 10-20b (probe): Inception's GENERATIVE Mercury models (`mercury-2`, `mercury-2.5`, `mercury-3`) REJECT images — `400 Image inputs are not supported
+  for this model` on /v1/chat/completions with an image_url part. Only `mercury-decide` sees images. So Mercury cannot replace the captcha
+  READER stage (free-form "what does the widget ask / name the targets"); the reader stays a vision generative model (deepseek-flash today; any
+  vision LLM is swappable), and Mercury Decide stays a typed judge over the image.
