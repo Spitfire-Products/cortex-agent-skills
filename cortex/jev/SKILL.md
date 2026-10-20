@@ -188,3 +188,15 @@ line with no evidencing call and the weakest-line aggregate is 0 for passes too.
 ROSE 1.47→2.66; coverage identical for pass/fail 0.57 vs 0.55). The §1 'missing evidence' reading was wrong — decomposing into typed
 single-slice leaves destroys the gestalt the flat question reads. CLOSED for typed-choice localization; a locator must be the harness or a
 generative pre-pass (vendor rule: degrades with indirection + irrelevant state). Note §2; records `leaves-full-*.jsonl` + `eval-262-full.jsonl` in HF. Runner `.bench/jev/leaves-replay.py` (resumable; line cache lines-66.json).
+
+## DELTA 2026-10-20 — IMAGES (vision) across the decision models — probe-verified, was NOT recorded here before
+Operator: "all those models are vision capable". Verified with one synthetic image (red square in the top-right quadrant) + a typed choice:
+| model | image shape | result |
+|---|---|---|
+| **Jev** `jev-latest` (= jev-1.13.0) and `jev-preview` (= jev-1.14.0) | header `TypeSafe-Danger-Zone-Images: true`; `assets: {<ref>: {type:"image", format:"png|jpg", data_base64}}`; the ref string placed in `state` (or a question's instructions/criteria) — docs.typesafe.ai/images.md | choice top_right conf 1.0; noul present 0.98. **Box** (1.14 only, `type:"box"`) → `{top,bottom,left,right}` fractions: 0.00/0.46/0.46/0.99 for the square at 0/0.5/0.5/1.0, conf 0.53 (always returns a box — pair with a noul). Limits: 280–1568 px per side, 78,400–2,458,624 px, 16 MiB/image, 32 MiB body. A 64-px probe image silently read as TEXT (near-random answers) — the size floor is real. |
+| **Mercury Decide** (Inception, `/v1/decisions`) | `state` as parts: `[{type:"text",…},{type:"image_url",image_url:{url:"data:image/png;base64,…"}}]`; ≤16 images, 10 MiB each; data URLs only | top_right conf 0.999 |
+| **Amos** (`api.amos.scira.ai/v1/systemone`, no key) | `images: [<base64>]`; `region` question → box `[x0,y0,x1,y1]` + best `cell` | amos-1-medium top_right 0.93; amos-1-small = the documented photo model (cold-start 503, ~3 min); **amos-1-mini does NOT see images** (0.17, random) |
+| **d1** (Liquid, local weights) | d1-omni-600M: text + images (tiled, several per state) + 30 s audio, SigLIP2 tower, 587M, typed answers with zero output tokens; d1-3B: images + text, LFM2.5-VL-3B, 3.1B | not probed (no hosted endpoint; runs locally) |
+Use: the browser MCP's captcha/challenge work (see the Browserbase comparison doc §5 + nexus-sense DELTA 10-20): typed choice over tiles,
+noul presence, Box/region localization → `computer_use`/`click({x,y})`. The 09-19/10-19 leaves replays measured Jev as a TEXT locator (null);
+image localization is a different primitive and is untested on real captcha grids — bake it off before trusting it (same rig as the fm question).
