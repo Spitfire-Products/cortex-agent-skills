@@ -381,3 +381,17 @@ TTL is enforced TWICE: the controller (`bench_host.ttl_at` → host_watch `Destr
    `arm_bench_scheduler` only if it is 0.
 TRAP (10-19): workspace `.cargo/bin` was EMPTY (rustup proxies lost) → the publish script silently built with /usr/bin rustc 1.88 and failed on the
 MSRV; fix = symlink cargo/rustc/rustdoc from `.rustup/toolchains/1.93.0-x86_64-unknown-linux-gnu/bin` into `.cargo/bin` (GLIBC_TUNABLES still required).
+
+## DELTA 2026-10-20 — the control plane generalises: a PROXY POOL is a bench run with no tasks (schema + rules)
+Design `nexus-terminal/docs/research/vast-proxy-pool-design-2026-10-20.md`. `bench_run` `proxy-pool`; one `bench_arm` per country (arm_id = ISO
+code; shard_n = pool slots; lanes_per_host 1; offer_filter_json `num_gpus eq 0, cpu_cores_effective gte 2, inet_up gte 50, rentable, vms_enabled,
+dph_total lte 0.03, geolocation in [cc]` — same grammar as the cells, `in` beside `notin`; onstart = bootstrap-proxy.sh; box env PROXY_SSH_PUBKEY
+(public), host_ttl_hours 24; NO HF store, NO provider secrets on the box). Unchanged: host_place/pick_offer (banned+busy), host_watch (TTL, boot-dead
+ban, cost), host_reap, bench_host_heartbeat (box token), bench_machine_ban, extend_bench_host_ttl. ADDITIVE schema (Option<T>, appended):
+`bench_host.ssh_host, ssh_port` (from the Vast instance record via parse_instance), `egress_ip, net_class` (from the heartbeat
+`{phase:"proxy", egress_ip, asn, asn_org, net_class, tunnels, up_mbps}`). NEW RULE in host_watch: run_id starting `proxy-` and net_class
+`datacenter` → state failed + ban_vast_machine 30 d (host_place re-rents); `unknown` is never picked. Worker reads `bench_host` over the /sql
+path it already uses for `browser_mcp_keys` (60-s KV cache); picks running + country + class ∈ {residential, isp} + fewest tunnels. Per-key
+policy = `browser_mcp_keys.proxy_allowed / proxy_daily_seconds` (platform module, appended Options). Publish = owner gate; code lands dark.
+Gateway concurrency test method (from the SpacetimeDB benchmark + our 06-17 restore memory): N connections × D in-flight; mean ± sd + p50/p99;
+30-s warm-up, ≥3 repeats; contention = one box vs spread; count end-to-end (bytes in the browser) and raw (SOCKS) separately; disclose placement.

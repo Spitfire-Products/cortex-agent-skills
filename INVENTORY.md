@@ -19,7 +19,7 @@ Every skill directory found in the workspace and what happened to it.
 | cortex | `herdr` | `omniclaude-v4/.cortex/skills/herdr` | 16 KB |
 | cortex | `jev` | `.claude/skills/jev` | 27 KB |
 | cortex | `pptx` | `omniclaude-v4/.cortex/skills/pptx` | 4 KB |
-| cortex | `stdb-bench` | `.claude/skills/stdb-bench` | 42 KB |
+| cortex | `stdb-bench` | `.claude/skills/stdb-bench` | 43 KB |
 | cortex | `v2p3-training-pipeline` | `.claude/skills/v2p3-training-pipeline` | 76 KB |
 | cortex | `verify-work` | `omniclaude-v4/.cortex/skills/verify-work` | 3 KB |
 | cortex | `xlsx` | `omniclaude-v4/.cortex/skills/xlsx` | 4 KB |
@@ -48,7 +48,7 @@ Every skill directory found in the workspace and what happened to it.
 | general | `spot-gpu-compute` | `.claude/skills/spot-gpu-compute` | 25 KB |
 | general | `team-plan` | `.claude/skills/team-plan` | 5 KB |
 | general | `train` | `.claude/skills/train` | 8 KB |
-| general | `vast-compute` | `.claude/skills/vast-compute` | 15 KB |
+| general | `vast-compute` | `.claude/skills/vast-compute` | 16 KB |
 | general | `vastai` | `.agents/skills/vastai` | 1025 KB |
 
 ## Held back (not exported until approved)

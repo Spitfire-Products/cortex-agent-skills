@@ -125,3 +125,14 @@ catches up to the new client) → relaunch the affected shards with the bootstra
   launches, and the box ends with 2× supervisors (two writers per shard). Fix = kill supervisors + harbor by PID from a listing, `docker rm -f`
   the task containers, relaunch once (separate ssh calls). Resolve the ssh port live (`vastai show instance <iid> --raw` .ports) — the cached
   `executor-<tag>-ssh.txt` can be stale.
+
+## DELTA 2026-10-20 — RESIDENTIAL EGRESS POOL (browser MCP) = a fourth job shape, run on the SAME STDB control plane
+Design: `nexus-terminal/docs/research/vast-proxy-pool-design-2026-10-20.md` (§2 mapping, §3 data path, §7 gateway test). Facts from the 10-20 offer
+survey: 64 CPU-only offers, $0.010–0.013/h, bandwidth UNMETERED on all, 49 distinct host IPs, 37 on ISP/telco ASNs (TELUS, AT&T, Verizon, O2/T-Mobile
+CZ, Telefónica, Orange, HiNet, KDDI, Viettel, Magyar Telekom, Google Fiber), 2 datacenter, 25 unknown; `direct_port_count` 0 on all → tunnels go
+through Vast's SSH gateway (`ssh5.vast.ai` mapped port); static_ip on 24/64; one host IP can back several offers (busy set = one slot per machine).
+Classify egress by ASN org (Team Cymru whois port 43 — `dig` is absent on the repl; use a socket) at rent time; datacenter → fail + ban.
+Vast ToS is silent on proxying ("careful and proper manner") — confirm before scaling past a pilot. Cap ~8 clients per box (reputation), TTL 24 h.
+Gateway concurrency test (P3): sweep N tunnels × D in-flight streams, MB/s ± sd + p50/p99, warm-up, 3 repeats, one box vs spread, end-to-end vs
+raw — the SpacetimeDB-benchmark method (clients × pipelining, Little's law); "in the pipe" (streams inside one SSH connection) beats "on the wire"
+(a connection per request; the gateway handshake is the auth-path analogue that crashed our local STDB at concurrency 16).
