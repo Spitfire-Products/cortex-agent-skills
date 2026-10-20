@@ -1,5 +1,5 @@
 {
- "cache_at": 1792451241820,
+ "cache_at": 1792456812784,
  "experiments": {
   "cai_giggly_dream": {
    "ended_at": "2026-10-18T02:37:14Z",
@@ -32,8 +32,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 1
@@ -49,8 +49,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 0
@@ -80,8 +80,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 1
@@ -97,8 +97,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 1
@@ -114,8 +114,8 @@
    "first_seen_cache_at": 1792099178714,
    "first_seen_version": "2.1.301",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 0
@@ -146,8 +146,8 @@
    "first_seen_cache_at": 1792451241820,
    "first_seen_version": "2.1.304",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 4
@@ -163,8 +163,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 0
@@ -180,8 +180,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 0
@@ -197,8 +197,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 0
@@ -231,8 +231,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 1
@@ -246,8 +246,8 @@
    "first_seen_cache_at": 1792291067093,
    "first_seen_version": "2.1.302",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 1
@@ -268,8 +268,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-19T23:08:01Z",
-   "last_seen_cache_at": 1792451241820,
+   "last_seen_at": "2026-10-20T00:40:14Z",
+   "last_seen_cache_at": 1792456812784,
    "last_seen_version": "2.1.304",
    "status": "active",
    "variationId": 1

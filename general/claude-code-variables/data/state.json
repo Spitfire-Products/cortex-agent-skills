@@ -1,6 +1,6 @@
 {
  "binary_sha256": "ea0f135784631619a7a409d07322ecec964f9cc4fd377508ed1ba3f141f27912",
- "cache_at": 1792451241820,
+ "cache_at": 1792456812784,
  "items": {
   "env:ANTHROPIC_API_HOST": {
    "category": "networking-api",
@@ -48250,10 +48250,7 @@
    "last_seen_at": "2026-10-12T23:39:05Z",
    "last_seen_version": "2.1.296",
    "name": "tengu_lucky_cerf_text",
-   "served": {
-    "source": "growthbook",
-    "value": ""
-   },
+   "served": null,
    "sites": 1,
    "snippet": "ae.of(e);if(r.started)return;r.started=!0,r.resolve({tools:n})}function tAt(e){return hae.of(e).requestSent}function Qto(e){hae.of(e).resolveRequestSent()}function nAt(){Qto(B())}function yae(){if(Hoe())return oAt;let e=Gr(\"tengu_lucky_cerf_text\",null);return typeof e===\"string\"&&e.trim()!==\"\"?e.trim():oAt}var oAt=`A fresh agent costs more than it looks. It knows only what you put in the prompt, and you see only the summary it sends back \\u2014 both handoffs drop detail, and neither of you can tell what the other m",
    "status": "deprecated",
@@ -59380,7 +59377,10 @@
    "last_seen_at": "2026-10-19T23:08:01Z",
    "last_seen_version": "2.1.304",
    "name": "tengu_walnut_tiller",
-   "served": null,
+   "served": {
+    "source": "growthbook",
+    "value": true
+   },
    "sites": 1,
    "snippet": "et(r.name),a=Z()?c!==void 0&&r.config.type===\"http\"&&r.config.url===c.url&&s?.heldSinceBoot(r.name)===!0?c.server:void 0:r.config.scope===\"claudeai\"||Yfn(r.config)!==void 0?r9t.find((F)=>Xgr(r,F)):void 0;if(a===void 0||!k(\"tengu_walnut_tiller\",!1))return;return{fileInput:{tool:e.name,arg:n.arg,feature:\"mcp_file_input_upload\",local:n.local,ref:n.ref,refWord:n.ref,maxFiles:eat,nothingDone:`${e.name} was not called.`},server:a,host:s}}async function De(e,i,...[n,r]){let s=i?await i(n,r):{result:!0},c=s.result?v(e,r.se",
    "status": "investigated",
