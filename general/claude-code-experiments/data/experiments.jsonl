@@ -34,3 +34,4 @@
 {"event": "experiment_resumed", "experimentId": "cai_giggly_dream", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
 {"event": "experiment_resumed", "experimentId": "ultrareview_cli_nudges", "ts": "2026-10-18T02:38:18Z", "version": "2.1.302"}
 {"event": "experiment_started", "experimentId": "tengu_curried_trinket_external_experiment_v3", "features": {"tengu_curried_trinket": "no_scratchpad_capped"}, "source": "live", "ts": "2026-10-19T23:07:23Z", "variationId": 4, "version": "2.1.304"}
+{"event": "experiment_started", "experimentId": "tengu_radiant_fox_experiment", "features": {"tengu_radiant_fox": false}, "source": "live", "ts": "2026-10-21T00:03:55Z", "variationId": 0, "version": "2.1.305"}
