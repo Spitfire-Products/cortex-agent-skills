@@ -1,6 +1,6 @@
 {
  "binary_sha256": "356733f185fa988e6bf3aa9a555269fdd167982a2e2a80d3c8a78037bb92ad58",
- "cache_at": 1792669899023,
+ "cache_at": 1792698627606,
  "items": {
   "env:ANTHROPIC_API_HOST": {
    "category": "networking-api",
@@ -37348,13 +37348,23 @@
    "last_seen_version": "2.1.308",
    "name": "tengu_amber_moleskin",
    "served": {
-    "source": "growthbook",
+    "experiment": "precomputed-compaction-v7",
+    "source": "experiment",
     "value": {
+     "1000000": {
+      "repl": 0.06,
+      "sdk": 0.05
+     },
+     "200000": {
+      "repl": 0.15,
+      "sdk": 0.15
+     },
      "default": {
       "repl": 0.15,
       "sdk": 0.15
      }
-    }
+    },
+    "variation": 1
    },
    "sites": 1,
    "snippet": "igin:c(y),threshold_source:c(s)})}function $X(e,n){let r=Math.min(e.maxOutputTokens,FTr),s=pp()?n:void 0,{window:h}=pS(e,s);return h-r}function UTr(e){let n=Math.min(e.maxOutputTokens,FTr);return e.contextWindow-n}var j4o=\"tengu_amber_moleskin\";function W4o(e){if(!sa().claim(\"precompute_arm_table_malformed\"))return;i(\"tengu_precompute_arm_table_malformed\",{payloadType:e})}function xYe(){let e=k(\"tengu_amber_rokovoko\",pSe);return typeof e===\"number\"&&Number.isFinite(e)&&e>=0&&e<1?e:pSe}function MYe(e,n,r){let s=k(j4",
@@ -42885,8 +42895,10 @@
    "last_seen_version": "2.1.308",
    "name": "tengu_curried_trinket",
    "served": {
-    "source": "growthbook",
-    "value": "control"
+    "experiment": "tengu_curried_trinket_external_experiment_v3",
+    "source": "experiment",
+    "value": "no_scratchpad_capped",
+    "variation": 4
    },
    "sites": 1,
    "snippet": "g\"?e??0:void 0;if(n.type!==\"response_length\"||e===void 0)return e;return n.op===\"add\"?e+n.delta:0}var yur=[\"control\",\"no_scratchpad\",\"no_scratchpad_capped\",\"no_scratchpad_keep_asks\",\"lean\",\"short\",\"short_v2\",\"capped\"],_ur=\"tengu_curried_trinket\";function Jwe(){let e=a.CLAUDE_CODE_CURRIED_TRINKET??k(_ur,\"control\");return yur.find((n)=>n===e)??\"control\"}function ZB(e){return typeof e===\"string\"&&e.includes(qh)}function Yln(e){return e.some((n)=>n?.type===\"text\"&&ZB(n.text))}function qut(e){return e.some(Ljn)}function",
@@ -45241,7 +45253,7 @@
    "name": "tengu_glowing_lark",
    "served": {
     "source": "growthbook",
-    "value": false
+    "value": true
    },
    "sites": 1,
    "snippet": "nts outlined here: https://code.claude.com/docs/en/legal-and-compliance.  // Version: 2.1.308 import{k}from\"/$bunfs/root/chunk-0szhef03.js\";import{a}from\"/$bunfs/root/chunk-pvqt3zs8.js\";var Bgt=5000;function mT(){return k(\"tengu_glowing_lark\",!1)}function Sln(){return mT()&&k(\"tengu_mcp_task_worker_wake\",!1)}function aHo(){return a.CLAUDE_CODE_DISABLE_MCP_TASK_BACKGROUND} export{Bgt,mT,Sln,aHo}; \u0000// @bun @bytecode // Claude Code is a Beta product per Anthropic's Commercial Terms of Service. // By using Claude Code,",
@@ -47420,7 +47432,7 @@
    "name": "tengu_juniper_relay",
    "served": {
     "source": "growthbook",
-    "value": false
+    "value": true
    },
    "sites": 2,
    "snippet": "){return HO(\"feedbackDrafts\")[0]??\"notify\"}function oco(){if(Une()!==null)return!1;if(Pue())return!1;if(lz())return!1;if(Re()!==\"firstParty\")return!1;let e=a.CLAUDE_CODE_SEND_FEEDBACK;if(e===!1)return!1;if(e===!0)return k(\"tengu_juniper_relay\",!1);return k(\"tengu_juniper_relay\",!1)}function cq(){return iXt()!==\"off\"&&oco()}function nDn(e,{storageV5:t,via:r}){let n=z()&&t!==void 0?Nn(\"userSettings\",{feedbackDrafts:e},void 0,t):Nn(\"userSettings\",{feedbackDrafts:e});return i(\"tengu_feedback_drafts_setting_changed\",{va",
@@ -48069,8 +48081,10 @@
    "last_seen_version": "2.1.308",
    "name": "tengu_lantern_spool",
    "served": {
-    "source": "growthbook",
-    "value": false
+    "experiment": "cc-grace-launch-1",
+    "source": "experiment",
+    "value": false,
+    "variation": 0
    },
    "sites": 1,
    "snippet": ").cachedExtraUsageDisabledReason,y=typeof h===\"string\"&&h!==\"fetch_error\"&&h!==\"unknown\";if(s&&h!==null&&!y)return!1;if(s&&k(\"tengu_lantern_hinge\",!1)!==!0)return!1;if(h===null&&!k(\"tengu_smooth_harbor\",!1))return!1;if(!k(\"tengu_lantern_spool\",!1))return!1;let S=e.agentContext;return!(PT(S)&&y&&S.workflowWaitsOutUsageLimit?.(ti().resetsAt)&&k(\"tengu_lantern_snuffer\",!1)===!0)}var qhr=\"tengu_fizzy_bonbon\";function Khr(e,n){let r;return()=>{if(r===void 0)try{r=qp(e,Bh(n))+PBe(e)}catch(s){l(N(s)),r=Number.POSITIVE_INF",
@@ -48239,7 +48253,7 @@
    "name": "tengu_lantern_wick_text",
    "served": {
     "source": "growthbook",
-    "value": null
+    "value": "Usage limit reached; a short grace allowance remains, then this turn is cut off without warning. Judge what's left: if it's genuinely only a few steps, finish it properly, then stop and say so without extra polishing. Otherwise don't attempt it all: finish the piece in hand and at most two more like it, then stop. The allowance also pays for any subagents you have running: they don't get this message and will keep going, so it's up to you how to handle them. Either way, end by telling the user their usage limit was reached, what's done and what's left."
    },
    "sites": 1,
    "snippet": "ap up: finish or \"+\"checkpoint; don't start subagents or long work.]\",wHs=\"tengu_lantern_wick_mode\";function vHs(e){let n=typeof e===\"string\"?e.trim().toLowerCase():e;return n===\"wrap-up\"||n===\"next-steps\"?n:\"off\"}var EHs=\"tengu_lantern_wick_text\";function vAo(e){let n=typeof e===\"string\"?e.trim():\"\";return n===\"\"?null:`[${n}]`}var kHs=\"[Usage limit reached \\u2014 grace window active. Checkpoint now: finish the \"+\"current step, then list up to 3 short bullets of the most impactful remaining work. Don't start subage",
@@ -51164,8 +51178,14 @@
    "served": {
     "source": "growthbook",
     "value": {
-     "enabled": false,
-     "version": 0
+     "autoContinue": true,
+     "enabled": true,
+     "label": "Reset your session limit now",
+     "noticeLine": "/limit-reset to reset your session limit now \u00b7 uses weekly limit \u00b7 1/week",
+     "spentLine": "Weekly reset used \u00b7 available again {date}",
+     "successLine": "Session limit reset \u00b7 next reset available {date} \u00b7 your weekly limit still applies",
+     "unavailableLine": "Couldn't reset your session limit right now \u00b7 try again in a moment",
+     "version": 1
     }
    },
    "sites": 1,
@@ -52022,7 +52042,7 @@
    "name": "tengu_pewter_brook",
    "served": {
     "source": "growthbook",
-    "value": false
+    "value": true
    },
    "sites": 2,
    "snippet": "een\"?\"settings_on\":\"upsell_trial_on\";case\"default\":return\"settings_off\"}if(e.freshInstallCached??d())return\"fresh_install_on\";if(e.downsellGateCached??k(\"tengu_amber_creek\",!1))return\"downsell_on\";return e.gbGateCached??k(\"tengu_pewter_brook\",!1)?\"gb_on\":\"gb_off\"}function s2n(e){switch(e){case\"env_on\":case\"bg_forced_on\":case\"settings_on\":case\"upsell_trial_on\":case\"ant_default\":case\"fresh_install_on\":case\"downsell_on\":case\"gb_on\":return\"fullscreen\";case\"env_off\":case\"sr_auto_off\":case\"crash_auto_off\":case\"tmux_cc_au",
@@ -54662,8 +54682,10 @@
    "last_seen_version": "2.1.308",
    "name": "tengu_sepia_moth",
    "served": {
-    "source": "growthbook",
-    "value": false
+    "experiment": "precomputed-compaction-v7",
+    "source": "experiment",
+    "value": true,
+    "variation": 1
    },
    "sites": 2,
    "snippet": "on zvo(e,{sent:n,received:r},s,h){return t6r({coverage:e.coverage,kept:e.result.messagesToPreserve,sent:n,received:r,instructions:void 0,fit:sfn(e,r.messages,s,h)})}function m1e(){if(!pp())return!1;if(!J0())return!1;if(!k(\"tengu_sepia_moth\",!1))return!1;return yIr()}function uWn(e){return $Lt(e)}function PTe(){return k(\"tengu_amber_packet\",!1)&&m1e()&&!qa()&&!Z()}var U7e=typeof{ISSUES_EXPLAINER:\"report the issue at https://github.com/anthropics/claude-code/issues\",PACKAGE_URL:\"@anthropic-ai/claude-code\",README_URL:",
@@ -56746,7 +56768,7 @@
    "served": {
     "source": "growthbook",
     "value": {
-     "mode": "off"
+     "mode": "compact"
     }
    },
    "sites": 1,
@@ -57654,8 +57676,15 @@
    "served": {
     "source": "growthbook",
     "value": {
-     "enabled": false,
-     "version": 0
+     "allowanceNote": "{percent} allowance left",
+     "budgetExhaustedCopy": "You've used this week's lower-priority allowance",
+     "cooloffMinutes": 10,
+     "enabled": true,
+     "label": "Continue now at lower priority",
+     "noticeLine": "/low-priority to continue now at lower priority \u00b7 uses your weekly limit",
+     "statusLine": "Lower priority until {reset}",
+     "version": 3,
+     "waitBanner": "Working at lower priority \u00b7 waiting for capacity"
     }
    },
    "sites": 1,
@@ -58364,7 +58393,7 @@
    "name": "tengu_umber_kestrel",
    "served": {
     "source": "growthbook",
-    "value": false
+    "value": true
    },
    "sites": 1,
    "snippet": "estions before use.  // (c) Anthropic PBC. All rights reserved. Use is subject to the Legal Agreements outlined here: https://code.claude.com/docs/en/legal-and-compliance.  // Version: 2.1.308 var dO=\"EndConversation\",sBo=\"tengu_umber_kestrel\"; export{dO,sBo}; \u0000// @bun @bytecode // Claude Code is a Beta product per Anthropic's Commercial Terms of Service. // By using Claude Code, you agree that all code acceptance or rejection decisions you make, // and the associated conversations in context, constitute Feedback u",

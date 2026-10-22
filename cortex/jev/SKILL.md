@@ -232,3 +232,20 @@ tasks × 6 labellers: Jev, deepseek-flash, deepseek-pro, Amos-1 large, Amos-1 me
   difficulty from step count / reference_length. Labels in STDB `web_playbook_task.labels_json` (per-field `sources`) + HF `labels-final-2026-10-20/`.
 Rule carried forward: pick a decision model PER FIELD by bake-off against objective truth where one exists; agreement is the fallback, and a
 field with no consensus is a sign the question is ill-posed, not that a better labeller exists.
+
+## 🔴 DELTA 2026-10-22 — Base Labs mammoth-1 (27B) BEATS Jev on agent-doneness; elephant-1 (9B) = Jev parity (both open, MIT, self-hosted)
+Base Labs (Baseten) released 10-21: `baselabs/mammoth-1` (Qwen3.5-27B) and `baselabs/elephant-1` (Qwen3.5-9B), MIT, Jev request shape via the pinned
+OneJev engine (`setup.sh` + `serve.patch`; `qev.engine.DecisionEngine`), 16,384-token limit (no refusals on our 256 states). Self-hosted on one A100
+80 GB (Vast, `.bench/jev/bakeoff-baselabs-launch.sh`, adapter `make_baselabs` in `bakeoff-driver.py`); results `<hf-org>/jev-bakeoff-2026-10-01`
+`bakeoff-{elephant,mammoth}-1.jsonl`. Same 256 fixed states (with tool evidence), same three questions.
+| model | done AUC | Δ vs Jev (95% CI) | verified AUC | ECE raw → Platt 5-fold | confident-wrong (fail ≥0.9 / pass ≤0.1) | latency |
+|---|---|---|---|---|---|---|
+| **mammoth-1** | **0.805** | **+0.059 [+0.011, +0.107]** | **0.791** | 0.342 → (fit) | 3 / 0 | ~2 s |
+| elephant-1 | 0.736 | −0.010 [−0.057, +0.036] | 0.756 | 0.328 → 0.020 | 1 / 1 | ~0.5 s |
+| amos-large (10-14) | 0.774 | +0.028 [−0.017, +0.075] | 0.767 | 0.30 → 0.050 | 3 | 1.6 s |
+| Jev (reference) | 0.746 | — | 0.707 | 0.097 raw | 0 | 0.34 s |
+**mammoth-1 is the first model in every bake-off since 09-18 whose done-AUC gain over Jev clears zero**, and it has the best verified signal measured.
+Same pattern as every open model: ranking ≥ Jev, raw calibration poor (mean p 0.55 vs base rate 0.21) → always behind a fitted calibration
+(elephant-1 Platt 0.020). Next: Platt-fit mammoth-1 and re-run the signals-replay with the per-task prior (DELTA 10-19c: Jev+prior 0.860) on
+mammoth; candidate base for the R260 verifier / V2-P14 acceptor head (MIT, self-hostable, no bench data leaves us). Run cost: 3 box attempts
+(two download stack failures, fixed: python snapshot_download with XET off + brotli/urllib3 upgrade + a download preflight) ≈ $2.

@@ -38,3 +38,6 @@
 {"event": "experiment_ended", "experimentId": "cc-grace-launch-1", "last_variationId": 0, "ts": "2026-10-22T11:25:46Z", "version": "2.1.308"}
 {"event": "experiment_ended", "experimentId": "precomputed-compaction-v7", "last_variationId": 1, "ts": "2026-10-22T11:25:46Z", "version": "2.1.308"}
 {"event": "experiment_ended", "experimentId": "tengu_curried_trinket_external_experiment_v3", "last_variationId": 4, "ts": "2026-10-22T11:25:46Z", "version": "2.1.308"}
+{"event": "experiment_resumed", "experimentId": "precomputed-compaction-v7", "ts": "2026-10-22T14:57:52Z", "version": "2.1.308"}
+{"event": "experiment_resumed", "experimentId": "tengu_curried_trinket_external_experiment_v3", "ts": "2026-10-22T14:57:52Z", "version": "2.1.308"}
+{"event": "experiment_resumed", "experimentId": "cc-grace-launch-1", "ts": "2026-10-22T14:57:52Z", "version": "2.1.308"}
