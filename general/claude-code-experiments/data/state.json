@@ -1,5 +1,5 @@
 {
- "cache_at": 1792526811763,
+ "cache_at": 1792669899023,
  "experiments": {
   "cai_giggly_dream": {
    "ended_at": "2026-10-18T02:37:14Z",
@@ -32,15 +32,15 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 1
   },
   "cc-grace-launch-1": {
-   "ended_at": "2026-10-18T02:37:14Z",
-   "ended_cache_at": null,
+   "ended_at": "2026-10-22T11:25:46Z",
+   "ended_cache_at": 1792668344180,
    "experimentId": "cc-grace-launch-1",
    "features": {
     "tengu_lantern_spool": false
@@ -49,15 +49,15 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
-   "status": "active",
+   "last_seen_at": "2026-10-22T05:49:30Z",
+   "last_seen_cache_at": 1792648139037,
+   "last_seen_version": "2.1.308",
+   "status": "past",
    "variationId": 0
   },
   "precomputed-compaction-v7": {
-   "ended_at": "2026-10-18T02:37:14Z",
-   "ended_cache_at": null,
+   "ended_at": "2026-10-22T11:25:46Z",
+   "ended_cache_at": 1792668344180,
    "experimentId": "precomputed-compaction-v7",
    "features": {
     "tengu_amber_moleskin": {
@@ -80,10 +80,10 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
-   "status": "active",
+   "last_seen_at": "2026-10-22T05:49:30Z",
+   "last_seen_cache_at": 1792648139037,
+   "last_seen_version": "2.1.308",
+   "status": "past",
    "variationId": 1
   },
   "tengu_amber_prism": {
@@ -97,9 +97,9 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 1
   },
@@ -114,9 +114,9 @@
    "first_seen_cache_at": 1792099178714,
    "first_seen_version": "2.1.301",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 0
   },
@@ -138,6 +138,8 @@
    "variationId": 1
   },
   "tengu_curried_trinket_external_experiment_v3": {
+   "ended_at": "2026-10-22T11:25:46Z",
+   "ended_cache_at": 1792668344180,
    "experimentId": "tengu_curried_trinket_external_experiment_v3",
    "features": {
     "tengu_curried_trinket": "no_scratchpad_capped"
@@ -146,10 +148,10 @@
    "first_seen_cache_at": 1792451241820,
    "first_seen_version": "2.1.304",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
-   "status": "active",
+   "last_seen_at": "2026-10-22T05:49:30Z",
+   "last_seen_cache_at": 1792648139037,
+   "last_seen_version": "2.1.308",
+   "status": "past",
    "variationId": 4
   },
   "tengu_flint_harbor": {
@@ -163,9 +165,9 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 0
   },
@@ -180,9 +182,9 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 0
   },
@@ -197,9 +199,9 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 0
   },
@@ -229,9 +231,9 @@
    "first_seen_cache_at": 1792526811763,
    "first_seen_version": "2.1.305",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 0
   },
@@ -246,9 +248,9 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 1
   },
@@ -261,9 +263,9 @@
    "first_seen_cache_at": 1792291067093,
    "first_seen_version": "2.1.302",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 1
   },
@@ -283,9 +285,9 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-21T00:04:31Z",
-   "last_seen_cache_at": 1792526811763,
-   "last_seen_version": "2.1.305",
+   "last_seen_at": "2026-10-22T11:51:41Z",
+   "last_seen_cache_at": 1792669899023,
+   "last_seen_version": "2.1.308",
    "status": "active",
    "variationId": 1
   }

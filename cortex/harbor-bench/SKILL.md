@@ -2590,3 +2590,14 @@ prefers regrade rows.
   session) get a synthesized task+final-message record from `response.attempt<k>.json`. `--no-attempts` skips; `--attempts-stdb` posts
   `bench_attempt_result` rows (needs the module publish). ETL: an ungraded outcome is unlabeled, not a 0.3 cap.
 - Readers: lake session_refs `harness~<sfx>__<task>__rN__a<k>`; the pick stays `…__rN`. Oracle/replay scripts unchanged (they read the store).
+
+## 🔴 DELTA 2026-10-20 — t4w2 (last full TB4 run) + t4w3n/m (14-task max-effort probes): results, the 1017 cliff, what not to spend on
+Full write-up: `omniclaude-v4/.cortex/bench/findings-tb4-t4w2-t4w3-2026-10-20.md` (every number cited to the `r-*.md` adjudications + STDB `bench_task_result`).
+- **t4w2 (10-17→19, 62 tasks, flash = DeepSeek-V4.1-Flash-1017, pin 4.125.4):** control a **17/62 = 27.4% ($21.02)** — THE 1017 control baseline;
+  second-attempt bundle b 11/59 ($61.31) / c 13/56 ($61.60), both budget-halted at the $60 cap; d (effort `none`, thinking truly off) 1/14.
+  Verdict: bundle UNDETERMINED on count, NEGATIVE on cost. Oracle 18/50 vs pick 10/50 → the selector discards ~8 passes/arm.
+- **t4w3n / t4w3m (10-20, the 14-task D set):** control @max 7/14 ($3.87) = control @high 7/14; bundle @max 5/14 ($9.62) = b/c @high.
+  On 1017 `max` does not raise reasoning (median 142K vs 139K per task) → no lift. Adjudication files say "/21": 7 rows are `__lever_audit__` markers.
+- **The cliff (9–10/14 → 5/14 from 10-17) is the MODEL**, not the library or the 10-17 git reset: same config, the 1017 weights halve reasoning per task.
+  Pre-10-17 flash numbers are a different model — re-baseline before pairing.
+- Reading the "/N" totals: always subtract `__lever_audit__` boot markers and infra rows (EnvironmentStartTimeoutError, GPU verifier timeouts) before quoting.
