@@ -208,3 +208,27 @@ image localization is a different primitive and is untested on real captcha grid
   char accuracy — they do not count positions) but read an instruction as a MENU perfectly (colour/size/action 16/16 each, one request, conf ≈1.0).
   Design rule: "type it out" = enumerate the answer space and ask a choice; never a per-character keyboard. Jev's request token budget caps a
   38-option question at ~8 per request.
+
+## DELTA 2026-10-20d — the two decision-model bake-offs of 10-20: CAPTCHA (what solves what) and WEB-TASK LABELS (who labels which field)
+**CAPTCHA** (ledger `omniclaude-v4/.cortex/research/captcha-bakeoff-2026-10-20.md` §1–§7; ≈ $0.18 of model spend, VenusBench-CAPTCHA + reCAPTCHA-v2 tiles):
+| captcha job | best | numbers |
+|---|---|---|
+| image grid ("select all squares with…") | **Jev**, then Mercury Decide | exact grids Jev 85% / Mercury 72%, calibrated per-tile probabilities (Mercury ECE 0.023) — one typed call solves a grid |
+| click-the-X localization | **Jev Box** (`jev-preview` 1.14) | best localizer measured, beats the VLM's own clicks; its confidence separates hits from misses — gate ≈ 0.5 |
+| presence / "did it clear?" (noul) | all three ≥ 94% | Mercury best calibrated |
+| reading the instruction / reference strip | the driving VLM, crop + re-read | icon_click 0/29 for every method (the strip is the wall, not resolution) |
+| OCR codes | deepseek-flash 20/30 (char-acc 0.82) | Jev keyboard 14/30 — doubles letters, fails CJK (never spell with a typed model, §10-20c) |
+| drag / slider | two-model: Jev Box finds the HANDLE (drag_end 30/30), the VLM estimates the DROP (slider median 19 px) | the real solver is a live drag → screenshot → noul loop |
+Shipped: browser MCP `solve_captcha` (typed menu read + per-tile decisions + human clicks + verify) — reCAPTCHA v2 solved live 10-20 5:30 PM PT,
+hCaptcha 2026 via the driver path 5:40 PM PT. Scope (own/consenting properties vs third-party sites) still gates wider production use.
+
+**WEB-TASK LABELS** (doc `nexus-terminal/docs/research/web-workflow-corpus-2026-10-20.md` "Labels"; scores `.bench/corpus/bakeoff/score-6.txt`; 150 stratified
+tasks × 6 labellers: Jev, deepseek-flash, deepseek-pro, Amos-1 large, Amos-1 medium, d1-3B):
+- form_heavy vs objective truth (≥ 2 TYPE/SELECT steps): **Amos-1 large acc 1.00 / AUC 1.00**, Jev 0.94 / 0.985, flash 0.93 / 0.984, Amos medium
+  0.85 / 0.948, pro 0.87 / 0.93, d1-3B 0.79 / 0.972.
+- leave-one-out agreement: Jev best on intent_family (0.83); risk_class flash/pro/Jev/Amos 0.93–0.97, d1-3B 0.37 (rejected); challenge_likely
+  Amos large 0.93 vs Jev 0.77; difficulty: NO consensus (0.41–0.75) → replaced by objective step counts.
+- Decision applied to all 1,439 corpus tasks: Jev → intent_family, risk_class, account_required; Amos-1 large → form_heavy, challenge_likely;
+  difficulty from step count / reference_length. Labels in STDB `web_playbook_task.labels_json` (per-field `sources`) + HF `labels-final-2026-10-20/`.
+Rule carried forward: pick a decision model PER FIELD by bake-off against objective truth where one exists; agreement is the fallback, and a
+field with no consensus is a sign the question is ill-posed, not that a better labeller exists.
