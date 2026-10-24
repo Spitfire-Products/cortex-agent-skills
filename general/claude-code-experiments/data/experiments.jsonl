@@ -41,3 +41,4 @@
 {"event": "experiment_resumed", "experimentId": "precomputed-compaction-v7", "ts": "2026-10-22T14:57:52Z", "version": "2.1.308"}
 {"event": "experiment_resumed", "experimentId": "tengu_curried_trinket_external_experiment_v3", "ts": "2026-10-22T14:57:52Z", "version": "2.1.308"}
 {"event": "experiment_resumed", "experimentId": "cc-grace-launch-1", "ts": "2026-10-22T14:57:52Z", "version": "2.1.308"}
+{"event": "experiment_started", "experimentId": "tengu_typed_trinket_experiment", "features": {"tengu_typed_trinket": 2}, "source": "live", "ts": "2026-10-24T03:58:51Z", "variationId": 1, "version": "2.1.310"}
