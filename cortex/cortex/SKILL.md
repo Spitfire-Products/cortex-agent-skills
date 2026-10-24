@@ -1119,4 +1119,6 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   jobs (wrangler ≥4.100 requires Node ≥22). Verified locally: `containers build --tag/--push` flags present, `containers images list`
   columns unchanged (the workflow's awk parse matched 0.15.77), `secret put` still reads a piped value (non-TTY → readFromStdin; the
   confirm-update prompt belongs to `secrets-store secret update`, not `secret put`), dry-run deploys OK (cortex bundle 637.26 KiB = CI's),
-  `tsc --noEmit` 0 errors ×3. First real sandbox deploy on it = the next ship-cortex-sandbox.sh run.
+  `tsc --noEmit` 0 errors ×3. VALIDATED 3:24 PM PT 10-24: ship-cortex-sandbox.sh 4.130.0 (images 0.15.78 / 2.8.24) — Deploy Workers runs 40137944522 + 40137942901
+  green, CI logs show `node-version: 22` + `wrangler 4.152.0` and a Current Version ID for each (no 100146). Still on Node 20: cf-proxy, redteam,
+  git-proxy, auth-notary, autoresearch, cortex, relay, data-ingestion, playwright-mcp (wrangler 3.114.17 / 4.86.0) — push-deployed, fine.
