@@ -1127,3 +1127,16 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   v5 — its lock-less `npm install` ERESOLVEd on ANY Node) and deployed live on Node 22 (run 40139153956). Still Node 20: deploy.yml + core-only-build
   (SPA), nexus-cortex ci.yml/publish.yml (20.18.1, deliberate), and the browser/autoresearch SANDBOX CONTAINERS (Node v20.20.0 from
   cloudflare/sandbox:0.7.12 — EOL, unpatched for the 2026-10-21 Node security release). Proposed next: Node 24 (active LTS).
+
+## DELTA 2026-10-24 — sandbox containers off Node 20 (CVE-2026-111497 "Node2Shell"/"HTTP2Shell", Brotli OOB write)
+- Fixed in Node 22.23.4 / 24.22.1 / 26.12.1, Bun 1.4.4, Python Brotli 1.2.1 / brotlicffi 1.2.1.0. Node 20 is EOL (2026-04-30) — no fix.
+- Browser + autoresearch images (base `cloudflare/sandbox:0.7.12`, which COPYs Node 20.20.0 from node:20-slim) now overlay Node 24.22.1:
+  `RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/corepack` THEN `COPY --from=node:24.22.1-slim` node + node_modules.
+  🔴 Without the rm, COPY MERGES npm 11 over npm 10 → `npm --version` works, `npm i` exits 1 with no message (autoresearch 2.8.25 build died;
+  browser 2.9.7 shipped broken npm). The build check now runs `npm i -g --dry-run semver`. Images browser 2.9.8 / autoresearch 2.8.26
+  (runs 40140994256 / 40140986685, 4:08 PM PT). The cortex image is Alpine with Node 24.22.1 already.
+- NOT fixed by the overlay: the control server `/container-server/sandbox` is a Bun-compiled binary with its own runtime — 0.7.12 embeds
+  Bun 1.3.10, the cortex image's copy (from `cloudflare/sandbox:0.12.4-musl`) Bun 1.3.12. Base 0.12.14 = Bun 1.4.4 + Node 22.23.4. The SDK
+  must match the image: cortex SDK 0.12.4 → 0.12.14 + COPY from `0.12.14-musl` (same minor); browser (SDK 0.7.12) and autoresearch (SDK 0.7.21)
+  need the SDK 0.7 → 0.12 API upgrade. Standalone `bun` 1.3.10 also sits in those images (oven/bun:1.4.4 exists). Chrome 156.0.8078.47 —
+  fixed Chrome build for this CVE not confirmed. No Python Brotli in the containers or the repl.
