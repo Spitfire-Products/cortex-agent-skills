@@ -1114,3 +1114,9 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   which uploads another version and immediately GETs it. If retries keep failing, the structural fix to propose is applying the secrets
   in the deploy itself (`wrangler deploy --secrets-file`, newer wrangler) so one deploy = one version.
 - npm users are unaffected; only the hosted containers stay on the previous harness version until a sandbox deploy goes green.
+- **UPDATE 2026-10-24 3:2x PM PT:** sandbox jobs moved to **wrangler 4.152.0** (exact pin in each sandbox worker's package.json/lock; was
+  4.86.0 / browser 4.70.0) + `@cloudflare/workers-types` 5.20261024.1 (wrangler ≥~4.120 peer-requires v5) + **Node 22** in the three sandbox
+  jobs (wrangler ≥4.100 requires Node ≥22). Verified locally: `containers build --tag/--push` flags present, `containers images list`
+  columns unchanged (the workflow's awk parse matched 0.15.77), `secret put` still reads a piped value (non-TTY → readFromStdin; the
+  confirm-update prompt belongs to `secrets-store secret update`, not `secret put`), dry-run deploys OK (cortex bundle 637.26 KiB = CI's),
+  `tsc --noEmit` 0 errors ×3. First real sandbox deploy on it = the next ship-cortex-sandbox.sh run.
