@@ -8,7 +8,7 @@ Every skill directory found in the workspace and what happened to it.
 |---|---|---|---|
 | cortex | `autoresearch` | `.agents/skills/autoresearch` | 30 KB |
 | cortex | `candidate-model-onboarding` | `.claude/skills/candidate-model-onboarding` | 22 KB |
-| cortex | `cortex` | `.agents/skills/nexus-cortex-harness` | 70 KB |
+| cortex | `cortex` | `.agents/skills/nexus-cortex-harness` | 72 KB |
 | cortex | `cortex-bench` | `.agents/skills/cortex-bench` | 49 KB |
 | cortex | `cortex-shipped` | `omniclaude-v4/.cortex/skills/cortex` | 48 KB |
 | cortex | `cortex-subagent` | `omniclaude-v4/.cortex/skills/cortex-subagent` | 7 KB |

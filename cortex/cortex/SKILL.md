@@ -1100,3 +1100,17 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   Verify with ONE fresh session ≥15 min after deploy; a stale answer before that is not a failed ship.
 - The bench is independent of this image: every harbor task container installs `nexus-cortex@$TB2_HARNESS` itself (harbor-bench
   DELTA 09-05b §4). A 77-store sweep on 09-26 found 0 pin/install mismatches.
+
+## DELTA 2026-10-24 — sandbox deploy fails with Cloudflare code 100146 ("Worker version could not be found")
+- Symptom: the `Deploy worker` step of a sandbox job (`deploy-nexus-cortex-sandbox` / `deploy-nexus-autoresearch-sandbox`) prints
+  `Uploaded <worker>` and then `A request to the Cloudflare API (/accounts/…/workers/scripts/<worker>/versions/<id>) failed … The requested
+  Worker version could not be found [code: 100146]`. The image build + push before it succeeded.
+- History: first seen 2026-08-04 (resume memory of that date) — recorded as a TRANSIENT versions-API flake, recovered by re-dispatching.
+  2026-10-24: 4 failures in a row 1:45–2:00 PM PT on wrangler 4.86.0 (same version as the last green run, 39960085274 on 10-23); no
+  Cloudflare incident listed; no workflow change on those jobs since the last green.
+- Recovery (deploy rule: same script, next version): rerun `bash nexus-terminal/scripts/ship-cortex-sandbox.sh <ver>` — it bumps both image
+  tags itself. Never `gh run rerun` / hand-dispatch around it.
+- Suspected mechanism (inferred): the job runs two `wrangler secret put` (each creates a Worker version) right before `wrangler deploy`,
+  which uploads another version and immediately GETs it. If retries keep failing, the structural fix to propose is applying the secrets
+  in the deploy itself (`wrangler deploy --secrets-file`, newer wrangler) so one deploy = one version.
+- npm users are unaffected; only the hosted containers stay on the previous harness version until a sandbox deploy goes green.
