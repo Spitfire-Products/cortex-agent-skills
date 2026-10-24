@@ -1122,3 +1122,8 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   `tsc --noEmit` 0 errors ×3. VALIDATED 3:24 PM PT 10-24: ship-cortex-sandbox.sh 4.130.0 (images 0.15.78 / 2.8.24) — Deploy Workers runs 40137944522 + 40137942901
   green, CI logs show `node-version: 22` + `wrangler 4.152.0` and a Current Version ID for each (no 100146). Still on Node 20: cf-proxy, redteam,
   git-proxy, auth-notary, autoresearch, cortex, relay, data-ingestion, playwright-mcp (wrangler 3.114.17 / 4.86.0) — push-deployed, fine.
+- **3:38 PM PT 10-24: EVERY deploy-workers.yml job on Node 22** (commit fc620003f). Local Node 22 `npm ci` + dry-run clean for all except
+  playwright-mcp (no lockfile + `npm ci` = already broken, TBD reference deployment). git-proxy got a lockfile (wrangler 4.152.0 + workers-types
+  v5 — its lock-less `npm install` ERESOLVEd on ANY Node) and deployed live on Node 22 (run 40139153956). Still Node 20: deploy.yml + core-only-build
+  (SPA), nexus-cortex ci.yml/publish.yml (20.18.1, deliberate), and the browser/autoresearch SANDBOX CONTAINERS (Node v20.20.0 from
+  cloudflare/sandbox:0.7.12 — EOL, unpatched for the 2026-10-21 Node security release). Proposed next: Node 24 (active LTS).
