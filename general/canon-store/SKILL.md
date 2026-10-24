@@ -45,8 +45,10 @@ events, compaction boundaries are all first-class records), translate-at-the-edg
 provider's dialect at request time. Full spec: `omniclaude-v4/docs/CANON.md`.
 
 - **Remote (private):** `github.com/Spitfire-Products/nexus-canon-store` (env `CANON_REPO`).
-- **Local store:** `/tmp/canon-store` (off the workspace quota by design; the repl wipes `/tmp`,
-  so it may need a re-clone — see Operations).
+- **Local store (2026-10-24):** `~/.cache/canon-store` on the workspace disk (`CANON_STORE` is set in settings env + both bashrc files);
+  `/tmp/canon-store` is a symlink to it, recreated at boot by `scripts/canon-store-link.sh` — so the `/tmp/canon-store/...` paths below
+  still work. Why moved: this repl's `/tmp` became a 4 GiB RAM tmpfs (2.7 GB of RAM held by the clone). nexus-canon ≥1.12 resolves the
+  default itself: `CANON_STORE` → an existing `/tmp/canon-store` → `~/.cache/nexus-canon/store` (`defaultCanonStore()`).
 - **It captures THESE Claude Code sessions.** Verified: this workspace's sessions live under
   `native/claude-code/-home-runner-workspace-nexus-terminal/<uuid>.jsonl.part-*` and are
   canonicalized into `canon/claude-code/…`. When you lose context, **your own history is in here.**
@@ -91,7 +93,7 @@ they call one implementation (`packages/canon/src/*`).
   `node $WORKSPACE/omniclaude-v4/packages/canon/bin/nexus-canon.js <verb>`.
 - **Inside the harness:** `cortex canon <verb>` (themed).
 
-All verbs accept `--store <dir>` (default `/tmp/canon-store`; or `CANON_REPO` env for the remote).
+All verbs accept `--store <dir>` (default: `defaultCanonStore()` — `CANON_STORE`, an existing `/tmp/canon-store`, else `~/.cache/nexus-canon/store`; `CANON_REPO` env for the remote).
 
 | Verb | What it does |
 |---|---|
