@@ -1146,3 +1146,9 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   40144553740: full test gate green on 24.22.1 — 3120+785+76+69 tests; packages skipped as already published, so the pack/publish step's first
   Node-24 run is the NEXT release). data-ingestion lockfile refreshed for npm 11 (94 missing esbuild optional entries). Replit `nodejs-24` module
   = Node 24.22.1 → golden repl kit (fresh-kit replit_modules) now nodejs-24; the home repl itself still nodejs-22 (22.23.4, patched).
+- **5:39 PM PT 10-24 — CONTROL SERVERS PATCHED (verified live):** browser 2.9.9 + autoresearch 2.8.28 on `cloudflare/sandbox:0.12.14` with SDK
+  0.12.14 (commit df6c4f88c; Node 24 overlay removed — base Node 22.23.4 is patched); cortex 0.15.79 copies `/sandbox` from `0.12.14-musl` with
+  SDK 0.12.14 (commit 29bf6da5f). Fresh browser session: `/container-server/sandbox` = Bun v1.4.4, node v22.23.4, npm i rc 0, run_code node +
+  python OK, browse OK; cortex `/sandbox` = Bun v1.4.4. Autoresearch verified by its green CI build only. Remaining: Chrome 156.0.8078.47's
+  status for this CVE unconfirmed. TRAP: a local `vite build` writes nexus-terminal/.wrangler/deploy/config.json → every local worker dry-run
+  fails ("deploy configuration at ../../.wrangler/deploy/config.json"); delete it after local SPA builds (only config.json.bak belongs there).
