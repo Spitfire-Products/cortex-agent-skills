@@ -6,10 +6,10 @@ metadata:
   author: clockworklabs
   version: "2.1"
   upstream_source: "github.com/clockworklabs/SpacetimeDB/blob/master/skills/rust-server/SKILL.md  (upstream RENAMED spacetimedb-rust -> rust-server since our sync)"
-  upstream_synced: "2026-04-25 (base); re-checked 2026-08-03"
+  upstream_synced: "2026-04-25 (base); re-checked 2026-08-03; MERGED upstream skills commits through 2026-10-24 (524b4487d rust-server +98: defaults, owned-String keys, view primary keys, Filter::Sql, procedures/HTTP; checked against crates 2.1.0 vs 2.13.0)"
   upstream_divergence: "2026-08-03: upstream REWROTE this skill into a terse ~291-line 'SDK Reference' — now a SUBSET of our richer copy (which retains the older upstream's HALLUCINATED-APIs warnings, Common Mistakes table, detailed Views/Procedures/Event-Tables). Deliberately NOT replaced (would lose depth). Harvested the only real delta: try_insert()/? note. We are AHEAD of upstream on 2.6/2.7 (upstream still v2.0-stamped)."
   release_notes: "https://github.com/clockworklabs/SpacetimeDB/releases/tag/v2.1.0"
-  version_reality: "installed CLI v2.1.0; MAINCLOUD auto-upgraded to 2.6+ (latest v2.7.1) — tooling ~5 releases behind; CLI-upgrade+type-regen is BREAKING (camelCase handles, Option<T> optional keys). See stdb-version-gap-2026-08 memory."
+  version_reality: "2026-10-24: latest v2.13.0 (MSRV Rust 1.97.1). Installed CLI 2.1.0 (current) + 2.13.0 side-by-side; crate 2.1.0 in 7 modules (redteam 2.8.0); TS SDK 2.1.0. CLI 2.13 codegen = camelCase handles even with CaseConversionPolicy::None; CLI 2.1 still generates identical snake bindings from a 2.13-built module. See stdb-version-gap-2026-08 memory."
   local_additions: "What's new in 2.1.0 callout; Nexus Terminal Build & Deploy section; 2.6 :sender-Identity migration note; [2026-08-03] finalized VIEW-BASED per-user security model + version-gap + stale-landmine corrections (see stdb-finalized-security-model memory + recovery/RLS_*.md)"
 ---
 
@@ -209,7 +209,7 @@ ctx.db              // Database access
 ctx.sender()        // Identity of the caller (method, not field!)
 ctx.connection_id() // Option<ConnectionId> (None for scheduled/system reducers)
 ctx.timestamp       // Invocation timestamp
-ctx.database_identity() // Module's own identity (was ctx.identity(), deprecated 2.4)
+ctx.database_identity() // Module's own identity — added in crate 2.3 (identity() deprecated there); on crate 2.1 ONLY ctx.identity() exists
 ctx.rng()            // Deterministic RNG (method, not field!)
 ```
 
@@ -626,7 +626,8 @@ Prefer `Result<(), String>` for all expected failure cases. Panics destroy and r
 
 ## Procedures (Beta)
 
-> Procedures are behind the `unstable` feature in `spacetimedb`.
+> Procedures are STABLE from crate 2.5 (no `unstable` needed); on crate ≤2.4 (our 2.1 modules) they are behind `unstable`. We keep
+> `features = ["unstable"]` everywhere anyway — RLS (`client_visibility_filter`), views and HTTP handlers are still gated in 2.13.
 > In `Cargo.toml`: `spacetimedb = { version = "...", features = ["unstable"] }`
 
 ```rust
@@ -650,6 +651,28 @@ fn save_external_data(ctx: &mut ProcedureContext, url: String) -> Result<(), Str
 | No HTTP/network | HTTP allowed |
 | No return values | Can return data |
 
+
+## Upstream additions merged 2026-10-24 (version-gated — check the module's locked crate before using)
+
+| Topic | API (upstream skill, verified in crate source) | crate 2.1.0 | crate 2.13.0 |
+|---|---|---|---|
+| Migration-safe new column | `#[default(true)]` / `#[default(None::<T>)]` on an appended field | ✅ | ✅ (`&'static str` defaults ≥2.8.1) |
+| Owned `String` index keys | `find`/`delete` on a `String` column take `String`/`&String`, not `&str` (`.delete("Alice".to_string())`) | ✅ | ✅ |
+| Connection id | `ctx.connection_id()` — a method, `None` outside connection-scoped calls | ✅ | ✅ |
+| Module identity | `ctx.database_identity()` | ❌ (use `ctx.identity()`) | ✅ (`identity()` deprecated) |
+| Visibility filter | `#[client_visibility_filter] const F: Filter = Filter::Sql("SELECT * FROM t WHERE owner = :sender");` (`:sender` is a typed Identity — column must be `Identity`) | ✅ unstable | ✅ unstable |
+| View primary key | `#[view(accessor = x, public, primary_key = sku)]` — explicit, NOT inherited from the source table | ❌ | ✅ (≥2.6) |
+| Procedural view access | indexed `find`/`filter` only, never `iter()` — start from an index (`ctx.db.entity().active().filter(true)`) | ✅ | ✅ |
+| Query-builder `String` compare | `row.label.eq("active".to_string())` (owned `String`) | ✅ | ✅ |
+| Procedures | `#[procedure] fn f(ctx: &mut ProcedureContext, …) -> T` returning typed values | unstable | stable (≥2.5) |
+| Short transactions | `ctx.with_tx(\|tx\| …)` — tables via `tx.db`, returns the closure's value directly (no `unwrap`) | ✅ | ✅ |
+| Outbound HTTP | `ctx.http.get(url)`; else `Request::builder().method("POST").uri(url).body(Body::from_bytes(data))` + `ctx.http.send(req)` | ✅ unstable | ✅ (gzip/br decoded for you ≥2.10.2 — drop manual decompression) |
+| Scheduled procedure | ordinary scheduled table; the target is `#[procedure]` taking `&mut ProcedureContext` + the row | ✅ unstable | ✅ |
+| Inbound HTTP | `use spacetimedb::http::{handler, router, Body, HandlerContext, Request, Response, Router};` `#[handler] fn health(_ctx: &mut HandlerContext, _r: Request) -> Response`, one `#[router] fn routes() -> Router { Router::new().get("/health", health) }`; `HandlerContext` has no `db` — use `ctx.with_tx`; bodies must own their data | ❌ | ✅ unstable |
+| Module env values | `#[env]` declared typed config/secrets, read via the context | ❌ | ✅ (2.12) |
+| Misc | `spacetimedb::sats::{u256, i256}`; `ConnectionId::from_u128(v)` | ✅ | ✅ |
+
+In-memory module unit tests (reducers, procedures with `with_tx`, env values, views) arrive in 2.12/2.13 — a reason to upgrade the module crate.
 
 ## Custom Types
 
@@ -755,7 +778,9 @@ All wrapper scripts source `spacetimedb-publish-core.sh` which contains the shar
 
 ### Schema Change Safety Rules
 
-1. **New fields MUST be `Option<T>`** — never add required fields to existing tables
+1. **New fields MUST be `Option<T>` at the END with a default annotation** — `#[default(None::<T>)] pub new_field: Option<T>,`. Maincloud ≥2.6
+   REJECTS an added column without one ("requires a default value annotation"); crate 2.1 already supports `#[default(CONSTANT)]` (CHAT
+   e7dc4dd30, lattice render_json). Never on primary_key/unique/auto_inc columns; non-Option `String` defaults need crate ≥2.8.1
 2. **Never remove columns** — mark as deprecated, remove in a future version after migration
 3. **Never change column types** — add a new column, migrate data, deprecate old
 4. **`npm run stdb:deploy`** is safe by default — preserves all data
@@ -823,6 +848,12 @@ The 2.6 `:sender` migration above was only HALF the DBPEN-driven refactor. The o
 **🔴 STALE LANDMINES (do not trust):** the per-module `utils/auth.rs` header comments still say *"JOIN-based RLS does NOT work — use client-side subscription scoping"* — SUPERSEDED (correct answer = a `ViewContext` view). `commands/standalone/CHAT/CLAUDE.md` claims "only user_identity_links has a filter" — WRONG (CHAT has 3 + a full views.rs). This skill's own Views section (above) documents views generically but does not mark them as THE security mechanism — this subsection is the correction.
 
 ### Version gap (grounded 2026-08-03) — our tooling is behind maincloud
+
+> **2026-10-24 update (supersedes the dates below):** latest = v2.13.0 (MSRV Rust 1.97.1; rustup 1.97.1 installed alongside 1.93.0).
+> camelCase TS handles landed in **2.7.0** and optional `Option<T>` keys in **2.6.1** (not 2.6). Proven locally: the 2.13 CLI generates camelCase
+> handles even with `CaseConversionPolicy::None`, while the 2.1 CLI still generates byte-identical snake bindings from a crate-2.13 module — so
+> modules can move to crate 2.13 one at a time WITHOUT touching the SPA. Offline pilot (blaster-lab, local 2.13 standalone): 2.1 → 2.13 publish
+> = empty migration plan, data kept. Security: v2.10.0 fixed an identity-impersonation JWT bug (server-side, maincloud's to patch).
 
 Upstream metadata on this skill = synced 2026-04-25 @ v2.1.0-era (and upstream restructured paths: `skills/spacetimedb-rust`→`skills/rust-server`). Installed CLI = **v2.1.0**; **maincloud auto-upgraded to 2.6+ (latest v2.7.1)** — ~5 releases ahead of our tooling. **🔴 A CLI upgrade + type regen triggers BREAKING TS changes** (2.6: generated handles → **camelCase**; `Option<T>` fields → truly optional keys) — upgrade deliberately in a branch, typecheck, fix casing; never bundle into a feature deploy. Also 2.6: **views gained PRIMARY KEYS** (`#[view(..., primary_key = id)]` → views can emit `onUpdate`); adding `#[unique]`/`#[primary_key]` to an existing table is now non-breaking if data satisfies. 2.4: `ReducerContext::identity` deprecated → `database_identity()`. Full list: memory `stdb-version-gap-2026-08`. Get upstream deltas via `gh api .../releases`, NOT a clone (a full SpacetimeDB clone to /tmp stalled the repl).
 

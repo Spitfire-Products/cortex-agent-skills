@@ -19,6 +19,10 @@ metadata:
 SpacetimeDB is a relational database that is also a server. It lets you upload application logic directly into the database via WebAssembly modules, eliminating the traditional web/game server layer entirely.
 
 
+> **Merged 2026-10-24 from upstream `concepts`:** event-table rows are NEVER stored in the client cache (`count()` returns 0, `iter()` yields
+> nothing — only `onInsert` fires); subscription hygiene = group by lifetime, subscribe-before-unsubscribe when swapping, avoid overlapping
+> queries, filter on indexed columns; procedures are stable from 2.5 (HTTP + `ctx.withTx`), views/RLS/HTTP handlers remain `unstable`.
+
 ## Critical Rules (Read First)
 
 These five rules prevent the most common SpacetimeDB mistakes:

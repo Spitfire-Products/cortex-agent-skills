@@ -17,7 +17,7 @@ triggers:
 metadata:
   upstream_source: "github.com/clockworklabs/SpacetimeDB/tree/feature/agentskills-integration/skills/spacetimedb-cli/SKILL.md"
   upstream_pr: "https://github.com/clockworklabs/SpacetimeDB/pull/4172"
-  upstream_synced: "2026-03-03"
+  upstream_synced: "2026-03-03; 2026-10-24 merged upstream cli (describe plural/human-readable 398c9eb2c, --no-config fdd647dfa, positional call args) + fixed --clear-database (not a real flag) → -c/--delete-data"
 ---
 
 # SpacetimeDB CLI
@@ -55,7 +55,7 @@ spacetime publish my-database --yes
 spacetime publish my-database --server local --yes
 
 # Clear database and republish
-spacetime publish my-database --clear-database --yes
+spacetime publish my-database --delete-data=always --yes   # 🔴 DESTRUCTIVE — never without the owner's explicit OK (flag is -c/--delete-data; there is NO --clear-database)
 ```
 
 ### Database Interaction
@@ -66,7 +66,7 @@ spacetime sql my-database "SELECT * FROM users"
 spacetime sql my-database --interactive   # REPL mode
 
 # Call reducers
-spacetime call my-database my_reducer '{"arg1": "value", "arg2": 123}'
+spacetime call my-database my_reducer '"value"' '123'   # each argument is its own positional JSON arg; Option = '{"some":v}' / '{"none":[]}'
 
 # Subscribe to changes
 spacetime subscribe my-database "SELECT * FROM users" --num-updates 10
@@ -77,8 +77,10 @@ spacetime logs my-database -n 100          # last 100 lines
 
 # Describe schema
 spacetime describe my-database --json
-spacetime describe my-database table users --json
+spacetime describe my-database table users --json         # CLI 2.1: singular entity, --json REQUIRED
 spacetime describe my-database reducer my_reducer --json
+# CLI ≥2.11: human-readable without --json; PLURAL entities: tables|views|reducers|procedures|routes|env|types
+#   spacetime describe my-database tables users --json
 ```
 
 **`spacetime sql` has no `--json` flag.** For machine-readable results (arrays, structured decoding), hit the HTTP `/sql` endpoint instead of the CLI:
@@ -181,7 +183,7 @@ spacetime dev
 spacetime start
 
 # Publish to local
-spacetime publish my-db --server local --clear-database --yes
+spacetime publish my-db --server local --delete-data=always --yes   # local dev only
 
 # Query local database
 spacetime sql my-db --server local "SELECT * FROM players"
@@ -204,6 +206,8 @@ spacetime dev --client-lang typescript --module-bindings-path ./client/src/bindi
 |------|-------|-------------|
 | `--server` | `-s` | Target server (nickname, hostname, or URL) |
 | `--yes` | `-y` | Non-interactive mode (skip confirmations) |
+| `--no-config` | | Ignore `spacetime.json` project configuration (CLI ≥2.11) |
+| `--config-path` | | Use a separate cli.toml — keeps a scratch/local login away from the real maincloud login |
 | `--anonymous` | | Use anonymous identity |
 | `--identity` | `-i` | Specify identity to use |
 | `--module-path` | `-p` | Path to module project |
@@ -225,7 +229,7 @@ spacetime server ping <server>
 ### "Schema conflict"
 ```bash
 # Clear data and republish
-spacetime publish my-db --clear-database --yes
+spacetime publish my-db --delete-data=always --yes   # 🔴 only with the owner's OK; in this workspace use the publish scripts
 ```
 
 ### "Build failed"
@@ -263,3 +267,18 @@ npm run stdb:logs              # Tail module logs
 ```
 
 See the **spacetimedb-rust** skill "Nexus Terminal — Build & Deploy" section for full details on the custom toolchain, multi-module architecture, and schema change safety rules.
+
+## Nexus Terminal (workspace-specific)
+Never run `spacetime publish` / `build` directly here — use the wrappers, which set PATH, GLIBC_TUNABLES and the Rust toolchain:
+```bash
+npm run stdb:deploy            # build + generate types + publish (safe; preserves data)
+npm run stdb:deploy:clear      # 🔴 DESTRUCTIVE — wipe data + publish (NEVER without explicit owner permission)
+bash scripts/spacetimedb-publish-<module>.sh [generate|publish]   # per-module (financial, lattice, nexus-cortex, chat, blaster-lab, …)
+```
+Toolchain detail: skill `spacetimedb-rust` → "Nexus Terminal — Build & Deploy".
+
+### Versions / upgrade path
+- `spacetime version list` · `spacetime version install <v>` (installs WITHOUT switching unless `--use`) · `spacetime version use <v>` ·
+  `spacetime version upgrade` (installs the latest AND switches). Pinned here: **2.1.0 current**; 2.13.0 installed side-by-side (2026-10-24)
+  at `~/.local/share/spacetime/bin/2.13.0/spacetimedb-cli`. Switching the current CLI changes type generation (camelCase handles) — see
+  memory stdb-version-gap-2026-08 before `use`/`upgrade`.

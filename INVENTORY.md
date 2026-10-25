@@ -40,11 +40,11 @@ Every skill directory found in the workspace and what happened to it.
 | general | `resume-analyst` | `omniclaude-v4/.cortex/skills/resume-analyst` | 12 KB |
 | general | `resume-session` | `.claude/skills/resume-session` | 15 KB |
 | general | `scope` | `.claude/skills/scope` | 4 KB |
-| general | `spacetimedb-cli` | `.agents/skills/spacetimedb-cli` | 7 KB |
+| general | `spacetimedb-cli` | `.agents/skills/spacetimedb-cli` | 9 KB |
 | general | `spacetimedb-concepts` | `.agents/skills/spacetimedb-concepts` | 20 KB |
 | general | `spacetimedb-csharp` | `.agents/skills/spacetimedb-csharp` | 15 KB |
-| general | `spacetimedb-rust` | `.agents/skills/spacetimedb-rust` | 36 KB |
-| general | `spacetimedb-typescript` | `.agents/skills/spacetimedb-typescript` | 25 KB |
+| general | `spacetimedb-rust` | `.agents/skills/spacetimedb-rust` | 40 KB |
+| general | `spacetimedb-typescript` | `.agents/skills/spacetimedb-typescript` | 27 KB |
 | general | `spot-gpu-compute` | `.claude/skills/spot-gpu-compute` | 25 KB |
 | general | `team-plan` | `.claude/skills/team-plan` | 5 KB |
 | general | `train` | `.claude/skills/train` | 8 KB |
