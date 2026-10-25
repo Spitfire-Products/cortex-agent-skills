@@ -1140,3 +1140,9 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   must match the image: cortex SDK 0.12.4 → 0.12.14 + COPY from `0.12.14-musl` (same minor); browser (SDK 0.7.12) and autoresearch (SDK 0.7.21)
   need the SDK 0.7 → 0.12 API upgrade. Standalone `bun` 1.3.10 also sits in those images (oven/bun:1.4.4 exists). Chrome 156.0.8078.47 —
   fixed Chrome build for this CVE not confirmed. No Python Brotli in the containers or the repl.
+- **5:04 PM PT 10-24 — Node 24.22.1 EVERYWHERE in CI** (exact pin; a bare '24' resolved to the runner's cached 24.21.0 = pre-fix):
+  nexus-terminal deploy-workers (13 jobs) + deploy.yml + core-only-build + compile-playbooks (commits 390403721 → a72b3a200; Pages, core-only
+  and a live data-ingestion deploy green on v24.22.1); nexus-cortex ci.yml (run 40143731776 green, no npm reify abort) + publish.yml (dry-run
+  40144553740: full test gate green on 24.22.1 — 3120+785+76+69 tests; packages skipped as already published, so the pack/publish step's first
+  Node-24 run is the NEXT release). data-ingestion lockfile refreshed for npm 11 (94 missing esbuild optional entries). Replit `nodejs-24` module
+  = Node 24.22.1 → golden repl kit (fresh-kit replit_modules) now nodejs-24; the home repl itself still nodejs-22 (22.23.4, patched).
