@@ -571,5 +571,5 @@ python3 .claude/skills/claude-code-variables/scripts/ccv.py mark <NAME> --kind <
 
 # CHANGELOG — 6 version(s) untriaged for library candidates
 
-Versions: 2.1.310, 2.1.309, 2.1.308, 2.1.307, 2.1.306, 2.1.305. Read `reference/changelog.md` (UNTRIAGED section, tagged bullets first), add candidates to `library/CANDIDATES.md`, then `ccv.py changelog-triaged <version>`. Last fetch: 2026-10-24T03:59:23Z
+Versions: 2.1.310, 2.1.309, 2.1.308, 2.1.307, 2.1.306, 2.1.305. Read `reference/changelog.md` (UNTRIAGED section, tagged bullets first), add candidates to `library/CANDIDATES.md`, then `ccv.py changelog-triaged <version>`. Last fetch: 2026-10-25T08:44:33Z
 
