@@ -750,6 +750,10 @@ The workspace has a non-standard Rust installation that requires specific enviro
 
 5. **Pre-built WASM** — Scripts run `cargo build --target wasm32-unknown-unknown --release` manually, then pass the `.wasm` binary to `spacetime publish --bin-path`. This avoids `spacetime build` which may use incorrect toolchain settings.
 
+> **Per-module toolchain (2026-10-24):** a wrapper sets `STDB_RUST_TOOLCHAIN="1.97.1"` once its module's crate is ≥2.12 (MSRV 1.97);
+> `spacetimedb-publish-core.sh` then puts that rustup toolchain's bin + the runtime `gcc` first on PATH. Unset = the old 1.93.0 path.
+> First module on crate 2.13: **nexus-blaster-lab** (published 2026-10-24 9:19 PM PT, commit cf5a33841). Others still on 2.1.0.
+
 ### npm Deploy Commands
 
 ```bash
