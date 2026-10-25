@@ -1152,3 +1152,6 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   python OK, browse OK; cortex `/sandbox` = Bun v1.4.4. Autoresearch verified by its green CI build only. Remaining: Chrome 156.0.8078.47's
   status for this CVE unconfirmed. TRAP: a local `vite build` writes nexus-terminal/.wrangler/deploy/config.json → every local worker dry-run
   fails ("deploy configuration at ../../.wrangler/deploy/config.json"); delete it after local SPA builds (only config.json.bak belongs there).
+  SECOND TRAP (same build): `vite build --outDir <ABSOLUTE path>` makes the static-docs-copy plugin write 452 .md copies under
+  nexus-terminal$WORKSPACE/… — the next deploy-nexus-terminal.sh SHIPPED them to the private repo (removed by a later deploy;
+  history keeps them; all duplicates of tracked docs). Local SPA test builds: default dist/ or a RELATIVE outDir, then `git status` before deploying.
