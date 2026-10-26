@@ -5646,3 +5646,4 @@
 {"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_mossy_anchor", "to": {"source": "growthbook", "value": false}, "ts": "2026-10-24T15:26:07Z", "version": "2.1.310"}
 {"event": "value_changed", "from": {"source": "growthbook", "value": false}, "kind": "flag", "name": "tengu_valiant_finch", "to": null, "ts": "2026-10-24T15:26:07Z", "version": "2.1.310"}
 {"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_wondrous_island", "to": {"source": "growthbook", "value": false}, "ts": "2026-10-24T15:26:07Z", "version": "2.1.310"}
+{"event": "value_changed", "from": {"source": "growthbook", "value": false}, "kind": "flag", "name": "tengu_steady_mitten", "to": {"source": "growthbook", "value": true}, "ts": "2026-10-26T18:15:20Z", "version": "2.1.310"}
