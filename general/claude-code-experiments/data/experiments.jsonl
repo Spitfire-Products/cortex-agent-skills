@@ -55,3 +55,16 @@
 {"event": "experiment_ended", "experimentId": "tengu_spicy_pearl_experiment", "last_variationId": 1, "ts": "2026-10-27T06:04:00Z", "version": "2.1.311"}
 {"event": "experiment_ended", "experimentId": "tengu_typed_trinket_experiment", "last_variationId": 1, "ts": "2026-10-27T06:04:00Z", "version": "2.1.311"}
 {"event": "experiment_ended", "experimentId": "ultrareview_cli_nudges", "last_variationId": 1, "ts": "2026-10-27T06:04:00Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "precomputed-compaction-v7", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "tengu_amber_prism", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "tengu_clever_orbit_experiment", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "tengu_curried_trinket_external_experiment_v3", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "cc-grace-launch-1", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "tengu_mcp_subagent_prompt-public", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "tengu_plank_river_frost", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "tengu_radiant_fox_experiment", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "tengu_read_dedup_killswitch", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "tengu_spicy_pearl_experiment", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "cai_giggly_dream", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "tengu_typed_trinket_experiment", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}
+{"event": "experiment_resumed", "experimentId": "ultrareview_cli_nudges", "ts": "2026-10-27T14:12:22Z", "version": "2.1.311"}

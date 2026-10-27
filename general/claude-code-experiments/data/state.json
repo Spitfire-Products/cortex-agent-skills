@@ -1,5 +1,5 @@
 {
- "cache_at": 1793081038689,
+ "cache_at": 1793110496273,
  "experiments": {
   "cai_giggly_dream": {
    "ended_at": "2026-10-27T06:04:00Z",
@@ -32,10 +32,10 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 1
   },
   "cc-grace-launch-1": {
@@ -49,10 +49,10 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 0
   },
   "precomputed-compaction-v7": {
@@ -80,10 +80,10 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 1
   },
   "tengu_amber_prism": {
@@ -97,10 +97,10 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 1
   },
   "tengu_clever_orbit_experiment": {
@@ -114,10 +114,10 @@
    "first_seen_cache_at": 1792099178714,
    "first_seen_version": "2.1.301",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 0
   },
   "tengu_curried_trinket_external_experiment_v2": {
@@ -148,10 +148,10 @@
    "first_seen_cache_at": 1792451241820,
    "first_seen_version": "2.1.304",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 4
   },
   "tengu_flint_harbor": {
@@ -165,8 +165,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T06:04:00Z",
-   "last_seen_cache_at": 1793081038689,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
    "status": "active",
    "variationId": 0
@@ -182,10 +182,10 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 0
   },
   "tengu_plank_river_frost": {
@@ -199,10 +199,10 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 0
   },
   "tengu_quirky_kazoo_trigger_note_experiment": {
@@ -233,10 +233,10 @@
    "first_seen_cache_at": 1792526811763,
    "first_seen_version": "2.1.305",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 0
   },
   "tengu_read_dedup_killswitch": {
@@ -250,10 +250,10 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 1
   },
   "tengu_spicy_pearl_experiment": {
@@ -267,10 +267,10 @@
    "first_seen_cache_at": 1792291067093,
    "first_seen_version": "2.1.302",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 1
   },
   "tengu_typed_trinket_experiment": {
@@ -284,10 +284,10 @@
    "first_seen_cache_at": 1792814329187,
    "first_seen_version": "2.1.310",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 1
   },
   "ultrareview_cli_nudges": {
@@ -306,10 +306,10 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T04:41:06Z",
-   "last_seen_cache_at": 1793076064046,
+   "last_seen_at": "2026-10-27T14:14:57Z",
+   "last_seen_cache_at": 1793110496273,
    "last_seen_version": "2.1.311",
-   "status": "past",
+   "status": "active",
    "variationId": 1
   }
  }
