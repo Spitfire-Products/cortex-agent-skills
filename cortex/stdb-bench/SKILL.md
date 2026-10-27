@@ -380,7 +380,7 @@ TTL is enforced TWICE: the controller (`bench_host.ttl_at` → host_watch `Destr
    reaped/failed). Verify `SELECT host_id, ttl_at FROM bench_host`. A publish keeps `bench_scheduler_job` (verified 1 row before/after) — re-arm with
    `arm_bench_scheduler` only if it is 0.
 TRAP (10-19): workspace `.cargo/bin` was EMPTY (rustup proxies lost) → the publish script silently built with /usr/bin rustc 1.88 and failed on the
-MSRV; fix = symlink cargo/rustc/rustdoc from `.rustup/toolchains/1.93.0-x86_64-unknown-linux-gnu/bin` into `.cargo/bin` (GLIBC_TUNABLES still required).
+MSRV; fix = symlink cargo/rustc/rustdoc from `.rustup/toolchains/1.97.1-x86_64-unknown-linux-gnu/bin` (1.93.0 at the time) into `.cargo/bin` (GLIBC_TUNABLES still required).
 
 ## DELTA 2026-10-20 — the control plane generalises: a PROXY POOL is a bench run with no tasks (schema + rules)
 Design `nexus-terminal/docs/research/vast-proxy-pool-design-2026-10-20.md`. `bench_run` `proxy-pool`; one `bench_arm` per country (arm_id = ISO

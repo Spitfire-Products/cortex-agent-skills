@@ -9,7 +9,7 @@ metadata:
   upstream_synced: "2026-04-25 (base); re-checked 2026-08-03"
   upstream_divergence: "2026-08-03: upstream rewrote this into a terse ~108-line reference — a SUBSET of our richer copy. Deliberately NOT replaced (would lose depth). Minor upstream deltas noted: TS modules run on V8, C++ server modules, event-table rows never client-cached (count()=0). We are AHEAD on 2.6/2.7 + the view-based security model."
   release_notes: "https://github.com/clockworklabs/SpacetimeDB/releases/tag/v2.1.0"
-  version_reality: "installed CLI v2.1.0; MAINCLOUD 2.6+ (latest v2.7.1) — see stdb-version-gap-2026-08 memory"
+  version_reality: "2026-10-26 UPGRADE COMPLETE: CLI v2.13.0 (launcher-delegated; banner 'current: v2.1.0' = launcher self-version), crate 2.13.0 in all 8 modules, TS SDK ^2.13.0, maincloud 2.13 — see stdb-version-gap-2026-08 memory"
   local_additions: "AuthBridge integration section; 2.6 :sender-Identity RLS note; [2026-08-03] 'per-user security = VIEWS not client_visibility_filter' correction (see stdb-finalized-security-model memory)"
 ---
 

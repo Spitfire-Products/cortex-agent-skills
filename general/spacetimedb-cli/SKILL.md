@@ -279,6 +279,6 @@ Toolchain detail: skill `spacetimedb-rust` → "Nexus Terminal — Build & Deplo
 
 ### Versions / upgrade path
 - `spacetime version list` · `spacetime version install <v>` (installs WITHOUT switching unless `--use`) · `spacetime version use <v>` ·
-  `spacetime version upgrade` (installs the latest AND switches). Pinned here: **2.1.0 current**; 2.13.0 installed side-by-side (2026-10-24)
+  `spacetime version upgrade` (installs the latest AND switches). Pinned here: **2.13.0 current** (since 2026-10-26; the banner 'current: v2.1.0' is the launcher's self-version — `spacetime version list` is the truth)
   at `~/.local/share/spacetime/bin/2.13.0/spacetimedb-cli`. Switching the current CLI changes type generation (camelCase handles) — see
   memory stdb-version-gap-2026-08 before `use`/`upgrade`.

@@ -1124,7 +1124,7 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   git-proxy, auth-notary, autoresearch, cortex, relay, data-ingestion, playwright-mcp (wrangler 3.114.17 / 4.86.0) — push-deployed, fine.
 - **3:38 PM PT 10-24: EVERY deploy-workers.yml job on Node 22** (commit fc620003f). Local Node 22 `npm ci` + dry-run clean for all except
   playwright-mcp (no lockfile + `npm ci` = already broken, TBD reference deployment). git-proxy got a lockfile (wrangler 4.152.0 + workers-types
-  v5 — its lock-less `npm install` ERESOLVEd on ANY Node) and deployed live on Node 22 (run 40139153956). Still Node 20: deploy.yml + core-only-build
+  v5 — its lock-less `npm install` ERESOLVEd on ANY Node) and deployed live on Node 22 (run 40139153956). Still Node 20: deploy.yml + core-only-build (both DISABLED 2026-10-26 — the SPA builds on Cloudflare Pages git integration)
   (SPA), nexus-cortex ci.yml/publish.yml (20.18.1, deliberate), and the browser/autoresearch SANDBOX CONTAINERS (Node v20.20.0 from
   cloudflare/sandbox:0.7.12 — EOL, unpatched for the 2026-10-21 Node security release). Proposed next: Node 24 (active LTS).
 

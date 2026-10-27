@@ -8,8 +8,8 @@ metadata:
   upstream_source: "github.com/clockworklabs/SpacetimeDB/blob/master/skills/rust-server/SKILL.md  (upstream RENAMED spacetimedb-rust -> rust-server since our sync)"
   upstream_synced: "2026-04-25 (base); re-checked 2026-08-03; MERGED upstream skills commits through 2026-10-24 (524b4487d rust-server +98: defaults, owned-String keys, view primary keys, Filter::Sql, procedures/HTTP; checked against crates 2.1.0 vs 2.13.0)"
   upstream_divergence: "2026-08-03: upstream REWROTE this skill into a terse ~291-line 'SDK Reference' — now a SUBSET of our richer copy (which retains the older upstream's HALLUCINATED-APIs warnings, Common Mistakes table, detailed Views/Procedures/Event-Tables). Deliberately NOT replaced (would lose depth). Harvested the only real delta: try_insert()/? note. We are AHEAD of upstream on 2.6/2.7 (upstream still v2.0-stamped)."
-  release_notes: "https://github.com/clockworklabs/SpacetimeDB/releases/tag/v2.1.0"
-  version_reality: "2026-10-24: latest v2.13.0 (MSRV Rust 1.97.1). Installed CLI 2.1.0 (current) + 2.13.0 side-by-side; crate 2.1.0 in 7 modules (redteam 2.8.0); TS SDK 2.1.0. CLI 2.13 codegen = camelCase handles even with CaseConversionPolicy::None; CLI 2.1 still generates identical snake bindings from a 2.13-built module. See stdb-version-gap-2026-08 memory."
+  release_notes: "https://github.com/clockworklabs/SpacetimeDB/releases/tag/v2.13.0"
+  version_reality: "2026-10-27: UPGRADE COMPLETE 10-26 — crate 2.13.0 in ALL 8 modules (Rust 1.97.1 via STDB_RUST_TOOLCHAIN); CLI 2.13.0 launcher-delegated (the banner 'current: v2.1.0' is the launcher's self-version — `spacetime version list` is the truth); TS SDK ^2.13.0; scripts/stdb-backup.sh reads the 2.13 describe shape (sections[].Tables[].source_name). CLI 2.13 codegen = camelCase handles even with CaseConversionPolicy::None; CLI 2.1 still generates identical snake bindings from a 2.13-built module. See stdb-version-gap-2026-08 memory."
   local_additions: "What's new in 2.1.0 callout; Nexus Terminal Build & Deploy section; 2.6 :sender-Identity migration note; [2026-08-03] finalized VIEW-BASED per-user security model + version-gap + stale-landmine corrections (see stdb-finalized-security-model memory + recovery/RLS_*.md)"
 ---
 
@@ -21,7 +21,7 @@ SpacetimeDB modules are WebAssembly applications that run inside the database. T
 > **Tested with:** SpacetimeDB 2.0+ APIs
 
 
-## What's new in 2.1.0 (relative to 2.0.2)
+## What's new in 2.1.0 (relative to 2.0.2) — HISTORY: all modules, CLI and SDK are on 2.13.0 since 2026-10-26
 
 Non-breaking. Notable for module authors:
 
@@ -626,7 +626,7 @@ Prefer `Result<(), String>` for all expected failure cases. Panics destroy and r
 
 ## Procedures (Beta)
 
-> Procedures are STABLE from crate 2.5 (no `unstable` needed); on crate ≤2.4 (our 2.1 modules) they are behind `unstable`. We keep
+> Procedures are STABLE from crate 2.5 (no `unstable` needed); on crate ≤2.4 (our modules until 2026-10-26; all are 2.13 now) they are behind `unstable`. We keep
 > `features = ["unstable"]` everywhere anyway — RLS (`client_visibility_filter`), views and HTTP handlers are still gated in 2.13.
 > In `Cargo.toml`: `spacetimedb = { version = "...", features = ["unstable"] }`
 
@@ -738,9 +738,9 @@ The workspace has a non-standard Rust installation that requires specific enviro
    RUSTUP_HOME="$WORKSPACE/.rustup/"
    ```
 
-3. **Pinned Rust version** — Rust 1.93.0 matches SpacetimeDB 2.0/2.1 MSRV exactly:
+3. **Pinned Rust version** — Rust 1.97.1 matches the SpacetimeDB 2.13 MSRV (the publish wrappers pin it via STDB_RUST_TOOLCHAIN):
    ```bash
-   export RUSTUP_TOOLCHAIN="1.93.0"
+   export RUSTUP_TOOLCHAIN="1.97.1"
    ```
 
 4. **Nix linker** — A Nix-provided `clang` wrapper must be on PATH for proc-macro compilation:
@@ -751,8 +751,8 @@ The workspace has a non-standard Rust installation that requires specific enviro
 5. **Pre-built WASM** — Scripts run `cargo build --target wasm32-unknown-unknown --release` manually, then pass the `.wasm` binary to `spacetime publish --bin-path`. This avoids `spacetime build` which may use incorrect toolchain settings.
 
 > **Per-module toolchain (2026-10-24):** a wrapper sets `STDB_RUST_TOOLCHAIN="1.97.1"` once its module's crate is ≥2.12 (MSRV 1.97);
-> `spacetimedb-publish-core.sh` then puts that rustup toolchain's bin + the runtime `gcc` first on PATH. Unset = the old 1.93.0 path.
-> First module on crate 2.13: **nexus-blaster-lab** (published 2026-10-24 9:19 PM PT, commit cf5a33841). Others still on 2.1.0.
+> `spacetimedb-publish-core.sh` then puts that rustup toolchain's bin + the runtime `gcc` first on PATH. Unset = the wrapper default (1.97.1 since 2026-10-26).
+> First module on crate 2.13: **nexus-blaster-lab** (published 2026-10-24 9:19 PM PT, commit cf5a33841). All 8 modules on 2.13 since 2026-10-26 (scripts/stdb-upgrade-module.sh).
 
 ### npm Deploy Commands
 
@@ -795,7 +795,7 @@ All wrapper scripts source `spacetimedb-publish-core.sh` which contains the shar
 
 ```bash
 export GLIBC_TUNABLES=glibc.rtld.optional_static_tls=65536
-export RUSTUP_TOOLCHAIN=1.93.0
+export RUSTUP_TOOLCHAIN=1.97.1
 export PATH="$WORKSPACE/.cargo/bin:/usr/bin:/bin:$PATH"
 
 cargo check --manifest-path spacetimedb-module/Cargo.toml
@@ -853,13 +853,13 @@ The 2.6 `:sender` migration above was only HALF the DBPEN-driven refactor. The o
 
 ### Version gap (grounded 2026-08-03) — our tooling is behind maincloud
 
-> **2026-10-24 update (supersedes the dates below):** latest = v2.13.0 (MSRV Rust 1.97.1; rustup 1.97.1 installed alongside 1.93.0).
+> **2026-10-24 update (supersedes the dates below):** latest = v2.13.0 (MSRV Rust 1.97.1; rustup 1.97.1 installed alongside 1.93.0). **2026-10-26: upgrade COMPLETE — all 8 modules + CLI + SDK on 2.13.0.**
 > camelCase TS handles landed in **2.7.0** and optional `Option<T>` keys in **2.6.1** (not 2.6). Proven locally: the 2.13 CLI generates camelCase
 > handles even with `CaseConversionPolicy::None`, while the 2.1 CLI still generates byte-identical snake bindings from a crate-2.13 module — so
 > modules can move to crate 2.13 one at a time WITHOUT touching the SPA. Offline pilot (blaster-lab, local 2.13 standalone): 2.1 → 2.13 publish
 > = empty migration plan, data kept. Security: v2.10.0 fixed an identity-impersonation JWT bug (server-side, maincloud's to patch).
 
-Upstream metadata on this skill = synced 2026-04-25 @ v2.1.0-era (and upstream restructured paths: `skills/spacetimedb-rust`→`skills/rust-server`). Installed CLI = **v2.1.0**; **maincloud auto-upgraded to 2.6+ (latest v2.7.1)** — ~5 releases ahead of our tooling. **🔴 A CLI upgrade + type regen triggers BREAKING TS changes** (2.6: generated handles → **camelCase**; `Option<T>` fields → truly optional keys) — upgrade deliberately in a branch, typecheck, fix casing; never bundle into a feature deploy. Also 2.6: **views gained PRIMARY KEYS** (`#[view(..., primary_key = id)]` → views can emit `onUpdate`); adding `#[unique]`/`#[primary_key]` to an existing table is now non-breaking if data satisfies. 2.4: `ReducerContext::identity` deprecated → `database_identity()`. Full list: memory `stdb-version-gap-2026-08`. Get upstream deltas via `gh api .../releases`, NOT a clone (a full SpacetimeDB clone to /tmp stalled the repl).
+Upstream metadata on this skill = synced 2026-04-25 @ v2.1.0-era (and upstream restructured paths: `skills/spacetimedb-rust`→`skills/rust-server`). Installed CLI = **v2.13.0** (since 2026-10-26; the launcher banner 'current: v2.1.0' is its self-version); **maincloud 2.13** — ~5 releases ahead of our tooling. **🔴 A CLI upgrade + type regen triggers BREAKING TS changes** (2.6: generated handles → **camelCase**; `Option<T>` fields → truly optional keys) — upgrade deliberately in a branch, typecheck, fix casing; never bundle into a feature deploy. Also 2.6: **views gained PRIMARY KEYS** (`#[view(..., primary_key = id)]` → views can emit `onUpdate`); adding `#[unique]`/`#[primary_key]` to an existing table is now non-breaking if data satisfies. 2.4: `ReducerContext::identity` deprecated → `database_identity()`. Full list: memory `stdb-version-gap-2026-08`. Get upstream deltas via `gh api .../releases`, NOT a clone (a full SpacetimeDB clone to /tmp stalled the repl).
 
 ### `ctx.identity()` is the MODULE identity, NOT the database owner (learned 2026-06)
 
