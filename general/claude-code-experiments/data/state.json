@@ -1,5 +1,5 @@
 {
- "cache_at": 1793114883374,
+ "cache_at": 1793130536287,
  "experiments": {
   "cai_giggly_dream": {
    "ended_at": "2026-10-27T15:28:03Z",
@@ -165,8 +165,8 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-27T15:28:22Z",
-   "last_seen_cache_at": 1793114883374,
+   "last_seen_at": "2026-10-27T19:49:46Z",
+   "last_seen_cache_at": 1793130536287,
    "last_seen_version": "2.1.311",
    "status": "active",
    "variationId": 0

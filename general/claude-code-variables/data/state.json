@@ -1,6 +1,6 @@
 {
  "binary_sha256": "86dc1fcc69498159eaf15f446613e847010f9036bfbbdffd4c49350be8489ada",
- "cache_at": 1793114883374,
+ "cache_at": 1793130536287,
  "items": {
   "env:ANTHROPIC_API_HOST": {
    "category": "networking-api",
@@ -45509,7 +45509,7 @@
    "name": "tengu_fancy_wand",
    "served": {
     "source": "growthbook",
-    "value": false
+    "value": true
    },
    "sites": 1,
    "snippet": "feb28e9fd9c7de025\",HOOKS_WORKER_URL:\"/$bunfs/root/src/plugins/functionHooks/hooks-worker/hooks-worker.js\",DD_SOURCEMAP_GROUP:\"default\"}.VERSION)return;try{return(fJ.parse(s)?.compare(r)??0)>0?s:void 0}catch{return}}var gJ=\"tengu_fancy_wand\";function zZt(){return rYe(gJ)||Xp()&&qi()}function $Qo(){return Boolean(process.stdout.isTTY&&process.stdin.isTTY)}function qZt(){if(!$Qo())return!1;let e=O();if(e!==\"macos\"&&e!==\"linux\")return!1;if(!q7())return!1;if(H_()!==void 0)return!1;if($t())return!1;return!Rt()&&!L_()}fun",
@@ -52212,7 +52212,10 @@
    "last_seen_at": "2026-10-27T01:06:32Z",
    "last_seen_version": "2.1.311",
    "name": "tengu_mended_ribbon",
-   "served": null,
+   "served": {
+    "source": "growthbook",
+    "value": false
+   },
    "sites": 1,
    "snippet": "}}return}function xP(e,n){if(ze(n)||lre(n)){t(`[print.ts] ${e} failed, the boot goes on without them: ${d(n)}`,{level:\"warn\"});return}l(n)}var VN=\"tengu_polished_salamander\",GN=\"tengu_ccr_inherited_approval_killswitch\",zN=\"tengu_mended_ribbon\",YN=2000;function JN(){return i.CLAUDE_CODE_PARKED_PERMISSION_WAIT_MS??2000}function BP(e){try{return sE(e)===\"on\"}catch{return!1}}function WP(){return{resumeInterruptedTurn:i.CLAUDE_CODE_RESUME_INTERRUPTED_TURN,parkedStopRetires:i.CLAUDE_CODE_PARKED_STOP_RETIRES,runsBeforeCle",
    "status": "new",
@@ -57884,7 +57887,10 @@
    "last_seen_at": "2026-10-27T01:06:32Z",
    "last_seen_version": "2.1.311",
    "name": "tengu_snug_mitten",
-   "served": null,
+   "served": {
+    "source": "growthbook",
+    "value": true
+   },
    "sites": 1,
    "snippet": "rewrite the project/workspace the request targets. Unset it or correct its value.\",\"GCP path-segment env var failed the charset gate\")}var rf=\"x-claude-code-sandy-plover\",jb=64,Vb=7168,Xb=256,Jb=wae;function of(){return k(\"tengu_snug_mitten\",!1)&&Fw()}var tf=new Set([Be,qe,it,Yt,oo,br,Gi,eT,mt,ku,qs,JS,g_]);function Qb(e){let n=e.filter((h)=>h!==\"\"&&Buffer.byteLength(h,\"utf8\")<=Xb),r=[...n.filter((h)=>!tf.has(h)),...n.filter((h)=>tf.has(h))],s=nf(r);if(s.length<e.length)return s=nf([Jb,...r]),{value:`[${s.join(\",\")",
    "status": "new",

@@ -5844,3 +5844,6 @@
 {"event": "value_changed", "from": {"source": "growthbook", "value": true}, "kind": "flag", "name": "tengu_vscode_feedback_survey", "to": {"source": "growthbook", "value": false}, "ts": "2026-10-27T15:28:03Z", "version": "2.1.311"}
 {"event": "value_changed", "from": {"source": "growthbook", "value": 0}, "kind": "flag", "name": "tengu_humming_waffle", "to": null, "ts": "2026-10-27T15:28:22Z", "version": "2.1.311"}
 {"event": "value_changed", "from": {"source": "growthbook", "value": {}}, "kind": "flag", "name": "tengu_knobby_oxbow", "to": null, "ts": "2026-10-27T15:28:22Z", "version": "2.1.311"}
+{"event": "value_changed", "from": {"source": "growthbook", "value": false}, "kind": "flag", "name": "tengu_fancy_wand", "to": {"source": "growthbook", "value": true}, "ts": "2026-10-27T19:49:46Z", "version": "2.1.311"}
+{"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_mended_ribbon", "to": {"source": "growthbook", "value": false}, "ts": "2026-10-27T19:49:46Z", "version": "2.1.311"}
+{"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_snug_mitten", "to": {"source": "growthbook", "value": true}, "ts": "2026-10-27T19:49:46Z", "version": "2.1.311"}
