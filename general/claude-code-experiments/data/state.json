@@ -1,9 +1,9 @@
 {
- "cache_at": 1793220370112,
+ "cache_at": 1793229075122,
  "experiments": {
   "cai_giggly_dream": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "cai_giggly_dream",
    "features": {
     "tengu_swift_lynx": {
@@ -35,12 +35,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "cc-grace-launch-1": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "cc-grace-launch-1",
    "features": {
     "tengu_lantern_spool": false
@@ -52,12 +52,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 0
   },
   "lower-subagent-bash-timeout": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "lower-subagent-bash-timeout",
    "features": {
     "tengu_maple_ferry": 0
@@ -69,12 +69,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 0
   },
   "precomputed-compaction-v7": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "precomputed-compaction-v7",
    "features": {
     "tengu_amber_moleskin": {
@@ -100,12 +100,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_amber_prism": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "tengu_amber_prism",
    "features": {
     "tengu_amber_prism": true
@@ -117,12 +117,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_clever_orbit_experiment": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "tengu_clever_orbit_experiment",
    "features": {
     "tengu_clever_orbit": false
@@ -134,7 +134,7 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 0
   },
   "tengu_curried_trinket_external_experiment_v2": {
@@ -155,8 +155,8 @@
    "variationId": 1
   },
   "tengu_curried_trinket_external_experiment_v3": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "tengu_curried_trinket_external_experiment_v3",
    "features": {
     "tengu_curried_trinket": "no_scratchpad_capped"
@@ -168,7 +168,7 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 4
   },
   "tengu_flint_harbor": {
@@ -182,15 +182,15 @@
    "first_seen_cache_at": 1791820942751,
    "first_seen_version": "2.1.296",
    "history": [],
-   "last_seen_at": "2026-10-28T20:46:12Z",
-   "last_seen_cache_at": 1793220370112,
+   "last_seen_at": "2026-10-28T23:11:16Z",
+   "last_seen_cache_at": 1793229075122,
    "last_seen_version": "2.1.312",
    "status": "active",
    "variationId": 0
   },
   "tengu_mcp_subagent_prompt-public": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "tengu_mcp_subagent_prompt-public",
    "features": {
     "tengu_mcp_subagent_prompt": false
@@ -202,12 +202,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 0
   },
   "tengu_plank_river_frost": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "tengu_plank_river_frost",
    "features": {
     "tengu_plank_river_frost": "user_intent"
@@ -219,7 +219,7 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 0
   },
   "tengu_quirky_kazoo_trigger_note_experiment": {
@@ -240,8 +240,8 @@
    "variationId": 0
   },
   "tengu_radiant_fox_experiment": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "tengu_radiant_fox_experiment",
    "features": {
     "tengu_radiant_fox": true
@@ -261,12 +261,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_read_dedup_killswitch": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "tengu_read_dedup_killswitch",
    "features": {
     "tengu_read_dedup_killswitch": true
@@ -278,12 +278,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_spicy_pearl_experiment": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "tengu_spicy_pearl_experiment",
    "features": {
     "tengu_spicy_pearl": true
@@ -295,12 +295,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_typed_trinket_experiment": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "tengu_typed_trinket_experiment",
    "features": {
     "tengu_typed_trinket": 2
@@ -312,12 +312,12 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "ultrareview_cli_nudges": {
-   "ended_at": "2026-10-28T04:43:18Z",
-   "ended_cache_at": 1793152135908,
+   "ended_at": "2026-10-28T23:11:16Z",
+   "ended_cache_at": 1793229075122,
    "experimentId": "ultrareview_cli_nudges",
    "features": {
     "tengu_ultrareview_awareness": {
@@ -334,7 +334,7 @@
    "last_seen_at": "2026-10-28T20:46:12Z",
    "last_seen_cache_at": 1793220370112,
    "last_seen_version": "2.1.312",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   }
  }
