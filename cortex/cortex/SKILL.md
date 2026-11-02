@@ -1155,3 +1155,29 @@ is structurally impossible now; the 08-18b "grep the default first" step is obso
   SECOND TRAP (same build): `vite build --outDir <ABSOLUTE path>` makes the static-docs-copy plugin write 452 .md copies under
   nexus-terminal$WORKSPACE/… — the next deploy-nexus-terminal.sh SHIPPED them to the private repo (removed by a later deploy;
   history keeps them; all duplicates of tracked docs). Local SPA test builds: default dist/ or a RELATIVE outDir, then `git status` before deploying.
+
+## DELTA 2026-11-03 — secrets vault, the local browser, Browse modes, web tools, bounded sub-agents (all committed, NOT yet released)
+- **Secrets vault** (`docs/secrets.md`): `~/.cortex/secrets.enc` (SPA SECRETS format). Unlock with no prompt: `CORTEX_SECRETS_KEY` →
+  `_FILE` → OS keychain → `~/.cortex/vault.key`. Precedence real env > vault > .env. `cortex secrets status|init|set|get|list|delete|bind|
+  unbind|import-env|exec`; `/secrets` dialog in neoncortex + fuzzycortex. Tool processes get ONLY bound secrets (`toolChildEnv`), every
+  tool result is masked (`«secret:NAME»`, at the top of processToolTraining), `SecretsList` tool. `cortex setup` writes keys to the vault.
+- **Browser** (`docs/browser.md`): `NEXUS_BROWSER_MODE=hosted|local`. Local = `@nexus-cortex/browser` (AGPL-3.0-only OR commercial,
+  private, excluded from the public export). Chosen at `cortex setup --browser local` or `cortex browser install [--yes]` — the choice
+  installs EVERYTHING; nothing installs at runtime otherwise. `cortex browser status|use`. McpServerRegistry swaps `nexus-browser` to the
+  local stdio server only when the install reports ready (`<NEXUS_BROWSER_HOME>/install.json`).
+- **Browse modes**: default delegate (a browse sub-agent); `mode: "direct"` connects nexus-browser into the CURRENT session mid-turn (tools
+  pinned + appended to the turn) so the main model drives it. MCP tuple `items` are normalized (`mcp/mcpSchemaCompat.ts`) — DeepSeek
+  400'd every request carrying nexus-browser `computer_use` before.
+- **Web tools with the local browser**: WebFetch fallback = plain HTTP first, local browser when thin/walled (ladder default → sandbox
+  real Chrome → `NEXUS_BROWSER_PROXY_URL` scoped to the site → fail). WebSearch never uses the browser (measured: keyless DDG HTML 7/8 >
+  DeepSeek 6/8 > Gemini 5/8 > browser-Bing 2/8). `WEB_TOOLS_MODEL=local-browser` = no provider. `ENABLE_WEBTOOLS=auto` turns Browse +
+  browser tools on with the local browser, keys or not. Ledger `.cortex/bench/r-web-tools-local-browser-2026-11-03.md`; probes
+  `.cortex/bench/scripts/web-{backend,fetch}-probe.mjs`.
+- **Bounded sub-agents**: `CORTEX_AGENT_DEPTH` set by both spawners; `CORTEX_MAX_AGENT_DEPTH` default 1 → sub-agents are not offered
+  Task/Browse/WebSearch and spawns are refused (both spawn sites); the Browse delegate (`CORTEX_BROWSE_AGENT`) never spawns. The SearchTools
+  catalog and EXECUTION now enforce an agent's allowlist (`toolAllowlist.ts filterAgentTools / isBlockedBaseToolCall`) — before, a
+  restricted delegate could discover and run Bash/Write. A delegate that needs a browser declares `mcp: nexus-browser` (web-researcher).
+- 🔴 Traps: test new CLI subcommands through `packages/cli/bin/cortex.js` (its COMMANDER_SUBCOMMANDS allow-list; unknown names become MODEL
+  PROMPTS on an auto-started server — guard test `tests/binSubcommands.test.ts`); `bootstrapEnv` runs more than once per process
+  (OrchestratorFactory per request); `fuser -k` does not work on this repl — stop test servers by PID via `/proc/<pid>/environ` PORT;
+  the `/v1/messages` `tools` field takes OBJECTS `{name}` (bare strings crash isWebTool) — the API table above is wrong about that.
