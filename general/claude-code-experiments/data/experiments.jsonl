@@ -229,3 +229,13 @@
 {"event": "experiment_ended", "experimentId": "precomputed-compaction-v7", "last_variationId": 1, "ts": "2026-11-02T06:29:14Z", "version": "2.1.316"}
 {"event": "experiment_ended", "experimentId": "tengu_curried_trinket_external_experiment_v3", "last_variationId": 4, "ts": "2026-11-02T06:29:14Z", "version": "2.1.316"}
 {"event": "experiment_ended", "experimentId": "tengu_typed_trinket_experiment", "last_variationId": 1, "ts": "2026-11-02T06:29:14Z", "version": "2.1.316"}
+{"event": "experiment_resumed", "experimentId": "precomputed-compaction-v7", "ts": "2026-11-02T15:21:45Z", "version": "2.1.316"}
+{"event": "experiment_resumed", "experimentId": "tengu_curried_trinket_external_experiment_v3", "ts": "2026-11-02T15:21:45Z", "version": "2.1.316"}
+{"event": "experiment_resumed", "experimentId": "tengu_typed_trinket_experiment", "ts": "2026-11-02T15:21:45Z", "version": "2.1.316"}
+{"event": "experiment_ended", "experimentId": "precomputed-compaction-v7", "last_variationId": 1, "ts": "2026-11-02T16:11:42Z", "version": "2.1.316"}
+{"event": "experiment_ended", "experimentId": "tengu_curried_trinket_external_experiment_v3", "last_variationId": 4, "ts": "2026-11-02T16:11:42Z", "version": "2.1.316"}
+{"event": "experiment_ended", "experimentId": "tengu_typed_trinket_experiment", "last_variationId": 1, "ts": "2026-11-02T16:11:42Z", "version": "2.1.316"}
+{"event": "experiment_resumed", "experimentId": "precomputed-compaction-v7", "ts": "2026-11-03T01:28:35Z", "version": "2.1.316"}
+{"event": "experiment_resumed", "experimentId": "tengu_typed_trinket_experiment", "ts": "2026-11-03T01:28:35Z", "version": "2.1.316"}
+{"event": "experiment_started", "experimentId": "tengu_keen_pudding_experiment", "features": {"tengu_keen_pudding": 58720256}, "source": "live", "ts": "2026-11-06T02:28:52Z", "variationId": 1, "version": "2.1.318"}
+{"event": "experiment_started", "experimentId": "tengu_mossy_gray_experiment", "features": {"tengu_mossy_gray": true}, "source": "live", "ts": "2026-11-06T02:28:52Z", "variationId": 1, "version": "2.1.318"}

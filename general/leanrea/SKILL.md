@@ -76,3 +76,30 @@ Go: `go version -m T` alone usually answers the question.
 - Memory: run any whole-binary pass through `scripts/oom-box.sh --max 3G -- …` (8 GB VM, no swap; see skill `replit-management` §8).
 - Already-mapped targets (don't redo): the Replit supervisor stack (pid0/pid1/pid2), the `replit` CLI, pid2's `/mnt/pid2/*.cjs` bundles,
   the viktor SQLite index — all in skill `replit-management`. `go version -m` works here (Go toolchain present).
+
+---
+## VM disk images / guest filesystems (appended 2026-11-05, macbook; proven on a suspended Parallels Win7 VM)
+Read a guest FS **without booting the VM and without hypervisor tooling**: the pure-python Fox-IT `dissect` stack parses the
+container, the partition table and the filesystem directly, read-only. Works where the vendor tools refuse — Parallels Mounter
+and `prl_disk_tool` both reject a SUSPENDED VM's disk; `dissect` does not care. Pure python → runs on old hosts (Big Sur
+py3.12 verified; no compile).
+```sh
+python3 -m pip install dissect.hypervisor dissect.volume dissect.ntfs   # + dissect.extfs/xfs/vmfs as needed
+```
+```python
+from pathlib import Path
+from dissect.hypervisor.disk.hdd import HDD          # Parallels; also: .vmdk VMDK, .vhdx VHDX, .qcow2 QCOW2
+from dissect.volume.disk import Disk                  # MBR/GPT
+from dissect.ntfs import NTFS
+hdd = HDD(Path(".../VM.pvm/HardDisk-0.hdd"))          # the .hdd BUNDLE dir (DiskDescriptor.xml + .hds), not the .hds
+fs = NTFS(Disk(hdd.open()).partitions[1].open())      # [0] is usually System Reserved on Windows
+rec = fs.mft.get("Program Files/Vendor")              # path lookup from root
+rec.listdir()                                         # dict name -> entry; keys are the names
+with fs.mft.get(f"{path}/{name}").open() as f: ...    # stream file content (chunked read for big files)
+```
+Traps (cost an iteration each): `listdir()` values are IndexEntry objects with NO `.name` — iterate the dict KEYS and
+`fs.mft.get(full_path)` each child for reliable `is_dir()` / `size()` / `open()`. Skip the 8.3 alias names (`FOO~1.LUA`) or
+you copy everything twice. `DiskDescriptor.xml` in the .hdd bundle gives size/encryption/suspend state before you start.
+Windows layout recall: user content under both `Program Files*` AND `Users/<u>/AppData/{Roaming,Local}`; `Documents and
+Settings` is a junction (may not resolve — use `Users/`). Sweep for artifacts by extension with a bounded-depth recursive
+walk rather than a full-MFT pass on 8 GB hosts.
