@@ -149,3 +149,19 @@ raw — the SpacetimeDB-benchmark method (clients × pipelining, Little's law); 
   residential/ISP line = a fractional-GPU Docker offer (`gpu_frac` 0.125–0.5) at $0.03–0.09/h; `vms_enabled` offers are rare and dear (US 1 @ $1/h).
   `onstart` is capped at 4048 chars (docs quirks note) — ship bundles by URL (`.bench/proxy/stdb-proxy-pool.sh publish-bundle`), never embedded.
   A host_place `create_failed` ban (2 h, by machine_id) is OURS (10-05 rule) — `unban_vast_machine` lifts it; 32 lifted 10-20.
+
+## DELTA 2026-11-07 — one-off jobs (vast-job.sh) hardened during the M1 oracle runs (17 runs in one night)
+- **Jobs run DETACHED on the box** (69dd0e0b7): the run command is written to `/root/.vast-job-run.sh`, started with `setsid nohup`, and the
+  repl polls `/root/.vast-job-rc` every 20 s through ssh drops (up to ~10 min unreachable); the box's own log is appended to the job log at
+  the end. Before this, an ssh "closed by remote host" mid-apt was declared rc=255 while run.sh kept going (M1 run 13; finished by hand with
+  `.bench/vm/m1-recover.sh <iid> <host> <port>`). Trap found while building it: a trailing `&` backgrounds the WHOLE `a && b && c &` list and
+  bash gives background jobs /dev/null as stdin → `cat > script` wrote an empty file and "succeeded" rc 0. Use `a; b; setsid … &`.
+- **Machine ids are logged at rent** (a07862c21): `rented <iid> (offer <o>, machine <m>)` + `jobs/<tag>.machine` — a destroyed instance's
+  offer is gone, so the machine can't be looked up afterwards. Exclude bad hosts with `machine_id notin [a,b]` in the query.
+- **Bad-host signatures seen 11-07:** tar `Cannot open: Function not implemented` (ENOSYS) on every file → broken filesystem (run.sh never
+  starts, rc=2); a 45 MB scp at ~20 KB/s → add `inet_down>=200 inet_up>=100` to small-box queries; a box stuck `loading` 22 min (image pull on
+  a fresh host) → vast-job destroys it at its wait limit.
+- vast-job KEEPS boxes on rc != 0; a launcher that has already pushed the results must destroy the box itself (m1-oracle-launch does).
+- **Never kill by pattern from the same command line** — `pkill -f '<pattern>'` / `ps | awk '/[x]…/'` match your OWN bash (exit 144) and stop
+  the chain mid-way (11-07: a slow box stayed billing). Kill the PID captured at spawn; re-verify every step after an exit 144.
+- Pushes from a launcher must rebase + retry (another agent pushes mid-run → non-fast-forward); know the repo's default branch (market-research = master).
