@@ -8037,3 +8037,4 @@
 {"event": "value_changed", "from": null, "kind": "flag", "name": "tengu_twinkling_aurora", "to": {"source": "growthbook", "value": false}, "ts": "2026-11-05T22:18:50Z", "version": "2.1.318"}
 {"event": "value_changed", "from": {"source": "growthbook", "value": false}, "kind": "flag", "name": "tengu_mossy_gray", "to": {"experiment": "tengu_mossy_gray_experiment", "source": "experiment", "value": true, "variation": 1}, "ts": "2026-11-06T02:28:52Z", "version": "2.1.318"}
 {"event": "value_changed", "from": {"source": "growthbook", "value": false}, "kind": "flag", "name": "tengu_wiggly_locket", "to": null, "ts": "2026-11-06T02:28:52Z", "version": "2.1.318"}
+{"event": "value_changed", "from": {"source": "growthbook", "value": {}}, "kind": "flag", "name": "tengu_canary", "to": {"source": "growthbook", "value": {"external": "2.1.319"}}, "ts": "2026-11-06T14:54:33Z", "version": "2.1.318"}
