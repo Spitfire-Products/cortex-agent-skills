@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-11-12T01:55:40Z",
+ "fetched_at": "2026-11-12T16:40:35Z",
  "source": "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md",
  "versions": {
   "0.2.100": {
@@ -7,7 +7,7 @@
     "Fixed a crash caused by a stack overflow error",
     "Made db storage optional; missing db support disables --continue and --resume"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -17,7 +17,7 @@
     "Improved @mention reliability for images and folders",
     "You can now paste multiple large chunks into one prompt"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -28,7 +28,7 @@
     "Added word movement keybindings for Vim",
     "Improved latency for startup, todo tool, and file edits"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -37,7 +37,7 @@
     "MCP SSE server configs can now specify custom headers",
     "Fixed a bug where MCP permission prompt didn't always show correctly"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -45,7 +45,7 @@
    "bullets": [
     "CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -58,7 +58,7 @@
     "Deprecated MCP wizard interface in favor of other MCP commands",
     "Lots of other bugfixes and improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -69,7 +69,7 @@
     "Introduced CLAUDE_CODE_API_KEY_HELPER_TTL_MS env var",
     "Introduced --debug mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -78,7 +78,7 @@
     "Breaking change: Bedrock ARN passed to `ANTHROPIC_MODEL` or `ANTHROPIC_SMALL_FAST_MODEL` should no longer contain an escaped slash (specify `/` instead of `%2F`)",
     "Removed `DEBUG=true` in favor of `ANTHROPIC_LOG=debug`, to log all requests"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -86,7 +86,7 @@
    "bullets": [
     "Fuzzy matching for /commands"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -96,7 +96,7 @@
     "Word-level diff display for improved code readability",
     "Fuzzy matching for slash commands"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -106,7 +106,7 @@
     "Fixed issue where slash command arguments weren't being sent properly",
     "(Mac-only) API keys are now stored in macOS Keychain"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -115,7 +115,7 @@
     "Custom slash commands: Markdown files in .claude/commands/ directories now appear as custom slash commands to insert prompts into your conversation",
     "MCP debug mode: Run with --mcp-debug flag to get more information about MCP server errors"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -124,7 +124,7 @@
     "Interactive MCP setup wizard: Run \"claude mcp add\" to add MCP servers with a step-by-step interface",
     "Fix for some PersistentShell issues"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -132,7 +132,7 @@
    "bullets": [
     "Vim bindings for text input - enable with /vim or /config"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -141,7 +141,7 @@
     "Import MCP servers from Claude Desktop with `claude mcp add-from-claude-desktop`",
     "Add MCP servers as JSON strings with `claude mcp add-json <n> <json>`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -150,7 +150,7 @@
     "New /release-notes command lets you view release notes at any time",
     "`claude config add/remove` commands now accept multiple values separated by commas or spaces"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -159,7 +159,7 @@
     "MCP server startup timeout can now be configured via MCP_TIMEOUT environment variable",
     "MCP server startup no longer blocks the app from starting up"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -167,7 +167,7 @@
    "bullets": [
     "Ask Claude to make a plan with thinking mode: just say 'think' or 'think harder' or even 'ultrathink'"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -177,7 +177,7 @@
     "Press Shift + Tab to toggle auto-accept for file edits",
     "Automatic conversation compaction for infinite conversation length (toggle with /config)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -185,7 +185,7 @@
    "bullets": [
     "Previous MCP server scopes have been renamed: previous \"project\" scope is now \"local\" and \"global\" scope is now \"user\""
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -193,7 +193,7 @@
    "bullets": [
     "New MCP \"project\" scope now allows you to add MCP servers to .mcp.json files and commit them to your repository"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -202,7 +202,7 @@
     "New web fetch tool lets Claude view URLs that you paste in",
     "Fixed a bug with JPEG detection"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -212,7 +212,7 @@
     "Press ctrl+r to see full output for long tool results",
     "Added support for MCP SSE transport"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -222,7 +222,7 @@
     "Improved progress indicators for bash and fetch tools",
     "Bugfixes for non-interactive mode (-p)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -232,7 +232,7 @@
     "Enhanced image detection for more reliable clipboard paste functionality",
     "Fixed an issue where ESC key could crash the conversation history selector"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -240,7 +240,7 @@
    "bullets": [
     "Fixed an issue where MCP tools were loaded twice, which caused tool call errors"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -249,7 +249,7 @@
     "Print mode (-p) now supports streaming output via --output-format=stream-json",
     "Fixed issue where pasting could trigger memory or bash mode unexpectedly"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -257,7 +257,7 @@
    "bullets": [
     "Shared project permission rules can be saved in .claude/settings.json"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -266,7 +266,7 @@
     "Fixed UI glitches with improved Select component behavior",
     "Enhanced terminal output display with better text truncation logic"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -276,7 +276,7 @@
     "Claude can now run multiple web queries in parallel",
     "Pressing ESC once immediately interrupts Claude in Auto-accept mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -284,7 +284,7 @@
    "bullets": [
     "Updated spinner to indicate tokens loaded and tool usage"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -293,7 +293,7 @@
     "Added support for refreshing dynamically generated API keys (via apiKeyHelper), with a 5 minute TTL",
     "Task tool can now perform writes and run bash commands"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -305,7 +305,7 @@
     "Run one-off MCP servers with `claude --mcp-config <path-to-file>`",
     "Improved performance for filename auto-complete"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -314,7 +314,7 @@
     "Added support for --disallowedTools",
     "Renamed tools for consistency: LSTool -> LS, View -> Read, etc."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -323,7 +323,7 @@
     "Resume conversations from where you left off from with \"claude --continue\" and \"claude --resume\"",
     "Claude now has access to a Todo list that helps it stay on track and be more organized"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -331,7 +331,7 @@
    "bullets": [
     "Claude Code can now also be used with a Claude Max subscription (https://claude.ai/upgrade)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -339,7 +339,7 @@
    "bullets": [
     "Fixed an issue where auto-compact was running twice"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -348,7 +348,7 @@
     "Claude Code is now generally available",
     "Introducing Sonnet 4 and Opus 4 models"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -358,7 +358,7 @@
     "Improved model references to show provider-specific names (Sonnet 3.7 for Bedrock, Sonnet 4 for Console)",
     "Updated documentation links and OAuth process descriptions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -367,7 +367,7 @@
     "Added markdown table support",
     "Improved streaming performance"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -375,7 +375,7 @@
    "bullets": [
     "Windows: Fixed path permission matching to consistently use POSIX format (e.g., `Read(//c/Users/...)`)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -383,7 +383,7 @@
    "bullets": [
     "SDK: Added partial message streaming support via `--include-partial-messages` CLI flag"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -395,7 +395,7 @@
     "Improved shell configuration error handling",
     "Improved todo list handling during compaction"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -405,7 +405,7 @@
     "MCP: OAuth tokens now proactively refresh before expiration",
     "Fixed reliability issues with background Bash processes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -414,7 +414,7 @@
     "/model now validates provided model names",
     "Fixed Bash tool crashes caused by malformed shell syntax parsing"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -426,7 +426,7 @@
     "Added `spinnerTipsEnabled` setting to disable spinner tips",
     "IDE: Various improvements and bug fixes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -435,7 +435,7 @@
     "Deprecated piped input in interactive mode",
     "Move Ctrl+R keybinding for toggling transcript to Ctrl+O"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -448,7 +448,7 @@
     "Fix visual feedback when loading state completes",
     "Improve UI consistency for permission request dialogs"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -460,7 +460,7 @@
     "Fix Windows PATH comparison to be case-insensitive for drive letters",
     "Add permissions management hint to /add-dir output"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -471,7 +471,7 @@
     "Fix thinking mode not working in headless sessions",
     "Fix slash commands now properly update allowed tools instead of replacing them"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -483,7 +483,7 @@
     "Fixed IDE compatibility issue by removing worktree support check",
     "Fixed security vulnerability where Bash tool permission checks could be bypassed using prefix matching"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -497,7 +497,7 @@
     "Fixed a bug where resuming a conversation in headless mode would sometimes enable thinking unnecessarily",
     "Migrated --debug logging to a file, to enable easy tailing & filtering"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -509,7 +509,7 @@
     "Fixed security vulnerability in Bash tool permission checks",
     "Improved VSCode extension performance for large files"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -518,7 +518,7 @@
     "Enable /context command for Bedrock and Vertex",
     "Add mTLS support for HTTP-based OpenTelemetry exporters"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -529,7 +529,7 @@
     "MCP server list UI improvements",
     "Update Claude Code process title to display \"claude\" instead of \"node\""
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -544,7 +544,7 @@
     "Added auto-reconnection for MCP SSE connections on disconnect",
     "Fixed issue where pasted content was lost when dialogs appeared"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -554,7 +554,7 @@
     "Fix for tool_use without matching tool_result errors",
     "Fixed a bug where stdio MCP server processes would linger after quitting Claude Code"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -562,7 +562,7 @@
    "bullets": [
     "SDK: Renamed `total_cost` to `total_cost_usd`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -571,7 +571,7 @@
     "Released TypeScript SDK: import @anthropic-ai/claude-code to get started",
     "Released Python SDK: pip install claude-code-sdk to get started"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -580,7 +580,7 @@
     "Improved /mcp output",
     "Fixed a bug where settings arrays got overwritten instead of merged"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -591,7 +591,7 @@
     "Improved support for Ghostty",
     "Improved web search reliability"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -602,7 +602,7 @@
     "MCP resources can now be @-mentioned",
     "/resume slash command to switch conversations within Claude Code"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -614,7 +614,7 @@
     "Performance optimizations for memory usage",
     "New attributes (terminal.type, language) in OpenTelemetry logging"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -622,7 +622,7 @@
    "bullets": [
     "Improved CJK character support in cursor navigation and rendering"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -633,7 +633,7 @@
     "Added timestamps in Ctrl-r mode and fixed Ctrl-c handling",
     "Enhanced jq regex support for complex filters with pipes and select"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -641,7 +641,7 @@
    "bullets": [
     "Fixed a bug where ~/.claude.json would get reset when file contained invalid JSON"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -650,7 +650,7 @@
     "Updated loopback config for litellm",
     "Added forceLoginMethod setting to bypass login selection screen"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -660,7 +660,7 @@
     "Added prompt input undo functionality (Ctrl+Z and vim 'u' command)",
     "Improvements to plan mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -668,7 +668,7 @@
    "bullets": [
     "Fixed a memory leak causing a MaxListenersExceededWarning message to appear"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -676,7 +676,7 @@
    "bullets": [
     "Added support for MCP OAuth Authorization Server discovery"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -685,7 +685,7 @@
     "Web search now takes today's date into context",
     "Fixed a bug where stdio MCP servers were not terminating properly on exit"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -693,7 +693,7 @@
    "bullets": [
     "Remove ability to set `Proxy-Authorization` header via ANTHROPIC_AUTH_TOKEN or apiKeyHelper"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -701,7 +701,7 @@
    "bullets": [
     "Released hooks. Special thanks to community input in https://github.com/anthropics/claude-code/issues/712. Docs: https://code.claude.com/docs/en/hooks"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -709,7 +709,7 @@
    "bullets": [
     "New Active Time metric in OpenTelemetry logging"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -717,7 +717,7 @@
    "bullets": [
     "Fixed a bug where MCP tool errors weren't being parsed correctly"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -725,7 +725,7 @@
    "bullets": [
     "Fixed a bug causing API connection errors with UNABLE_TO_GET_ISSUER_CERT_LOCALLY if `NODE_EXTRA_CA_CERTS` was set"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -737,7 +737,7 @@
     "Fixed a bug where MCP tools would display twice in tool list",
     "New tool parameters JSON for Bash tool in `tool_decision` event"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -745,7 +745,7 @@
    "bullets": [
     "Added tilde (`~`) expansion support to `/add-dir` command"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -754,7 +754,7 @@
     "Fixed a bug where the theme selector was saving excessively",
     "Hooks: Added EPIPE system error handling"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -765,7 +765,7 @@
     "MCP: tool annotations and tool titles now display in /mcp view",
     "Changed Ctrl+Z to suspend Claude Code. Resume by running `fg`. Prompt input undo is now Ctrl+U."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -778,7 +778,7 @@
     "Stop Hooks: Fixed transcript path after /clear and fixed triggering when loop ends with tool call",
     "Custom slash commands: Restored namespacing in command names based on subdirectories. For example, .claude/commands/frontend/component.md is now /frontend:component, not /component."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -792,7 +792,7 @@
     "Hooks: Added a PreCompact hook",
     "Vim mode: Added c, f/F, t/T"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -808,7 +808,7 @@
     "Custom slash commands: Fixed user-level commands in subdirectories",
     "Plan mode: Fixed issue where rejected plan from sub-task would get discarded"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -816,7 +816,7 @@
    "bullets": [
     "Added support for MCP server instructions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -825,7 +825,7 @@
     "Updated @-mention file truncation from 100 lines to 2000 lines",
     "Add helper script settings for AWS token refresh: awsAuthRefresh (for foreground operations like aws sso login) and awsCredentialExport (for background operation with STS-like response)."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -837,7 +837,7 @@
     "Windows: mode switching now uses alt + m, and plan mode renders properly",
     "Shell: Switch to in-memory shell snapshot to fix file-related errors"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -848,7 +848,7 @@
     "SDK: Added ability to capture error logging",
     "Add --system-prompt-file option to override system prompt in print mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -858,7 +858,7 @@
     "Fixes for WSL IDE detection",
     "Fix an issue causing awsRefreshHelper changes to .aws directory not to be picked up"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -868,7 +868,7 @@
     "Improved permission messages to help Claude understand allowed tools",
     "Fix: Remove trailing newlines from bash output in terminal wrapping"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -878,7 +878,7 @@
     "MCP: Improved server health status display in 'claude mcp list'",
     "Hooks: Added CLAUDE_PROJECT_DIR env var for hook commands"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -890,7 +890,7 @@
     "Hooks: UserPromptSubmit now supports additionalContext in advanced JSON output",
     "Fixed issue where some Max users that specified Opus would still see fallback to Sonnet"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -902,7 +902,7 @@
     "Added support for symlinks in @file typeahead",
     "Bugfixes, UI polish, and tool reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -910,7 +910,7 @@
    "bullets": [
     "You can now create custom subagents for specialized tasks! Run /agents to get started"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -925,7 +925,7 @@
     "IDE: Added `CLAUDE_CODE_AUTO_CONNECT_IDE=false` for disabling IDE auto-connection",
     "Added `CLAUDE_CODE_SHELL_PREFIX` for wrapping Claude and user-provided shell commands run by Claude Code"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -936,7 +936,7 @@
     "/add-dir command now supports typeahead for directory paths",
     "Improved network connectivity check reliability"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -944,7 +944,7 @@
    "bullets": [
     "Windows: Fixed file search, @agent mentions, and custom slash commands functionality"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -956,7 +956,7 @@
     "SDK: Fixed user input tracking across multi-turn conversations",
     "Added hidden files to file search and @-mention suggestions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -965,7 +965,7 @@
     "IDE: Fixed connection stability issues and error handling for diagnostics",
     "Windows: Fixed shell environment setup for users without .bashrc files"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -979,7 +979,7 @@
     "Added `disableAllHooks` setting",
     "Improved file suggestions performance in large repos"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -987,7 +987,7 @@
    "bullets": [
     "Upgraded Opus to version 4.1"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1000,7 +1000,7 @@
     "Improved error handling for /install-github-app",
     "Bugfixes, UI polish, and tool reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1010,7 +1010,7 @@
     "Windows: Fixed native file search, ripgrep, and subagent functionality",
     "Added support for @-mentions in slash command arguments"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1019,7 +1019,7 @@
     "Background commands: (Ctrl-b) to run any Bash command in the background so Claude can keep working (great for dev servers, tailing logs, etc.)",
     "Customizable status line: add your terminal prompt to Claude Code with /statusline"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1027,7 +1027,7 @@
    "bullets": [
     "Ask permissions: have Claude Code always ask for confirmation to use specific tools with /permissions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1039,7 +1039,7 @@
     "UI: Enhanced spinner animations and status line visual hierarchy",
     "Linux: Added support for Alpine and musl-based distributions (requires separate ripgrep installation)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1050,7 +1050,7 @@
     "Fix token limit errors in conversation summarization",
     "Opus Plan Mode: New setting in `/model` to run Opus only in plan mode, Sonnet otherwise"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1063,7 +1063,7 @@
     "Added support for triggering thinking non-English languages",
     "Improved compacting UI"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1071,7 +1071,7 @@
    "bullets": [
     "UI improvements: Fix text contrast for custom subagent colors and spinner rendering issues"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1080,7 +1080,7 @@
     "Released output styles, including new built-in educational output styles \"Explanatory\" and \"Learning\". Docs: https://code.claude.com/docs/en/output-styles",
     "Agents: Fix custom agent loading when agent files are unparsable"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1092,7 +1092,7 @@
     "MCP: Improve tool name consistency",
     "Bash: Fix crash when Claude tries to automatically read large files"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1101,7 +1101,7 @@
     "@-mention: Support files with spaces in path",
     "New shimmering spinner"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1112,7 +1112,7 @@
     "@-mention: Add ~/.claude/\\* files to suggestions for easier agent, output style, and slash command editing",
     "Use built-in ripgrep by default; to opt out of this behavior, set USE_BUILTIN_RIPGREP=0"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1121,7 +1121,7 @@
     "Status line input now includes session cost info",
     "Hooks: Introduced SessionEnd hook"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1131,7 +1131,7 @@
     "SDK: Added UUID support for all SDK messages",
     "SDK: Added `--replay-user-messages` to replay user messages back to stdout"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1143,7 +1143,7 @@
     "Introduced `ANTHROPIC_DEFAULT_SONNET_MODEL` and `ANTHROPIC_DEFAULT_OPUS_MODEL` for controlling model aliases opusplan, opus, and sonnet.",
     "Bedrock: Updated default Sonnet model to Sonnet 4"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1151,7 +1151,7 @@
    "bullets": [
     "Settings file changes take effect immediately - no restart required"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1160,7 +1160,7 @@
     "Windows: Add alt + v shortcut for pasting images from clipboard",
     "Support NO_PROXY environment variable to bypass proxy for specified hostnames and IPs"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1171,7 +1171,7 @@
     "SDK: Add custom tools as callbacks",
     "Added /todos command to list current todo items"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1179,7 +1179,7 @@
    "bullets": [
     "Settings: /doctor now validates permission rule syntax and suggests corrections"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1196,7 +1196,7 @@
     "SDK: The Claude Code SDK is now the Claude Agent SDK",
     "Add subagents dynamically with `--agents` flag"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1205,7 +1205,7 @@
     "Skip Sonnet 4.5 default model setting change for Bedrock and Vertex",
     "Various bug fixes and presentation improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1218,7 +1218,7 @@
     "Press Ctrl-G to edit your prompt in your system's configured text editor",
     "Fixes for bash permission checks with environment variables in the command"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1229,7 +1229,7 @@
     "Fixed Opus fallback rate limit errors appearing incorrectly",
     "Fixed /add-dir command selecting wrong default tab"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1247,7 +1247,7 @@
     "Avoid mentioning hooks in `/resume` summaries",
     "Changes to the \"verbose\" setting in `/config` now persist across sessions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1255,7 +1255,7 @@
    "bullets": [
     "Fixed `/plugin` not working on native build"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1269,7 +1269,7 @@
     "Several improvements to rendering",
     "Plugins UI polish"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1278,7 +1278,7 @@
     "Fixed bug with resuming where previously created files needed to be read again before writing",
     "Fixed bug with `-p` mode where @-mentioned files needed to be read again before writing"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1291,7 +1291,7 @@
     "OTEL: support HTTP_PROXY and HTTPS_PROXY",
     "`CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` now disables release notes fetching"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1300,7 +1300,7 @@
     "Auto-background long-running bash commands instead of killing them. Customize with BASH_DEFAULT_TIMEOUT_MS",
     "Fixed a bug where Haiku was unnecessarily called in print mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1308,7 +1308,7 @@
    "bullets": [
     "Added support for Claude Skills"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1320,7 +1320,7 @@
     "Added Haiku 4.5 as a model option for Pro users",
     "Fixed an issue where queued commands don't have access to previous messages' output"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1331,7 +1331,7 @@
     "Fix bug causing duplicate permission prompts with parallel tool calls",
     "Add support for enterprise managed MCP allowlist and denylist"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1342,7 +1342,7 @@
     "Sandbox: Releasing a sandbox mode for the BashTool on Linux & Mac",
     "Bedrock: Display awsAuthRefresh output when auth is required"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1350,7 +1350,7 @@
    "bullets": [
     "Removed legacy SDK entrypoint. Please migrate to @anthropic-ai/claude-agent-sdk for future SDK updates: https://platform.claude.com/docs/en/agent-sdk/migration-guide"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1362,7 +1362,7 @@
     "VSCode Extension: Add config setting to include .gitignored files in file searches",
     "VSCode Extension: Bug fixes for unrelated 'Warmup' conversations, and configuration/settings occasionally being reset to defaults"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1378,7 +1378,7 @@
     "Fixed a bug where macOS permission prompts would show up upon initial launch when launching from home directory",
     "Various other bug fixes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1401,7 +1401,7 @@
     "Fixed delay when navigating through typeahead suggestions with arrow keys",
     "VSCode: Restored selection indicator in input footer showing current file or code selection status"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1414,7 +1414,7 @@
     "Fixed issue causing `/compact` to fail with `prompt_too_long` by making it respect existing compact boundaries",
     "Fixed plugin uninstall not removing plugins"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1424,7 +1424,7 @@
     "Added `companyAnnouncements` setting for displaying announcements on startup",
     "Fixed hook progress messages not updating correctly during PostToolUse hook execution"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1434,7 +1434,7 @@
     "Fixed `claude doctor` incorrectly detecting Homebrew vs npm-global installations by properly resolving symlinks",
     "Fixed `claude mcp serve` exposing tools with incompatible outputSchemas"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1445,7 +1445,7 @@
     "Fixed infinite token refresh loop that caused MCP servers with OAuth (e.g., Slack) to hang during connection",
     "Fixed memory crash when reading or writing large files (especially base64-encoded images)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1457,7 +1457,7 @@
     "Migrated `ignorePatterns` from project config to deny permissions in the localSettings.",
     "Fixed menu navigation getting stuck on items with empty string or other falsy values (e.g., in the `/hooks` menu)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1467,7 +1467,7 @@
     "Fixed queued messages being incorrectly executed as bash commands",
     "Fixed input being lost when typing while a queued message is processed"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1477,7 +1477,7 @@
     "Hooks: Added matcher values for Notification hook events",
     "Output Styles: Added `keep-coding-instructions` option to frontmatter"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1496,7 +1496,7 @@
     "Plugins: Added support for sharing and installing output styles",
     "Teleporting a session from web will automatically set the upstream branch"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1504,7 +1504,7 @@
    "bullets": [
     "Added `agent_id` and `agent_transcript_path` fields to `SubagentStop` hooks."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1519,7 +1519,7 @@
     "Fixed some visual flickers",
     "Fixed NotebookEdit tool inserting cells at incorrect positions when cell IDs matched the pattern `cell-N`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1529,7 +1529,7 @@
     "Added `PermissionRequest` hook to automatically approve or deny tool permission requests with custom logic",
     "Send background tasks to Claude Code on the web by starting a message with `&`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1537,7 +1537,7 @@
    "bullets": [
     "Fixed image files being reported with incorrect media type when format cannot be detected from metadata"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1548,7 +1548,7 @@
     "Fixed race condition with history entry not getting logged at exit",
     "Fixed Vertex AI configuration not being applied from `settings.json`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1558,7 +1558,7 @@
     "Improved clarity of usage limit warning message",
     "Fixed handling of subagent permissions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1569,7 +1569,7 @@
     "Fix unhandled OAuth expiration 401 API errors",
     "SDK: Added SDKUserMessageReplay.isReplay to prevent duplicate messages"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1580,7 +1580,7 @@
     "Improved ultrathink text display",
     "Improved clarity of 5-hour session limit warning message"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1596,7 +1596,7 @@
     "Fixed handling of thinking errors",
     "Fixed performance regression"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1607,7 +1607,7 @@
     "Fixed image pasting not working on Linux systems running Wayland (now falls back to wl-paste when xclip is unavailable)",
     "Permit some uses of `$!` in bash commands"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1616,7 +1616,7 @@
     "Hooks: Enable PermissionRequest hooks to process 'always allow' suggestions and apply permission updates",
     "Fix issue with excessive iTerm notifications"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1627,7 +1627,7 @@
     "Improved AskUserQuestion tool to auto-submit single-select questions on the last question, eliminating the extra review screen for simple question flows",
     "Improved fuzzy matching for `@` file suggestions with faster, more accurate results"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1636,7 +1636,7 @@
     "Added setting to enable/disable terminal progress bar (OSC 9;4)",
     "VSCode Extension: Added support for VS Code's secondary sidebar (VS Code 1.97+), allowing Claude Code to be displayed in the right sidebar while keeping the file explorer on the left. Requires setting sidebar as Preferred Location in the config."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1645,7 +1645,7 @@
     "Added feedback input when rejecting plans, allowing users to tell Claude what to change",
     "VSCode: Added streaming message support for real-time response display"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1655,7 +1655,7 @@
     "Fixed timer duration showing \"11m 60s\" instead of \"12m 0s\"",
     "Windows: Managed settings now prefer `C:\\Program Files\\ClaudeCode` if it exists. Support for `C:\\ProgramData\\ClaudeCode` will be removed in a future version."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1665,7 +1665,7 @@
     "Added `agent` setting to configure main thread with a specific agent's system prompt, tool restrictions, and model",
     "VS Code: Fixed .claude.json config file being read from incorrect location"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1678,7 +1678,7 @@
     "Updated Fetch to skip summarization for pre-approved websites",
     "VSCode: Added support for multiple terminal clients connecting to the IDE server simultaneously"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1686,7 +1686,7 @@
    "bullets": [
     "Reverted VSCode support for multiple terminal clients due to responsiveness issues."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1700,7 +1700,7 @@
     "Fixed running versions getting removed because lock file incorrectly going stale",
     "Fixed IDE diff tab not closing when rejecting file changes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1721,7 +1721,7 @@
     "Bedrock: Add support for `aws login` AWS Management Console credentials",
     "Unshipped AgentOutputTool and BashOutputTool, in favor of a new unified TaskOutputTool"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1734,7 +1734,7 @@
     "Fixed prompt not being saved to history when aborting a query with Escape",
     "Fixed Read tool image handling to identify format from bytes instead of file extension"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1752,7 +1752,7 @@
     "Fixed consecutive @~/ file references in CLAUDE.md being incorrectly parsed due to markdown strikethrough interference",
     "Windows: Fixed plugin MCP servers failing due to colons in log directory paths"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1765,7 +1765,7 @@
     "Improved plan mode exit UX: show simplified yes/no dialog when exiting with empty or missing plan instead of throwing an error",
     "Add support for enterprise managed settings. Contact your Anthropic account team to enable this feature."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1773,7 +1773,7 @@
    "bullets": [
     "Minor bugfixes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1792,7 +1792,7 @@
     "Fix thinking mode toggle in /config not persisting correctly",
     "Improve UI for file creation permission dialog"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1806,7 +1806,7 @@
     "Bedrock: Environment variable `ANTHROPIC_BEDROCK_BASE_URL` is now respected for token counting and inference profile listing",
     "New syntax highlighting engine for native build"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1823,7 +1823,7 @@
     "Improved settings validation errors to be more prominent",
     "Changed thinking toggle from Tab to Alt+T to avoid accidental triggers"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1839,7 +1839,7 @@
     "Improved search UX across resume session, permissions, and plugins screens with a unified SearchBox component",
     "[VSCode] Added tab icon badges showing pending permissions (blue) and unread completions (orange)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1859,7 +1859,7 @@
     "[Windows] Fixed issue with improper rendering",
     "[VSCode] Added gift tag pictogram for year-end promotion message"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1867,7 +1867,7 @@
    "bullets": [
     "Minor bugfixes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1875,7 +1875,7 @@
    "bullets": [
     "Fixed issue with macOS code-sign warning when using Claude in Chrome integration"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1887,7 +1887,7 @@
     "Improve message rendering for users with light themes on dark terminals",
     "Remove deprecated .claude.json allowedTools, ignorePatterns, env, and todoFeatureEnabled config options (instead, configure these in your settings.json)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -1895,7 +1895,7 @@
    "bullets": [
     "Fix regression where bash backgrounding stopped working"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2011,7 +2011,7 @@
     "[VSCode] Fixed scrolling in the extension inadvertently scrolling the parent iframe",
     "[Windows] Fixed issue with improper rendering"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2025,7 +2025,7 @@
     "[VSCode] Added install count display to plugin listings",
     "[VSCode] Added trust warning when installing plugins"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2078,7 +2078,7 @@
     "Fixed `/insights` sometimes omitting the report file link from its response",
     "[VSCode] Fixed the file attachment below the chat input not clearing when the last editor tab is closed"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2122,7 +2122,7 @@
     "Fixed washed-out 16-color palette when using Ghostty, Kitty, Alacritty, WezTerm, foot, rio, or Contour over SSH/mosh",
     "Fixed Bash tool suggesting `acceptEdits` permission mode when exiting plan mode would downgrade from a higher permission level"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2130,7 +2130,7 @@
    "bullets": [
     "Show thinking hints sooner during long operations"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2161,7 +2161,7 @@
     "Fixed diacritical marks (accents, umlauts, cedillas) being dropped from responses when the `language` setting is configured",
     "Fixed policy-managed plugins never auto-updating when running from a different project than where they were first installed"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2169,7 +2169,7 @@
    "bullets": [
     "Improved the extended-thinking indicator with a rotating progress hint"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2177,7 +2177,7 @@
    "bullets": [
     "Fixed excessive MCP connection requests for HTTP/SSE transports"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2217,7 +2217,7 @@
     "Fixed Remote Control sessions showing a generic error instead of prompting for re-login when the session is too old",
     "Fixed Remote Control session renames from claude.ai not persisting the title to the local CLI session"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2259,7 +2259,7 @@
     "Windows: `CLAUDE_ENV_FILE` and SessionStart hook environment files now apply (previously a no-op)",
     "Windows: permission rules with drive-letter paths are now correctly root-anchored, and paths differing only by drive-letter case are recognized as the same path"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2267,7 +2267,7 @@
    "bullets": [
     "Fixed \"claude-opus-4-7 is temporarily unavailable\" for auto mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2312,7 +2312,7 @@
     "Fixed Remote Control sessions not being archived when Claude Code exits",
     "Fixed `thinking.type.enabled is not supported` 400 error when using Opus 4.7 via a Bedrock Application Inference Profile ARN"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2320,7 +2320,7 @@
    "bullets": [
     "Fixed a crash in the permission dialog when an agent teams teammate requested tool permission"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2352,7 +2352,7 @@
     "Fixed `/plugin` Installed tab showing the same item twice when it appears under Needs attention or Favorites",
     "Fixed `/update` and `/tui` not working after entering a worktree mid-session"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2387,7 +2387,7 @@
     "[VSCode] Fixed \"Manage Plugins\" panel breaking when multiple large marketplaces are configured",
     "Fixed Opus 4.7 sessions showing inflated `/context` percentages and autocompacting too early \u2014 Claude Code was computing against a 200K context window instead of Opus 4.7's native 1M"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2428,7 +2428,7 @@
     "Fixed Remote Control sessions getting archived on transient CCR initialization blips during JWT refresh",
     "Fixed subagents resumed via `SendMessage` not restoring the explicit `cwd` they were spawned with"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2486,7 +2486,7 @@
     "Windows: removed false-positive \"Windows requires 'cmd /c' wrapper\" MCP config warning",
     "[VSCode] Fixed voice dictation's first recording producing nothing on macOS while the microphone permission prompt is showing"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2494,7 +2494,7 @@
    "bullets": [
     "Fixed message rendering bug"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2523,7 +2523,7 @@
     "[VSCode] Voice dictation now respects the `language` setting in `~/.claude/settings.json`",
     "Fixed `find` in the Bash tool exhausting open file descriptors on large directory trees, causing host-wide crashes (macOS/Linux native builds)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2569,7 +2569,7 @@
     "Fixed embedded grep/find/rg shell wrappers failing when the running binary is deleted mid-session \u2014 now falls back to installed tools",
     "Reduced peak file descriptor usage during `find` in the Bash tool on large directory trees"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2594,7 +2594,7 @@
     "Fixed a malformed hooks entry in `settings.json` no longer invalidating the entire file",
     "Voice mode: keybindings bound to Caps Lock now show an error since terminals don't deliver Caps Lock as a key event"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2602,7 +2602,7 @@
    "bullets": [
     "Fixed OAuth authentication failing with a 401 retry loop when `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1` is set"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2641,7 +2641,7 @@
     "PowerShell tool: bare `--` (e.g. `git diff -- file`) is no longer mis-flagged as the `--%` stop-parsing token",
     "Fixed Agent SDK hang when the model emits a malformed tool name in a parallel tool call batch"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2685,7 +2685,7 @@
     "Fixed sub-agent summaries firing repeatedly while a sub-agent's transcript is static, capping worst-case token cost on idle sub-agents",
     "Headless `--output-format stream-json`: `init.plugin_errors` now includes `--plugin-dir` load failures in addition to dependency demotions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2719,7 +2719,7 @@
     "Fixed harmless WebSocket warning being logged as an error in `--debug` during voice mode",
     "[VSCode] Fixed `/clear` not clearing the conversation context and displayed transcript"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2728,7 +2728,7 @@
     "Fixed VS Code extension failing to activate on Windows due to a hardcoded build path in the bundled SDK (`createRequire` polyfill bug)",
     "Fixed Mantle endpoint authentication failing with missing `x-api-key` header"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2763,7 +2763,7 @@
     "Updated the `/tui fullscreen` startup banner to describe additional renderer benefits (lower memory usage, mouse support, auto-copy on select)",
     "Fixed Bedrock and Vertex 400 errors when `ENABLE_PROMPT_CACHING_1H` is set"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2787,7 +2787,7 @@
     "`claude --help` now lists `--remote-control` alongside `--remote-control-session-name-prefix`",
     "[VSCode] Fixed `claudeCode.claudeProcessWrapper` failing with \"Unsupported platform\" when the extension build doesn't bundle a Claude binary"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2846,7 +2846,7 @@
     "Improved error message when `--worktree` collides with an existing or stale worktree",
     "Changed plugin marketplace removal key to `d` (matching delete elsewhere) instead of `r` which collided with retry"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2854,7 +2854,7 @@
    "bullets": [
     "[VSCode] Fixed extension failing to activate on Windows"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2862,7 +2862,7 @@
    "bullets": [
     "Internal fixes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2919,7 +2919,7 @@
     "Fixed `claude plugin update` not preserving cross-plugin symlinks inside a marketplace",
     "[VSCode] Press Cmd/Ctrl+Shift+T to reopen the most recently closed session tab, configurable via `claudeCode.enableReopenClosedSessionShortcut`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2942,7 +2942,7 @@
     "Improved backspace to delete pasted text as a single token instead of one character at a time",
     "[VSCode] Added `/usage` command to display current plan usage"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -2962,7 +2962,7 @@
     "Fixed native terminal cursor not staying at the input caret when the terminal loses focus",
     "Plugins now warn when a default component folder (e.g. `commands/`) is silently ignored because `plugin.json` sets the matching key. Shown in `/doctor`, `claude plugin list`, and `/plugin`."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3030,7 +3030,7 @@
     "`claude agents` no longer shows empty placeholder sessions left over from backgrounding a fresh REPL, and shows onboarding text when entered via \u2190 with no other agents",
     "Empty idle background sessions left over from `\u2190` are now automatically retired by the daemon after 5 minutes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3061,7 +3061,7 @@
     "Improved hook configuration error: configuring a prompt- or agent-type hook for `SessionStart`/`Setup`/`SubagentStart` now shows a clear \"use a command-type hook instead\" error",
     "Removed stale `/model claude-sonnet-4-20250514` suggestion from Usage Policy refusal messages"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3101,7 +3101,7 @@
     "Fixed: background daemon spawn now falls back to the running binary when the `~/.local/bin/claude` launcher is missing or non-executable",
     "Fixed `claude agents --allow-dangerously-skip-permissions` defaulting dispatched sessions to bypass mode instead of making it available in the permission cycle"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3158,7 +3158,7 @@
     "Improved SDK/headless MCP startup: pre-wait now overlaps startup instead of blocking before the first turn (up to 2s faster with slow MCP servers)",
     "The post-survey follow-up hint now appears after every non-dismiss survey response with context-aware copy, making it easier to share more detail via /feedback."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3185,7 +3185,7 @@
     "Fixed an infinite loop where a skill using `context: fork` could repeatedly re-invoke itself instead of running",
     "Improved the Read tool to return a truncated first page with a \"PARTIAL view\" notice instead of a hard error when a whole-file read exceeds the token limit"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3225,7 +3225,7 @@
     "Fixed several spacing and layout glitches in the `/plugin`, `/status`, `/mobile`, `/sandbox`, and `/permissions` menus",
     "Fixed stripped images prompting the model to repeatedly re-read media that was no longer present"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3233,7 +3233,7 @@
    "bullets": [
     "Fixed the Bash tool returning exit code 127 on every command for some users (a regression introduced in 2.1.147)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3266,7 +3266,7 @@
     "Fixed tapping the \"Jump to bottom\" pill in fullscreen mode not dismissing it immediately",
     "Improved `/feedback` reports to include the conversation that happened before context compaction, making issues from earlier in long sessions easier to triage"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3277,7 +3277,7 @@
     "Fixed the \"Context left until auto-compact\" warning not disappearing after running `/compact`",
     "Fixed MCP stdio server timeout not killing child process, which could cause UI freezes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3285,7 +3285,7 @@
    "bullets": [
     "Internal infrastructure improvements (no user-facing changes)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3325,7 +3325,7 @@
     "Fixed the PushNotification tool incorrectly reporting \"Mobile push not sent (Remote Control inactive)\" in SDK-hosted sessions when Remote Control is enabled",
     "Fixed sessions getting stuck after a model or login switch left stale thinking-block signatures in history; now stripped proactively with a retry safety-net"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3368,7 +3368,7 @@
     "`/model` now saves your selection as the default for new sessions (matching the IDE). Press `s` in the picker to switch models for the current session only.",
     "If you customized the `modelPicker:setAsDefault` keybinding, rename it to `modelPicker:thisSessionOnly` in keybindings.json (the `d` action was replaced by `s`)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3419,7 +3419,7 @@
     "Fixed the /model picker not showing fast mode pricing on the Default option for API (pay-as-you-go) users when fast mode is on",
     "Fixed auto mode incorrectly blocking actions with \"could not evaluate this action\" when the safety classifier ran out of output tokens while reasoning"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3427,7 +3427,7 @@
    "bullets": [
     "Fixed an issue when using Opus 4.8 where thinking blocks were modified, leading to API errors."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3467,7 +3467,7 @@
     "Pressing backspace right after a workflow trigger keyword now dismisses the workflow request (same as alt+w) instead of deleting a character",
     "Added a \"Workflow keyword trigger\" setting in /config to stop the word \"workflow\" in a prompt from triggering a dynamic workflow"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3475,7 +3475,7 @@
    "bullets": [
     "Auto mode is now available on Bedrock, Vertex, and Foundry for Opus 4.7 and Opus 4.8. Opt in by setting `CLAUDE_CODE_ENABLE_AUTO_MODE=1`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3483,7 +3483,7 @@
    "bullets": [
     "Internal infrastructure improvements (no user-facing changes)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3497,7 +3497,7 @@
     "Fixed session titles on the resume screen not respecting the user's language setting",
     "[IDE] Fixed a race condition on Windows where the Claude Code sidebar view container would not appear on start"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3531,7 +3531,7 @@
     "Removed the JetBrains plugin install suggestion from startup",
     "Renamed the dynamic-workflow trigger keyword from `workflow` to `ultracode`. The word \"workflow\" no longer triggers a run; asking for one in your own words still works. The trigger keyword is highlighted in violet in the prompt input"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3560,7 +3560,7 @@
     "Improved rendering performance for large file writes",
     "[VSCode] Added a tip suggesting disabling terminal GPU acceleration (or running `/terminal-setup`) to fix garbled glyphs"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3595,7 +3595,7 @@
     "Background dispatch spawn failures now report the error class name when no errno is available",
     "Removed the \"Claude in Chrome enabled\" and \"marketplace installed\" startup messages; model auto-updates and the team-onboarding tip now show as quiet notices under the logo"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3624,7 +3624,7 @@
     "The subscription-switch suggestion now shows in the startup announcement slot instead of a toast",
     "`claude agents` dispatching from the state-grouped view now starts the session in the directory the agent view was opened from"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3632,7 +3632,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3660,7 +3660,7 @@
     "Fixed the cursor sticking at the end of the first line when typing a multiline prompt in the `claude agents` dispatch and reply inputs",
     "Fixed blank lines appearing between background agent rows in the task list on terminals without Unicode support"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3668,7 +3668,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3676,7 +3676,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3713,7 +3713,7 @@
     "Promo credit claims for Apple/Google-billed subscribers without a payment method now explain where to add one",
     "Added a tip suggesting `claude agents` when running multiple concurrent sessions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3721,7 +3721,7 @@
    "bullets": [
     "Fixed crashes on processors without AVX instruction support"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3730,7 +3730,7 @@
     "Introducing Claude Fable 5: a Mythos-class model that we\u2019ve made safe for general use. Fable\u2019s capabilities exceed those of any model we\u2019ve ever made generally available. Update to version 2.1.170 for access. https://www.anthropic.com/news/claude-fable-5-mythos-5",
     "Fixed sessions not saving transcripts (and not appearing in --resume) when launched from the VS Code integrated terminal or any shell that inherited Claude Code environment variables."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3767,7 +3767,7 @@
     "Stopped promoting `/loop` in remote sessions, where pending loops don't keep the container alive",
     "[VSCode] Fixed PowerShell tool calls rendering as raw JSON instead of a proper command display and permission dialog, and stripped ANSI escape codes from displayed shell output"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3776,7 +3776,7 @@
     "Fixed Fable 5 model names with a `[1m]` suffix not being normalized \u2014 Fable 5 includes 1M context by default, so the suffix is now stripped automatically",
     "Fixed a spurious \"sandbox dependencies missing\" startup warning on Windows when sandbox was enabled in settings"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3796,7 +3796,7 @@
     "[VSCode] Added usage attribution to the Account & usage dialog (`/usage`) showing cache misses, long context, subagents, and per-skill/agent/plugin/MCP breakdowns over the last 24h or 7d",
     "Fixed pre-warmed background workers failing with \"Could not resolve authentication method\" when claimed after sitting idle"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3804,7 +3804,7 @@
    "bullets": [
     "Added `enforceAvailableModels` managed setting \u2014 when enabled, the `availableModels` allowlist also constrains the Default model (a Default that would resolve to a disallowed model now falls back to the first allowed model), and user or project settings can no longer widen a managed `availableModels` list"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3833,7 +3833,7 @@
     "Fixed cloud sessions failing with \"Could not resolve authentication method\" when idle for too long before being claimed",
     "Background sessions now show clearer guidance when a window left open across an auto-update can't submit a reply, and `claude daemon status` explains version-skew behavior"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3864,7 +3864,7 @@
     "Fixed statusline links with custom URI schemes (e.g. `vscode://`) not opening when clicked in `claude agents`",
     "[VSCode] Fixed pressing Esc to dismiss a CJK IME candidate window canceling the running Claude task"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3880,7 +3880,7 @@
     "Fixed remote session background tasks appearing stuck as \"still running\" between turns",
     "Improved plugin loading performance in remote sessions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3888,7 +3888,7 @@
    "bullets": [
     "Added customizable keyboard shortcuts. Configure keybindings per context, create chord sequences, and personalize your workflow. Run `/keybindings` to get started. Learn more at https://code.claude.com/docs/en/keybindings"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3934,7 +3934,7 @@
     "Fixed user prompts queued mid-turn not showing a full-width background highlight in the transcript",
     "Fixed the activity spinner's pulse dwelling on the wrong glyph size in Ghostty"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3958,7 +3958,7 @@
     "Fixed scheduled task and webhook trigger deliveries being treated as keyboard input; they now classify as task notifications and can no longer approve a pending action or set the session title in auto mode",
     "Fixed focus mode showing \"Ran N PostToolUse hooks\" timing lines under each response"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -3966,7 +3966,7 @@
    "bullets": [
     "The stream-stall hint now reads \"Waiting for API response \u00b7 will retry in \u2026\" instead of \"No response from API \u00b7 Retrying in \u2026\", and triggers after 20s of silence instead of 10s"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4006,7 +4006,7 @@
     "Changed background subagents to surface permission prompts in the main session instead of auto-denying; the dialog shows which agent is asking, and Esc denies just that tool",
     "Changed `/review <pr>` to use the same review engine as `/code-review medium`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4034,7 +4034,7 @@
     "Improved `/plugin` to surface plugins you haven't used recently so you can clean them up",
     "[VSCode] Fixed extension becoming unresponsive when resuming a large session"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4055,7 +4055,7 @@
     "[SDK] Added replay of `queued_command` attachment messages as `SDKUserMessageReplay` events when `replayUserMessages` is enabled",
     "[VSCode] Enabled session forking and rewind functionality for all users"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4063,7 +4063,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4090,7 +4090,7 @@
     "Reduced CPU usage during streaming responses by ~37% by coalescing text updates to 100ms",
     "Reduced long-session memory growth from terminal output cache"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4112,7 +4112,7 @@
     "Improved plugin auto-rename: marketplace `renames` maps are now followed automatically, updating your settings to the new name",
     "Improved `/add-dir` message when the directory is already a working directory"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4131,7 +4131,7 @@
     "Improved `claude agents` completed list to fill available vertical space; on short terminals the header compacts so live sessions stay visible",
     "Improved Remote session startup with a provisioning checklist while the container starts"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4165,7 +4165,7 @@
     "Remote Control is now disabled when `ANTHROPIC_BASE_URL` points at a non-Anthropic host, matching the existing behavior under `CLAUDE_CODE_USE_BEDROCK`/`_VERTEX`/`_FOUNDRY`",
     "Changed opening the agents view from a foreground session to require a single `\u2190` press instead of two, matching the behavior in background sessions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4173,7 +4173,7 @@
    "bullets": [
     "Introducing Claude Sonnet 5: now the default model in Claude Code, with a native 1M-token context window and promotional pricing of $2/$10 per Mtok through August 31. Update to version 2.1.197 for access. https://www.anthropic.com/news/claude-sonnet-5"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4213,7 +4213,7 @@
     "Subagents now treat messages from the agent that launched them as normal task direction; an agent's message is still never treated as the user's approval",
     "Removed the `/agents` wizard; ask Claude to create or manage subagents, or edit `.claude/agents/` directly"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4244,7 +4244,7 @@
     "`CLAUDE_CODE_RETRY_WATCHDOG` now raises the default retry count for non-capacity transient errors to 300 and lifts the cap of 15 on `CLAUDE_CODE_MAX_RETRIES`",
     "`claude agents` session rows now show pull-request links as bare `#N` without the redundant \"PR\" label"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4273,7 +4273,7 @@
     "[SDK] Changed minimum zod peer dependency to ^4.0.0",
     "[VSCode] Fixed usage display not updating after manual compact"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4308,7 +4308,7 @@
     "Changed permission rules like `Bash(*)` to be accepted and treated as equivalent to `Bash`",
     "Changed config backups to be timestamped and rotated (keeping 5 most recent) to prevent data loss"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4332,7 +4332,7 @@
     "Improved screen-reader output: decorative glyphs are now hidden, transcript symbols read as short labels, and nested tables read as `Header: value.` lines",
     "Improved the install script to explain when installation is killed by the system running out of memory"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4340,7 +4340,7 @@
    "bullets": [
     "Claude Sonnet 5 sessions no longer use the mid-conversation system role for harness reminders"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4365,7 +4365,7 @@
     "Improved MCP error messages: clearer error when a server config has `url` but no `type`, suggesting `\"type\": \"http\"` instead of the misleading \"command: expected string\"",
     "Changed `/review <pr>` back to a fast single-pass review; use `/code-review <level> <pr#>` for the multi-agent review at a chosen effort level"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4409,7 +4409,7 @@
     "Removed a redundant navigation hint from the `claude agents` footer",
     "[VSCode] Added a Settings toggle for \"Enable Remote Control for all sessions\""
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4417,7 +4417,7 @@
    "bullets": [
     "Fixed hook events not streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4447,7 +4447,7 @@
     "Reserved the \"Claude Browser\" MCP server name (alongside \"Claude Preview\") ahead of the Claude Desktop pane rename; user-configured MCP servers can no longer register under either name",
     "Fixed Cowork VM-mode local-agent sessions failing to start with \"Not logged in \u00b7 Please run /login\" on CLI 2.1.203+"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4481,7 +4481,7 @@
     "Improved agents view: status column now uses full terminal width instead of truncating at 64 characters",
     "Changed agents view: Ctrl+X now permanently removes a completed session, and sessions no longer render twice; deleted background jobs stay deleted"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4512,7 +4512,7 @@
     "Plugin option values (`pluginConfigs`) are no longer read from project-level `.claude/settings.json`; only user, `--settings`, and managed settings are honored",
     "Fixed `/usage-credits` amount inputs silently stripping malformed values (e.g. a pasted timestamp) to digits; malformed amounts are now rejected with an error, and amounts over $1,000 require a typed confirmation"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4565,7 +4565,7 @@
     "`/usage` now shows your last-known usage bars with an \"as of\" note when the usage endpoint is rate-limited, instead of an error screen",
     "Fixed Bedrock auth failing with \"Session token not found or invalid\" for AWS SSO profiles whose sso_region differs from the Bedrock region (2.1.207 regression)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4573,7 +4573,7 @@
    "bullets": [
     "Fixed /model and other dialogs being blocked in `claude agents` background sessions (reverts an overly broad guard)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4590,7 +4590,7 @@
     "[VSCode] Added automatic Python virtual environment activation, ensuring `python` and `pip` commands use the correct interpreter (configurable via `claudeCode.usePythonEnvironment` setting)",
     "[VSCode] Fixed message action buttons having incorrect background colors"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4630,7 +4630,7 @@
     "Agent view: the session you pressed \u2190 from stays visibly marked even after mouse hover or arrow keys move the selection",
     "Fable temporarily shows as unavailable in the advisor picker while a server-side issue causing Fable advisor failures is fixed"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4674,7 +4674,7 @@
     "Claude in Chrome: `save_to_disk` on screenshot actions now writes the image to disk and returns the path; previously it did nothing",
     "Fixed a prompt-caching regression on Bedrock, Vertex, Mantle, and Foundry that billed the trailing system context block as fresh input tokens on every request."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4729,7 +4729,7 @@
     "Updated the auth status panel title from \"Cloud authentication\" to \"Authentication\"",
     "Corrected an earlier release note (2.1.200): tmux through the 3.6 series lacks synchronized output; newer tmux with support is detected automatically"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4783,7 +4783,7 @@
     "Changed keep-alive connection pooling to disable after a stale-connection error, so retries open a fresh socket",
     "Changed SessionStart hooks to report source `\"fork\"` when a session begins as a fork instead of `\"resume\"`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4791,7 +4791,7 @@
    "bullets": [
     "Claude no longer runs the `/verify` and `/code-review` skills on its own; invoke them with `/verify` or `/code-review` when you want them"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4838,7 +4838,7 @@
     "[VSCode] Fixed right-to-left text (Arabic, Hebrew, Persian) rendering in the wrong order when mixed with English or code",
     "Fixed cloud sessions dropping the in-flight message when the session's container restarts mid-turn \u2014 the interrupted turn now re-runs on resume instead of leaving the session unresponsive"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4865,7 +4865,7 @@
     "Changed subagents to no longer spawn nested subagents by default; set `CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH` to allow deeper nesting",
     "Fixed `--max-budget-usd` not stopping background subagents: once the cap is reached, new spawns are denied and running background agents are halted"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4908,7 +4908,7 @@
     "Added `yes`/`no`/`on`/`off`/`1`/`0` (case-insensitive) as accepted values for skill and plugin frontmatter booleans, alongside `true`/`false`",
     "Fixed remote sessions continuing to send heartbeats after their worker was replaced, which left long-lived desktop and IDE processes retrying a rejected request every few seconds forever"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4939,7 +4939,7 @@
     "Updated the claude-api skill to default to Claude Opus 5, with a migration path from Opus 4.8",
     "Subagents can now spawn nested subagents up to depth 3 by default (was 1); set CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH=1 to disable nesting"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4947,7 +4947,7 @@
    "bullets": [
     "Fixed structured outputs for non-interactive (-p) mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -4955,7 +4955,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5001,7 +5001,7 @@
     "Changed the Gateway `model` field validation: non-string values are rejected with a 400 instead of being forwarded",
     "Removed the repeated \"Permission mode changed while the auto-mode classifier call was queued\" notice from approval prompts"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5029,7 +5029,7 @@
     "Changed Remote Control auto-start so repo-local settings (`.claude/settings.json` or `.claude/settings.local.json`) can no longer turn it on (they can still turn it off); enable it at user scope via `/config`",
     "Removed ultraplan feature"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5055,7 +5055,7 @@
     "Changed `/review` to be an alias of `/code-review`, which reviews the current diff or a PR (`/code-review <level> <pr#>`); use `/code-review ultra` for a deep cloud review",
     "Changed `/code-review` with no effort level to reuse the level you typed last; type a level like `/code-review high` to change it"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5093,7 +5093,7 @@
     "Fixed a session resume silently reconnecting Remote Control after the user turned it off (`--resume`, SDK hosts, and the VS Code extension)",
     "[VSCode] Fixed sessions not honoring `remoteControlAtStartup` when explicitly enabled"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5114,7 +5114,7 @@
     "SendMessage can now start a conversation with your Remote Control sessions on other machines by name (`ListAgents` shows them as `name [ref]`), instead of only replying after they message you first",
     "SendMessage: a Remote Control recipient you already confirmed is never swapped for a same-named session on this machine when its own list couldn't be checked"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5122,7 +5122,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5134,7 +5134,7 @@
     "Improved slash-command menu: blue now marks only the selected row, matched characters are bolded instead of recolored, and emoji or accented names keep their glyphs",
     "Improved performance: fewer event-loop stalls on file-not-found suggestions and at-mention size checks"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5159,7 +5159,7 @@
     "Changed the Write tool so newer models can overwrite an existing file they haven't read this session, matching the Edit tool's rules; older models still require the read first",
     "Removed the outdated note about auto mode sessions costing slightly more from the first-use notice for Pro, Max, and Team plans"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5198,7 +5198,7 @@
     "[VSCode] Made the `/btw` side-question panel resizable by dragging its boundary, in both side-docked and stacked layouts",
     "[VSCode] Added session groups in the sidebar \u2014 right-click to create, rename, or delete; Cmd/Ctrl- or Shift-click to move several sessions at once"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5216,7 +5216,7 @@
     "Changed merged pull requests to show a purple status indicator in the prompt footer",
     "[IDE] Fixed model options displaying incorrect region strings for Bedrock users in headless mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5224,7 +5224,7 @@
    "bullets": [
     "Fixed MCP OAuth sign-in failing with a redirect URI mismatch for servers that use a pre-registered OAuth client, such as Slack"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5280,7 +5280,7 @@
     "Changed `sandbox.ripgrep` to be honored only from user, managed, and `--settings` settings; project settings can no longer override the sandbox's ripgrep binary",
     "Removed the startup tip suggesting you create custom subagents, and the matching nudge in the `/powerup` tour"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5307,7 +5307,7 @@
     "Windows: fixed auto mode repeatedly stopping for manual approval on ordinary `cd <dir> && <command> > file` Bash commands (a 2.1.232 regression)",
     "Reverted the 2.1.232 Bash permission changes for Cygwin-style symlinks on Windows and for input redirections (`< file`); a narrower version will return in a later release"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5365,7 +5365,7 @@
     "Mantle: skip the admin-pin availability probe at startup when a main-loop model is already picked",
     "Windows: startup no longer stalls on repeated rename retries when `~/.claude.json` is read-only"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5391,7 +5391,7 @@
     "Remote Control: `claude rc` now applies the same enterprise-gateway availability check as interactive startup",
     "[VSCode] Fixed focus jumping between open Claude tabs on its own when a window with several Claude panels is restored or reloaded"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5431,7 +5431,7 @@
     "Right-aligned footer items (goal indicator, session state, background agent status) and truncated notices now share a consistent right margin with the rest of the prompt area",
     "[VSCode] Added screen reader support for the transcript: live announcements for replies, permission requests, errors, and status changes, plus per-turn heading navigation"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5440,7 +5440,7 @@
     "Fixed prompt caching for sessions using an LLM gateway or custom base URL",
     "Added a built-in \"Concise\" output style: Claude leads with results and skips preamble and narration, while doing the work just as thoroughly. Select it under Output style in /config."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5486,7 +5486,7 @@
     "MCP `headersHelper` in a project `.mcp.json`, and inline MCP servers in project or `--add-dir` agent files, now require that folder's trust dialog to have been accepted (also under `claude -p`)",
     "MCP `headersHelper` from a project `.mcp.json`, plugin, or agent file runs without inherited credential env vars; user, managed and claude.ai-scope helpers now run from the Claude config dir"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5552,7 +5552,7 @@
     "Windows: cross-session messaging is now available, so Claude Code sessions across your machines can message each other with `SendMessage` and find each other with `ListAgents`, as on macOS and Linux",
     "[VSCode] \"View usage\" in the usage-limit banner now sits inline with the warning text instead of floating mid-banner"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5560,7 +5560,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5568,7 +5568,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5635,7 +5635,7 @@
     "[VSCode] Improved history trimming in long sessions: older tool-activity rows are dropped first so your messages and Claude's replies stay visible",
     "[VSCode] Improved attribution of the extension's own usage telemetry to your organization when you are signed in with a Claude account, so its data-handling settings apply"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5643,7 +5643,7 @@
    "bullets": [
     "Fixed a crash on startup on Linux distributions that ship glibc 2.44 (for example Arch Linux, CachyOS and Fedora Rawhide)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5711,7 +5711,7 @@
     "Changed OpenTelemetry plugin events for plugins synced from claude.ai: `plugin_id_hash` now reflects the plugin's real marketplace, and `enabled_via` is `admin-install` for admin-installed plugins",
     "Fixed the command sandbox's filesystem configuration not respecting `--setting-sources`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5751,7 +5751,7 @@
     "Changed Claude apps gateway sign-in requests to identify Claude Code (a `surface=claude_code` device-authorization parameter and a `claude-code/<version>` User-Agent)",
     "Changed organization sign-in enforcement to exit at start when the administrator's managed settings cannot be read, even if host-supplied or per-user Windows registry settings exist"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5807,7 +5807,7 @@
     "Changed cross-session messaging in Linux user namespaces: root-equivalent trust for unmapped owners is limited to canonical system directories",
     "Changed `SendMessage` from a subagent to another session: the result now notes that any reply is delivered to the parent session's conversation, not to the subagent"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5815,7 +5815,7 @@
    "bullets": [
     "Fixed beta header validation error for gateway users on Bedrock and Vertex, ensuring `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1` avoids the error"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5823,7 +5823,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5901,7 +5901,7 @@
     "[VSCode] Fixed the sign-in screen's \"Bedrock, Foundry, or Vertex\" button opening the docs at the top of the page instead of the third-party provider setup section",
     "[VSCode] Changed the Remote Control banner to a footer pill (shown while Remote Control is on or has failed) that opens the session on claude.ai/code; turn it on or off with `/remote-control`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -5912,7 +5912,7 @@
     "Fixed Remote Control sessions hosted by Claude Desktop or VS Code stalling for minutes after a tool finished when the connection to claude.ai was degraded",
     "Fixed background task notifications with very large failure output (for example git errors on a full disk) making the conversation exceed the API request size limit"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6023,7 +6023,7 @@
     "[VSCode] Changed the action menu to list slash commands in a filterable \"Slash commands\" dialog instead of inline; picking one runs it; the MCP servers dialog gained the same filter box",
     "[VSCode] Changed \"Delete session\" to \"Archive session\": archived sessions move to a collapsible \"Archived sessions\" group at the bottom of the list with an Unarchive action"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6032,7 +6032,7 @@
     "Fixed Claude Code failing to launch on macOS 12 (Monterey), a regression introduced in 2.1.255",
     "Fixed remote and scheduled sessions failing with \"user messages must have non-empty content\" after a re-sent permission approval could not be applied"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6076,7 +6076,7 @@
     "[VSCode] Added an Active quick filter and a status filter menu (Needs input, Working, Completed) to the session list sidebar",
     "Fixed remote and scheduled sessions doing nothing after a connector-tool permission prompt was approved while the session was paused"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6149,7 +6149,7 @@
     "[VSCode] Fixed a half-finished message, an empty tool card or an extra \"Thought for\" line staying on screen after Claude Code retried a dropped response",
     "[VSCode] Fixed \"Enable Remote Control for all sessions\" not applying to a session tab that was still starting when the toggle was flipped"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6223,7 +6223,7 @@
     "[VSCode] Fixed the session list's Open filter for sessions continued from claude.ai whose tab was still recorded under the web session, and labeled the filter menu's sections for screen readers",
     "[VSCode] Changed the model picker to one flat list of every model, with rows kept for older model spellings listed last"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6231,7 +6231,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6288,7 +6288,7 @@
     "[VSCode] Fixed the sidebar chat coming back blank after Reload Window or a restart when the conversation had been open for more than 10 minutes",
     "[VSCode] Fixed the timeline dot sitting below the text on the \"Remote Control is active\" message"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6296,7 +6296,7 @@
    "bullets": [
     "Fixed a 2.1.265 regression affecting LLM-gateway and proxy setups: the undocumented `CLAUDE_CODE_USE_GATEWAY` environment variable, previously ignored unless `ANTHROPIC_BASE_URL` and `ANTHROPIC_AUTH_TOKEN` were both set, began forcing Cloud-gateway sign-in on its own in 2.1.265, so configurations that set it alongside an API key, `apiKeyHelper`, or custom auth headers failed every request with \"Not signed in to the Cloud gateway\". The variable on its own is ignored again; no configuration change is needed"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6356,7 +6356,7 @@
     "[Claude Tag] Fixed thread requests to edit or delete a message Claude posted at the channel's top level being answered with a correction instead of reaching the session that posted it",
     "[Claude Tag] Fixed **Connect** on Tool access requests under Admin settings > Review requests failing with \"Authorization failed\" or showing the requested access bundle as deleted"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6459,7 +6459,7 @@
     "[Code Review] Fixed a push-triggered review that was queued behind a running review still posting after the pull request had been converted to draft",
     "[Code Review] Fixed reviews ignoring a directory's CLAUDE.md conventions when the PR edited a root file (e.g. README.md) that only shares a name with a file that CLAUDE.md lists"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6564,7 +6564,7 @@
     "[Claude Tag] Improved scheduled routines in Slack channels: a routine run can now reply in an existing thread instead of always posting a new top-level channel message",
     "[Claude Tag] Improved the timestamp on Claude's live progress checklists to show each reader's local time and how long ago it was updated, instead of a fixed UTC time"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6580,7 +6580,7 @@
     "Windows: Fixed console windows flashing when spawning child processes",
     "VSCode: Fixed OAuth token expiration causing 401 errors after extended sessions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6588,7 +6588,7 @@
    "bullets": [
     "Fixed read-only git commands in Bash unexpectedly asking for permission after a session had been running for a while (regression in 2.1.269)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6691,7 +6691,7 @@
     "[Code Review] Fixed reopening a finished /ultrareview cloud session in the Claude app starting the whole review over again unprompted",
     "Windows: Fixed PowerShell commands failing with \"Exit code 1\" and no output when the session's temp output path reaches 260 characters"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6699,7 +6699,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6770,7 +6770,7 @@
     "[Code Review] Fixed `/ultrareview --post` so a retry after a GitHub error posts the findings comment exactly once instead of never or twice; the comment now names the reviewed commit",
     "[Code Review] Fixed empty or content-identical pushes being re-reviewed on GitHub repositories whose owner or name contains a capital letter; these pushes are now skipped"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6885,7 +6885,7 @@
     "[Code Review] Improved how Code Review words each posted finding: short plain sentences that say who is affected, where the code goes wrong, and the fix up front",
     "[Code Review] Improved the check-run card and PR comment when a review is skipped because of an organization limit: each cause now links the admin page that fixes it"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6987,7 +6987,7 @@
     "[Code Review] Fixed reviews occasionally dropping part of their analysis when one of the reviewing agents returned its findings in an unexpected format",
     "[Code Review] Fixed pull requests with more than 100 Claude reviews getting a full re-review on every clean merge from the base branch instead of the lighter merge-focused review"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -6995,7 +6995,7 @@
    "bullets": [
     "Fixed every request failing with `400 \u2026 Input tag 'advisor_20260301'` when `ANTHROPIC_BASE_URL` points at a proxy or gateway (2.1.275 regression)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -7089,7 +7089,7 @@
     "[Claude Tag] Fixed Google Cloud credential forms in Claude Tag access bundles: a refused key file now says why, the website and scopes stay locked, and a rejected rotation keeps the pasted key",
     "[Claude Tag] Fixed the network events log in Claude Tag admin settings showing no response status for requests through connections that use AWS signing, client certificates or a custom CA"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -7098,7 +7098,7 @@
     "Changed auto mode for Claude API and Enterprise users, and on Bedrock, Vertex, Foundry and gateways, to default to the server-side classifier, which does not charge for classifier overhead (`CLAUDE_CODE_AUTO_MODE_SERVER=0` opts out on Bedrock, Vertex, Foundry and gateways); warns on billed fallback. See https://code.claude.com/docs/en/auto-mode-classifier-billing",
     "Added an `Auto mode server` row to `/status` showing whether this session's auto mode classifier runs on the server"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -7219,7 +7219,7 @@
     "[Claude Tag] Improved the GitHub banner in Claude Tag admin settings to say why GitHub isn't connected: not signed in, app not linked or not installed, sign-in expired, or SSO not authorized",
     "[Code Review] Improved the Code Review check run to say when REVIEW.md instructions were cut or left out of a review for exceeding a size limit, naming the file and the limit"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -7403,7 +7403,7 @@
     "[Claude Tag] Changed the routine list Claude gives when asked in a Slack thread to show that thread's own scheduled tasks by default instead of every routine in the channel",
     "[Code Review] Fixed a pull request getting no review when its reviewed commit was force-pushed away while a failed review was being retried in a repository not set to review every push"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -7496,7 +7496,7 @@
     "[Claude Tag] Changed the bordered cards Claude uses in Slack replies for plans, tables and details to render wide by default instead of a narrow width",
     "[Claude Tag] Changed newly connected Slack workspaces to follow the current default model instead of keeping whichever model was the default when they were connected"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -7597,7 +7597,7 @@
     "[Code Review] Fixed \"@claude review\" requests going silent when GitHub failed to return the pull request: the request is retried once, and a comment explains if it still fails",
     "[Code Review] Fixed billing for a review that stopped at its time limit with nothing verified: it now shows as incomplete, isn't charged, and is retried once"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -7704,7 +7704,7 @@
     "[Claude Tag] Improved adding repositories as a channel manager: when your GitHub sign-in can't confirm you're a repository admin, the page asks you to sign in with GitHub",
     "[Code Review] Fixed Code Review giving up without posting a finished review when an unsubmitted review under its GitHub App was open on the pull request; it now retries the post first"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -7847,7 +7847,7 @@
     "[Code Review] Fixed the organization menu in Code Review's \"Add a repository\" dialog showing only a few of your GitHub organizations; it now loads more as you scroll",
     "[Code Review] Improved the Code Review check run to say when your repository's REVIEW.md wasn't applied, for example on a very large pull request or when REVIEW.md is a symbolic link"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -7942,7 +7942,7 @@
     "[Claude Tag] Fixed public channel names on Claude Tag's spend limits page in admin settings showing as raw Slack IDs in larger organizations",
     "[Claude Tag] Improved the titles of sessions started from Slack as shown on claude.ai: they now read as the words you typed, without Slack user IDs or escape codes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8055,7 +8055,7 @@
     "[Code Review] Fixed Code Review skipping a pull request after a new push when its review had failed twice on the previous commit; it now reviews the latest commit",
     "[Code Review] Improved the failed-review card on a pull request whose conversation is locked: it now says the lock blocked the review and that nothing was posted or charged"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8151,7 +8151,7 @@
     "[Claude Tag] Improved save errors on a channel's Configure page: too-long channel instructions now say to shorten them, and a save refused for lost access no longer says to try again",
     "Fixed `claude plugin test` reporting mods as turned off remotely when it had only read an out-of-date saved setting"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8185,7 +8185,7 @@
     "Fixed published artifact pages freezing or crashing the reader's browser tab on short code blocks with many unclosed `<script>` tags",
     "Fixed a mod's Client region staying failed for the whole session after the terminal threw while drawing it"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8193,7 +8193,7 @@
    "bullets": [
     "Fixed startup performance issues when resuming sessions that have `saved_hook_context`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8390,7 +8390,7 @@
     "[Code Review] Fixed blocking review comments sometimes opening with a \"nit\" label that contradicted their severity",
     "[Code Review] Fixed tips to comment \"@claude review\" being posted on fork and Manual-mode pull requests in organizations that have turned Code Review off"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8399,7 +8399,7 @@
     "Fixed a regression in 2.1.290 where cloud sessions could drop answers to permission prompts",
     "Fixed a regression in 2.1.288 where the last messages of a session could be lost when quitting"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8498,7 +8498,7 @@
     "[Code Review] Fixed a queued review failing when the pull request moved to a new base branch and the old one was deleted; the commit is now re-queued for review",
     "[Code Review] Fixed reviews ignoring a CLAUDE.md's rules when the pull request edits that file; reviews now use its version from the base branch"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8561,7 +8561,7 @@
     "[Claude Tag] Changed the limit on channel rules in Claude Tag admin settings from 20 to 50 for each workspace and for the organization-wide Slack page",
     "[Code Review] Improved Code Review's Add a repository dialog to list each repository that couldn't be added and why, such as missing GitHub write access"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8570,7 +8570,7 @@
     "Fixed `prompt` and `agent` hooks written as instructions (such as \"Block commands that...\") allowing what they should block",
     "Improved how `prompt` hooks on Stop and SubagentStop written as instructions (such as \"Carry on if the build is broken\") are judged, so Claude is less likely to stop early"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8720,7 +8720,7 @@
     "[Code Review] Fixed Code Review still skipping a large CLAUDE.md's rules when the pull request edits that file",
     "Fixed web searches and `agent` hook evaluations taking much longer at `xhigh` and `max` effort"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -8806,7 +8806,7 @@
     "[Code Review] Fixed the Code Review check sometimes staying \"in progress\" on a pull request after the review finished; it now shows the review's result",
     "[Code Review] Improved Code Review admin settings to say why a setting couldn't be saved, such as a policy restriction, instead of a generic failure message"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9003,7 +9003,7 @@
     "[Claude Tag] Changed Claude in Slack to join channels with more than 100 members quietly, with no intro message",
     "[Code Review] Fixed Code Review's monthly spend-limit comment and check-run card sending admins to Claude Code settings; they now link the Usage page, where that limit is set"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9023,7 +9023,7 @@
     "Changed tool hook execution timeout from 60 seconds to 10 minutes",
     "[VSCode] Added clickable destination selector for permission requests, allowing you to choose where settings are saved (this project, all projects, shared with team, or session only)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9049,7 +9049,7 @@
     "[VSCode] Added multiline input support to the \"Other\" text input in question dialogs (use Shift+Enter for new lines)",
     "[VSCode] Fixed duplicate sessions appearing in the session list when starting a new conversation"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9144,7 +9144,7 @@
     "[Code Review] Fixed Code Review ignoring `@claude review` comments from people with write access whose GitHub organization membership is private; their comments now start a review",
     "[Code Review] Fixed Code Review's \"paused for this repository\" comment sending admins to Code Review settings; it now says who can fix it and links the Git providers page"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9202,7 +9202,7 @@
     "[VSCode] Fixed diagnostics showing \"[object Object]\" instead of the rule code (e.g. MD013) for some language servers",
     "[VSCode] Fixed the native dictation audio module being loaded, to check microphone permission, where dictation is not offered (non-claude.ai sign-ins, remote windows)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9272,7 +9272,7 @@
     "[Claude Tag] Changed the Roles page in organization settings to group the roles created for Claude Tag channel managers in a collapsed section below your organization's own roles",
     "[Code Review] Fixed Code Review setup not resuming after you leave to connect GitHub; back in admin settings, it now reopens at the repository picker"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9280,7 +9280,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9363,7 +9363,7 @@
     "[Code Review] Added an option in Code Review admin settings to review every repository in a GitHub organization, including ones added later, without selecting them one by one",
     "[Code Review] Fixed pull requests opened within a minute or two of an admin turning on Code Review being silently skipped; they are now retried and reviewed"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9408,7 +9408,7 @@
     "[Code Review] Fixed Code Review sometimes not reviewing the newest commit when several pushes landed on a pull request during a review",
     "[Code Review] Changed Code Review re-reviews so they no longer open with LGTM while earlier blocking findings are still open"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9417,7 +9417,7 @@
     "Fixed `claude -p` inside cloud sessions reporting \"Not logged in\" when started without the session's environment variables",
     "Fixed an API error being replaced by \"prompt is too long\", and an unneeded compaction, in sessions with many MCP tools"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9467,7 +9467,7 @@
     "[Cloud sessions] Fixed the \"Waiting for a runner\" status on self-hosted environments being cut off; with on-demand runners it now counts up from your last message and shows failed attempts",
     "[Code Review] Added `@claude review stop` (also `off` and `pause`) to Code Review, ending an `@claude review always` subscription on a pull request without starting a new review"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9475,7 +9475,7 @@
    "bullets": [
     "Bug fixes and reliability improvements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9561,7 +9561,7 @@
     "[Code Review] Fixed a finished review showing no check on the pull request when earlier tries to create it failed; a final try now adds a completed check",
     "[Code Review] Fixed a push queued behind a running review still starting a review after `@claude review stop`; its check now closes and says why"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9579,7 +9579,7 @@
     "Reduced layout jitter in the terminal when the spinner appears and disappears during streaming",
     "Removed misleading Anthropic API pricing from model selector for third-party provider (Bedrock, Vertex, Foundry) users"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9612,7 +9612,7 @@
     "[Code Review] Fixed the Code Review admin section hiding its repositories and switches after a failed refresh of the repository list",
     "[Code Review] Improved the Code Review admin section to retry the first load and show one Try again banner when it still fails"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9711,7 +9711,7 @@
     "[Code Review] Improved Code Review's check run to say no further automatic review will start when the model still can't analyze a change on the automatic retry",
     "[Code Review] Improved Code Review reliability: a review whose session fails to start because of a transient server fault is now retried once automatically, and its check run says so"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9757,7 +9757,7 @@
     "[Claude Tag] Fixed Claude in Slack sometimes posting a file in the wrong thread when it was answering in another thread of the same channel",
     "[Code Review] Fixed Code Review reviewing an outdated commit, or none at all, when GitHub delivered a push event late; it now reviews the pull request's current commit"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9883,7 +9883,7 @@
     "[Claude Tag] Fixed Retry on plugin and skill pages in Claude Tag admin settings discarding unsaved access changes after a failed load; your edits now stay in place",
     "[Claude Tag] Fixed the repositories control in Claude Tag admin settings showing the same action twice; its menu now lists only what the button doesn't already do"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -9945,7 +9945,7 @@
     "[Claude Tag] Changed a Slack channel's Respond automatically switch to a \"How Claude participates\" choice on the channel's Configure page and in Claude Tag admin settings",
     "[Code Review] Added a findings-by-severity card to the Code Review analytics page, showing the period's total findings, a daily chart stacked by severity, and each severity's count"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10039,7 +10039,7 @@
     "[Remote Control] Fixed the next message to an idle session going unanswered after you restart `claude remote-control`, when you sent it within a minute of your previous message",
     "[Claude Tag] Changed newly pasted artifact links in Slack to show a simpler card with an Open button that opens the artifact in Claude, instead of Slack's side panel"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10130,7 +10130,7 @@
     "[Claude Tag] Fixed keyboard focus and screen reader announcements in Claude Tag admin setup; pressing Escape in the connect form no longer also closes the Add dialog",
     "[Code Review] Improved the Code Review analytics page to retry once after a server or network failure, then show a Try again banner instead of empty cards"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10283,7 +10283,7 @@
     "[Claude Tag] Added a Claude Tag row to the Models admin page for Enterprise orgs with Claude Tag connected, linking to where its model defaults are managed",
     "[Claude Tag] Fixed saving auto mode allow rules in Claude Tag admin settings overwriting another admin's changes; the save is now refused with a message"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10302,7 +10302,7 @@
     "VSCode: Fixed slash commands incorrectly being executed when pressing Enter with preceding text in the input field",
     "VSCode: Added spinner when loading past conversations list"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10427,7 +10427,7 @@
     "[VSCode] Added a warning above the prompt box when both an auth token and an API key are set, matching the terminal's startup warning",
     "[VSCode] Fixed a plugin's permission request showing a name with hidden characters: it now reads \"a plugin\""
    ],
-   "first_seen": "2026-11-10T00:53:35Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10435,7 +10435,7 @@
    "bullets": [
     "Added fast mode on Vertex in the global, us and eu regions, falling back to standard speed if Vertex refuses it"
    ],
-   "first_seen": "2026-11-10T02:42:57Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10458,7 +10458,7 @@
     "VSCode: Added git branch and message count to the session picker, with support for searching by branch name",
     "VSCode: Fixed scroll-to-bottom under-scrolling on initial session load and session switch"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10467,7 +10467,7 @@
     "Fixed a crash when agent teams setting changed between renders",
     "Fixed a bug where commands excluded from sandboxing (via `sandbox.excludedCommands` or `dangerouslyDisableSandbox`) could bypass the Bash ask permission rule when `autoAllowBashIfSandboxed` was enabled"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10475,7 +10475,7 @@
    "bullets": [
     "Fast mode is now available for Opus 4.6. Learn more at https://code.claude.com/docs/en/fast-mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10483,7 +10483,7 @@
    "bullets": [
     "Fixed an issue where /fast was not immediately available after enabling /extra-usage"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10497,7 +10497,7 @@
     "Improved heredoc delimiter parsing to prevent command smuggling",
     "Blocked writes to `.claude/skills` directory in sandbox mode"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10509,7 +10509,7 @@
     "Fixed character loss at terminal screen boundary",
     "Fixed blank lines in verbose transcript view"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10518,7 +10518,7 @@
     "Added `CLAUDE_CODE_DISABLE_BACKGROUND_TASKS` environment variable to disable all background task functionality including auto-backgrounding and the Ctrl+B shortcut",
     "Fixed \"Help improve Claude\" setting fetch to refresh OAuth and retry when it fails due to a stale OAuth token"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10547,7 +10547,7 @@
     "Fixed clear stale permission rules when settings change on disk",
     "Fixed hook blocking errors showing stderr content in UI"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10559,7 +10559,7 @@
     "Fixed /resume showing interrupt messages as session titles",
     "Fixed image dimension limit errors to suggest /compact"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10569,7 +10569,7 @@
     "Fixed spurious warnings for non-agent markdown files in `.claude/agents/` directory",
     "Fixed structured-outputs beta header being sent unconditionally on Vertex/Bedrock"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10578,7 +10578,7 @@
     "Fixed ENAMETOOLONG errors for deeply-nested directory paths",
     "Fixed auth refresh errors"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10600,7 +10600,7 @@
     "Improved collapsed read/search groups to show the current file or search pattern being processed beneath the summary line while active",
     "[VSCode] Improved permission destination choice (project/user/session) to persist across sessions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10609,7 +10609,7 @@
     "Fixed orphaned CC processes after terminal disconnect on macOS",
     "Added support for using claude.ai MCP connectors in Claude Code"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10684,7 +10684,7 @@
     "Fixed Edit tool silently corrupting Unicode curly quotes (\\u201c\\u201d \\u2018\\u2019) by replacing them with straight quotes when making edits (anthropics/claude-code#26141)",
     "Fixed OSC 8 hyperlinks only being clickable on the first line when link text wraps across multiple terminal lines."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10718,7 +10718,7 @@
     "Fixed `--resume` session picker showing raw XML tags for sessions that start with commands like `/clear`. Now correctly falls through to the session ID fallback.",
     "Improved permission prompts for path safety and working directory blocks to show the reason for the restriction instead of a bare prompt with no context"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10726,7 +10726,7 @@
    "bullets": [
     "Added `CLAUDE_CODE_TMPDIR` environment variable to override the temp directory used for internal temp files, useful for environments with custom temp directory requirements"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10758,7 +10758,7 @@
     "Fixed memory leak in CircularBuffer where cleared items were retained in the backing array",
     "Fixed memory leak in shell command execution where ChildProcess and AbortController references were retained after cleanup"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10776,7 +10776,7 @@
     "The `/model` picker now shows human-readable labels (e.g., \"Sonnet 4.5\") instead of raw model IDs for pinned model versions, with an upgrade hint when a newer version is available.",
     "Managed settings can now be set via macOS plist or Windows Registry. Learn more at https://code.claude.com/docs/en/settings#settings-files"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10784,7 +10784,7 @@
    "bullets": [
     "VS Code: Fixed extension crash on Windows (\"command 'claude-vscode.editor.openLast' not found\")"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10799,7 +10799,7 @@
     "Fixed a crash in the WebAssembly interpreter on Linux x64 & Windows x64",
     "Fixed a crash that sometimes occurred after 2 minutes on Windows ARM64"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10807,7 +10807,7 @@
    "bullets": [
     "Fixed BashTool failing on Windows with EINVAL error"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10815,7 +10815,7 @@
    "bullets": [
     "VS Code: Fixed another cause of \"command 'claude-vscode.editor.openLast' not found\" crashes"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10823,7 +10823,7 @@
    "bullets": [
     "Expand Remote Control to more users"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10838,7 +10838,7 @@
     "Fixed shell commands not showing a clear error message when the working directory has been deleted",
     "Fixed config file corruption that could wipe authentication when multiple Claude Code instances ran simultaneously"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10870,7 +10870,7 @@
     "Removed ability to @-mention MCP servers to enable/disable - use `/mcp enable <name>` instead",
     "[VSCode] Fixed usage indicator not updating after manual compact"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10878,7 +10878,7 @@
    "bullets": [
     "Fixed concurrent writes corrupting config file on Windows"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10886,7 +10886,7 @@
    "bullets": [
     "Fixed prompt suggestion cache regression that reduced cache hit rates"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10919,7 +10919,7 @@
     "VSCode: Added session rename and remove actions to the sessions list",
     "Fixed `/clear` not resetting cached skills, which could cause stale skill content to persist in the new conversation"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10927,7 +10927,7 @@
    "bullets": [
     "Reduced spurious error logging"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -10937,7 +10937,7 @@
     "Re-introduced the \"ultrathink\" keyword to enable high effort for the next turn",
     "Removed Opus 4 and 4.1 from Claude Code on the first-party API \u2014 users with these models pinned are automatically moved to Opus 4.6"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11047,7 +11047,7 @@
     "[VSCode] The permission mode picker now respects `permissions.disableBypassPermissionsMode` from your effective Claude Code settings (including managed/policy settings) \u2014 when set to `disable`, bypass permissions mode is hidden from the picker",
     "[VSCode] Fixed RTL text (Arabic, Hebrew, Persian) rendering reversed in the chat panel (regression in v2.1.63)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11069,7 +11069,7 @@
     "Changed OAuth and API Console URLs from console.anthropic.com to platform.claude.com",
     "[VSCode] Fixed `claudeProcessWrapper` setting passing the wrapper path instead of the Claude binary path"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11105,7 +11105,7 @@
     "[VSCode] Added full markdown document view for plans in VS Code, with support for adding comments to provide feedback",
     "[VSCode] Added native MCP server management dialog \u2014 use `/mcp` in the chat panel to enable/disable servers, reconnect, and manage OAuth authentication without switching to the terminal"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11140,7 +11140,7 @@
     "Updated `/debug` to toggle debug logging on mid-session, since debug logs are no longer written by default",
     "Removed startup notification noise for unauthenticated org-registered claude.ai connectors"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11198,7 +11198,7 @@
     "VSCode: Added effort level indicator on the input border",
     "VSCode: Added `vscode://anthropic.claude-code/open` URI handler to open a new Claude Code tab programmatically, with optional `prompt` and `session` query parameters"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11231,7 +11231,7 @@
     "Deprecated `/output-style` command \u2014 use `/config` instead. Output style is now fixed at session start for better prompt caching",
     "VSCode: Fixed HTTP 400 errors for users behind proxies or on Bedrock/Vertex with Claude 4.5 models"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11255,7 +11255,7 @@
     "[VSCode] Fixed delete button not working for Untitled sessions",
     "[VSCode] Improved scroll wheel responsiveness in the integrated terminal with terminal-aware acceleration"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11281,7 +11281,7 @@
     "Suppressed async hook completion messages by default (visible with `--verbose` or transcript mode)",
     "Breaking change: Removed deprecated Windows managed settings fallback at `C:\\ProgramData\\ClaudeCode\\managed-settings.json` \u2014 use `C:\\Program Files\\ClaudeCode\\managed-settings.json`"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11323,7 +11323,7 @@
     "Updated `--plugin-dir` to only accept one path to support subcommands \u2014 use repeated `--plugin-dir` for multiple directories",
     "[VSCode] Fixed gitignore patterns containing commas silently excluding entire filetypes from the @-mention file picker"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11374,7 +11374,7 @@
     "[VSCode] Improved plan preview tab titles to use the plan's heading instead of \"Claude's Plan\"",
     "[VSCode] When option+click doesn't trigger native selection on macOS, the footer now points to the `macOptionClickForcesSelection` setting"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11407,7 +11407,7 @@
     "[VSCode] Fixed a brief flash of the login screen when opening the sidebar while already authenticated",
     "[VSCode] Fixed \"API Error: Rate limit reached\" when selecting Opus \u2014 model dropdown no longer offers 1M context variant to subscribers whose plan tier is unknown"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11432,7 +11432,7 @@
     "[VSCode] Fixed the thinking pill showing \"Thinking\" instead of \"Thought for Ns\" after a response completes",
     "[VSCode] Fixed missing session diff button when opening sessions from the left sidebar"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11456,7 +11456,7 @@
     "Reduced memory usage on startup in large repositories (~80 MB saved on 250k-file repos)",
     "Fixed managed settings (`enabledPlugins`, `permissions.defaultMode`, policy-set env vars) not being applied at startup when `remote-settings.json` was cached from a prior session"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11490,7 +11490,7 @@
     "Disabled line-by-line response streaming on Windows (including WSL in Windows Terminal) due to rendering issues",
     "[VSCode] Fixed Windows PATH inheritance for Bash tool when using Git Bash (regression in v2.1.78)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11573,7 +11573,7 @@
     "[VSCode] Added Esc-twice (or `/rewind`) to open a keyboard-navigable rewind picker",
     "[VSCode] Fixed \"Fork conversation from here\" and rewind actions failing silently after the session cache goes stale"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11620,7 +11620,7 @@
     "[VSCode] Added rate limit warning banner with usage percentage and reset time",
     "Stats screenshot (Ctrl+S in /stats) now works in all builds and is 16\u00d7 faster"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11657,7 +11657,7 @@
     "Improved scroll performance with large transcripts by replacing WASM yoga-layout with a pure TypeScript implementation",
     "Reduced UI stutter when compaction triggers on large sessions"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11690,7 +11690,7 @@
     "[VSCode] Fixed extension defaulting Max plan users to Sonnet after the OAuth token refreshes (8 hours after login)",
     "Read tool now uses compact line-number format and deduplicates unchanged re-reads, reducing token usage"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11698,7 +11698,7 @@
    "bullets": [
     "Fixed messages in Cowork Dispatch not getting delivered"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11757,7 +11757,7 @@
     "Pasting `!command` into an empty prompt now enters bash mode, matching typed `!` behavior",
     "`/buddy` is here for April 1st \u2014 hatch a small creature that watches you code"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11773,7 +11773,7 @@
     "Fixed MCP server reconnection hanging when cached connection promise never resolves",
     "Fixed Ctrl+Z suspend not working in terminals using Kitty keyboard protocol (Ghostty, iTerm2, kitty, WezTerm)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11799,7 +11799,7 @@
     "Changed `--resume` picker to no longer show sessions created by `claude -p` or SDK invocations",
     "Removed `Get-DnsClientCache` and `ipconfig /displaydns` from auto-allow (DNS cache privacy)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11819,7 +11819,7 @@
     "Improved performance: faster `stripAnsi` on Bun by routing through `Bun.stripANSI`",
     "Edit tool now uses shorter `old_string` anchors, reducing output tokens"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11847,7 +11847,7 @@
     "Removed `/vim` command (toggle vim mode via `/config` \u2192 Editor mode)",
     "Linux sandbox now ships the `apply-seccomp` helper in both npm and native builds, restoring unix-socket blocking for sandboxed commands"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11879,7 +11879,7 @@
     "[VSCode] Fixed dropdown menus selecting the wrong item when the mouse was over the list while typing or using arrow keys",
     "[VSCode] Added a warning banner when `settings.json` files fail to parse, so users know their permission rules are not being applied"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11887,7 +11887,7 @@
    "bullets": [
     "Fixed Bedrock requests failing with `403 \"Authorization header is missing\"` when using `AWS_BEARER_TOKEN_BEDROCK` or `CLAUDE_CODE_SKIP_BEDROCK_AUTH` (regression in 2.1.94)"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -11940,7 +11940,7 @@
     "Improved Bash tool OTEL tracing: subprocesses now inherit a W3C `TRACEPARENT` env var when tracing is enabled",
     "Updated `/claude-api` skill to cover Managed Agents alongside the Claude API"
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   },
@@ -12004,7 +12004,7 @@
     "Fixed `CLAUDE_CODE_MAX_CONTEXT_TOKENS` to honor `DISABLE_COMPACT` when it is set.",
     "Dropped `/compact` hints when `DISABLE_COMPACT` is set."
    ],
-   "first_seen": "2026-11-07T18:41:08Z",
+   "first_seen": "2026-11-12T16:40:35Z",
    "triaged": false,
    "triaged_at": null
   }

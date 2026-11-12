@@ -1,7 +1,13 @@
 {
+<<<<<<< Updated upstream
  "cache_at": 1794426862728,
+=======
+ "cache_at": 1794501584777,
+>>>>>>> Stashed changes
  "experiments": {
   "cai_giggly_dream": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "cai_giggly_dream",
    "features": {
     "tengu_swift_lynx": {
@@ -33,10 +39,12 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "precomputed-compaction-v7": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "precomputed-compaction-v7",
    "features": {
     "tengu_amber_moleskin": {
@@ -62,10 +70,12 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_amber_prism": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "tengu_amber_prism",
    "features": {
     "tengu_amber_prism": true
@@ -77,10 +87,12 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_clever_orbit_experiment": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "tengu_clever_orbit_experiment",
    "features": {
     "tengu_clever_orbit": false
@@ -92,7 +104,7 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 0
   },
   "tengu_flint_harbor": {
@@ -104,13 +116,20 @@
    "first_seen_cache_at": 1793335732967,
    "first_seen_version": "2.1.314",
    "history": [],
+<<<<<<< Updated upstream
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
+=======
+   "last_seen_at": "2026-11-12T16:39:45Z",
+   "last_seen_cache_at": 1794501584777,
+>>>>>>> Stashed changes
    "last_seen_version": "2.1.322",
    "status": "active",
    "variationId": 0
   },
   "tengu_keen_pudding_experiment": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "tengu_keen_pudding_experiment",
    "features": {
     "tengu_keen_pudding": 58720256
@@ -122,10 +141,12 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_mcp_subagent_prompt-public": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "tengu_mcp_subagent_prompt-public",
    "features": {
     "tengu_mcp_subagent_prompt": false
@@ -137,10 +158,12 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 0
   },
   "tengu_mossy_gray_experiment": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "tengu_mossy_gray_experiment",
    "features": {
     "tengu_mossy_gray": true
@@ -152,10 +175,12 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_plank_river_frost": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "tengu_plank_river_frost",
    "features": {
     "tengu_plank_river_frost": "user_intent"
@@ -167,10 +192,12 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 0
   },
   "tengu_radiant_fox_experiment": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "tengu_radiant_fox_experiment",
    "features": {
     "tengu_radiant_fox": true
@@ -182,10 +209,12 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "tengu_typed_trinket_experiment": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "tengu_typed_trinket_experiment",
    "features": {
     "tengu_typed_trinket": 2
@@ -197,10 +226,12 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   },
   "ultrareview_cli_nudges": {
+   "ended_at": "2026-11-12T16:39:45Z",
+   "ended_cache_at": 1794501584777,
    "experimentId": "ultrareview_cli_nudges",
    "features": {
     "tengu_ultrareview_awareness": {
@@ -217,7 +248,7 @@
    "last_seen_at": "2026-11-11T22:13:49Z",
    "last_seen_cache_at": 1794426862728,
    "last_seen_version": "2.1.322",
-   "status": "active",
+   "status": "past",
    "variationId": 1
   }
  }
