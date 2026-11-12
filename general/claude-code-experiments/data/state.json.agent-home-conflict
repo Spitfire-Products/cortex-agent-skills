@@ -1,0 +1,20 @@
+{
+ "cache_at": 1794354917462,
+ "experiments": {
+  "tengu_flint_harbor": {
+   "experimentId": "tengu_flint_harbor",
+   "features": {
+    "tengu_flint_harbor": false
+   },
+   "first_seen_at": "2026-11-10T23:52:45Z",
+   "first_seen_cache_at": 1793335732967,
+   "first_seen_version": "2.1.314",
+   "history": [],
+   "last_seen_at": "2026-11-10T23:55:51Z",
+   "last_seen_cache_at": 1794354917462,
+   "last_seen_version": "2.1.322",
+   "status": "active",
+   "variationId": 0
+  }
+ }
+}

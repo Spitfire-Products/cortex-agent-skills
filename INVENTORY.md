@@ -28,12 +28,12 @@ Every skill directory found in the workspace and what happened to it.
 | general | `assemble-skills` | `.claude/skills/assemble-skills` | 9 KB |
 | general | `best-of-n` | `omniclaude-v4/.cortex/skills/best-of-n` | 3 KB |
 | general | `canon-store` | `.claude/skills/canon-store` | 18 KB |
-| general | `claude-code-experiments` | `.claude/skills/claude-code-experiments` | 84 KB |
-| general | `claude-code-variables` | `.claude/skills/claude-code-variables` | 12166 KB |
+| general | `claude-code-experiments` | `.claude/skills/claude-code-experiments` | 82 KB |
+| general | `claude-code-variables` | `.claude/skills/claude-code-variables` | 21773 KB |
 | general | `execute` | `.claude/skills/execute` | 9 KB |
 | general | `grounded-research` | `.claude/skills/grounded-research` | 3 KB |
 | general | `huggingface-spaces` | `.claude/skills/huggingface-spaces` | 91 KB |
-| general | `leanrea` | `.claude/skills/leanrea` | 18 KB |
+| general | `leanrea` | `.claude/skills/leanrea` | 20 KB |
 | general | `nexus-rea` | `.claude/skills/nexus-rea` | 28 KB |
 | general | `pdf-documents` | `omniclaude-v4/.cortex/skills/pdf-documents` | 105 KB |
 | general | `pm-wake-loop` | `.claude/skills/pm-wake-loop` | 4 KB |

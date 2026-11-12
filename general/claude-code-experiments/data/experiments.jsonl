@@ -239,3 +239,39 @@
 {"event": "experiment_resumed", "experimentId": "tengu_typed_trinket_experiment", "ts": "2026-11-03T01:28:35Z", "version": "2.1.316"}
 {"event": "experiment_started", "experimentId": "tengu_keen_pudding_experiment", "features": {"tengu_keen_pudding": 58720256}, "source": "live", "ts": "2026-11-06T02:28:52Z", "variationId": 1, "version": "2.1.318"}
 {"event": "experiment_started", "experimentId": "tengu_mossy_gray_experiment", "features": {"tengu_mossy_gray": true}, "source": "live", "ts": "2026-11-06T02:28:52Z", "variationId": 1, "version": "2.1.318"}
+{"event": "experiment_ended", "experimentId": "cai_giggly_dream", "last_variationId": 1, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "precomputed-compaction-v7", "last_variationId": 1, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "tengu_amber_prism", "last_variationId": 1, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "tengu_clever_orbit_experiment", "last_variationId": 0, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "tengu_flint_harbor", "last_variationId": 0, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "tengu_keen_pudding_experiment", "last_variationId": 1, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "tengu_mcp_subagent_prompt-public", "last_variationId": 0, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "tengu_mossy_gray_experiment", "last_variationId": 1, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "tengu_plank_river_frost", "last_variationId": 0, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "tengu_radiant_fox_experiment", "last_variationId": 1, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "tengu_typed_trinket_experiment", "last_variationId": 1, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_ended", "experimentId": "ultrareview_cli_nudges", "last_variationId": 1, "ts": "2026-11-07T18:37:43Z", "version": "2.1.112"}
+{"event": "experiment_resumed", "experimentId": "precomputed-compaction-v7", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "tengu_amber_prism", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "tengu_clever_orbit_experiment", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "tengu_flint_harbor", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "tengu_keen_pudding_experiment", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "tengu_mcp_subagent_prompt-public", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "tengu_mossy_gray_experiment", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "tengu_plank_river_frost", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "tengu_radiant_fox_experiment", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "cai_giggly_dream", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "tengu_typed_trinket_experiment", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_resumed", "experimentId": "ultrareview_cli_nudges", "ts": "2026-11-07T19:44:44Z", "version": "2.1.319"}
+{"event": "experiment_started", "experimentId": "tengu_flint_harbor", "features": {"tengu_flint_harbor": false}, "source": "backup:.claude.json.backup.1793355562275", "ts": "2026-11-10T23:52:45Z", "variationId": 0, "version": "2.1.314"}
+{"event": "experiment_started", "experimentId": "precomputed-compaction-v7", "features": {"tengu_amber_moleskin": {"1000000": {"repl": 0.06, "sdk": 0.05}, "200000": {"repl": 0.15, "sdk": 0.15}, "default": {"repl": 0.15, "sdk": 0.15}}, "tengu_sepia_moth": true}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 1, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "tengu_amber_prism", "features": {"tengu_amber_prism": true}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 1, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "tengu_clever_orbit_experiment", "features": {"tengu_clever_orbit": false}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 0, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "tengu_keen_pudding_experiment", "features": {"tengu_keen_pudding": 58720256}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 1, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "tengu_mcp_subagent_prompt-public", "features": {"tengu_mcp_subagent_prompt": false}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 0, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "tengu_mossy_gray_experiment", "features": {"tengu_mossy_gray": true}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 1, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "tengu_plank_river_frost", "features": {"tengu_plank_river_frost": "user_intent"}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 0, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "tengu_radiant_fox_experiment", "features": {"tengu_radiant_fox": true}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 1, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "cai_giggly_dream", "features": {"tengu_swift_lynx": {"claimLinkIncludesOrganization": true, "desktopPath": "/claude-code-desktop/claim-credit", "endpoint": "/v1/code/promo/cloud_credit", "ide": {"buttonLabel": "Get started", "text": "While you wait, start a new cloud session with a $250 credit"}, "limitWall": {"claimPageLine": "Get started with your $250 cloud session credit", "label": "While you wait, start a new cloud session with a $250 credit", "noticeLine": "While you wait, start a new cloud session with a $250 credit"}, "startup": {"buttonLabel": "Get started", "claimPageLine": "Get started with your $250 cloud session credit", "text": "You've been granted a $250 bonus credit for cloud sessions, on top of your plan limits"}, "version": 2, "webPath": "/code/claim-credit"}}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 1, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "tengu_typed_trinket_experiment", "features": {"tengu_typed_trinket": 2}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 1, "version": "2.1.322"}
+{"event": "experiment_started", "experimentId": "ultrareview_cli_nudges", "features": {"tengu_ultrareview_awareness": {"post_commit": true, "prose_pointer": true, "slash_menu": true, "startup_tip": true}}, "source": "live", "ts": "2026-11-11T00:04:32Z", "variationId": 1, "version": "2.1.322"}

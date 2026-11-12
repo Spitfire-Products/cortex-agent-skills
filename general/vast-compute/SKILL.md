@@ -165,3 +165,9 @@ raw — the SpacetimeDB-benchmark method (clients × pipelining, Little's law); 
 - **Never kill by pattern from the same command line** — `pkill -f '<pattern>'` / `ps | awk '/[x]…/'` match your OWN bash (exit 144) and stop
   the chain mid-way (11-07: a slow box stayed billing). Kill the PID captured at spawn; re-verify every step after an exit 144.
 - Pushes from a launcher must rebase + retry (another agent pushes mid-run → non-fast-forward); know the repo's default branch (market-research = master).
+
+## DELTA 2026-11-09 — vast-job.sh poll deadline ≠ job length
+`vast-job.sh` stops POLLING after `VAST_JOB_RUN_TIMEOUT` (default 5400 s) and reports `rc=124, results 0, box KEPT` — the detached run keeps
+going on the box, but nothing ever copies its results back. The 8-box Dukascopy fleet (~30 h jobs) hit it at 90 min. Any job longer than
+~1 h MUST pass `VAST_JOB_RUN_TIMEOUT` ≥ its TTL (duka-fleet*.sh now do). Recovery for boxes already orphaned: `.bench/vm/fleet-collect.sh`
+pattern (live ip:port via `vastai show instance`, wait for /root/.vast-job-rc, scp, destroy only on rc=0 + results) under `scripts/job.sh`.

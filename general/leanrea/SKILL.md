@@ -103,3 +103,21 @@ you copy everything twice. `DiskDescriptor.xml` in the .hdd bundle gives size/en
 Windows layout recall: user content under both `Program Files*` AND `Users/<u>/AppData/{Roaming,Local}`; `Documents and
 Settings` is a junction (may not resolve — use `Users/`). Sweep for artifacts by extension with a bounded-depth recursive
 walk rather than a full-MFT pass on 8 GB hosts.
+
+## Defunct-vendor source hunting (appended 2026-11-07, macbook; proven on the Gehtsoft/Indicore SDK)
+When a vendor's download site is dead and you need headers/bundles/grammars, run these in cost order:
+1. `gh api orgs/<org>/repos` then `git/trees/<ref>?recursive=1` per repo — grep whole trees with zero clones.
+2. PRs survive deleted forks: `pulls?state=all` names the real engineers; `pulls/N/files --paginate` manifests
+   let you diff "what a PR added" vs current master to spot content deleted since (or confirm nothing hidden).
+3. Wayback CDX (`/cdx/search/cdx?url=<domain>&matchType=domain&collapse=urlkey`) rate-limits hard — sleep
+   20-30s, retry once, treat EMPTY output as a rate-limit not a no-capture until a clean query confirms.
+4. Cloudflare-walled legacy hosts: curl fails even with a browser UA (JS challenge) and curl INSIDE the
+   browser sandbox fails too (clearance is per-client) — only the sandbox's real `browse()` page passes;
+   then `extract_links`/`get_content`. One session, close it.
+5. `gh api search/code -f q='"DistinctiveClassName" extension:h'` settles "does any public copy exist" in one call.
+6. **Sample ASSETS are ground truth**: mobile samples' `assets/`/`Resources/` data files carried the exact
+   HDR/DAT file grammar the engine's own ini described ambiguously (named `t1` interval vs our guessed "1" —
+   two failed runs). Sweep bundled sample data BEFORE guessing any file grammar.
+7. No public headers anywhere ⇒ reconstruct: sample-code usage + `c++filt` on the .so dynamic table +
+   typed MSVC exports of the Windows sibling DLL; check `.comment` (GCC era) to size the ABI effort first.
+Worked example + full source map: market-research/re/gehtsoft-sources.md.
