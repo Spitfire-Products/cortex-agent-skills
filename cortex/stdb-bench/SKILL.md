@@ -426,3 +426,21 @@ runs; the heartbeat reducer fills `egress_ip/net_class` from a `phase:"proxy"` h
 worker's PUBLIC key, named `PROXY_SSH_AUTHORIZED` because `set_bench_arm_vast` refuses literals whose name contains KEY/TOKEN/SECRET). Read the module log
 after `create` exactly as for a cell. Pilot checks owed: Vast's accepted onstart size (13.6 KB), `geolocation in [CC]` on the search API, `-D` through the
 ssh gateway, classifier precision (heartbeat `asn_org`).
+
+## DELTA 2026-11-12 — USER PROFILES vs BENCH PROFILES (nexus-cortex 4.132.0) + the om2w profile cells (o3*)
+- 4.132.0 ships LOCKED user profiles `CORTEX_PROFILE=user-fast|user-hybrid|user-careful` (interactiveProfile.ts USER_*): MCP injected, web on,
+  Bash+Edit frame, guards, no second attempt; their levers WIN over .env FILE values but LOSE to the real process env + .env.local. The shipped
+  default stays `standard`. The Harbor adapter pins `CORTEX_PROFILE=standard` when an arm names no profile (bench baselines never move); the
+  om2w supervisor has NO such pin — an om2w arm that names no profile runs the shipped default.
+- 🔴 To TEST a locked profile, the arm env must contain ONLY the profile name + plumbing (`TB2_KIND=om2w TB2_MIN_VCPU_PER_LANE=4
+  CORTEX_UPDATE_POLICY=warn CORTEX_PROFILE=user-hybrid`): every arm-env key is REAL env on the box and overrides the profile. To test a profile
+  PLUS one lever, add exactly that lever (o3up = user-fast + MENTORSHIP_ENABLED/CORTEX_LIFT_PLAN/_INTERACTIVE/CORTEX_MENTOR_REASONING=none).
+  Proof per row: `effective_config.<KEY>.source == "profile"` for the profile's levers.
+- Recipe: `.bench/vm/o3-launch.sh` (waits for npm+tag, then guard/seed/create/launch per run as separate checked phases; one arm per run;
+  holdout-8 = `.bench/eval/om2w/om2w-holdout8-tasks.txt` + `holdout-cmp.json`; SHARD_N=4 LPH=4 TTL_H=3 cap $6). Read rows from the store
+  (`results*.jsonl`, dedup by task; tokens in inputTokens/cacheReadTokens/outputTokens — `cost_usd` is 0 on om2w rows, compute from tokens).
+  First result: o3uf (user-fast) 8/8 rows, median 2.2 min/task, 34.6 min total (standard 11-06: 9.4 min/task, 84 min); ungraded until audit.
+- Release recipe that worked (4.132.0): changeset → `npx changeset version` (changesets `ignore` = the private @nexus-cortex/browser + desktop)
+  → bump ROOT package.json (the deploy script tags from it) → `npm install --package-lock-only` → `node scripts/check-env-docs.mjs` → commit →
+  `.bench/release-drivers/release-4.132.0.sh` (A deploy --release → B publish.yml → C npm → C2 install smoke → F tarball sweep). The export
+  must exclude packages/desktop/ like packages/browser/ (added 11-12).
