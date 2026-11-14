@@ -5,7 +5,7 @@
 Nothing pending. The next binary version that adds an item will list it here and the SessionStart hook will say so.
 
 
-# CHANGELOG — 439 version(s) untriaged for library candidates
+# CHANGELOG — 440 version(s) untriaged for library candidates
 
-Versions: 2.1.322, 2.1.321, 2.1.319, 2.1.318, 2.1.317, 2.1.316, 2.1.314, 2.1.312, 2.1.311, 2.1.310, 2.1.309, 2.1.308…. Read `reference/changelog.md` (UNTRIAGED section, tagged bullets first), add candidates to `library/CANDIDATES.md`, then `ccv.py changelog-triaged <version>`. Last fetch: 2026-11-12T16:40:35Z
+Versions: 2.1.323, 2.1.322, 2.1.321, 2.1.319, 2.1.318, 2.1.317, 2.1.316, 2.1.314, 2.1.312, 2.1.311, 2.1.310, 2.1.309…. Read `reference/changelog.md` (UNTRIAGED section, tagged bullets first), add candidates to `library/CANDIDATES.md`, then `ccv.py changelog-triaged <version>`. Last fetch: 2026-11-13T20:39:23Z
 

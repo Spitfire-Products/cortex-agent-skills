@@ -121,3 +121,33 @@ When a vendor's download site is dead and you need headers/bundles/grammars, run
 7. No public headers anywhere ⇒ reconstruct: sample-code usage + `c++filt` on the .so dynamic table +
    typed MSVC exports of the Windows sibling DLL; check `.comment` (GCC era) to size the ABI effort first.
 Worked example + full source map: market-research/re/gehtsoft-sources.md.
+
+## Live traffic of a running app (appended 2026-11-13, workspace; DRAFT — finalize after the Sun 11-15 Trading Station capture)
+Goal: see where a running desktop app gets its data — which hosts, which connections stay open, how often messages arrive, how late
+they are — then hand the capture to the pcap row above for analysis. Static first: extract every URL/host from the binaries
+(`strings -el`/`strings` + a URL regex over each DLL/EXE/.so; worked example market-research/public-endpoints.txt, 41 TS binaries) so
+live hosts can be mapped to the component that names them.
+**Scope rules (hard):** your own software on your own machine; read the vendor's terms before any decryption; trading/banking apps
+ONLY on a demo login for anything beyond tier 1; captures stay on the capturing machine (never mailed, uploaded or committed);
+never type, log or store a credential for someone else.
+**Tier 1 — passive capture (no decryption, no credential exposure). Start here; it answers most questions.**
+- Pick the interface the app's traffic crosses. A VM guest: capture on the HOST's virtual interface (Parallels shared network
+  shows as a `bridge`/`vnic` interface; list with `ifconfig`, confirm with a test ping from the guest). `sudo tcpdump -i <if> -w
+  cap.pcap 'not port 22'` (or Wireshark, same filter); note the guest IP to filter later.
+- Sync clocks FIRST (`sntp -sS time.apple.com` on macOS; `w32tm /resync` in Windows) and log the host↔guest offset before and after.
+- Read it: `tshark -r cap.pcap -q -z conv,tcp` (long-lived conversations = streams), `-T fields -e frame.time_epoch -e ip.dst
+  -e tls.handshake.extensions_server_name` (which host each connection is), then per long-lived connection the packet
+  inter-arrival times and sizes (`-Y 'tcp.stream==N' -T fields -e frame.time_delta_displayed -e tcp.len`) → rate per stream,
+  p50/p95 gaps, burst pattern. Map each SNI host to the static endpoint list.
+**Tier 2 — intercepting proxy (decrypts; ONLY if tier 1 cannot answer the protocol question, ONLY on a demo login).**
+- mitmproxy/mitmdump on the host, the app pointed at it (system proxy in the guest, or transparent mode); trust mitmproxy's CA in
+  the guest's ROOT store (Windows: `certutil -addstore root mitmproxy-ca-cert.cer`) — remove it when done.
+- Filter the sign-on exchange OUT of the saved flows (a mitmdump `-s` script that drops auth/SSO/token URLs and Authorization /
+  Cookie headers before writing); assume a raw flow file contains secrets and keep it local.
+- Pinning check: if the app refuses to connect (or the proxy logs TLS handshake failures only for the app's hosts) the client pins
+  certificates — STOP; tier 1 is the answer. Do not patch the binary to defeat pinning.
+**Timing / delay study:** delay = receive time (NTP-synced capture clock) − the source's own timestamp in the message (tier 2, or
+any timestamp visible in clear text); without a source timestamp, report cadence only (rate, inter-arrival), and lead/lag
+against a second recorded source of the same instrument.
+TODO after the Sunday run: the real interface name on the macbook's Parallels, the TS hosts/ports seen, whether TS honours the
+system proxy, whether it pins, the measured quote cadence per pair — replace this TODO with what was proven.
